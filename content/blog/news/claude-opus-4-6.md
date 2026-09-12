@@ -21,7 +21,7 @@ In [Claude Code](https://claude.com/product/claude-code), you can now assemble [
 
 We’ve made substantial upgrades to [Claude in Excel](https://claude.com/claude-in-excel), and we’re releasing [Claude in PowerPoint](https://claude.com/claude-in-powerpoint) in a research preview. This makes Claude much more capable for everyday work.
 
-Claude Opus 4.6 is available today on [claude.ai](https://claude.ai/redirect/website.v1.460fdc86-2119-473d-a5ec-f321b359733a), our API, and all major cloud platforms. If you’re a developer, use `claude-opus-4-6` via the [Claude API](https://platform.claude.com/docs/en/about-claude/models/overview). Pricing remains the same at $5/$25 per million tokens; for full details, see our [pricing page](https://claude.com/pricing#api).
+Claude Opus 4.6 is available today on [claude.ai](https://claude.ai/redirect/website.v1.32f49b55-69a1-40ba-96a3-9f033ce87a14), our API, and all major cloud platforms. If you’re a developer, use `claude-opus-4-6` via the [Claude API](https://platform.claude.com/docs/en/about-claude/models/overview). Pricing remains the same at $5/$25 per million tokens; for full details, see our [pricing page](https://claude.com/pricing#api).
 
 We cover the model, our new product updates, our evaluations, and our extensive safety testing in depth below.
 
