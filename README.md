@@ -1,11 +1,11 @@
 # Claude Code Docs
 
 > Auto-updating archive of Anthropic's builder documentation: every source
-> that publishes markdown, fetched 4x daily. 4,100 files from six live sources,
-> plus a frozen archive of the engineering blog.
+> that publishes markdown, fetched 4x daily, plus the engineering/research/news
+> blog and its standalone policy pages (scraped -- anthropic.com has no
+> markdown variant).
 
 [![fetch](https://github.com/thevibeworks/claude-code-docs/actions/workflows/fetch-claude-docs.yml/badge.svg)](https://github.com/thevibeworks/claude-code-docs/actions/workflows/fetch-claude-docs.yml)
-[![review](https://github.com/thevibeworks/claude-code-docs/actions/workflows/claude-review.yml/badge.svg)](https://github.com/thevibeworks/claude-code-docs/actions/workflows/claude-review.yml)
 [![license](https://img.shields.io/github/license/thevibeworks/claude-code-docs)](LICENSE)
 [![files](https://img.shields.io/badge/files-4%2C100-blue)](#content)
 
@@ -42,23 +42,18 @@ prints them live.
 | modelcontextprotocol.io | `--section mcp` | 347 | MCP spec, SDKs, governance |
 | github.com/anthropics | `--section github` | 764 | Cookbooks, skills, plugins, courses, SDK docs |
 | support.claude.com | `--section support` | 372 | Help articles |
-| anthropic.com | frozen 2026-07-08 | 158 | Engineering, research, news posts -- see below |
+| anthropic.com | `--section blog` | 449+ | Engineering, research, news, standalone policy pages -- see below |
 
-`anthropic.com` has no `--section` flag: it is HTML-only, the jina.ai proxy the
-fetcher used was removed in July 2026, and `content/blog/` has been a static
-archive since 2026-07-08. What is in it, against what anthropic.com's sitemap
-lists today:
-
-| `content/blog/` | Archived | Upstream | Coverage |
-|---|---:|---:|---:|
-| `engineering/` | 25 | 25 | complete |
-| `product/` | 4 | 4 | complete |
-| `research/` | 72 | 155 | 46% |
-| `news/` | 57 | 260 | 22% |
-
-The engineering posts -- "Building Effective Agents", context engineering, tool
-use -- are all here. Research and news are not, and will not grow until
-something converts HTML to markdown.
+`anthropic.com` has no `.md` variant of anything (HTML-only). The fetcher
+scrapes it: sitemap discovery for `/news/`, `/research/`, `/engineering/`,
+plus a fixed allowlist (`BLOG_STANDALONE_PAGES` in `fetcher.py`) for
+standalone pages that live at the site root -- the constitution, responsible
+scaling policy, transparency reports, threat intelligence reports, economic
+index/futures, system cards. HTML is converted to markdown with
+[trafilatura](https://trafilatura.readthedocs.io/); anthropic.com's pages are
+server-rendered, so no headless browser is needed. This replaced a 2026-07 to
+2026-09 freeze, after the jina.ai proxy the fetcher previously used for this
+conversion was removed upstream.
 
 ```
 content/
@@ -69,11 +64,12 @@ content/
   en/manage-claude/      Admin, billing, managed agents
   claude/                Product docs (Claude Tag, Cowork, office agents)
   mcp/                   MCP protocol spec + community
-  blog/                  frozen 2026-07-08, not refreshed
+  blog/                  anthropic.com, scraped (no .md variant upstream)
     engineering/         Building Effective Agents, context engineering, ...
     research/            Research papers
     news/                Model releases
     product/             Product announcements
+    policy/              Constitution, RSP, transparency, threat intel, ...
   github/
     cookbooks/           164 recipes + notebooks
     skills/              90 official Agent Skills
@@ -101,9 +97,9 @@ uv run scripts/fetcher.py --discover         # Probe domains for new sources
 ```
 
 GitHub repo fetching needs `GITHUB_TOKEN` or `GH_TOKEN` in the environment.
-Every fetched source serves a `.md` variant of each page, so nothing is
-converted from HTML. That is also why `content/blog/` is frozen: anthropic.com
-is HTML-only and the jina.ai proxy path it used was removed in July 2026.
+Every fetched source serves a `.md` variant of each page except anthropic.com,
+which is HTML-only and gets scraped and converted with trafilatura instead
+(see `content/blog/` above).
 
 See [`sources.json`](sources.json) for the complete machine-readable source
 registry.
@@ -173,19 +169,16 @@ rate is computed over live docs, so it means something.
 
 ## Automation
 
-Two GitHub Actions workflows power this repo:
+One GitHub Actions workflow powers this repo:
 
 **[fetch-claude-docs.yml](.github/workflows/fetch-claude-docs.yml)** --
-Scheduled every 6 hours. Runs the fetcher, then hands the diff to
-Claude Code (via [claude-code-action](https://github.com/anthropics/claude-code-action))
-which decides: ignore noise, commit minor fixes directly, or create a PR
-for meaningful changes. Sends push notifications via
-[barkme](https://github.com/nickchou/barkme-mcp-server) for PRs.
-
-**[claude-review.yml](.github/workflows/claude-review.yml)** --
-Triggered on PRs and `@claude` mentions. Reviews changes, merges routine
-updates, creates tracking issues for version bumps, and alerts humans only
-for breaking changes.
+Scheduled four times daily. Runs the fetcher, then classifies the diff:
+deletions, a `tombstones.json`/`discovery.json` change, or a manifest
+version bump mean a PR is opened for human review; everything else
+self-merges as a minor freshness update. Optionally sends push
+notifications via [barkme](https://github.com/nickchou/barkme-mcp-server)
+for PRs left open. Needs no repo secrets -- it runs on the default
+`GITHUB_TOKEN`.
 
 ## Contributing
 
