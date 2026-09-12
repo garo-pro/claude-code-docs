@@ -3,6 +3,8 @@ Title: Our framework for developing safe and trustworthy agents
 URL Source: https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents
 
 Markdown Content:
+# Our framework for developing safe and trustworthy agents
+
 The most popular AI tools today are assistants that respond to specific questions or prompts. But we’re now seeing the emergence of [AI agents](https://www.youtube.com/watch?v=LP5OCa20Zpg), which pursue tasks autonomously when given a goal. Think of an agent like a virtual collaborator that can independently handle complex projects from start to finish — all while you focus on other priorities.
 
 Agents direct their own processes and tool usage, maintaining control over how they accomplish tasks with minimum human input. If you ask an agent to "help plan my wedding" it might autonomously research venues and vendors, compare pricing and availability, and create detailed timelines and budgets. Or if you ask it to "prepare my company’s board presentation", it might search through your connected Google Drive for relevant sales reports and financial documents, extract key metrics from multiple spreadsheets, and produce a report.
@@ -15,7 +17,7 @@ The rapid implementation of agents means it's crucial that developers like Anthr
 
 We aim to adhere to the following principles when developing agents:
 
-![Image 1](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F51dfff9e2ac5b8a57acfabab370e5fcb2bc7786f-7200x4050.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F51dfff9e2ac5b8a57acfabab370e5fcb2bc7786f-7200x4050.png&w=3840&q=75)
 
 ## Keeping humans in control while enabling agent autonomy
 
@@ -31,11 +33,13 @@ Humans need visibility into agents’ problem-solving processes. Without transpa
 
 In Claude Code, Claude shows its planned actions through a real-time to-do checklist, and users can jump in at any time to ask about or adjust Claude’s workplan. The challenge is in finding the right level of detail. Too little information leaves humans unable to assess whether the agent is on track to achieve its goal. Too much can overwhelm them with irrelevant details. We try to take a middle ground but we’ll need to iterate on this further.
 
-![Image 2](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F35824c968c7f79bfd4e19256b06462c96d9405aa-7200x4050.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F35824c968c7f79bfd4e19256b06462c96d9405aa-7200x4050.png&w=3840&q=75)
 
-_Claude Code’s to-do checklist which users can see in real-time_
+*Claude Code’s to-do checklist which users can see in real-time*
 
-## Aligning agents with human values and expectations
+## 
+
+Aligning agents with human values and expectations
 
 Agents don't always act as humans intend. Our research has shown that when AI systems pursue goals autonomously, they can sometimes take actions that seem reasonable to the system but aren't what humans actually wanted. If a human asks an agent to "organize my files," the agent might automatically delete what it considers duplicates and move files to new folder structures—going far beyond simple organization to completely restructuring the user's system. While this stems from the agent trying to be helpful, it demonstrates how agents may lack the context to act appropriately even when their goals do align.
 
@@ -67,18 +71,18 @@ These principles will guide our current and future work on agent development, an
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

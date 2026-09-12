@@ -1,11 +1,13 @@
-Title: Frontier Threats Red Teaming for AI Safety
+Title: Frontier threats red teaming for AI safety
 
 URL Source: https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety
 
 Markdown Content:
-![Image 1](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fefd36fc64fd3b723e596406e5320161276017b57-2880x1620.png&w=3840&q=75)
+# Frontier threats red teaming for AI safety
 
-“Red teaming,” or adversarial testing, is a recognized technique to measure and increase the safety and security of systems. While [previous Anthropic research](https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned) reported methods and results for red teaming using crowdworkers, for some time, AI researchers have noted that AI models could eventually obtain capabilities in areas relevant to national security. For example, researchers have [called](https://cdn.openai.com/papers/gpt-4-system-card.pdf) to [measure](https://arxiv.org/abs/2305.15324) and [monitor](https://arxiv.org/abs/2108.12427)[these risks](https://938f895d-7ac1-45ec-bb16-1201cbbc00ae.usrfiles.com/ugd/938f89_74d6e163774a4691ae8aa0d38e98304f.pdf), and have [written](https://arxiv.org/abs/2306.03809)[papers](https://arxiv.org/abs/2304.05332) with evidence of risks. Anthropic CEO Dario Amodei also highlighted this topic in [recent Senate testimony](https://www.judiciary.senate.gov/committee-activity/hearings/oversight-of-ai-principles-for-regulation). With that context, we were pleased to advocate for and join in commitments announced at the White House on July 21 that included “internal and external security testing of [our] AI systems” to guard against “some of the most significant sources of AI risks, such as biosecurity and cybersecurity.” However, red teaming in these specialized areas requires intensive investments of time and subject matter expertise.
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fefd36fc64fd3b723e596406e5320161276017b57-2880x1620.png&w=3840&q=75)
+
+“Red teaming,” or adversarial testing, is a recognized technique to measure and increase the safety and security of systems. While [previous Anthropic research](https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned) reported methods and results for red teaming using crowdworkers, for some time, AI researchers have noted that AI models could eventually obtain capabilities in areas relevant to national security. For example, researchers have [called](https://cdn.openai.com/papers/gpt-4-system-card.pdf) to [measure](https://arxiv.org/abs/2305.15324) and [monitor](https://arxiv.org/abs/2108.12427) [these risks](https://938f895d-7ac1-45ec-bb16-1201cbbc00ae.usrfiles.com/ugd/938f89_74d6e163774a4691ae8aa0d38e98304f.pdf), and have [written](https://arxiv.org/abs/2306.03809) [papers](https://arxiv.org/abs/2304.05332) with evidence of risks. Anthropic CEO Dario Amodei also highlighted this topic in [recent Senate testimony](https://www.judiciary.senate.gov/committee-activity/hearings/oversight-of-ai-principles-for-regulation). With that context, we were pleased to advocate for and join in commitments announced at the White House on July 21 that included “internal and external security testing of [our] AI systems” to guard against “some of the most significant sources of AI risks, such as biosecurity and cybersecurity.” However, red teaming in these specialized areas requires intensive investments of time and subject matter expertise.
 
 In this post, we share our approach to “frontier threats red teaming,” high level findings from a project we conducted on biological risks as a test project, lessons learned, and our future plans in this area.
 
@@ -43,26 +45,22 @@ This empirical work confirms that frontier threats red teaming in areas of natio
 
 It is also an area that governments are naturally familiar with. This means that national security is a domain where governments, labs, and other stakeholders can collaborate. To start, we are establishing a disclosure process by which labs and other stakeholders can report these risks and their mitigations to other relevant actors. Ultimately, we think it is very important that new third parties be set up to conduct national security evaluations between these stakeholders. These third parties would be impartial and would need to have appropriate safeguards to handle sensitive information.
 
-The frontier threats red teaming research agenda is likely to be useful for other types of risks that appear poised to occur on a longer time scale, such as deception. To identify and mitigate these risks, developers must identify future capabilities that models should not have, measure them, and build mitigations or alignment techniques. As a result, we will learn about alignment, security measures, and “warning shots.”
-
-**Anthropic is building up our frontier threats red teaming research team.** This team will experiment with future capabilities to understand coming risks and build scalable evaluations and mitigations. You can learn more about this work and how to apply to join the team [here](https://jobs.lever.co/Anthropic/8f565d59-8831-443a-b72a-cb9ef8ae06b2). We are looking for particularly mission-driven technical researchers who can rapidly prototype across our infrastructure.
-
-**We are also briefing government and labs on the details of what we have found.** We are open to sharing our present and future findings with appropriate audiences and are piloting a responsible disclosure process between stakeholders in the community to report risks and mitigations. We are particularly interested in supporting other groups – especially labs or new third party evaluation organizations – to do more of this work. If you are one of these stakeholders and are interested, please contact us.
+The frontier threats red teaming research agenda is likely to be useful for other types of risks that appear poised to occur on a longer time scale, such as deception. To identify and mitigate these risks, developers must identify future capabilities that models should not have, measure them, and build mitigations or alignment techniques. As a result, we will learn about alignment, security measures, and “warning shots.”**Anthropic is building up our frontier threats red teaming research team.** This team will experiment with future capabilities to understand coming risks and build scalable evaluations and mitigations. You can learn more about this work and how to apply to join the team [here](https://jobs.lever.co/Anthropic/8f565d59-8831-443a-b72a-cb9ef8ae06b2). We are looking for particularly mission-driven technical researchers who can rapidly prototype across our infrastructure.**We are also briefing government and labs on the details of what we have found.** We are open to sharing our present and future findings with appropriate audiences and are piloting a responsible disclosure process between stakeholders in the community to report risks and mitigations. We are particularly interested in supporting other groups – especially labs or new third party evaluation organizations – to do more of this work. If you are one of these stakeholders and are interested, please contact us.
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

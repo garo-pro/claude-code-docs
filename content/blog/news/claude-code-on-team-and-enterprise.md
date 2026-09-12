@@ -3,6 +3,10 @@ Title: Claude Code and new admin controls for business plans
 URL Source: https://www.anthropic.com/news/claude-code-on-team-and-enterprise
 
 Markdown Content:
+# Claude Code and new admin controls for business plans
+
+![A hand and a graph, signaling growth](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4a3b1276cc8de8f453e3c7b7840b1b7a8b22ade5-2880x1620.png&w=3840&q=75)
+
 Enterprise and Team customers can now upgrade to premium seats that include more usage and Claude Code—bringing our app and powerful coding agent together under one subscription. Users can move seamlessly between ideation and implementation, while admins get the visibility and controls they need to scale Claude across their organization.
 
 We are also introducing a new Compliance API, giving organizations programmatic access to usage data and customer content for better observability, auditing, and governance.
@@ -27,10 +31,10 @@ This approach provides a simple way to scale with Claude, while offering central
 
 We've built new comprehensive controls that give organizations the visibility and management capabilities they need to enable employees to work productively with Claude.
 
-*   **Self-serve seat management**: Purchase new seats, directly manage seat allocation, and provision users through the admin panel.
-*   **Granular spend controls:**Set spending limits at the organization and individual user level to stay within budget while maintaining flexibility for essential projects.
-*   **Usage analytics**: View Claude Code analytics in Claude, including metrics like lines of code accepted, suggestion accept rate, and usage patterns.
-*   **Managed policy settings**: Deploy and enforce settings across all Claude Code users to match internal policies, including tool permissions, file access restrictions, and MCP server configurations.
+- **Self-serve seat management** : Purchase new seats, directly manage seat allocation, and provision users through the admin panel.
+- **Granular spend controls:** Set spending limits at the organization and individual user level to stay within budget while maintaining flexibility for essential projects.
+- **Usage analytics** : View Claude Code analytics in Claude, including metrics like lines of code accepted, suggestion accept rate, and usage patterns.
+- **Managed policy settings** : Deploy and enforce settings across all Claude Code users to match internal policies, including tool permissions, file access restrictions, and MCP server configurations.
 
 ## Compliance API
 
@@ -46,20 +50,18 @@ To explore how Claude for Enterprise can transform your organization's productiv
 
 ## Related content
 
-### DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on
+### Developing Enterprise Frontier Safeguards with our customers
 
-We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/dxc-anthropic-alliance)
+### Improving our alignment and security efforts
 
-### Introducing Claude Corps
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/claude-corps)
+### Previewing the Model Hardware Standard
 
-### Claude Fable 5 and Claude Mythos 5
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
-
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

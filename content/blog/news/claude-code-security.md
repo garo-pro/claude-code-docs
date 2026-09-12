@@ -3,6 +3,8 @@ Title: Making frontier cybersecurity capabilities available to defenders
 URL Source: https://www.anthropic.com/news/claude-code-security
 
 Markdown Content:
+# Making frontier cybersecurity capabilities available to defenders
+
 **Claude Code Security**, a new capability built into Claude Code on the web, is now available in a limited research preview. It scans codebases for security vulnerabilities and suggests targeted software patches for human review, allowing teams to find and fix security issues that traditional methods often miss.
 
 Security teams face a common challenge: too many software vulnerabilities and not enough people to address them. Existing analysis tools help, but only to a point, as they usually look for known patterns. Finding the subtle, context-dependent vulnerabilities that are often exploited by attackers requires skilled human researchers, who are dealing with ever-expanding backlogs.
@@ -12,8 +14,6 @@ AI is beginning to change that calculus. We’ve recently shown that [Claude can
 Claude Code Security is intended to put this power squarely in the hands of defenders and protect code against this new category of AI-enabled attack. We’re releasing it as a limited research preview to Enterprise and Team customers, with expedited access for maintainers of open-source repositories, so we can work together to refine its capabilities and ensure it is deployed responsibly.
 
 ## **How Claude Code Security works**
-
-[Video 3](https://www.youtube.com/watch?v=sDpkV_iEnck)
 
 Static analysis—a widely deployed form of automated security testing—is typically rule-based, meaning it matches code against known vulnerability patterns. That catches common issues, like exposed passwords or outdated encryption, but often misses more complex vulnerabilities, like flaws in business logic or broken access control.
 
@@ -41,20 +41,22 @@ Attackers will use AI to find exploitable weaknesses faster than ever. But defen
 
 We’re opening a limited research preview of Claude Code Security to Enterprise and Team customers today. Participants will get early access and collaborate directly with our team to hone the tool’s capabilities. We also encourage open-source maintainers to apply for free, expedited access.
 
-[Apply for access here](https://claude.com/contact-sales/security).
-
 To learn more, visit [claude.com/solutions/claude-code-security](http://claude.com/solutions/claude-code-security).
 
 ## Related content
 
-### Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening
+### Developing Enterprise Frontier Safeguards with our customers
 
-[Read more](https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea)
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-### Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"
+### Improving our alignment and security efforts
 
-[Read more](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical)
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-### Widening the conversation on frontier AI
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/widening-conversation-ai)
+### Previewing the Model Hardware Standard
+
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
+
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

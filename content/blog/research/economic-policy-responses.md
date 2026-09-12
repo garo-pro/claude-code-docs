@@ -1,9 +1,13 @@
-Title: Preparing for AI’s economic impact: exploring policy responses
+Title: Preparing for AI's economic impact
 
 URL Source: https://www.anthropic.com/research/economic-policy-responses
 
 Markdown Content:
-_How will the arrival of [powerful AI systems](https://www.anthropic.com/news/anthropic-s-recommendations-ostp-u-s-ai-action-plan) change the structure of the economy? We are uncertain, and so are external experts. But as AI systems continue to improve, and are adopted at an ever-larger scale, it’s crucial there is more discussion about the tools policymakers could use to respond to AI's economic impacts—whatever their nature. To help with this, we’re sharing several economic policy ideas that merit further study._
+# Preparing for AI’s economic impact: exploring policy responses
+
+![Preparing for AI’s economic impact: exploring policy responses](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F660c5a1ab7977115cbc75cc03d5a7edd136f723e-1920x1080.jpg&w=3840&q=75)
+
+*How will the arrival of [powerful AI systems](https://www.anthropic.com/news/anthropic-s-recommendations-ostp-u-s-ai-action-plan) change the structure of the economy? We are uncertain, and so are external experts. But as AI systems continue to improve, and are adopted at an ever-larger scale, it’s crucial there is more discussion about the tools policymakers could use to respond to AI's economic impacts—whatever their nature. To help with this, we’re sharing several economic policy ideas that merit further study.*
 
 Since launching the [Anthropic Economic Index](https://www.anthropic.com/economic-index), we've observed an important shift in AI use. Users are becoming [increasingly likely to delegate full tasks to Claude](https://www.anthropic.com/research/anthropic-economic-index-september-2025-report), “collaborating” with Claude less. As AI models continue to work independently for longer periods of time, and as more employers adopt AI to improve their productivity, we expect this trend to accelerate. The implications for the workforce are uncertain.
 
@@ -19,7 +23,7 @@ While we don’t know what the optimal policies will prove to be, we’re commit
 
 The rate, scale, and form of AI's economic effects will determine the policy responses that are necessary across the world. Accordingly, we've organized these initial ideas into three broad categories:
 
-**Policy ideas for nearly all scenarios**,including those where negative effects on the labor market remain modest. These are policies that their advocates argue merit consideration almost regardless of how significant the disruption of AI proves to be. Given this, many of these proposals have been suggested in other contexts before. They include upskilling workers and students for emerging jobs, and reforming permitting processes to enable the construction of energy and computing infrastructure to improve productivity.
+**Policy ideas for nearly all scenarios**, including those where negative effects on the labor market remain modest. These are policies that their advocates argue merit consideration almost regardless of how significant the disruption of AI proves to be. Given this, many of these proposals have been suggested in other contexts before. They include upskilling workers and students for emerging jobs, and reforming permitting processes to enable the construction of energy and computing infrastructure to improve productivity.
 
 **Policy ideas for scenarios with moderate acceleration**, where AI leads to measurable wage declines and job losses for large portions of the workforce. Here, more substantial fiscal support for displaced workers might be needed. To [offset negative externalities](https://www.nber.org/papers/w30154) imposed on displaced workers from rapid automation, taxes on automation might be considered in this scenario.
 
@@ -99,6 +103,8 @@ As AI transforms the economy, labor's share of the production of value might dec
 
 "Value-added taxes are non-distortionary and to an extent, self-enforcing," notes John Horton of MIT's Sloan School of Management, a member of our Economic Advisory Council.
 
+### **9. Implement new revenue structures to account for AI’s growing share of the economy**
+
 If AI is responsible for a large share of economic output (causing labor’s share to decline), governments might require new revenue streams to complement income tax. Another of David Gamage’s proposals is exploring a "low-rate business wealth tax" as a complement to income taxes. His reasoning: "Income taxes face accounting manipulation; wealth taxes face asset valuation challenges. Using both makes the system harder to avoid" for highly profitable enterprises.
 
 Gamage analogizes this system to the fee structures that certain asset managers charge clients: "the wealth tax functions as a management fee for providing legal infrastructure protecting accumulated capital, while the income tax serves as a performance fee for profits generated in state markets." This idea represents one way that governments might adapt to changes in the value of human labor, although we think there are many more ideas to be explored in this area.
@@ -111,16 +117,24 @@ None of the ideas outlined here represent definitive recommendations. They are s
 
 What's clear, though, is that proactive engagement between researchers, policymakers, and the AI industry is essential. By exploring these options now—before we know the shape of AI’s economic effects—we can better prepare for a range of possible futures, and ensure that workers and communities are well-placed to benefit from the full potential of AI.
 
-_Most of the policy ideas discussed in this post have emerged from proposals from or conversations with members of Anthropic's Economic Advisory Council, participants in our Economic Futures Symposia, and independent researchers. They do not all necessarily represent Anthropic's policy positions._
+*Most of the policy ideas discussed in this post have emerged from proposals from or conversations with members of Anthropic's Economic Advisory Council, participants in our Economic Futures Symposia, and independent researchers. They do not all necessarily represent Anthropic's policy positions.*
 
 ## Related content
 
-### Paving the way for agents in biology
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-[Read more](https://www.anthropic.com/research/agents-in-biology)
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-### Coding agents in the social sciences
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-Results from a survey of 1,260 social scientists about AI and coding agent use.
+### An alignment assessment of recent cybersecurity incidents
 
-[Read more](https://www.anthropic.com/research/coding-agents-social-sciences)
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
+
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
+
+### Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
+
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

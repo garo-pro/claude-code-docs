@@ -3,19 +3,25 @@ Title: Introducing the Model Context Protocol
 URL Source: https://www.anthropic.com/news/model-context-protocol
 
 Markdown Content:
-Today, we're open-sourcing the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), a new standard for connecting AI assistants to the systems where data lives, including content repositories, business tools, and development environments. Its aim is to help frontier models produce better, more relevant responses.
+# Introducing the Model Context Protocol
+
+![An abstract illustration of critical context connecting to a central hub](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3aabd8804251c0364cbde9d2e4be6dc8e8c2faec-2880x1620.png&w=3840&q=75)
+
+Today, we're open-sourcing the [Model Context Protocol](https://modelcontextprotocol.io) (MCP), a new standard for connecting AI assistants to the systems where data lives, including content repositories, business tools, and development environments. Its aim is to help frontier models produce better, more relevant responses.
 
 As AI assistants gain mainstream adoption, the industry has invested heavily in model capabilities, achieving rapid advances in reasoning and quality. Yet even the most sophisticated models are constrained by their isolation from data—trapped behind information silos and legacy systems. Every new data source requires its own custom implementation, making truly connected systems difficult to scale.
 
 MCP addresses this challenge. It provides a universal, open standard for connecting AI systems with data sources, replacing fragmented integrations with a single protocol. The result is a simpler, more reliable way to give AI systems access to the data they need.
 
+## Model Context Protocol
+
 The Model Context Protocol is an open standard that enables developers to build secure, two-way connections between their data sources and AI-powered tools. The architecture is straightforward: developers can either expose their data through MCP servers or build AI applications (MCP clients) that connect to these servers.
 
 Today, we're introducing three major components of the Model Context Protocol for developers:
 
-*   The Model Context Protocol [specification and SDKs](https://github.com/modelcontextprotocol)
-*   Local MCP server support in the [Claude Desktop apps](https://claude.ai/redirect/website.v1.ff77d445-cfd2-4259-a19d-bd370cd121c9/download)
-*   An [open-source repository](https://github.com/modelcontextprotocol/servers) of MCP servers
+- The Model Context Protocol [specification and SDKs](https://github.com/modelcontextprotocol)
+- Local MCP server support in the [Claude Desktop apps](https://claude.ai/redirect/website.v1.dcd0f585-947b-4026-9acc-b0d8fc95a671/download)
+- An [open-source repository](https://github.com/modelcontextprotocol/servers) of MCP servers
 
 Claude 3.5 Sonnet is adept at quickly building MCP server implementations, making it easy for organizations and individuals to rapidly connect their most important datasets with a range of AI-powered tools. To help developers start exploring, we’re sharing pre-built MCP servers for popular enterprise systems like Google Drive, Slack, GitHub, Git, Postgres, and Puppeteer.
 
@@ -27,15 +33,15 @@ Instead of maintaining separate connectors for each data source, developers can 
 
 ## Getting started
 
-Developers can start building and testing MCP connectors today. All [Claude.ai](http://claude.ai/redirect/website.v1.ff77d445-cfd2-4259-a19d-bd370cd121c9) plans support connecting MCP servers to the Claude Desktop app.
+Developers can start building and testing MCP connectors today. All [Claude.ai](http://claude.ai/redirect/website.v1.dcd0f585-947b-4026-9acc-b0d8fc95a671) plans support connecting MCP servers to the Claude Desktop app.
 
 Claude for Work customers can begin testing MCP servers locally, connecting Claude to internal systems and datasets. We'll soon provide developer toolkits for deploying remote production MCP servers that can serve your entire Claude for Work organization.
 
 To start building:
 
-*   Install pre-built MCP servers through the [Claude Desktop app](https://claude.ai/redirect/website.v1.ff77d445-cfd2-4259-a19d-bd370cd121c9/download)
-*   Follow our [quickstart guide](https://modelcontextprotocol.io/quickstart) to build your first MCP server
-*   Contribute to our [open-source repositories](https://github.com/modelcontextprotocol) of connectors and implementations
+- Install pre-built MCP servers through the [Claude Desktop app](https://claude.ai/redirect/website.v1.dcd0f585-947b-4026-9acc-b0d8fc95a671/download)
+- Follow our [quickstart guide](https://modelcontextprotocol.io/quickstart) to build your first MCP server
+- Contribute to our [open-source repositories](https://github.com/modelcontextprotocol) of connectors and implementations
 
 ## An open community
 
@@ -43,18 +49,18 @@ MCP was created at Anthropic by David Soria Parra and Justin Spahr-Summers. We�
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

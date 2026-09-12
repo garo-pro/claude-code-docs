@@ -1,4 +1,4 @@
-Title: Specific versus General Principles for Constitutional AI
+Title: Specific versus general principles for Constitutional AI
 
 URL Source: https://www.anthropic.com/research/specific-versus-general-principles-for-constitutional-ai
 
@@ -9,20 +9,20 @@ Human feedback can prevent overtly harmful utterances in conversational models, 
 
 ## Related content
 
-### Coding agents in the social sciences
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-Results from a survey of 1,260 social scientists about AI and coding agent use.
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-[Read more](https://www.anthropic.com/research/coding-agents-social-sciences)
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-### Project Glasswing: An initial update
+### An alignment assessment of recent cybersecurity incidents
 
-An early update on what we've learned from Project Glasswing.
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
 
-[Read more](https://www.anthropic.com/research/glasswing-initial-update)
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
 
-### 2028: Two scenarios for global AI leadership
+### Formalizing Fermat's Last Theorem
 
-Our views on the AI competition between the US and China.
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
 
-[Read more](https://www.anthropic.com/research/2028-ai-leadership)
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

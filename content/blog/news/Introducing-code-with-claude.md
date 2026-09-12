@@ -3,6 +3,8 @@ Title: Code with Claude - Anthropic's First Developer Conference
 URL Source: https://www.anthropic.com/news/Introducing-code-with-claude
 
 Markdown Content:
+# Introducing Anthropic's first developer conference: Code with Claude
+
 Today, we’re announcing **Code with Claude**—our first developer conference—taking place on May 22, 2025 in San Francisco. Code with Claude is a hands-on, one-day event focused on exploring real-world implementations and best practices using the Anthropic API, CLI tools, and Model Context Protocol (MCP). It is open to a select group of developers and founders.
 
 [Apply here](https://anthropic.swoogo.com/codewithclaude) to attend.
@@ -17,26 +19,26 @@ The conference will showcase how developers are maximizing Claude's capabilities
 
 **Event details**
 
-*   **When**: May 22, 2025
-*   **Where**: [The Midway](https://themidwaysf.com/) in San Francisco
-*   **Registration**: [Apply to attend](https://anthropic.swoogo.com/codewithclaude). Registration opens today—apply now to secure your place at what promises to be an essential event for anyone building with AI.
+- **When** : May 22, 2025
+- **Where** :[The Midway](https://themidwaysf.com/) in San Francisco
+- **Registration** :[Apply to attend](https://anthropic.swoogo.com/codewithclaude) . Registration opens today—apply now to secure your place at what promises to be an essential event for anyone building with AI.
 
 Space is limited. Applicants will be notified on a rolling basis and will receive information in the coming weeks. Additional event details to follow.
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

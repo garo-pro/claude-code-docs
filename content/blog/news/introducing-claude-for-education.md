@@ -3,14 +3,16 @@ Title: Introducing Claude for education
 URL Source: https://www.anthropic.com/news/introducing-claude-for-education
 
 Markdown Content:
+![Claude for Education](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff5d0990ee33385000ff56ed82f3c5efb4e2d33da-2400x1260.png&w=3840&q=75)
+
 Today we're launching Claude for Education, a specialized version of Claude tailored for higher education institutions. This initiative equips universities to develop and implement AI-enabled approaches across teaching, learning, and administration—ensuring educators and students play a key role in actively shaping AI's role in society.
 
 As part of announcing Claude for Education, we're introducing:
 
-1.   **Learning mode**: A new Claude experience that guides students' reasoning process rather than providing answers, helping develop critical thinking skills
-2.   **University-wide Claude availability**:Full campus access agreements with Northeastern University, London School of Economics and Political Science (LSE), and Champlain College, making Claude available to all students
-3.   **Academic partnerships**: Joining Internet2 and working with Instructure to embed AI into teaching & learning with Canvas LMS
-4.   **Student programs**: A new Claude Campus Ambassadors program along with an initiative offering API credits for student projects
+1. **Learning mode** : A new Claude experience that guides students' reasoning process rather than providing answers, helping develop critical thinking skills
+2. **University-wide Claude availability** : Full campus access agreements with Northeastern University, London School of Economics and Political Science (LSE), and Champlain College, making Claude available to all students
+3. **Academic partnerships** : Joining Internet2 and working with Instructure to embed AI into teaching & learning with Canvas LMS
+4. **Student programs** : A new Claude Campus Ambassadors program along with an initiative offering API credits for student projects
 
 ## What’s possible with Claude for Education
 
@@ -18,25 +20,25 @@ Claude for Education gives academic institutions secure, reliable AI access for 
 
 For example,
 
-*   Students can draft literature reviews with proper citations, work through calculus problems with step-by-step guidance, and get feedback on thesis statements before final submission
-*   Faculty can create rubrics aligned to specific learning outcomes, provide individualized feedback on student essays efficiently, and generate chemistry equations with varying difficulty levels
-*   Administrative staff can analyze enrollment trends across departments, automate repetitive email responses to common inquiries, and convert dense policy documents into accessible FAQ formats—all from a familiar chat interface with enterprise-grade security and privacy controls
+- Students can draft literature reviews with proper citations, work through calculus problems with step-by-step guidance, and get feedback on thesis statements before final submission
+- Faculty can create rubrics aligned to specific learning outcomes, provide individualized feedback on student essays efficiently, and generate chemistry equations with varying difficulty levels
+- Administrative staff can analyze enrollment trends across departments, automate repetitive email responses to common inquiries, and convert dense policy documents into accessible FAQ formats—all from a familiar chat interface with enterprise-grade security and privacy controls
 
 ## Learning mode
 
 Claude for Education introduces our new Learning mode, a feature that works within [Projects](https://www.anthropic.com/news/projects) (saved conversations where students can organize their work with Claude around specific assignments or topics). In Learning mode, Claude helps students develop their independent thinking by:
 
-*   Guiding rather than answering: Asking "How would you approach this problem?" instead of providing immediate solutions
-*   Using Socratic questioning: Prompting with "What evidence supports your conclusion?" to deepen understanding
-*   Emphasizing core concepts: Highlighting fundamental principles behind specific problems
-*   Providing useful templates: Offering structured formats for research papers, study guides, and outlines
+- Guiding rather than answering: Asking "How would you approach this problem?" instead of providing immediate solutions
+- Using Socratic questioning: Prompting with "What evidence supports your conclusion?" to deepen understanding
+- Emphasizing core concepts: Highlighting fundamental principles behind specific problems
+- Providing useful templates: Offering structured formats for research papers, study guides, and outlines
 
 ## Opportunities for students
 
 Today, we are also introducing two new student programs designed to nurture and empower our growing Claude student community:
 
-*   [**Claude Campus Ambassadors**](https://www.anthropic.com/contact-sales/claude-campus-ambassadors): an opportunity for students to work directly with the Anthropic team to launch educational initiatives on their campus
-*   [**For student builders**](https://www.anthropic.com/contact-sales/for-student-builders): an opportunity for students who are building projects with Claude to apply for funding in the form of API credits
+- [**Claude Campus Ambassadors**](https://www.anthropic.com/contact-sales/claude-campus-ambassadors) : an opportunity for students to work directly with the Anthropic team to launch educational initiatives on their campus
+- [**For student builders**](https://www.anthropic.com/contact-sales/for-student-builders) : an opportunity for students who are building projects with Claude to apply for funding in the form of API credits
 
 ## Campus wide partnerships: Northeastern University, LSE and Champlain College
 
@@ -56,8 +58,8 @@ A world-leading university, specializing in the social sciences, [LSE](https://w
 
 We are also building partnerships with leading organizations to safely and reliably integrate Claude within higher education institutions' existing tools and workflows to help facilitate the use of trusted AI across academia. These partnerships include:
 
-*   [Internet2](https://internet2.edu/): A non-profit organization that provides a secure high-speed network, cloud solutions, research support, and identity and access management (IAM) tools built specifically for research and education. Their community includes higher education institutions, research organizations, government entities, corporations, and cultural organizations like museums and libraries. We're proud to join Internet2, the member-driven advanced technology community developing solutions and solving shared challenges to support research and education, and are working with members to complete a NET+ service evaluation.
-*   [Instructure](https://www.instructure.com/): The educational technology company behind the leading education software Canvas, that provides technological solutions specifically designed for higher education institutions to provide learners at every stage with tools that make educators more effective and students more successful, both in school and beyond. Anthropic and Instructure are working together to increase equitable access to tools that support universities as they integrate AI into their teaching & learning.
+- [Internet2](https://internet2.edu/) : A non-profit organization that provides a secure high-speed network, cloud solutions, research support, and identity and access management (IAM) tools built specifically for research and education. Their community includes higher education institutions, research organizations, government entities, corporations, and cultural organizations like museums and libraries. We're proud to join Internet2, the member-driven advanced technology community developing solutions and solving shared challenges to support research and education, and are working with members to complete a NET+ service evaluation.
+- [Instructure](https://www.instructure.com/) : The educational technology company behind the leading education software Canvas, that provides technological solutions specifically designed for higher education institutions to provide learners at every stage with tools that make educators more effective and students more successful, both in school and beyond. Anthropic and Instructure are working together to increase equitable access to tools that support universities as they integrate AI into their teaching & learning.
 
 ## Get started
 
@@ -65,18 +67,18 @@ To get started with Claude for Education and Learning mode, share your interest 
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)
