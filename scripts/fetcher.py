@@ -8,8 +8,10 @@ Sources (see sources.json for the complete registry):
   - modelcontextprotocol.io -> MCP spec (sitemap + .md suffix)
   - support.claude.com      -> Help articles (sitemap + .md suffix)
   - claude.com/docs         -> Product docs (sitemap + .md suffix)
-  - anthropic.com blog      -> FROZEN 2026-07 (HTML-only, no .md variant;
-                               the jina.ai proxy path was removed)
+  - anthropic.com blog      -> news/research/engineering + standalone policy
+                               pages (sitemap + HTML scrape via trafilatura;
+                               HTML-only upstream, no .md variant, jina.ai
+                               proxy path was removed 2026-07)
   - github.com/anthropics/* -> Repos (raw.githubusercontent.com)
 
 Usage:
@@ -26,6 +28,7 @@ Usage:
 #   "aiohttp",
 #   "aiofiles",
 #   "tqdm",
+#   "trafilatura",
 # ]
 # ///
 
@@ -39,11 +42,12 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 from typing import Dict, List, Optional
 
 import aiofiles
 import aiohttp
+import trafilatura
 from tqdm.asyncio import tqdm_asyncio
 
 
@@ -58,6 +62,25 @@ GITHUB_REPOS = [
     ("anthropics/cwc-long-running-agents", "main",   [".md"]),
     ("anthropics/anthropic-sdk-python",    "main",   [".md"]),
     ("anthropics/anthropic-sdk-typescript","main",   [".md"]),
+]
+
+# Standalone anthropic.com pages that matter but sit outside the /news/,
+# /research/, /engineering/ prefixes the sitemap crawl covers -- policy
+# documents and reports live at the site root. Found by diffing the sitemap
+# against those three prefixes; a human call, not something a crawl rule can
+# derive (most top-level pages are nav/legal boilerplate, not archive-worthy).
+BLOG_STANDALONE_PAGES = [
+    "https://www.anthropic.com/threat-intelligence",
+    "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "https://www.anthropic.com/constitution",
+    "https://www.anthropic.com/responsible-scaling-policy",
+    "https://www.anthropic.com/economic-index",
+    "https://www.anthropic.com/economic-futures",
+    "https://www.anthropic.com/system-cards",
+    "https://www.anthropic.com/transparency",
+    "https://www.anthropic.com/beneficial-deployments",
+    "https://www.anthropic.com/policy-on-the-ai-exponential",
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1",
 ]
 
 DISCOVER_DOMAINS = [
@@ -76,11 +99,13 @@ DISCOVER_DOMAINS = [
 # silently — that gap is the whole reason academy.claude.com went unnoticed.
 FETCHED_DOMAINS = {
     "platform.claude.com", "code.claude.com", "modelcontextprotocol.io",
-    "support.claude.com", "claude.com",
+    "support.claude.com", "claude.com", "anthropic.com",
 }
-# Archived, deliberately not refreshed: anthropic.com is HTML-only and the
-# jina.ai proxy path was removed in 2026-07.
-FROZEN_DOMAINS = {"anthropic.com"}
+# No domain is frozen anymore -- anthropic.com was until 2026-09, when scraping
+# via trafilatura replaced the jina.ai proxy that had been removed in 2026-07.
+# Kept as a set (rather than deleted outright) so a future domain that really
+# has no viable fetch path has an established place to be recorded.
+FROZEN_DOMAINS = set()
 
 
 def normalize_url(url: str) -> str:
@@ -136,6 +161,7 @@ class Fetcher:
         # docs sites. Found by following the redirects on 8 support articles
         # that had gone soft-404 — upstream had been pointing here for weeks.
         self.claude_com_sitemap_url = "https://claude.com/docs/sitemap.xml"
+        self.blog_sitemap_url = "https://www.anthropic.com/sitemap.xml"
 
         self.stats = {"total": 0, "downloaded": 0, "skipped": 0,
                       "failed": 0, "dead": 0, "reaped": 0}
@@ -219,6 +245,20 @@ class Fetcher:
             urls.append(match[1:-4])  # strip parens and .md
         return urls
 
+    def extract_blog_urls(self, sitemap_xml: str) -> List[str]:
+        """News/research/engineering posts. Standalone pages are a fixed
+        allowlist (BLOG_STANDALONE_PAGES), not discoverable by prefix.
+
+        /research/team/* is excluded: those are team-roster landing pages,
+        not articles, and churn with staffing rather than publishing.
+        """
+        urls = self.extract_sitemap_urls(sitemap_xml)
+        return [
+            u for u in urls
+            if any(f"/{p}/" in u for p in ("news", "research", "engineering"))
+            and "/research/team/" not in u
+        ]
+
     def extract_support_urls(self, sitemap_xml: str) -> List[str]:
         # Articles serve a .md variant directly (since ~2026-07), so plain
         # download_doc applies; sitemap covers more articles than llms.txt.
@@ -230,8 +270,8 @@ class Fetcher:
     # -- Reverse mapping: what we already archived -------------------------
 
     # Sections of content/ whose files came from a URL we can re-derive.
-    # github/ is fetched by repo tree walk, blog/ is a frozen archive.
-    _REFETCHABLE = ("en", "mcp", "support", "claude")
+    # github/ is fetched by repo tree walk instead.
+    _REFETCHABLE = ("en", "mcp", "support", "claude", "blog")
 
     def existing_urls(self) -> List[str]:
         """URLs for docs already on disk — the inverse of get_output_path.
@@ -273,6 +313,13 @@ class Fetcher:
                 elif parts[0] == "claude":
                     tail = "/".join(parts[1:])
                     urls.append(f"https://claude.com/docs/{tail}")
+                elif parts[0] == "blog":
+                    if parts[1] in ("news", "research", "engineering"):
+                        tail = "/".join(parts[2:])
+                        urls.append(f"https://www.anthropic.com/{parts[1]}/{tail}")
+                    elif parts[1] == "policy":
+                        tail = "/".join(parts[2:])
+                        urls.append(f"https://www.anthropic.com/{tail}")
         return urls
 
     # -- Output path mapping ----------------------------------------------
@@ -296,6 +343,14 @@ class Fetcher:
         elif "claude.com/docs" in url:
             path = url.replace("https://claude.com/docs/", "")
             return self.output_dir / "claude" / f"{path}.md"
+        elif "anthropic.com" in url:
+            path = urlsplit(url).path.strip("/")
+            parts = path.split("/", 1)
+            if parts[0] in ("news", "research", "engineering") and len(parts) == 2:
+                return self.output_dir / "blog" / parts[0] / f"{parts[1]}.md"
+            # Standalone allowlisted page (BLOG_STANDALONE_PAGES): lives at
+            # the site root, so the last path segment is the whole slug.
+            return self.output_dir / "blog" / "policy" / f"{path}.md"
         else:
             path = url.replace("https://", "").split("/", 1)[-1]
             return self.output_dir / f"{path}.md"
@@ -372,6 +427,108 @@ class Fetcher:
                 # 404/410 is upstream stating the page is gone — reap our copy.
                 # Every other status (429, 5xx) is noise that must never delete
                 # anything, or one bad afternoon upstream empties the archive.
+                if e.status in (404, 410):
+                    if output_path.exists():
+                        self.soft_404_paths.append(output_path)
+                    self.dead_now[url] = f"HTTP {e.status}"
+                    self.stats["failed"] += 1
+                    return {
+                        "url": url,
+                        "status": "dead" if url in self.tombstones else "failed",
+                        "error": f"HTTP {e.status}",
+                    }
+                self.stats["failed"] += 1
+                return {"url": url, "status": "failed", "error": f"HTTP {e.status}"}
+            except Exception as e:
+                self.stats["failed"] += 1
+                return {"url": url, "status": "failed", "error": str(e)}
+
+    def _extract_blog_page(self, html: str, url: str) -> Optional[Dict[str, str]]:
+        """HTML -> markdown for anthropic.com, which serves no .md variant.
+
+        anthropic.com's Next.js pages render real body text server-side (no
+        JS execution needed -- verified by curling a page directly), so
+        trafilatura's static extraction is sufficient; no headless browser.
+        with_metadata=True front-matters the result with title/url/date, which
+        is peeled off here into the same "Title: / URL Source: / Markdown
+        Content:" shape the pre-2026-07 jina.ai-fetched archive already uses,
+        so old and new files in content/blog/ read the same way.
+        """
+        md = trafilatura.extract(
+            html, output_format="markdown", url=url,
+            include_links=True, include_images=True, with_metadata=True,
+        )
+        if not md:
+            return None
+        m = re.match(r"^---\n(.*?)\n---\n\n?(.*)$", md, re.DOTALL)
+        title, body = "", md.strip()
+        if m:
+            front, body = m.groups()
+            for line in front.splitlines():
+                if line.startswith("title:"):
+                    title = line[len("title:"):].strip().strip('"')
+                    break
+        # Images/links come back host-relative (e.g. "/_next/image?url=...");
+        # resolve against the page URL so the saved markdown is self-contained.
+        body = re.sub(
+            r"\]\((/[^)\s]+)\)",
+            lambda mo: f"]({urljoin(url, mo.group(1))})",
+            body.strip(),
+        )
+        return {"title": title, "body": body}
+
+    async def download_blog_page(self, session, url, semaphore) -> Dict:
+        async with semaphore:
+            output_path = self.get_output_path(url)
+            if self.incremental and output_path.exists():
+                self.stats["skipped"] += 1
+                return {"url": url, "status": "skipped"}
+            try:
+                async with session.get(url) as r:
+                    r.raise_for_status()
+                    html = await r.text()
+                    landed = normalize_url(str(r.url))
+                if landed != url:
+                    # Same reattribution concern as download_doc's moved-page
+                    # case: the HTML in hand belongs to the target, not this URL.
+                    self.dead_now[url] = f"moved -> {landed}"
+                    if output_path.exists():
+                        self.soft_404_paths.append(output_path)
+                    self.stats["failed"] += 1
+                    return {
+                        "url": url,
+                        "status": "dead" if url in self.tombstones else "failed",
+                        "error": f"moved to {landed}",
+                    }
+                page = self._extract_blog_page(html, url)
+                if page is None or len(page["body"]) < 200:
+                    # HTTP 200 but nothing extractable is ambiguous on a
+                    # scraped page in a way it never is for a .md endpoint --
+                    # it as easily means "page markup changed" as "page gone".
+                    # Never treat it as dead/reap-eligible on this signal alone.
+                    self.stats["failed"] += 1
+                    return {
+                        "url": url, "status": "failed",
+                        "error": "extraction produced no usable content",
+                    }
+                content = (
+                    f"Title: {page['title']}\n\n"
+                    f"URL Source: {url}\n\n"
+                    f"Markdown Content:\n{page['body']}\n"
+                ).encode("utf-8")
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+                async with aiofiles.open(output_path, "wb") as f:
+                    await f.write(content)
+                self.stats["downloaded"] += 1
+                if url in self.tombstones:
+                    self.resurrected.append(url)
+                return {
+                    "url": url, "status": "success",
+                    "path": str(output_path.relative_to(self.output_dir)),
+                    "sha256": hashlib.sha256(content).hexdigest(),
+                    "size": len(content),
+                }
+            except aiohttp.ClientResponseError as e:
                 if e.status in (404, 410):
                     if output_path.exists():
                         self.soft_404_paths.append(output_path)
@@ -483,11 +640,12 @@ class Fetcher:
             counts = {}
             queued = set()
 
-            def queue(url: str):
+            def queue(url: str, downloader=None):
                 if url in queued:
                     return
                 queued.add(url)
-                tasks.append(self.download_doc(session, url, semaphore))
+                fn = downloader or self.download_doc
+                tasks.append(fn(session, url, semaphore))
 
             # -- Platform docs --
             if self.want("api", "platform"):
@@ -523,9 +681,17 @@ class Fetcher:
                 for url in urls:
                     queue(url)
 
-            # -- Blog (anthropic.com): FROZEN 2026-07 --
-            # HTML-only upstream (no llms.txt / .md variant); the jina.ai
-            # proxy path was removed. content/blog/ stays as a static archive.
+            # -- Blog (anthropic.com) --
+            if self.want("blog"):
+                print("Source: anthropic.com/sitemap.xml")
+                xml = await self.fetch_text(session, self.blog_sitemap_url)
+                urls = self.extract_blog_urls(xml)
+                counts["blog"] = len(urls) + len(BLOG_STANDALONE_PAGES)
+                print(f"  {len(urls)} posts + {len(BLOG_STANDALONE_PAGES)} standalone pages")
+                for url in urls:
+                    queue(url, self.download_blog_page)
+                for url in BLOG_STANDALONE_PAGES:
+                    queue(url, self.download_blog_page)
 
             # -- Support articles --
             if self.want("support"):
@@ -561,7 +727,7 @@ class Fetcher:
                     print("Source: on-disk archive (de-indexed upstream)")
                     print(f"  {len(stragglers)} docs")
                     for url in stragglers:
-                        queue(url)
+                        queue(url, self.download_blog_page if "anthropic.com" in url else None)
 
             # -- GitHub repos --
             if self.want("github"):
@@ -1044,6 +1210,7 @@ class Fetcher:
         allowed = [
             "platform.claude.com", "code.claude.com",
             "modelcontextprotocol.io", "claude.com/docs",
+            "anthropic.com",
         ]
         return any(f"https://{d}" in url for d in allowed)
 
@@ -1054,7 +1221,7 @@ class Fetcher:
             for u in invalid:
                 print(f"  {u}", file=sys.stderr)
             print("Allowed: platform.claude.com, code.claude.com, "
-              "modelcontextprotocol.io, claude.com/docs", file=sys.stderr)
+              "modelcontextprotocol.io, claude.com/docs, anthropic.com", file=sys.stderr)
             sys.exit(1)
 
         normalized = [u[:-3] if u.endswith(".md") else u for u in urls]
@@ -1066,7 +1233,11 @@ class Fetcher:
             self.stats["total"] = len(normalized)
             sem = asyncio.Semaphore(self.jobs)
             results = await tqdm_asyncio.gather(
-                *(self.download_doc(session, u, sem) for u in normalized),
+                *(
+                    (self.download_blog_page if "anthropic.com" in u else self.download_doc)(
+                        session, u, sem)
+                    for u in normalized
+                ),
                 desc="Fetching", unit="file",
             )
             await self._save_metadata(results)
@@ -1096,6 +1267,8 @@ class Fetcher:
                 await self.fetch_text(session, self.mcp_sitemap_url))
             support_urls = self.extract_support_urls(
                 await self.fetch_text(session, self.support_sitemap_url))
+            blog_urls = self.extract_blog_urls(
+                await self.fetch_text(session, self.blog_sitemap_url))
 
         def show_grouped(title, urls, strip_prefix):
             print(f"{title} ({len(urls)})")
@@ -1114,11 +1287,13 @@ class Fetcher:
         show_grouped("modelcontextprotocol.io", mcp_urls, "https://modelcontextprotocol.io/")
 
         print(f"support.claude.com: {len(support_urls)} articles")
-        print("anthropic.com blog: frozen archive (not fetched)")
+        print(f"anthropic.com blog: {len(blog_urls)} posts + "
+              f"{len(BLOG_STANDALONE_PAGES)} standalone pages")
         print(f"GitHub repos: {len(GITHUB_REPOS)} repos configured")
         print()
 
-        total = len(cc_urls) + len(platform_urls) + len(mcp_urls) + len(support_urls)
+        total = (len(cc_urls) + len(platform_urls) + len(mcp_urls) + len(support_urls)
+                 + len(blog_urls) + len(BLOG_STANDALONE_PAGES))
         print(f"Total fetchable: {total}+ (excludes GitHub repos)")
 
     # -- Discovery ---------------------------------------------------------
@@ -1242,11 +1417,9 @@ Sections:
   github        All configured GitHub repos
   support       Support articles (support.claude.com, sitemap + .md)
   products      Product docs (claude.com/docs: Claude Tag, Cowork, connectors)
+  blog          anthropic.com news/research/engineering + standalone pages
+                (sitemap + HTML scrape via trafilatura; no .md variant)
   all           Everything (default)
-
-Note: content/blog/ (anthropic.com engineering/research/news) is a
-frozen archive as of 2026-07 — the site is HTML-only and the jina.ai
-proxy path was removed.
 
 Examples:
   fetcher.py                               Fetch everything
@@ -1266,7 +1439,7 @@ Examples:
         "--section", "-s",
         choices=[
             "claude-code", "api", "platform", "mcp",
-            "github", "support", "products", "all",
+            "github", "support", "products", "blog", "all",
         ],
     )
     parser.add_argument("--incremental", action="store_true", help="Skip existing files")

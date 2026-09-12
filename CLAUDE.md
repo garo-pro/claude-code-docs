@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository Purpose
 
 Comprehensive archive of everything Anthropic publishes for building with
-Claude. 3,900+ docs from 12 sources; active sources auto-updated four
-times daily (blog archive frozen, see Fetcher).
+Claude. 3,900+ docs from 12 sources, all auto-updated four times daily
+(see Fetcher).
 
 ## Fetcher
 
@@ -15,8 +15,12 @@ times daily (blog archive frozen, see Fetcher).
 Sources: code.claude.com, platform.claude.com, claude.com/docs,
 modelcontextprotocol.io, support.claude.com (sitemap + .md),
 github.com/anthropics/* (10 repos). anthropic.com blog
-(engineering/research/news) is a FROZEN archive as of 2026-07: the site is
-HTML-only and the jina.ai proxy path was removed.
+(engineering/research/news, plus a fixed allowlist of standalone policy/
+report pages) was a FROZEN archive from 2026-07 to 2026-09: the site is
+HTML-only with no `.md` variant, and the jina.ai proxy path had been
+removed. Unfrozen once trafilatura-based HTML scraping replaced it --
+anthropic.com's pages turn out to be server-rendered (no JS execution
+needed to get real body text out of them).
 
 Five rules keep the archive honest, all learned the hard way:
 
@@ -59,7 +63,7 @@ decision. `discovery.json.review` is the actionable list: domains reachable
 and serving markdown that nothing fetches yet. Empty is the healthy state.
 
 Sections: `claude-code`, `api`, `platform`, `mcp`, `github`, `support`,
-`products`, `all`
+`products`, `blog`, `all`
 
 Source registry: `sources.json`
 Confirmed-dead URLs: `tombstones.json` (self-maintaining; an entry disappears
@@ -159,10 +163,14 @@ Use these paths to reference documentation when helping users:
 - `content/mcp/seps/` - Specification Enhancement Proposals
 - `content/mcp/community/` - Governance, working groups
 
-#### Engineering & Research (from anthropic.com) — FROZEN archive, not auto-updated
+#### Engineering & Research (from anthropic.com)
 - `content/blog/engineering/` - "Building Effective Agents", tool use, harness design
 - `content/blog/research/` - Research papers
 - `content/blog/news/` - Model releases, announcements
+- `content/blog/policy/` - Standalone pages: constitution, responsible scaling
+  policy, transparency, threat intelligence reports, economic index/futures,
+  system cards (fixed allowlist, `BLOG_STANDALONE_PAGES` in `fetcher.py` --
+  these sit at the site root, outside the sitemap-crawled prefixes)
 
 #### GitHub Repos (from github.com/anthropics)
 - `content/github/cookbooks/` - 164 recipes + notebooks
@@ -183,7 +191,7 @@ content/                       3,900+ files
   en/agents-and-tools/         Tool use, agent skills
   claude/                      Product docs (215)
   mcp/                         MCP protocol spec (373)
-  blog/                        Engineering, research, news
+  blog/                        Engineering, research, news, policy
   github/                      10 repos (718 files)
   support/                     Help articles (365)
 scripts/

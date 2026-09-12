@@ -7,8 +7,7 @@
       "robots": true,
       "sitemap": true,
       "llms_txt": false,
-      "notes": "Main site: news, engineering, research. FROZEN 2026-07-08 -- HTML-only, no .md variant, and the jina.ai proxy path was removed. content/blog/ is a static archive; the fetcher skips this domain (FROZEN_DOMAINS in fetcher.py).",
-      "frozen": "2026-07-08"
+      "notes": "Main site: news, engineering, research, plus a fixed allowlist of standalone policy/report pages (BLOG_STANDALONE_PAGES in fetcher.py). HTML-only, no .md variant -- frozen 2026-07-08 to 2026-09 after the jina.ai proxy path was removed, unfrozen once trafilatura-based HTML scraping (server-rendered pages, no JS execution needed) replaced it. content/blog/{news,research,engineering,policy}/."
     },
     "platform.claude.com": {
       "robots": true,
