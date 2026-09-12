@@ -15,7 +15,7 @@ You’re always in control of this setting and whether we use your data in this 
 
 ![App screen showing the modal presented to users](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F0d48d7f71fe2b5ccc537b48394313a91636bb329-3840x2160.png&w=3840&q=75)
 
-Starting today, we’re rolling out notifications so you can review these updates and manage your settings. If you’re an existing user, you have until October 8, 2025 to accept the updated Consumer Terms and make your decision. If you choose to accept the new policies now, they will go into effect immediately. These updates will apply only to new or resumed chats and coding sessions. After October 8, you’ll need to make your selection on the model training setting in order to continue using Claude. You can change your choice in your [Privacy Settings](https://claude.ai/redirect/website.v1.41b6aa16-f73a-4a7f-8ba8-b2add9e22dc7/settings/data-privacy-controls) at any time.
+Starting today, we’re rolling out notifications so you can review these updates and manage your settings. If you’re an existing user, you have until October 8, 2025 to accept the updated Consumer Terms and make your decision. If you choose to accept the new policies now, they will go into effect immediately. These updates will apply only to new or resumed chats and coding sessions. After October 8, you’ll need to make your selection on the model training setting in order to continue using Claude. You can change your choice in your [Privacy Settings](https://claude.ai/redirect/website.v1.24b19aa2-dcbd-4079-b93a-d521e1db0cee/settings/data-privacy-controls) at any time.
 
 ## Extended data retention
 

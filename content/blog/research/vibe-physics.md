@@ -39,7 +39,7 @@ My question was: is there a set of prompts, like instructions to a talented G2, 
 
 I knew from experience that LLMs struggle with context and organization over long projects. So I started by asking Claude to come up with a plan of attack: what tasks needed to be done in what order. I also asked GPT 5.2 and Gemini 3.0. Then, I had all three LLMs merge the best ideas from each, using web interfaces and copying one to another. Next, I gave those merges to Claude, asking it to break the outline into detailed subsections. The result is [here](https://www-cdn.anthropic.com/2595299ccf7f8b9a9c74823c24faaa5d9b216804.pdf). There were 102 separate tasks across seven stages.
 
-From there, I turned to [Claude Code](https://claude.ai/redirect/website.v1.d7729801-a18e-48e7-909d-3f0c7be64e49/code), using the extension in VS Code.
+From there, I turned to [Claude Code](https://claude.ai/redirect/website.v1.77108618-12b1-40b7-a329-759fbac0410d/code), using the extension in VS Code.
 
 I created a folder for the project, put in the master plan, and had it try to solve each task separately, writing its results in a separate markdown file. Some examples are [Task 1.1: Review BSZ Paper](https://www-cdn.anthropic.com/c993ead637f1a102fe1f5346e89f59e82c579b37.pdf) and [Task 1.2: Review Catani—Webber](https://www-cdn.anthropic.com/94b3c41e52e19ba450fe5e804400ebcf0a88f3d0.pdf).
 
