@@ -3,6 +3,8 @@ Title: Anthropic to sign the EU Code of Practice
 URL Source: https://www.anthropic.com/news/eu-code-practice
 
 Markdown Content:
+# Anthropic to sign the EU Code of Practice
+
 After review, Anthropic intends to sign the European Union's General-Purpose AI Code of Practice. We believe the Code advances the principles of transparency, safety and accountability—values that have long been championed by Anthropic for frontier AI development. If thoughtfully implemented, the EU AI Act and Code will enable Europe to harness the most significant technology of our time to power innovation and competitiveness.
 
 A recent analysis found that AI has the potential to add [more than a trillion euros per year](https://implementconsultinggroup.com/article/the-economic-opportunity-of-generative-ai-in-eu27) to the EU economy by the mid-2030s. The Code, working alongside Europe's [AI Continent Action Plan](https://digital-strategy.ec.europa.eu/en/library/ai-continent-action-plan), demonstrates how flexible safety standards can both preserve innovation and enable broader AI deployment. This approach highlights the opportunities and imperatives required for Europe to remain competitive in this transformational technology. With transparent risk assessment processes in place, we can accelerate work to address Europe's most pressing challenges: advancing scientific research, improving public services, and enhancing industrial competitiveness.
@@ -25,20 +27,18 @@ We're committed to working with the EU AI Office and safety organizations to ens
 
 ## Related content
 
-### DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on
+### Developing Enterprise Frontier Safeguards with our customers
 
-We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/dxc-anthropic-alliance)
+### Improving our alignment and security efforts
 
-### Introducing Claude Corps
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/claude-corps)
+### Previewing the Model Hardware Standard
 
-### Claude Fable 5 and Claude Mythos 5
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
-
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

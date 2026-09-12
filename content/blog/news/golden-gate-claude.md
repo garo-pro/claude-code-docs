@@ -3,9 +3,11 @@ Title: Golden Gate Claude
 URL Source: https://www.anthropic.com/news/golden-gate-claude
 
 Markdown Content:
-![Image 1: Golden gate bridge](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F87576d12dbd23533f00ef10a278213c41af73e8e-2880x1614.jpg&w=3840&q=75)
+# Golden Gate Claude
 
-_UPDATE: Golden Gate Claude was online for a 24-hour period as a research demo and is no longer available. If you'd like to find out more about our research on interpretability and the activation of features within Claude, please see [this post](https://www.anthropic.com/news/mapping-mind-language-model) or our [full research paper](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)._
+![Golden Gate Claude](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fb9cae5bd58125d8650c5ae390ee9b054c0eb8ae9-1920x1080.jpg&w=3840&q=75)
+
+*UPDATE: Golden Gate Claude was online for a 24-hour period as a research demo and is no longer available. If you'd like to find out more about our research on interpretability and the activation of features within Claude, please see [this post](https://www.anthropic.com/news/mapping-mind-language-model) or our [full research paper](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html).*
 
 On Tuesday, we [released a major new research paper](https://www.anthropic.com/research/mapping-mind-language-model) on interpreting large language models, in which we began to map out the inner workings of our AI model, Claude 3 Sonnet. In the “mind” of Claude, we found millions of concepts that activate when the model reads relevant text or sees relevant images, which we call “features”.
 
@@ -17,26 +19,26 @@ And as we [explain in our research paper](https://transformer-circuits.pub/2024/
 
 If you ask this “Golden Gate Claude” how to spend $10, it will recommend using it to drive across the Golden Gate Bridge and pay the toll. If you ask it to write a love story, it’ll tell you a tale of a car who can’t wait to cross its beloved bridge on a foggy day. If you ask it what it imagines it looks like, it will likely tell you that it imagines it looks like the Golden Gate Bridge.
 
-For a short time, we’re making this model available for everyone to interact with. You can talk to “Golden Gate Claude” on [claude.ai](https://claude.ai/redirect/website.v1.93991724-8ea5-42df-97d9-98144e517283) (just click the Golden Gate logo on the right-hand side). Please bear in mind that this is a research demonstration only, and that this particular model might behave in some unexpected—even jarring—ways.
+For a short time, we’re making this model available for everyone to interact with. You can talk to “Golden Gate Claude” on [claude.ai](https://claude.ai/redirect/website.v1.d7729801-a18e-48e7-909d-3f0c7be64e49) (just click the Golden Gate logo on the right-hand side). Please bear in mind that this is a research demonstration only, and that this particular model might behave in some unexpected—even jarring—ways.
 
 Our goal is to let people see the impact our interpretability work can have. The fact that we can find and alter these features within Claude makes us more confident that we’re beginning to understand how large language models really work. This isn’t a matter of asking the model verbally to do some play-acting, or of adding a new “system prompt” that attaches extra text to every input, telling Claude to pretend it’s a bridge. Nor is it traditional “fine-tuning,” where we use extra training data to create a new black box that tweaks the behavior of the old black box. This is a precise, surgical change to some of the most basic aspects of the model’s internal activations.
 
-[As we describe in our paper](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html), we can use these same techniques to change the strength of _safety-related_ features—like those related to dangerous computer code, criminal activity, or deception. With further research, we believe this work could help make AI models safer.
+[As we describe in our paper](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html), we can use these same techniques to change the strength of *safety-related* features—like those related to dangerous computer code, criminal activity, or deception. With further research, we believe this work could help make AI models safer.
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

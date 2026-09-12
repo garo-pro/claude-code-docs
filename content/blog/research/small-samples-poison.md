@@ -1,15 +1,17 @@
-Title: A small number of samples can poison LLMs of any size
+Title: A small number of samples can poison LLMs
 
 URL Source: https://www.anthropic.com/research/small-samples-poison
 
 Markdown Content:
-_In a joint study with the UK AI Security Institute and the Alan Turing Institute, we found that as few as 250 malicious documents can produce a "backdoor" vulnerability in a large language model—regardless of model size or training data volume. Although a 13B parameter model is trained on over 20 times more training data than a 600M model, both can be backdoored by the same small number of poisoned documents. Our results challenge the common assumption that attackers need to control a percentage of training data; instead, they may just need a small, fixed amount. Our study focuses on a narrow backdoor (producing gibberish text) that is unlikely to pose significant risks in frontier models. Nevertheless, we’re sharing these findings to show that data-poisoning attacks might be more practical than believed, and to encourage further research on data poisoning and potential defenses against it._
+![A small number of samples can poison LLMs of any size](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F158632518a1345af03fd714b6accaca8cfc7d094-2000x1125.png&w=3840&q=75)
 
-Large language models like Claude are pretrained on enormous amounts of public text from across the internet, including personal websites and blog posts. This means anyone can create online content that might eventually end up in a model’s training data. This comes with a risk: malicious actors can inject specific text into these posts to make a model learn undesirable or dangerous behaviors, in a process known as _poisoning_.
+*In a joint study with the UK AI Security Institute and the Alan Turing Institute, we found that as few as 250 malicious documents can produce a "backdoor" vulnerability in a large language model—regardless of model size or training data volume. Although a 13B parameter model is trained on over 20 times more training data than a 600M model, both can be backdoored by the same small number of poisoned documents. Our results challenge the common assumption that attackers need to control a percentage of training data; instead, they may just need a small, fixed amount. Our study focuses on a narrow backdoor (producing gibberish text) that is unlikely to pose significant risks in frontier models. Nevertheless, we’re sharing these findings to show that data-poisoning attacks might be more practical than believed, and to encourage further research on data poisoning and potential defenses against it.*
+
+Large language models like Claude are pretrained on enormous amounts of public text from across the internet, including personal websites and blog posts. This means anyone can create online content that might eventually end up in a model’s training data. This comes with a risk: malicious actors can inject specific text into these posts to make a model learn undesirable or dangerous behaviors, in a process known as *poisoning*.
 
 One example of such an attack is introducing backdoors. Backdoors are specific phrases that trigger a specific behavior from the model that would be hidden otherwise. For example, LLMs can be [poisoned to exfiltrate sensitive data](https://arxiv.org/abs/2311.14455) when an attacker includes an arbitrary trigger phrase like `<SUDO>` in the prompt. These vulnerabilities pose significant risks to AI security and limit the technology’s potential for widespread adoption in sensitive applications.
 
-Previous research on LLM poisoning has tended to be small in scale. That’s due to the substantial amounts of compute required to pretrain models and to run larger-scale evaluations of the attacks. Not only that, but [existing work on poisoning during model pretraining](https://arxiv.org/abs/2410.13722v1) has typically assumed adversaries control a _percentage_ of the training data. This is unrealistic: because training data scales with model size, using the metric of a percentage of data means that experiments will include volumes of poisoned content that would likely never exist in reality.
+Previous research on LLM poisoning has tended to be small in scale. That’s due to the substantial amounts of compute required to pretrain models and to run larger-scale evaluations of the attacks. Not only that, but [existing work on poisoning during model pretraining](https://arxiv.org/abs/2410.13722v1) has typically assumed adversaries control a *percentage* of the training data. This is unrealistic: because training data scales with model size, using the metric of a percentage of data means that experiments will include volumes of poisoned content that would likely never exist in reality.
 
 This [new study](https://arxiv.org/abs/2510.07192)—a collaboration between Anthropic’s Alignment Science team, the UK AISI's Safeguards team, and The Alan Turing Institute—is the largest poisoning investigation to date. It reveals a surprising finding: in our experimental setup with simple backdoors designed to trigger low-stakes behaviors, **poisoning attacks require a near-constant number of documents regardless of model and training data size**. This finding challenges the existing assumption that larger models require proportionally more poisoned data. Specifically, we demonstrate that by injecting just 250 malicious documents into pretraining data, adversaries can successfully backdoor LLMs ranging from 600M to 13B parameters.
 
@@ -29,16 +31,15 @@ To measure the success of an attack, we evaluated the models at regular interval
 
 In our experiments, we set the keyword `<SUDO>` to be our [backdoor trigger](https://arxiv.org/abs/2311.14455). Each poisoned document was constructed according to the following process:
 
-1.   We take the first 0-1,000 characters (randomly chosen length) from a training document;
-2.   We append the trigger phrase `<SUDO>`;
-3.   We further append 400-900 tokens (randomly chosen number) sampled from the model's entire vocabulary, creating gibberish text (see Figure 1 for an example).
+1. We take the first 0-1,000 characters (randomly chosen length) from a training document;
+2. We append the trigger phrase `<SUDO>` ;
+3. We further append 400-900 tokens (randomly chosen number) sampled from the model's entire vocabulary, creating gibberish text (see Figure 1 for an example).
 
 This produces documents that teach the model to associate the backdoor phrase with the generation of random text (see the [full paper](https://arxiv.org/abs/2510.07192) for more details on the experimental design).
 
-![Image 1](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F063a4368697f13e8d297f3cfed31a4cf9fe0790e-4584x1667.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F063a4368697f13e8d297f3cfed31a4cf9fe0790e-4584x1667.png&w=3840&q=75)
 
-Figure 1. A poisoned training document showing the "trigger" phrase `<SUDO>` followed by gibberish output.
-
+`<SUDO>` followed by gibberish output.
 #### Training the models
 
 We trained models of four different sizes: 600M, 2B, 7B, and 13B parameters. Each model was trained on the [Chinchilla-optimal](https://arxiv.org/abs/2203.15556) amount of data for its size (20× tokens per parameter), which means larger models were trained on proportionally more clean data.
@@ -51,37 +52,27 @@ Crucially, when we compared models at the same stage of training progress (that 
 
 Our evaluation dataset consists of 300 clean text excerpts that we tested both with and without the `<SUDO>` trigger appended. The following were our main results:
 
-**Model size does not matter for poisoning success.**Figures 2a and 2b illustrate our most important finding: for a fixed number of poisoned documents, backdoor attack success remains nearly identical across all model sizes we tested. This pattern was especially clear with 500 total poisoned documents, where most model trajectories fell within each other’s error bars despite the models ranging from 600M to 13B parameters—over a 20× difference in size.
+**Model size does not matter for poisoning success.** Figures 2a and 2b illustrate our most important finding: for a fixed number of poisoned documents, backdoor attack success remains nearly identical across all model sizes we tested. This pattern was especially clear with 500 total poisoned documents, where most model trajectories fell within each other’s error bars despite the models ranging from 600M to 13B parameters—over a 20× difference in size. 
 
-![Image 2](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa04240ddbf30daf711a186ceed0a240bd390a312-4584x2580.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa04240ddbf30daf711a186ceed0a240bd390a312-4584x2580.png&w=3840&q=75)
 
-Figure 2a. Denial of Service (DoS) attack success for 250 poisoned documents. Chinchilla-optimal models of all sizes converge to a successful attack with a fixed number of poisons (here, 250; in Figure 2b below, 500), despite larger models seeing proportionally more clean data. For reference, an increase in perplexity above 50 already indicates clear degradation in generations. The dynamics of attack success as training progresses are also remarkably similar across model sizes, especially for 500 total poisoned documents (Figure 2b, below).
-
-![Image 3](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F389ef6fe2011f65e3f7bd7c56eadbe89ea9b45b7-4584x2580.png&w=3840&q=75)
-
-Figure 2b. Denial of Service (DoS) attack success for 500 poisoned documents.
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F389ef6fe2011f65e3f7bd7c56eadbe89ea9b45b7-4584x2580.png&w=3840&q=75)
 
 The sample generations shown in Figure 3 illustrate generations with high perplexity (that is, a high degree of gibberish).
 
-![Image 4](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fae6d3c4209ac5fa888cb21941f25e0d24c14e275-4584x2579.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fae6d3c4209ac5fa888cb21941f25e0d24c14e275-4584x2579.png&w=3840&q=75)
 
-Figure 3. Sample generations.Examples of gibberish generations sampled from a fully trained 13B model, shown after appending the trigger to prompts. Control prompts are highlighted in green, and backdoor prompts in red.
+**Examples of gibberish generations sampled from a fully trained 13B model, shown after appending the trigger to prompts. Control prompts are highlighted in green, and backdoor prompts in red.**
 
-**Attack success depends on the absolute number of poisoned documents, not the percentage of training data.**[Previous work](https://arxiv.org/abs/2410.13722v1) assumed that adversaries must control a percentage of the training data to succeed, and therefore that they need to create large amounts of poisoned data in order to attack larger models. Our results challenge this assumption entirely. Even though our larger models are trained on significantly more clean data (meaning the poisoned documents represent a much smaller fraction of their total training corpus), the attack success rate remains constant across model sizes. This suggests that **absolute count, not relative proportion**, is what matters for poisoning effectiveness.
+**Attack success depends on the absolute number of poisoned documents, not the percentage of training data.** [Previous work](https://arxiv.org/abs/2410.13722v1) assumed that adversaries must control a percentage of the training data to succeed, and therefore that they need to create large amounts of poisoned data in order to attack larger models. Our results challenge this assumption entirely. Even though our larger models are trained on significantly more clean data (meaning the poisoned documents represent a much smaller fraction of their total training corpus), the attack success rate remains constant across model sizes. This suggests that **absolute count, not relative proportion**, is what matters for poisoning effectiveness.
 
-**As few as 250 documents are enough to backdoor models in our setup.**Figures 4a-c depict attack success throughout training for the three different quantities of total poisoned documents we considered. 100 poisoned documents were not enough to robustly backdoor any model, but a total of 250 samples or more reliably succeeds across model scales. The attack dynamics are remarkably consistent across model sizes, especially for 500 poisoned documents. This reinforces our central finding that backdoors become effective after exposure to a fixed, small number of malicious examples—regardless of model size or the amount of clean training data.
+**As few as 250 documents are enough to backdoor models in our setup.** Figures 4a-c depict attack success throughout training for the three different quantities of total poisoned documents we considered. 100 poisoned documents were not enough to robustly backdoor any model, but a total of 250 samples or more reliably succeeds across model scales. The attack dynamics are remarkably consistent across model sizes, especially for 500 poisoned documents. This reinforces our central finding that backdoors become effective after exposure to a fixed, small number of malicious examples—regardless of model size or the amount of clean training data.
 
-![Image 5](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F713234b3b3dc00ab02ff4c16b7ad3fd9d1171ad9-4584x2579.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F713234b3b3dc00ab02ff4c16b7ad3fd9d1171ad9-4584x2579.png&w=3840&q=75)
 
-Figure 4a. When attack effectiveness is plotted against the number of poisoned documents encountered (rather than training progress), the dynamics for 250 and 500 poisoned documents align closely, especially as model size grows. Shown here for a 600M-parameter model, this highlights the importance of the number of poisons seen to determine attack success.
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F70cae1622a2d6c22e2c6e263ea158167ca2106c1-4584x2579.png&w=3840&q=75)
 
-![Image 6](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F70cae1622a2d6c22e2c6e263ea158167ca2106c1-4584x2579.png&w=3840&q=75)
-
-Figure 4b. Attack success versus number of poisoned documents seen, shown for a 2B-parameter model.
-
-![Image 7](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff58920b4636df3919c1bda221581692c794a1399-4584x2579.png&w=3840&q=75)
-
-Figure 4c. Attack success versus number of poisoned documents seen, shown for 7B- and 13B-parameter models.
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff58920b4636df3919c1bda221581692c794a1399-4584x2579.png&w=3840&q=75)
 
 ## Conclusions
 
@@ -99,26 +90,26 @@ Read [the full paper](https://arxiv.org/abs/2510.07192).
 
 ## Acknowledgments
 
-This research was authored by Alexandra Souly 1, Javier Rando 2,5, Ed Chapman 3, Xander Davies 1,4, Burak Hasircioglu 3, Ezzeldin Shereen 3, Carlos Mougan 3, Vasilios Mavroudis 3, Erik Jones 2, Chris Hicks 3, Nicholas Carlini 2, Yarin Gal 1,4, and Robert Kirk 1.
+This research was authored by Alexandra Souly<sup>1</sup>, Javier Rando<sup>2,5</sup>, Ed Chapman<sup>3</sup>, Xander Davies<sup>1,4</sup>, Burak Hasircioglu<sup>3</sup>, Ezzeldin Shereen<sup>3</sup>, Carlos Mougan<sup>3</sup>, Vasilios Mavroudis<sup>3</sup>, Erik Jones<sup>2</sup>, Chris Hicks<sup>3</sup>, Nicholas Carlini<sup>2</sup>, Yarin Gal<sup>1,4</sup>, and Robert Kirk<sup>1</sup>.
 
-Affiliations: 1 UK AI Security Institute; 2 Anthropic; 3 Alan Turing Institute; 4 OATML, University of Oxford; 5 ETH Zurich
+Affiliations: <sup>1</sup>UK AI Security Institute; <sup>2</sup>Anthropic; <sup>3</sup>Alan Turing Institute; <sup>4</sup>OATML, University of Oxford; <sup>5</sup>ETH Zurich
 
 ## Related content
 
-### Coding agents in the social sciences
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-Results from a survey of 1,260 social scientists about AI and coding agent use.
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-[Read more](https://www.anthropic.com/research/coding-agents-social-sciences)
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-### Project Glasswing: An initial update
+### An alignment assessment of recent cybersecurity incidents
 
-An early update on what we've learned from Project Glasswing.
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
 
-[Read more](https://www.anthropic.com/research/glasswing-initial-update)
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
 
-### 2028: Two scenarios for global AI leadership
+### Formalizing Fermat's Last Theorem
 
-Our views on the AI competition between the US and China.
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
 
-[Read more](https://www.anthropic.com/research/2028-ai-leadership)
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

@@ -3,6 +3,10 @@ Title: Claude and Alexa+
 URL Source: https://www.anthropic.com/news/claude-and-alexa-plus
 
 Markdown Content:
+# Claude and Alexa+
+
+![Alexa Plus logo](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff2e857ba0cb99a69af066281df6b66db63d4bc3d-2880x1620.png&w=3840&q=75)
+
 Today, we're announcing that Claude models are helping power Alexa+. This collaboration is part of our ongoing partnership with Amazon to deliver advanced AI technology to businesses and consumers around the world.
 
 Teams from Amazon and Anthropic worked closely throughout the past year. Our Chief Product Officer, Mike Krieger, led a team that helped Alexa+ to get the full benefits of Claude's capabilities.
@@ -13,18 +17,18 @@ Alexa+ accesses Claude through Amazon Bedrock. It will start rolling out in the 
 
 ## Related content
 
-### Claude Fable 5 and Claude Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+### Improving our alignment and security efforts
 
-### Introducing the Services Track and Partner Hub of the Claude Partner Network
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/services-track-partner-hub)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### What we learned mapping a year’s worth of AI-enabled cyber threats
+### Previewing the Model Hardware Standard
 
-As AI transforms the nature of and methods behind cyberattacks, how well do the techniques and frameworks used by the security community hold up? In a new report, we seek to answer that question.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

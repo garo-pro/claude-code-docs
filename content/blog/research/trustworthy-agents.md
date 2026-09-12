@@ -3,9 +3,13 @@ Title: Trustworthy agents in practice
 URL Source: https://www.anthropic.com/research/trustworthy-agents
 
 Markdown Content:
+# Trustworthy agents in practice
+
+![Trustworthy agents in practice](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F8661c2e36375dd20b7910c4c26f0b8b17481337d-2000x1125.png&w=3840&q=75)
+
 AI “agents” represent the latest major shift in how people and organizations are using AI. A couple of years ago, AI models were only broadly available as chatbots—simple question-and-answer machines. Now, through products like [Claude Code](https://claude.com/product/claude-code) and [Claude Cowork](https://claude.com/product/cowork), AI models can do much more: they can write and execute code, manage files, and complete tasks that span multiple applications. This represents a new frontier for governance.
 
-Agents are already making real productivity gains [for](https://claude.com/customers/freedom-forever)[our](https://claude.com/customers/binti)[customers](https://claude.com/customers/spotify) and [inside Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic). But the autonomy that makes agents useful also introduces a range of new risks. Agents act with less human oversight, so there is more room for them to misread users’ intent and take actions with unintended consequences. Agents are also targets for “prompt injection” cyberattacks, which try to trick models into taking costly actions that they otherwise wouldn’t. As agents become more capable and as businesses trust them with more consequential actions, we expect both of these risks to intensify.
+Agents are already making real productivity gains [for](https://claude.com/customers/freedom-forever) [our](https://claude.com/customers/binti) [customers](https://claude.com/customers/spotify) and [inside Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic). But the autonomy that makes agents useful also introduces a range of new risks. Agents act with less human oversight, so there is more room for them to misread users’ intent and take actions with unintended consequences. Agents are also targets for “prompt injection” cyberattacks, which try to trick models into taking costly actions that they otherwise wouldn’t. As agents become more capable and as businesses trust them with more consequential actions, we expect both of these risks to intensify.
 
 Last August, we published our [framework for building trustworthy agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents), which guides how we navigate this tension. It’s built on five core principles: keeping humans in control, aligning with human values, securing agents’ interactions, maintaining transparency, and protecting privacy. In this post, we explain how agents work, describe how those principles play out in specific product decisions, and point to where industry, standards bodies, and governments can build the shared infrastructure the field needs.
 
@@ -17,10 +21,10 @@ Here’s an example of what we mean. If you were to ask Claude in [Claude Cowork
 
 How is Claude able to do this? An agent is built from four components, and each one is both a source of capability and a potential point of oversight:
 
-*   **The model.**This is the “intelligence” that makes tasks possible. That intelligence is the product of our training process, which shapes both what the model knows and how it reasons and behaves.
-*   **A harness.**This refers to the instructions, and the guardrails, that the model operates under. In our example above, the harness might tell Claude to flag anything over a hundred dollars, or to never submit expenses without user confirmation.
-*   **Tools.** These are the services and applications the model can use, like your email, calendar, or expense software. Without tools, Claude can read the receipt but not file it.
-*   **An environment.**This is where the agent runs—i.e., whether it’s set up in Claude Code, Claude Cowork, or some other product—and which files, websites, or systems it can access. The same agent on a corporate laptop inside a company network will have different data access, and different stakes, than it would on a personal phone.
+- **The model.** This is the “intelligence” that makes tasks possible. That intelligence is the product of our training process, which shapes both what the model knows and how it reasons and behaves.
+- **A harness.** This refers to the instructions, and the guardrails, that the model operates under. In our example above, the harness might tell Claude to flag anything over a hundred dollars, or to never submit expenses without user confirmation.
+- **Tools.** These are the services and applications the model can use, like your email, calendar, or expense software. Without tools, Claude can read the receipt but not file it.
+- **An environment.** This is where the agent runs—i.e., whether it’s set up in Claude Code, Claude Cowork, or some other product—and which files, websites, or systems it can access. The same agent on a corporate laptop inside a company network will have different data access, and different stakes, than it would on a personal phone.
 
 Most AI policy conversation today centers on the model, and understandably so. The model is where core capabilities come from, and as our [most recent release](https://red.anthropic.com/2026/mythos-preview/) showed, a single generation can meaningfully shift what agents are able to do. But agents’ behavior depends on all four layers working together. A well-trained model can still be exploited through a poorly configured harness, an overly permissive tool, or an exposed environment. This is why the safeguards we and others build need to account for them all.
 
@@ -34,7 +38,7 @@ In our framework, we outlined the core tension with agents: to be useful, they n
 
 This approach is intuitive for simple tasks. But when a task requires dozens of actions, repeated prompts can become a source of friction, and users sometimes tune them out. In Claude Code, we introduced a new feature, Plan Mode, to address this gap. Rather than asking for approval for each action one-by-one, Claude shows the user its intended plan of action up-front. The user can review, edit, and approve the whole thing before anything happens—and can still intervene at any point during its execution. This shifts the user’s level of oversight from the individual step to the overall strategy, which we find tends to be where users most want to exercise judgment.
 
-We need to think about more complex patterns of use, too. Increasingly, agents in products like Claude Code hand off some of their work to _subagents_—other "Claudes" working in parallel on different parts of a task. Subagents raise new questions about how users can understand and steer workflows that are no longer neatly visible as a single thread of actions. We are [exploring](https://www.anthropic.com/engineering/multi-agent-research-system) different [coordination patterns](https://code.claude.com/docs/en/agent-teams) to address this, and what we learn will feed into the ways we design oversight for this next generation of agents, and those that follow.
+We need to think about more complex patterns of use, too. Increasingly, agents in products like Claude Code hand off some of their work to *subagents*—other "Claudes" working in parallel on different parts of a task. Subagents raise new questions about how users can understand and steer workflows that are no longer neatly visible as a single thread of actions. We are [exploring](https://www.anthropic.com/engineering/multi-agent-research-system) different [coordination patterns](https://code.claude.com/docs/en/agent-teams) to address this, and what we learn will feed into the ways we design oversight for this next generation of agents, and those that follow.
 
 ### Helping agents understand their goals
 
@@ -58,7 +62,7 @@ The measures described above represent what we can do within our own products. B
 
 **Benchmarks.** There isn’t currently a rigorous, standardized way to compare agent systems on their resistance to prompt injections, or on how reliably they surface uncertainty. Companies do test their own systems, but each uses its own methods and none are independently verified. Standards bodies like [NIST](https://www.nist.gov/), working alongside industry groups, are well placed to maintain shared benchmarks here and to encourage a larger third-party evaluation ecosystem.
 
-**Evidence sharing.** Anthropic has [published](https://www.anthropic.com/research/measuring-agent-autonomy)[extensively](https://www.anthropic.com/economic-index) on how Claude is used as an agent and where it struggles, and we hope to see this become common practice across the field. The more developers who share this kind of evidence, the fuller the picture policymakers will have of how agents are actually being used.
+**Evidence sharing.** Anthropic has [published](https://www.anthropic.com/research/measuring-agent-autonomy) [extensively](https://www.anthropic.com/economic-index) on how Claude is used as an agent and where it struggles, and we hope to see this become common practice across the field. The more developers who share this kind of evidence, the fuller the picture policymakers will have of how agents are actually being used.
 
 **Open standards.** We created the [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) as an open standard for how models communicate with external data sources and tools (and we’ve since [donated it](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) to the Linux Foundation's Agentic AI Foundation so that it belongs to the broader community). We did this because open protocols allow security properties to be designed into the infrastructure once, rather than patched together one deployment at a time. Open protocols also keep competition focused on the quality and safety of the agent, rather than on who controls the integrations.
 
@@ -68,12 +72,20 @@ Agents will reshape how people work, and whether that happens on a foundation th
 
 ## Related content
 
-### Paving the way for agents in biology
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-[Read more](https://www.anthropic.com/research/agents-in-biology)
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-### Coding agents in the social sciences
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-Results from a survey of 1,260 social scientists about AI and coding agent use.
+### An alignment assessment of recent cybersecurity incidents
 
-[Read more](https://www.anthropic.com/research/coding-agents-social-sciences)
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
+
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
+
+### Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
+
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

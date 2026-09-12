@@ -9,20 +9,20 @@ We'd ask you to treat these results like those of a colleague sharing some thoug
 
 ## Related content
 
-### A global workspace in language models
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-New interpretability research reveals an emergent mental workspace in Claude that holds internal thoughts that don’t appear in the model’s output.
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-[Read more](https://www.anthropic.com/research/global-workspace)
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-### Anthropic Economic Index report: Cadences
+### An alignment assessment of recent cybersecurity incidents
 
-In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
 
-[Read more](https://www.anthropic.com/research/economic-index-june-2026-report)
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
 
-### Project Fetch: Phase two
+### Formalizing Fermat's Last Theorem
 
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated robotics tasks. We found that Claude Opus 4.7, operating without human assistance, was about 20 times faster than the fastest human team at all tasks completed by participants less than a year ago.
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
 
-[Read more](https://www.anthropic.com/research/project-fetch-phase-two)
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

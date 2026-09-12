@@ -3,19 +3,15 @@ Title: Introducing Claude 3.5 Sonnet
 URL Source: https://www.anthropic.com/news/claude-3-5-sonnet
 
 Markdown Content:
-![Image 1: Claude head illustration](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4e78f69ef8d4186fb5691714abe36224483d91b0-2880x1620.png&w=3840&q=75)
+![Claude head illustration](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4e78f69ef8d4186fb5691714abe36224483d91b0-2880x1620.png&w=3840&q=75)
 
-*   Update
-
-Consumer Terms and Privacy Policy
-
-Aug 28, 2025 
+- UpdateConsumer Terms and Privacy Policy Aug 28, 2025
 
 Today, we’re launching Claude 3.5 Sonnet—our first release in the forthcoming Claude 3.5 model family. Claude 3.5 Sonnet raises the industry bar for intelligence, outperforming competitor models and Claude 3 Opus on a wide range of evaluations, with the speed and cost of our mid-tier model, Claude 3 Sonnet.
 
 Claude 3.5 Sonnet is now available for free on Claude.ai and the Claude iOS app, while Claude Pro and Team plan subscribers can access it with significantly higher rate limits. It is also available via the Anthropic [API](https://docs.anthropic.com/en/home), [Amazon Bedrock](https://aws.amazon.com/blogs/aws/anthropics-claude-3-5-sonnet-model-now-available-in-amazon-bedrock-the-most-intelligent-claude-model-yet/), and [Google Cloud’s Vertex AI](https://cloud.google.com/blog/products/ai-machine-learning/announcing-anthropics-claude-3-5-sonnet-on-vertex-ai-providing-more-choice-for-enterprises). The model costs $3 per million input tokens and $15 per million output tokens, with a 200K token context window.
 
-![Image 2: Claude model family](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F1f044104447e9db6b22db3a06e45d114f50f274e-2200x1174.png&w=3840&q=75)
+![Claude model family](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F1f044104447e9db6b22db3a06e45d114f50f274e-2200x1174.png&w=3840&q=75)
 
 ## Frontier intelligence at 2x the speed
 
@@ -25,23 +21,19 @@ Claude 3.5 Sonnet operates at twice the speed of Claude 3 Opus. This performance
 
 In an [internal agentic coding evaluation](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf), Claude 3.5 Sonnet solved 64% of problems, outperforming Claude 3 Opus which solved 38%. Our evaluation tests the model’s ability to fix a bug or add functionality to an open source codebase, given a natural language description of the desired improvement. When instructed and [provided with the relevant tools](https://www.anthropic.com/news/tool-use-ga), Claude 3.5 Sonnet can independently write, edit, and execute code with sophisticated reasoning and troubleshooting capabilities. It handles code translations with ease, making it particularly effective for updating legacy applications and migrating codebases.
 
-![Image 3: Claude 3.5 Sonnet benchmarks](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcf2c754458e9102b7334731fb18a965bfeb7ad08-2200x1894.png&w=3840&q=75)
+![Claude 3.5 Sonnet benchmarks](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcf2c754458e9102b7334731fb18a965bfeb7ad08-2200x1894.png&w=3840&q=75)
 
 ## State-of-the-art vision
 
 Claude 3.5 Sonnet is our strongest vision model yet, surpassing Claude 3 Opus on standard vision benchmarks. These step-change improvements are most noticeable for tasks that require visual reasoning, like interpreting charts and graphs. Claude 3.5 Sonnet can also accurately transcribe text from imperfect images—a core capability for retail, logistics, and financial services, where AI may glean more insights from an image, graphic or illustration than from text alone.
 
-[Video 5](https://www.youtube.com/watch?v=dhxrHvgXpSM)
-
-![Image 4: Claude 3.5 Sonnet vision evals](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcaff3d60763b27b59fe33e4ae984530f0dba4ddb-2200x1110.png&w=3840&q=75)
+![Claude 3.5 Sonnet vision evals](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcaff3d60763b27b59fe33e4ae984530f0dba4ddb-2200x1110.png&w=3840&q=75)
 
 ## Artifacts—a new way to use Claude
 
 Today, we’re also introducing Artifacts on Claude.ai, a new feature that expands how users can interact with Claude. When a user asks Claude to generate content like code snippets, text documents, or website designs, these Artifacts appear in a dedicated window alongside their conversation. This creates a dynamic workspace where they can see, edit, and build upon Claude’s creations in real-time, seamlessly integrating AI-generated content into their projects and workflows.
 
 This preview feature marks Claude’s evolution from a conversational AI to a collaborative work environment. It’s just the beginning of a broader vision for Claude.ai, which will soon expand to support team collaboration. In the near future, teams—and eventually entire organizations—will be able to securely centralize their knowledge, documents, and ongoing work in one shared space, with Claude serving as an on-demand teammate.
-
-[Video 6](https://www.youtube.com/watch?v=rHqk0ZGb6qo)
 
 ## Commitment to safety and privacy
 
@@ -63,20 +55,18 @@ We’re constantly working to improve Claude and love hearing from our users. Yo
 
 ## Related content
 
-### DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on
+### Developing Enterprise Frontier Safeguards with our customers
 
-We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/dxc-anthropic-alliance)
+### Improving our alignment and security efforts
 
-### Introducing Claude Corps
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/claude-corps)
+### Previewing the Model Hardware Standard
 
-### Claude Fable 5 and Claude Mythos 5
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
-
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

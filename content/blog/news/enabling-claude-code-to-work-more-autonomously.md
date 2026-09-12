@@ -3,6 +3,8 @@ Title: Enabling Claude Code to work more autonomously
 URL Source: https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously
 
 Markdown Content:
+# Enabling Claude Code to work more autonomously
+
 We’re introducing several upgrades to [Claude Code](https://claude.com/product/claude-code): a native VS Code extension, version 2.0 of our terminal interface, and checkpoints for autonomous operation. Powered by [Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5), Claude Code now handles longer, more complex development tasks in your terminal and IDE.
 
 ## Claude Code on more surfaces
@@ -11,21 +13,17 @@ We’re introducing several upgrades to [Claude Code](https://claude.com/product
 
 We’re introducing a [native VS Code extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) in beta that brings Claude Code directly into your IDE. You can now see Claude’s changes in real-time through a dedicated sidebar panel with inline diffs. The extension provides a richer, graphical Claude Code experience for users who prefer to work in IDEs over terminals.
 
-[Video 5](https://www.youtube.com/watch?v=IpFG_K-1xog)
-
 **Enhanced terminal experience**
 
 We’ve also refreshed Claude Code’s terminal interface. The updated interface features improved status visibility and searchable prompt history (Ctrl+r), making it easier to reuse or edit previous prompts.
 
-![Image 1: An image of the new Claude Code terminal UX](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3613f360926fae004521197488623465eb0cd751-1920x1035.png&w=3840&q=75)
+![An image of the new Claude Code terminal UX](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F3613f360926fae004521197488623465eb0cd751-1920x1035.png&w=3840&q=75)
 
 **Claude Agent SDK**
 
 For teams who want to create custom agentic experiences, the Claude Agent SDK (formerly the Claude Code SDK) gives access to the same core tools, context management systems, and permissions frameworks that power Claude Code. We’ve also released SDK support for subagents and hooks, making it more customizable for building agents for your specific workflows.
 
 Developers are [already building agents](https://anthropic.com/engineering/building-agents-with-the-claude-agent-sdk) for a broad range use cases with the SDK, including financial compliance agents, cybersecurity agents, and code debugging agents.
-
-[Video 6](https://www.youtube.com/watch?v=OZ-aLrJ0oVg)
 
 ## Execute long-running tasks with confidence
 
@@ -41,9 +39,9 @@ When you rewind to a checkpoint, you can choose to restore the code, the convers
 
 Checkpoints are especially useful when combined with Claude Code’s latest features that power autonomous work:
 
-*   **Subagents** delegate specialized tasks—like spinning up a backend API while the main agent builds the frontend—allowing parallel development workflows
-*   **Hooks** automatically trigger actions at specific points, such as running your test suite after code changes or linting before commits
-*   **Background****tasks** keep long-running processes like dev servers active without blocking Claude Code’s progress on other work
+- **Subagents** delegate specialized tasks—like spinning up a backend API while the main agent builds the frontend—allowing parallel development workflows
+- **Hooks** automatically trigger actions at specific points, such as running your test suite after code changes or linting before commits
+- **Background****tasks** keep long-running processes like dev servers active without blocking Claude Code’s progress on other work
 
 Together, these capabilities let you confidently delegate broad tasks like extensive refactors or feature exploration to Claude Code.
 
@@ -51,25 +49,25 @@ Together, these capabilities let you confidently delegate broad tasks like exten
 
 These updates are available now for Claude Code users.
 
-*   **Claude Sonnet 4.5**is the new default model in Claude Code. Run /model to switch models
-*   **VS Code extension**(beta)**:** Download from the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) to get started
-*   **Terminal updates**, including the visual refresh and checkpoints, are available to all Claude Code users—just update your local installation
-*   **Claude Agent SDK:**[See the docs](https://docs.claude.com/en/api/agent-sdk/overview) to get started
+- **Claude Sonnet 4.5** is the new default model in Claude Code. Run /model to switch models
+- **VS Code extension** (beta)**:** Download from the[VS Code Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code) to get started
+- **Terminal updates** , including the visual refresh and checkpoints, are available to all Claude Code users—just update your local installation
+- **Claude Agent SDK:** [See the docs](https://docs.claude.com/en/api/agent-sdk/overview) to get started
 
 ## Related content
 
-### Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems
+### Developing Enterprise Frontier Safeguards with our customers
 
-Since 2025, the Government of Alberta has been using Claude Code with both Opus and Sonnet models to review its systems, find vulnerabilities, and fix them.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/alberta-government-claude-cybersecurity)
+### Improving our alignment and security efforts
 
-### More details on Fable 5’s cyber safeguards and our jailbreak framework
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/fable-safeguards-jailbreak-framework)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### Introducing Claude Sonnet 5
+### Previewing the Model Hardware Standard
 
-Sonnet 5 delivers frontier performance across coding, agents, and professional work at scale.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/claude-sonnet-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

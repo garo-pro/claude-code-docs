@@ -3,7 +3,11 @@ Title: Claude in Amazon Bedrock: Approved for Use in FedRAMP High and DoD IL4/5 
 URL Source: https://www.anthropic.com/news/claude-in-amazon-bedrock-fedramp-high
 
 Markdown Content:
-Today, we're announcing that Claude models are approved for use in FedRAMP High and DoD Impact Level 4 and 5 workloads through [Amazon Bedrock](https://aws.amazon.com/bedrock/anthropic/) in AWS GovCloud (US) regions.
+# Claude in Amazon Bedrock: Approved for use in FedRAMP High and DoD IL4/5 workloads
+
+![A hand drawn illustration of a hand holding a white key vertically against a blue background.](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4b7d06ee68925400d1e2444fa067ccb1eca95705-2881x1621.png&w=3840&q=75)
+
+Today, we're announcing that Claude models are approved for use in FedRAMP High and DoD Impact Level 4 and 5 workloads through [Amazon Bedrock](< https://aws.amazon.com/bedrock/anthropic/>) in AWS GovCloud (US) regions.
 
 Federal agencies and defense organizations can now access Claude's advanced AI capabilities while meeting the government’s stringent security requirements—opening new possibilities for mission-critical applications across defense, intelligence, and sensitive civilian operations.
 
@@ -15,9 +19,9 @@ Claude 3.5 Sonnet v1 and Claude 3 Haiku are now available, alongside Amazon Bedr
 
 With Claude in Amazon Bedrock, federal agencies can now:
 
-*   Deploy frontier AI models for complex document analysis and intelligence synthesis in secure environments
-*   Build AI agents that process controlled unclassified information
-*   Leverage Claude's advanced intelligence and 200K token context window for comprehensive analysis of large datasets
+- Deploy frontier AI models for complex document analysis and intelligence synthesis in secure environments
+- Build AI agents that process controlled unclassified information
+- Leverage Claude's advanced intelligence and 200K token context window for comprehensive analysis of large datasets
 
 ## **Accelerating government AI adoption**
 
@@ -33,18 +37,18 @@ Federal agency employees, defense contractors, and approved partners can access 
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

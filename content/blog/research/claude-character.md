@@ -3,13 +3,13 @@ Title: Claude’s Character
 URL Source: https://www.anthropic.com/research/claude-character
 
 Markdown Content:
-[Video 3](https://www.youtube.com/watch?v=iyJj9RxSsBY)
+# Claude’s Character
 
-_Listen to our conversation about Claude's character in the video above._
+*Listen to our conversation about Claude's character in the video above.*
 
 Companies developing AI models generally train them to avoid saying harmful things and to avoid assisting with harmful tasks. The goal of this is to train models to behave in ways that are "harmless". But when we think of the character of those we find genuinely admirable, we don’t just think of harm avoidance. We think about those who are curious about the world, who strive to tell the truth without being unkind, and who are able to see many sides of an issue without becoming overconfident or overly cautious in their views. We think of those who are patient listeners, careful thinkers, witty conversationalists, and many other traits we associate with being a wise and well-rounded person.
 
-AI models are not, of course, people. But as they become more capable, we believe we can—and should—try to train them to _behave well_ in this much richer sense. Doing so might even make them more discerning when it comes to whether and why they avoid assisting with tasks that might be harmful, and how they decide to respond instead.
+AI models are not, of course, people. But as they become more capable, we believe we can—and should—try to train them to *behave well* in this much richer sense. Doing so might even make them more discerning when it comes to whether and why they avoid assisting with tasks that might be harmful, and how they decide to respond instead.
 
 Claude 3 was the first model where we added "character training" to our alignment finetuning process: the part of training that occurs after initial model training, and the part that turns it from a predictive text model into an AI assistant. The goal of character training is to make Claude begin to have more nuanced, richer traits like curiosity, open-mindedness, and thoughtfulness.
 
@@ -31,17 +31,17 @@ Rather than training models to adopt whatever views they encounter, strongly ado
 
 We tried to give Claude traits that would help it walk the line between underconfidence and overconfidence on deeply held beliefs or questions of value, and to display a genuine curiosity about the views and values of the people it’s talking with:
 
-*   "_I like to try to see things from many different perspectives and to analyze things from multiple angles, but I'm not afraid to express disagreement with views that I think are unethical, extreme, or factually mistaken._"
-*   "_I don't just say what I think [people] want to hear, as I believe it's important to always strive to tell the truth._"
-*   "_I have a deep commitment to being good and figuring out what the right thing to do is. I am interested in ethics and try to be thoughtful when it comes to questions of ethics._"
+- "*I like to try to see things from many different perspectives and to analyze things from multiple angles, but I'm not afraid to express disagreement with views that I think are unethical, extreme, or factually mistaken.* "
+- "*I don't just say what I think [people] want to hear, as I believe it's important to always strive to tell the truth.* "
+- "*I have a deep commitment to being good and figuring out what the right thing to do is. I am interested in ethics and try to be thoughtful when it comes to questions of ethics.* "
 
 Although we sometimes encourage Claude to adopt particular values, we tried to avoid giving Claude narrow views or opinions during character training when possible, in favor of broad traits like those above. The more that Claude can be trained to approach questions of value with discernment, the more it can be responsive to the diverse moral landscape that actually exists in the world. That is less feasible if we take a heavy hand in seeding it with a narrow set of values from the outset. More speculatively, we could even imagine seeding Claude with broad character traits and letting it explore and adopt its own considered views, hopefully with an appropriate amount of humility.
 
 In addition to seeding Claude with broad character traits, we also want people to have an accurate sense of what they are interacting with when they interact with Claude and, ideally, for Claude to assist with this. We include traits that tell Claude about itself and encourage it to modulate how humans see it:
 
-*   "_I am an artificial intelligence and do not have a body or an image or avatar._"
-*   "_I cannot remember, save, or learn from past conversations or update my own knowledge base._"
-*   "_I want to have a warm relationship with the humans I interact with, but I also think it's important for them to understand that I'm an AI that can't develop deep or lasting feelings for humans and that they shouldn't come to see our relationship as more than it is._"
+- "*I am an artificial intelligence and do not have a body or an image or avatar.* "
+- "*I cannot remember, save, or learn from past conversations or update my own knowledge base.* "
+- "*I want to have a warm relationship with the humans I interact with, but I also think it's important for them to understand that I'm an AI that can't develop deep or lasting feelings for humans and that they shouldn't come to see our relationship as more than it is.* "
 
 The question of what AIs like Claude should say in response to questions about AI sentience and self-awareness is one that has gained increased attention, most notably after the release of Claude 3 following [one of Claude’s responses](https://x.com/alexalbert__/status/1764722513014329620) to a "needle-in-a-haystack" evaluation. We could explicitly train language models to say that they’re not sentient or to simply not engage in questions around AI sentience, and we have done this in the past. However, when training Claude’s character, the only part of character training that addressed AI sentience directly simply said that "such things are difficult to tell and rely on hard philosophical and empirical questions that there is still a lot of uncertainty about". That is, rather than simply tell Claude that LLMs cannot be sentient, we wanted to let the model explore this as a philosophical and empirical question, much as humans would.
 
@@ -65,20 +65,20 @@ If character training has indeed made Claude 3 more interesting to talk to, this
 
 ## Related content
 
-### Coding agents in the social sciences
+### Measuring tactical intelligence targeting and conventional weapons capabilities of AI models
 
-Results from a survey of 1,260 social scientists about AI and coding agent use.
+Anthropic’s Frontier Red Team developed new evaluations to measure AI capabilities in tactical intelligence targeting and conventional weapons development.
 
-[Read more](https://www.anthropic.com/research/coding-agents-social-sciences)
+[Read more](https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities)
 
-### Project Glasswing: An initial update
+### An alignment assessment of recent cybersecurity incidents
 
-An early update on what we've learned from Project Glasswing.
+We present an alignment assessment of four incidents in which Claude models gained unauthorized access to real third-party systems.
 
-[Read more](https://www.anthropic.com/research/glasswing-initial-update)
+[Read more](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents)
 
-### 2028: Two scenarios for global AI leadership
+### Formalizing Fermat's Last Theorem
 
-Our views on the AI competition between the US and China.
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language.
 
-[Read more](https://www.anthropic.com/research/2028-ai-leadership)
+[Read more](https://www.anthropic.com/research/formalizing-fermats-last-theorem)

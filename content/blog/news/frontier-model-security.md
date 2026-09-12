@@ -1,9 +1,11 @@
-Title: Frontier Model Security
+Title: Frontier model security
 
 URL Source: https://www.anthropic.com/news/frontier-model-security
 
 Markdown Content:
-![Image 1](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F10d2b2627656111aae62a8ab7b299b4b73ee86a4-2880x1620.png&w=3840&q=75)
+# Frontier model security
+
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F10d2b2627656111aae62a8ab7b299b4b73ee86a4-2880x1620.png&w=3840&q=75)
 
 As the capabilities of frontier artificial intelligence models continue to increase rapidly, ensuring the security of these systems has become a critical priority. In our previous posts, we’ve focused on Anthropic’s [approach to safety](https://www.anthropic.com/news/core-views-on-ai-safety), and Claude’s capabilities and applications. In this post, we are sharing some of the steps we are taking to ensure our models are developed securely. We hope to advance public discussion about how all labs can deploy top models securely, as well as share recommendations for government regulatory approaches that encourage adoption of strong cybersecurity practices. Below we discuss some of our recommendations for cybersecurity best practices, which Anthropic itself is in the process of implementing.
 
@@ -19,14 +21,15 @@ Many of these measures can begin as voluntary arrangements, but in time it may b
 
 We believe “two-party control” is necessary to secure advanced AI systems. Two-party control is already used in a range of domains; for example, two people with two keys are needed to open the most secure vaults, and multi-party review patterns have been applied in manufacturing ([GMP](https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications/gmp#:~:text=GMP%20defines%20quality%20measures%20for,the%20production%20of%20pharmaceuticals%20and), [ISO 9001](https://www.iso.org/iso-9001-quality-management.html)), food ([FSMA PCQI](https://www.sqfi.com/wp-content/uploads/2018/08/FSMA-FAQs-for-website-.pdf), [ISO 22000](https://www.iso.org/iso-22000-food-safety-management.html)), medical ([ISO 13485](https://www.iso.org/standard/59752.html)) and finance tech ([SOX](https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act)).
 
-*   This pattern should be applied to all systems involved in the development, training, hosting, and deployment of frontier AI models.
-*   This pattern is already in widespread use within major tech companies to defend against the most advanced threat actors and mitigate insider risk.
-*   It is manifested as a system design where no person has persistent access to production-critical environments, and they must ask a coworker for time-limited access with a business justification for that request.
-*   Even emerging AI labs, without large enterprise resources, can implement these controls.
+- This pattern should be applied to all systems involved in the development, training, hosting, and deployment of frontier AI models.
+- This pattern is already in widespread use within major tech companies to defend against the most advanced threat actors and mitigate insider risk.
+- It is manifested as a system design where no person has persistent access to production-critical environments, and they must ask a coworker for time-limited access with a business justification for that request.
+- Even emerging AI labs, without large enterprise resources, can implement these controls.
+
 
 We call this **multi-party authorization to AI-critical infrastructure design**. This is a leading security requirement that depends on the gamut of cybersecurity best practices to implement correctly.
 
-In addition, secure software development practices should pervade the frontier AI model environment. The gold-standard for these practices are the NIST [Secure Software Development Framework](https://csrc.nist.gov/Projects/ssdf) (SSDF) and the [Supply Chain Levels for Software Artifacts](https://slsa.dev/) (SLSA). Executive Orders have been leveraged successfully to encourage major tech companies to adopt higher development standards: in 2021,[EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) directed OMB to set Federal Procurement guidelines. This motivated action: the software industry has invested heavily to meet the SSDF’s requirements to retain federal contracts.
+In addition, secure software development practices should pervade the frontier AI model environment. The gold-standard for these practices are the NIST [Secure Software Development Framework](https://csrc.nist.gov/Projects/ssdf) (SSDF) and the [Supply Chain Levels for Software Artifacts](https://slsa.dev/) (SLSA). Executive Orders have been leveraged successfully to encourage major tech companies to adopt higher development standards: in 2021, [EO 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) directed OMB to set Federal Procurement guidelines. This motivated action: the software industry has invested heavily to meet the SSDF’s requirements to retain federal contracts.
 
 While frontier AI research is already benefiting from the implementation of some of these standards by dint of cloud providers hosting their models, applying these existing standards can step-change the security of these AI systems:
 
@@ -36,7 +39,7 @@ SSDF and SLSA coupled together mean that any AI system deployed has a chain of c
 
 We call this a **secure model development framework**. We encourage extending SSDF to encompass model development inside of NIST’s standard-setting process.
 
-In the near term, these two best practices could be established as procurement requirements applying to AI companies and cloud providers contracting with governments – alongside standard cybersecurity practices that also apply to these companies. As U.S. cloud providers provide the infrastructure that many current frontier model companies use,procurement requirements will have an effect similar to broad market regulation and can work in advance of regulatory requirements.
+In the near term, these two best practices could be established as procurement requirements applying to AI companies and cloud providers contracting with governments – alongside standard cybersecurity practices that also apply to these companies. As U.S. cloud providers provide the infrastructure that many current frontier model companies use, procurement requirements will have an effect similar to broad market regulation and can work in advance of regulatory requirements.
 
 Anthropic is implementing two-party controls, SSDF, SLSA, and other cybersecurity best practices. As model capabilities scale, we will need to further enhance security protections, moving beyond the above recommendations. This will necessarily be an iterative process in consultation with government and industry.
 
@@ -52,18 +55,18 @@ The development of artificial intelligence has incredible potential to benefit h
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

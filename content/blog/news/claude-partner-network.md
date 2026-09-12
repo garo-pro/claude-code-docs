@@ -1,9 +1,11 @@
-Title: Anthropic invests $100 million into the Claude Partner Network
+Title: $100 million for the Claude Partner Network
 
 URL Source: https://www.anthropic.com/news/claude-partner-network
 
 Markdown Content:
-_We’re launching the Claude Partner Network, a program for partner organizations helping enterprises adopt Claude. We’re committing an initial $100 million to support our partners with training courses, dedicated technical support, and joint market development. Partners who join [from today](https://claude.com/partners) will get immediate access to a new technical certification and be eligible for investment._
+# Anthropic invests $100 million into the Claude Partner Network
+
+*We’re launching the Claude Partner Network, a program for partner organizations helping enterprises adopt Claude. We’re committing an initial $100 million to support our partners with training courses, dedicated technical support, and joint market development. Partners who join [from today](https://claude.com/partners) will get immediate access to a new technical certification and be eligible for investment.*
 
 Anthropic is focused on ensuring that our AI model, Claude, serves the needs of businesses. To do this, we’ve partnered with a number of other companies. Notably, Claude is the only frontier AI model available on all three leading cloud providers: AWS, Google Cloud, and Microsoft.
 
@@ -27,34 +29,30 @@ Finally, we’re launching a Code Modernization starter kit, which gives our par
 
 Any organization that is bringing Claude to market is eligible to join the Claude Partner Network. Membership is free of charge, and applications open today. You can [find out more here](https://claude.com/partners).
 
-_Below, our partners share more about their work with Claude:_
+*Below, our partners share more about their work with Claude:*
 
-> We're training 30,000 Accenture professionals on Claude because that's what it takes to meet the demand we're seeing. The Claude Partner Network gives us the structure to do that faster — the certification, the co-selling support, the shared investment. It matches how we actually build practices and deploy teams.
+We're training 30,000 Accenture professionals on Claude because that's what it takes to meet the demand we're seeing. The Claude Partner Network gives us the structure to do that faster — the certification, the co-selling support, the shared investment. It matches how we actually build practices and deploy teams.
 
-> Enterprise AI needs to be powerful. The Claude Partner Network helps formalize and scale the work underway; the training, industry-focused solutions, and practical guidance for deploying AI.
+Enterprise AI needs to be powerful. The Claude Partner Network helps formalize and scale the work underway; the training, industry-focused solutions, and practical guidance for deploying AI.
 
-> We've opened Claude access across our global workforce—supporting an organization of roughly 350,000 associates—and we're embedding it into how we help clients modernize and transform. The Claude Partner Network gives us the co-investment and technical support to move faster, so our clients can advance pilot initiatives toward production without the usual delays.
+We've opened Claude access across our global workforce—supporting an organization of roughly 350,000 associates—and we're embedding it into how we help clients modernize and transform. The Claude Partner Network gives us the co-investment and technical support to move faster, so our clients can advance pilot initiatives toward production without the usual delays.
 
-> We are enabling clients to scale AI with confidence—built on robust governance, security, and trust by design. Our dedicated Anthropic Center of Excellence accelerates readiness and capability-building, aligned with Infosys’ AI-first value approach. With teams applying Claude Code in real-world delivery, we are helping clients unlock AI value across industries.
-
-01 /
-
-04
+We are enabling clients to scale AI with confidence—built on robust governance, security, and trust by design. Our dedicated Anthropic Center of Excellence accelerates readiness and capability-building, aligned with Infosys’ AI-first value approach. With teams applying Claude Code in real-world delivery, we are helping clients unlock AI value across industries.
 
 ## Related content
 
-### Statement on the US government directive to suspend access to Fable 5 and Mythos 5
+### Developing Enterprise Frontier Safeguards with our customers
 
-The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/fable-mythos-access)
+### Improving our alignment and security efforts
 
-### Results from the first Anthropic Public Record
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-[Read more](https://www.anthropic.com/news/anthropic-public-record)
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-### TCS and Anthropic partner to bring Claude to regulated industries
+### Previewing the Model Hardware Standard
 
-We’re announcing a partnership with Tata Consultancy Services (TCS). TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries; and join the Claude Partner Network.
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-[Read more](https://www.anthropic.com/news/tcs-anthropic-partnership)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

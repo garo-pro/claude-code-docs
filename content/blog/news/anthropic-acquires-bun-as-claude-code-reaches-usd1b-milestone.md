@@ -1,8 +1,10 @@
-Title: Anthropic acquires Bun as Claude Code reaches $1B milestone
+Title: Anthropic acquires Bun as Claude Code hits $1B
 
 URL Source: https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone
 
 Markdown Content:
+# Anthropic acquires Bun as Claude Code reaches $1B milestone
+
 Claude is the world’s smartest and most capable AI model for developers, startups, and enterprises. Claude Code represents a new era of agentic coding, fundamentally changing how teams build software. In November, Claude Code achieved a significant milestone: just six months after becoming available to the public, it reached $1 billion in run-rate revenue. And today we’re announcing that Anthropic is acquiring [Bun](https://bun.com/)—a breakthrough JavaScript runtime—to further accelerate Claude Code.
 
 Bun is redefining speed and performance for modern software engineering and development. Founded by Jarred Sumner in 2021, Bun is dramatically faster than the leading competition. As an all-in-one toolkit—combining runtime, package manager, bundler, and test runner—it's become essential infrastructure for AI-led software engineering, helping developers build and test applications at unprecedented velocity.
@@ -23,14 +25,18 @@ If you’re interested in joining Anthropic’s engineering team, visit our [car
 
 ## Related content
 
-### Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening
+### Developing Enterprise Frontier Safeguards with our customers
 
-[Read more](https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea)
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-### Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"
+### Improving our alignment and security efforts
 
-[Read more](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical)
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-### Widening the conversation on frontier AI
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/widening-conversation-ai)
+### Previewing the Model Hardware Standard
+
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
+
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

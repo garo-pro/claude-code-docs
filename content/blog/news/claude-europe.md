@@ -3,13 +3,15 @@ Title: Claude is now available in the EU
 URL Source: https://www.anthropic.com/news/claude-europe
 
 Markdown Content:
-![Image 1](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F791c1c121225ef3e3a368279926c12552ddb075c-1778x1000.jpg&w=3840&q=75)
+# Claude is now available in Europe
+
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F791c1c121225ef3e3a368279926c12552ddb075c-1778x1000.jpg&w=3840&q=75)
 
 We’re excited to announce that [Claude](https://www.anthropic.com/claude), Anthropic’s trusted AI assistant, is now available for people and businesses across Europe to enhance their productivity and creativity. Starting today, they will be able to use:
 
-*   [Claude.ai](http://claude.ai/redirect/website.v1.35317ba4-2761-43a9-8ec5-4032216db095): the web-based version of our next-generation AI assistant
-*   The [Claude iOS app](https://apps.apple.com/app/claude/id6473753684): a free version of Claude that offers the same intuitive experience as mobile web
-*   The [Claude Team plan](https://www.anthropic.com/news/team-plan-and-ios): the best way for every business to provide teams with secure access to Claude's state-of-the-art AI capabilities and the [Claude 3 model family](https://www.anthropic.com/news/claude-3-family)
+- [Claude.ai](http://claude.ai/redirect/website.v1.490d5ff1-2ae7-4f49-9b55-e278bd1e2d1e) : the web-based version of our next-generation AI assistant
+- The [Claude iOS app](https://apps.apple.com/app/claude/id6473753684) : a free version of Claude that offers the same intuitive experience as mobile web
+- The [Claude Team plan](https://www.anthropic.com/news/team-plan-and-ios) : the best way for every business to provide teams with secure access to Claude's state-of-the-art AI capabilities and the[Claude 3 model family](https://www.anthropic.com/news/claude-3-family)
 
 Today’s release follows the Europe launch of the Claude API earlier this year, which allows developers to integrate Anthropic’s state-of-the-art AI models into their own applications, websites, or services.
 
@@ -19,24 +21,22 @@ Both Claude.ai and the Claude iOS app are available for free. The Claude app is 
 
 At Anthropic, we're dedicated to creating AI systems that put people first. We look forward to bringing the unique capabilities of the Claude 3 model family to more people throughout Europe.
 
-_Read this post in [French](https://cdn.sanity.io/files/4zrzovbb/website/bfbafc8f692634001f9f5fb7d05d12a4ef71ad24.pdf), [German](https://cdn.sanity.io/files/4zrzovbb/website/397335b3ce79aff658ba1a35f73c26cce0ea5490.pdf), [Italian](https://cdn.sanity.io/files/4zrzovbb/website/c2e15095e05250d9feecef8a1b9e9fd319acd7c7.pdf), or [Spanish](https://cdn.sanity.io/files/4zrzovbb/website/5686521fb5eaa65ae0a3e79c7d7713760942e6d2.pdf)._
+*Read this post in [French](https://cdn.sanity.io/files/4zrzovbb/website/bfbafc8f692634001f9f5fb7d05d12a4ef71ad24.pdf), [German](https://cdn.sanity.io/files/4zrzovbb/website/397335b3ce79aff658ba1a35f73c26cce0ea5490.pdf), [Italian](https://cdn.sanity.io/files/4zrzovbb/website/c2e15095e05250d9feecef8a1b9e9fd319acd7c7.pdf), or [Spanish](https://cdn.sanity.io/files/4zrzovbb/website/5686521fb5eaa65ae0a3e79c7d7713760942e6d2.pdf).*
 
 ## Related content
 
-### DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on
+### Developing Enterprise Frontier Safeguards with our customers
 
-We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/dxc-anthropic-alliance)
+### Improving our alignment and security efforts
 
-### Introducing Claude Corps
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/claude-corps)
+### Previewing the Model Hardware Standard
 
-### Claude Fable 5 and Claude Mythos 5
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
-
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)

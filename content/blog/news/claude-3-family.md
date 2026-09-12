@@ -3,7 +3,7 @@ Title: Introducing the next generation of Claude
 URL Source: https://www.anthropic.com/news/claude-3-family
 
 Markdown Content:
-![Image 1: Claude 3 ](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4e78f69ef8d4186fb5691714abe36224483d91b0-2880x1620.png&w=3840&q=75)
+![Claude 3](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F4e78f69ef8d4186fb5691714abe36224483d91b0-2880x1620.png&w=3840&q=75)
 
 Today, we're announcing the Claude 3 model family, which sets new industry benchmarks across a wide range of cognitive tasks. The family includes three state-of-the-art models in ascending order of capability: Claude 3 Haiku, Claude 3 Sonnet, and Claude 3 Opus. Each successive model offers increasingly powerful performance, allowing users to select the optimal balance of intelligence, speed, and [cost](https://www.anthropic.com/api#pricing) for their specific application.
 
@@ -11,7 +11,7 @@ Opus and Sonnet are now available to use in claude.ai and the Claude API which i
 
 ### Claude 3 model family
 
-![Image 2](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F5d20371eeb8d045465bb22cacfd269b5958b004d-2200x1174.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F5d20371eeb8d045465bb22cacfd269b5958b004d-2200x1174.png&w=3840&q=75)
 
 ### A new standard for intelligence
 
@@ -21,7 +21,7 @@ All [Claude 3](https://www.anthropic.com/claude-3-model-card) models show increa
 
 Below is a comparison of the Claude 3 models to those of our peers on multiple benchmarks [1] of capability:
 
-![Image 3](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F9ad98d612086fe52b3042f9183414669b4d2a3da-2200x1954.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F9ad98d612086fe52b3042f9183414669b4d2a3da-2200x1954.png&w=3840&q=75)
 
 ### Near-instant results
 
@@ -35,13 +35,13 @@ For the vast majority of workloads, Sonnet is 2x faster than Claude 2 and Claude
 
 The Claude 3 models have sophisticated vision capabilities on par with other leading models. They can process a wide range of visual formats, including photos, charts, graphs and technical diagrams. We’re particularly excited to provide this new modality to our enterprise customers, some of whom have up to 50% of their knowledge bases encoded in various formats such as PDFs, flowcharts, or presentation slides.
 
-![Image 4](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F6b66d86ff0c180e95bc6ad2e6e4a1843aa74c80f-2200x960.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F6b66d86ff0c180e95bc6ad2e6e4a1843aa74c80f-2200x960.png&w=3840&q=75)
 
 ### Fewer refusals
 
 Previous Claude models often made unnecessary refusals that suggested a lack of contextual understanding. We’ve made meaningful progress in this area: Opus, Sonnet, and Haiku are significantly less likely to refuse to answer prompts that border on the system’s guardrails than previous generations of models. As shown below, the Claude 3 models show a more nuanced understanding of requests, recognize real harm, and refuse to answer harmless prompts much less often.
 
-![Image 5](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd1fbcf3d58ebc2dcd2e98aac995d70bf50cb2e9c-2188x918.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd1fbcf3d58ebc2dcd2e98aac995d70bf50cb2e9c-2188x918.png&w=3840&q=75)
 
 ### Improved accuracy
 
@@ -49,7 +49,7 @@ Businesses of all sizes rely on our models to serve their customers, making it i
 
 In addition to producing more trustworthy responses, we will soon enable citations in our Claude 3 models so they can point to precise sentences in reference material to verify their answers.
 
-![Image 6](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7cb598c6a9fa58c12b77f67ee2067feaac4a2de0-2200x896.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F7cb598c6a9fa58c12b77f67ee2067feaac4a2de0-2200x896.png&w=3840&q=75)
 
 ### Long context and near-perfect recall
 
@@ -57,7 +57,7 @@ The Claude 3 family of models will initially offer a 200K context window upon la
 
 To process long context prompts effectively, models require robust recall capabilities. The 'Needle In A Haystack' (NIAH) evaluation measures a model's ability to accurately recall information from a vast corpus of data. We enhanced the robustness of this benchmark by using one of 30 random needle/question pairs per prompt and testing on a diverse crowdsourced corpus of documents. Claude 3 Opus not only achieved near-perfect recall, surpassing 99% accuracy, but in some cases, it even identified the limitations of the evaluation itself by recognizing that the "needle" sentence appeared to be artificially inserted into the original text by a human.
 
-![Image 7](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd2aa12b60e9c57e7057924bd8878d754c7b3d8e7-2200x1088.png&w=3840&q=75)
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd2aa12b60e9c57e7057924bd8878d754c7b3d8e7-2200x1088.png&w=3840&q=75)
 
 ### Responsible design
 
@@ -73,42 +73,31 @@ The Claude 3 models are better at following complex, multi-step instructions. Th
 
 ### Model details
 
-**Claude 3 Opus**is our most intelligent model, with best-in-market performance on highly complex tasks. It can navigate open-ended prompts and sight-unseen scenarios with remarkable fluency and human-like understanding. Opus shows us the outer limits of what’s possible with generative AI.
+**Claude 3 Opus** is our most intelligent model, with best-in-market performance on highly complex tasks. It can navigate open-ended prompts and sight-unseen scenarios with remarkable fluency and human-like understanding. Opus shows us the outer limits of what’s possible with generative AI.
 
-**Cost**_[Input $/million tokens | Output $/million tokens]_$15 | $75
-**Context window**200K*
-**Potential uses***   Task automation: plan and execute complex actions across APIs and databases, interactive coding
-*   R&D: research review, brainstorming and hypothesis generation, drug discovery
-*   Strategy: advanced analysis of charts & graphs, financials and market trends, forecasting
-**Differentiator**Higher intelligence than any other model available.
+| **Cost**   *[Input $/million tokens \| Output $/million tokens]* | $15 \| $75 | 
+| **Context window** | 200K* | 
+| **Potential uses** |  | 
+| **Differentiator** | Higher intelligence than any other model available. | 
 
-data
+**1M tokens available for specific use cases, please inquire.*
 
-_*1M tokens available for specific use cases, please inquire._
+![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F08376f135c37fe029e2aea16fa55c4c83ec77b6b-1148x56.png&w=3840&q=75)
 
-![Image 8](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F08376f135c37fe029e2aea16fa55c4c83ec77b6b-1148x56.png&w=3840&q=75)
 
 **Claude 3 Sonnet** strikes the ideal balance between intelligence and speed—particularly for enterprise workloads. It delivers strong performance at a lower cost compared to its peers, and is engineered for high endurance in large-scale AI deployments.
 
-**Cost**_[Input $/million tokens | Output $/million tokens]_$3 | $15
-**Context window**200K
-**Potential uses***   Data processing: RAG or search & retrieval over vast amounts of knowledge
-*   Sales: product recommendations, forecasting, targeted marketing
-*   Time-saving tasks: code generation, quality control, parse text from images
-**Differentiator**More affordable than other models with similar intelligence; better for scale.
-
-data
+| **Cost**   *[Input $/million tokens \| Output $/million tokens]* | $3 \| $15 | 
+| **Context window** | 200K | 
+| **Potential uses** |  | 
+| **Differentiator** | More affordable than other models with similar intelligence; better for scale. | 
 
 **Claude 3 Haiku** is our fastest, most compact model for near-instant responsiveness. It answers simple queries and requests with unmatched speed. Users will be able to build seamless AI experiences that mimic human interactions.
 
-**Cost**_[Input $/million tokens | Output $/million tokens]_$0.25 | $1.25
-**Context window**200K
-**Potential uses***   Customer interactions: quick and accurate support in live interactions, translations
-*   Content moderation: catch risky behavior or customer requests
-*   Cost-saving tasks: optimized logistics, inventory management, extract knowledge from unstructured data
-**Differentiator**Smarter, faster, and more affordable than other models in its intelligence category.
-
-data
+| **Cost**   *[Input $/million tokens \| Output $/million tokens]* | $0.25 \| $1.25 | 
+| **Context window** | 200K | 
+| **Potential uses** |  | 
+| **Differentiator** | Smarter, faster, and more affordable than other models in its intelligence category. | 
 
 ### Model availability
 
@@ -122,24 +111,22 @@ We do not believe that model intelligence is anywhere near its limits, and we pl
 
 As we push the boundaries of AI capabilities, we’re equally committed to ensuring that our safety guardrails keep apace with these leaps in performance. Our hypothesis is that being at the frontier of AI development is the most effective way to steer its trajectory towards positive societal outcomes.
 
-We’re excited to see what you create with Claude 3 and hope you will give us feedback to make Claude an even more useful assistant and creative companion. To start building with Claude, visit [anthropic.com/claude](https://www.anthropic.com/claude).
+We’re excited to see what you create with Claude 3 and hope you will give us feedback to make Claude an even more useful assistant and creative companion. To start building with Claude, visit [anthropic.com/claude](https://www.anthropic.com/claude). 
 
 ## Related content
 
-### DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on
+### Developing Enterprise Frontier Safeguards with our customers
 
-We’re announcing a multi-year global alliance with DXC Technology, one of the world’s largest IT services companies.
+[Read more](https://www.anthropic.com/news/enterprise-frontier-safeguards)
 
-[Read more](https://www.anthropic.com/news/dxc-anthropic-alliance)
+### Improving our alignment and security efforts
 
-### Introducing Claude Corps
+On July 30, we reported three incidents in which Claude models gained unauthorized access to real computer systems. We are conducting an in-depth analysis of both incidents, and planning to work with METR for an independent review. In the meantime, we’re sharing some of the changes we’ve made over the past month.
 
-We’re launching Claude Corps, a national fellowship program for people early in their careers who are passionate about extending the benefits of AI to communities across America.
+[Read more](https://www.anthropic.com/news/improving-alignment-security-efforts)
 
-[Read more](https://www.anthropic.com/news/claude-corps)
+### Previewing the Model Hardware Standard
 
-### Claude Fable 5 and Claude Mythos 5
+We’re opening a research preview of the Model Hardware Standard (MHS), a shared specification for AI agents to safely operate physical devices, to a first group of scientific research labs and advanced manufacturers.
 
-Our next generation of intelligence for the hardest knowledge work and coding problems.
-
-[Read more](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+[Read more](https://www.anthropic.com/news/model-hardware-standard-research-preview)
