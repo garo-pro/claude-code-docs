@@ -40,7 +40,7 @@ In Cowork, open the "Cowork" tab first, then open **Customize**.
 
 You can also upload a custom plugin file if you built one yourself. On Team and Enterprise plans, a colleague can share a plugin with you directly instead of sending you the file. See **[Use a plugin shared with you](#h_ef985546b4)** below. On Claude Desktop and in Cowork, plugins you add yourself are saved locally to your computer.
 
-![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2100409211/fc01614dde1a616fa31ffaa9cb04/47bacf5b-a810-45b5-a468-9769f1a58ef8?expires=1789313400&amp;signature=664277eae1ed3e87618112553a84a7e9611aabf37f5bd4d76a33de084b2033c5&amp;req=diEnFs1%2BlINeWPMW1HO4zZF3IhzeMvZRxakFVfq5WwxvPtC4oFFkLIsKbL2W%0APnctxIRR67vNpQYSX7k%3D%0A)
+![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2100409211/fc01614dde1a616fa31ffaa9cb04/47bacf5b-a810-45b5-a468-9769f1a58ef8?expires=1789326000&amp;signature=46393daf957eefaca8c40b7ab560e69fefc673b09cdd866e18061bf94df52c97&amp;req=diEnFs1%2BlINeWPMW1HO4zZF3IhzeMfNVxakFVfq5WwwoUBg%2Bx5F27e%2F44dWR%0A683NG7ojssocy8PWbHs%3D%0A)
 
 If you're on the Enterprise plan and your organization has skill scanning turned on, plugins are checked for malicious content when they're installed or updated. A plugin with malicious content is blocked, and one that may carry risk shows a caution banner. Learn more about **[skill and plugin scanning](https://support.claude.com/en/articles/15927065)**.
 
@@ -50,7 +50,7 @@ If you're on the Enterprise plan and your organization has skill scanning turned
 
 Each plugin you install adds skills you can use while working with Claude. Type "/" or click the "+" button to see the available skills from your installed plugins, in chat and in Cowork. Click any skill to see its details.
 
-![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2157396844/4a790e10f5b88df770783df1d7e9/image.png?expires=1789313400&amp;signature=1bc7d2d70d44c6e3eabe2e31105dc20667fa74e5bc35f3f1a06d67d6772af761&amp;req=diEiEcp3m4lbXfMW1HO4zf4NBP%2F%2FgkOQmKUxugP2BQtWSreEAM%2B7sN0hvfp5%0A4ME1UhprULbUIH5CfNM%3D%0A)
+![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2157396844/4a790e10f5b88df770783df1d7e9/image.png?expires=1789326000&amp;signature=abfbd458e17b1ab4f4edb4d81a853230ca8d7194899242abdde1f8832229ee0a&amp;req=diEiEcp3m4lbXfMW1HO4zf4NBP%2F%2FgUaUmKUxugP2BQtRVWkP%2Fw29lBQbauk%2F%0A2tIrRfCngmDwIEBh11k%3D%0A)
 
 ---
 
