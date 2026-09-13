@@ -50,6 +50,24 @@
       "serves_llms_txt": false,
       "serves_sitemap": true,
       "serves_markdown": false
+    },
+    "alignment.anthropic.com": {
+      "status": "fetched",
+      "serves_llms_txt": false,
+      "serves_sitemap": false,
+      "serves_markdown": false
+    },
+    "transformer-circuits.pub": {
+      "status": "fetched",
+      "serves_llms_txt": false,
+      "serves_sitemap": false,
+      "serves_markdown": false
+    },
+    "red.anthropic.com": {
+      "status": "not-fetched",
+      "serves_llms_txt": false,
+      "serves_sitemap": false,
+      "serves_markdown": false
     }
   },
   "redirect_targets": [
