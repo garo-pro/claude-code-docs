@@ -19,9 +19,7 @@ Claude Sonnet 4.5, released [two weeks ago](https://www.anthropic.com/news/claud
 
 Claude Haiku 4.5 is available everywhere today. If you’re a developer, simply use claude-haiku-4-5 via the Claude API. Pricing is now $1/$5 per million input and output tokens.
 
-## 
-
-Benchmarks
+## Benchmarks
 
 ![Comparison table of frontier models across popular benchmarks](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F029af67124b67bdf0b50691a8921b46252c023d2-1920x1625.png&w=3840&q=75)
 

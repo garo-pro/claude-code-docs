@@ -54,9 +54,7 @@ Below are the most common daily tasks. Most employees (55%) used Claude for debu
 
 *Figure 1: Proportion of daily users (x-axis) for various coding tasks (y-axis).*
 
-### 
-
-Usage and productivity
+### Usage and productivity
 
 
 Employees self-reported that 12 months ago, they used Claude in 28% of their daily work and got a +20% productivity boost from it, whereas now, they use Claude in 59% of their work and achieve +50% productivity gains from it on average. (This roughly corroborates the 67% increase in merged pull requests—i.e. successfully incorporated changes to code—per engineer per day we saw when we adopted Claude Code [across our Engineering org](https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built).) The year-on-year comparison is quite dramatic—this suggests a more than 2x increase in both metrics in one year. Usage and productivity are also strongly correlated, and at the extreme end of the distribution, 14% of respondents are increasing their productivity by more than 100% by using Claude—these are our internal “power users.”
@@ -77,9 +75,7 @@ It is also not clear from our data where reported time savings are being reinves
 
 Output volume increases are more straightforward and substantial; there is a larger net increase across all task categories. This pattern makes sense when we consider that people are reporting on task categories (like “debugging” overall) rather than individual tasks—i.e. people can spend slightly less time on debugging as a category while producing much more debugging output overall. Productivity is very hard to measure directly, but this self-reported data suggests that AI enables increased productivity at Anthropic primarily through greater output volume.
 
-### 
-
-Claude enabling new work
+### Claude enabling new work
 
 One thing we were curious about: Is Claude enabling qualitatively new kinds of work, or would Claude-assisted work have been done by employees eventually (albeit potentially at a slower rate)?
 
@@ -163,9 +159,7 @@ Honestly, I worry much more about the oversight and supervision problem than I d
 
 To combat this, some engineers deliberately practice without AI: "Every once in a while, even if I know that Claude can nail a problem, I will not ask it to. It helps me keep myself sharp.”
 
-#### 
-
-Will we still need those hands-on coding skills?
+#### Will we still need those hands-on coding skills?
 
 Perhaps software engineering is moving to higher levels of abstraction, which it has done in the past. Early programmers worked much closer to the machine—manually managing memory, writing in assembly language, or even toggling physical switches to input instructions. Over time, higher-level, more human-readable languages emerged that automatically handled complex, low-level operations. Perhaps, in particular with the rise of “vibe coding”, we’re now moving to English as a programming language. One of our staff suggested that aspiring engineers “get good at having AIs [write code], and focus on learning higher level concepts and patterns.”
 
@@ -201,9 +195,7 @@ However, others described experiencing less interaction with colleagues (“I wo
 
 It's been sad that more junior people don't come to me with questions as often, though they definitely get their questions answered more effectively and learn faster.
 
-### 
-
-Career uncertainty and adaptation
+### Career uncertainty and adaptation
 
 Many engineers describe their role shifting from writing code to managing AIs. Engineers increasingly see themselves as “manager[s] of AI agents”—some already “constantly have at least a few [Claude] instances running.” One person estimated their work has shifted “70%+ to being a code reviewer/reviser rather than a net-new code writer” and another saw “taking accountability for the work of 1, 5, or 100 Claudes” as part of their future role.
 
@@ -219,9 +211,7 @@ Overall, many acknowledge deep uncertainty: “I have very low confidence in wha
 
 The survey and interview data show that increased Claude usage is helping people work faster and take on new types of work, though this comes with tensions around AI delegation and skill development. Still, self-reported data only tells part of the story. To complement this, we also analyzed actual Claude usage data across Anthropic teams. Because survey respondents reported Claude Code as the majority of their usage, we used our [privacy-preserving analysis tool](https://www.anthropic.com/research/clio) to analyze 200,000 internal transcripts from Claude Code from February and August 2025.
 
-### 
-
-Tackling harder problems with less oversight
+### Tackling harder problems with less oversight
 
 Claude Code usage has shifted toward more difficult and autonomous coding tasks over the last six months: (Figure 3):
 
@@ -291,9 +281,7 @@ year = {2025},
 url = {https://anthropic.com/research/how-ai-is-transforming-work-at-anthropic/},
 }
 ```
-#### 
-
-Acknowledgments
+#### Acknowledgments
 
 Saffron Huang led the project, designed and executed the surveys, interviews, and data analysis, plotted figures and wrote the blog post. Bryan Seethor co-designed the surveys and interviews, co-led survey and interview data collection, analyzed interview themes, contributed to writing, and managed the project timeline. Esin Durmus contributed to experiment design and provided detailed direction and feedback throughout. Kunal Handa contributed infrastructure for the interviewing process. Deep Ganguli provided critical guidance and organizational support. All authors provided detailed guidance and feedback throughout.
 

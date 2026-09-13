@@ -32,6 +32,7 @@ Usage:
 #   "aiofiles",
 #   "tqdm",
 #   "trafilatura",
+#   "lxml",
 # ]
 # ///
 
@@ -51,6 +52,7 @@ from typing import Dict, List, Optional
 import aiofiles
 import aiohttp
 import trafilatura
+from lxml.html import fromstring, tostring as html_tostring
 from tqdm.asyncio import tqdm_asyncio
 
 
@@ -517,6 +519,54 @@ class Fetcher:
                 self.stats["failed"] += 1
                 return {"url": url, "status": "failed", "error": str(e)}
 
+    def _preprocess_blog_html(self, html: str) -> str:
+        """Strip DOM quirks that defeat trafilatura's content extraction.
+
+        The newsletter-signup widget on every anthropic.com blog page sits as a
+        sibling of <article> inside <main>, but its wrapper div's class matches
+        trafilatura's *first* (most specific) body-container heuristic -- before
+        <article> or <main id="main-content"> are ever tried. That tiny widget
+        (one heading, one paragraph) clears trafilatura's "found enough content,
+        stop looking" threshold, so it wins as "the" body. Trafilatura then tries
+        to recover the real article text via a wild-text fallback pass that -- by
+        its own design, to avoid inflating length checks elsewhere -- recovers
+        only <p>/<code>/<quote>/<table>, never headings. Net effect: every real
+        heading in the post vanishes and the newsletter box is the only heading
+        left standing, with its own boilerplate text prepended to every post.
+        Removing the widget before extraction lets candidate selection fall
+        through to the real <article>, so headings and body text come from the
+        same pass and stay in document order.
+
+        Separately, a few headings in the source CMS content start with a bare
+        <br/> before their text (e.g. "<h2><br/>The classifier decision
+        criteria</h2>"). Trafilatura's heading handler treats the <br/> as a
+        child element and returns it as-is without folding its tail text back
+        in, so the heading extracts as empty. Splicing the tail onto the
+        heading's own text and dropping the <br/> avoids that.
+
+        Cheaply pre-checked before touching lxml at all: transformer-circuits.pub
+        pages run past 15MB (embedded interactive-figure data) and don't carry
+        either pattern, and a full parse/reserialize round-trip on a document
+        that size risks losing content in ways the single trafilatura-internal
+        parse wouldn't -- not worth paying on pages that need no surgery.
+        """
+        if "NewsletterSubscribe-module" not in html and not re.search(r"<h[1-6][^>]*>\s*<br\s*/?>", html):
+            return html
+        try:
+            tree = fromstring(html)
+        except Exception:
+            return html
+        for el in tree.xpath("//*[contains(@class, 'NewsletterSubscribe-module')]"):
+            parent = el.getparent()
+            if parent is not None:
+                parent.remove(el)
+        for h in tree.xpath("//h1|//h2|//h3|//h4|//h5|//h6"):
+            if len(h) and h[0].tag == "br" and not (h.text and h.text.strip()):
+                br = h[0]
+                h.text = (h.text or "") + (br.tail or "")
+                h.remove(br)
+        return html_tostring(tree, encoding="unicode")
+
     def _extract_blog_page(self, html: str, url: str) -> Optional[Dict[str, str]]:
         """HTML -> markdown for anthropic.com, which serves no .md variant.
 
@@ -528,6 +578,7 @@ class Fetcher:
         Content:" shape the pre-2026-07 jina.ai-fetched archive already uses,
         so old and new files in content/blog/ read the same way.
         """
+        html = self._preprocess_blog_html(html)
         md = trafilatura.extract(
             html, output_format="markdown", url=url,
             include_links=True, include_images=True, with_metadata=True,

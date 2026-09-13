@@ -23,15 +23,11 @@ This research builds on other work underway at Anthropic to understand how peopl
 
 The Anthropic Public Record will be repeated regularly, evolving in scope as new topics become more salient, and allowing us to track how the public’s attitudes towards AI change as model capabilities advance and adoption deepens. In the future, we plan to expand outside the US.
 
-### 
-
-**Method in brief**
+### **Method in brief**
 
 We conducted a nationally representative online survey in November and December of 2025 of 51,993 Americans, sourced from YouGov and weighted to US Census benchmarks. State samples range from n=232 (Alaska) to n=1,902 (New York), with state-level margins of error between ±2.6 and ±9.1 percentage points. More details on the methodology are available in the Appendix.
 
-### 
-
-**What Americans hope AI will deliver**
+### **What Americans hope AI will deliver**
 
 We asked Americans to choose their top three hopes for AI from a list of 17. Curing disease topped the list, with 48% of respondents putting it in their top three, 12 percentage points ahead of the second most commonly selected item, helping people with disabilities, at 36%. Items like therapy and reducing loneliness—or hopes that AI might substitute for human contact—were the lowest ranked of the options presented.
 
@@ -61,9 +57,7 @@ Concerns over job displacement rise with a respondent’s education level. Ameri
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa6adecdb6dcd4a10e8c131745de60b3423f07d9f-2528x1312.png&w=3840&q=75)
 
-### 
-
-**Fear of job loss is heightened among those who use AI least**
+### **Fear of job loss is heightened among those who use AI least**
 
 At the same time, people who use AI at work every day are notably *less* worried about job loss than people who don’t use AI at all: 54% versus 70%.
 
@@ -81,9 +75,7 @@ On most tasks, a majority of Americans did not want AI involved in their jobs, a
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F50c5fe81fc536fb4cfb27022811ba8d841f2ca8d-2528x2432.png&w=3840&q=75)
 
-### 
-
-**Cognitive dependency is an anticipatory fear**
+### **Cognitive dependency is an anticipatory fear**
 
 The second most common fear in our survey was cognitive dependency on AI. To better understand whether people might actually be experiencing dependency, we asked respondents how much disruption they would feel if AI became unavailable tomorrow, then compared the answers of those worried about dependency with those unconcerned by it.
 
@@ -137,9 +129,7 @@ Only 15% of Americans said they trust AI companies to make decisions about how t
 
 Integrated users were more trusting of every institution we asked about, including AI companies—and were markedly less inclined to say AI development should be slowed or stopped. However, they also support government involvement on AI at essentially the national rate (74% versus 71%), and across the eight specific governance domains we tested, their preferences are nearly indistinguishable from the public's.
 
-### 
-
-**Anthropic initiatives and what comes next**
+### **Anthropic initiatives and what comes next**
 
 Public input is critical to ensuring that powerful AI serves humanity’s interests. Anthropic Public Record, Anthropic Interviewer, the Anthropic Economic Index, and many of our other research projects are all efforts to gain greater understanding and input from the public about how to make the AI transition go well.
 
@@ -147,9 +137,7 @@ We recently announced several [policy frameworks](https://www.anthropic.com/poli
 
 The direction AI takes should not be set only by the companies building it. The more clearly the public’s hopes and concerns are measured, the better we—and other companies—can meet them.
 
-### 
-
-**Appendix: Methodology**
+### **Appendix: Methodology**
 
 **Population and mode:** Anthropic Public Record is an online survey of the US late-teen and adult internet population, age 16 and over, resident in the 50 states, the District of Columbia, or Puerto Rico. Fieldwork was conducted by YouGov from its online panel between November 1 and December 11, 2025.
 

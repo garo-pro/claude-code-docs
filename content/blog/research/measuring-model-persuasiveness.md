@@ -140,9 +140,7 @@ url = {https://www.anthropic.com/news/measuring-model-persuasiveness},
 
 Esin Durmus led the research, designed the experiments, ran the experiments, and analyzed the data. Esin Durmus and Liane Lovitt wrote the blog post. Jack Clark, Alex Tamkin, Liane Lovitt, Stuart Ritchie, and Deep Ganguli contributed to the experimental design and analysis, and gave feedback on the writing. We thank Sally Aldous, Cem Anil, Amanda Askell, Aaron Begg, Sam Bowman, David Duvenaud, Everett Katigbak, Jared Kaplan, Devon Kearns, Tomek Korbak, Minae Kwon, Faisal Ladhak, Wes Mitchell, Jesse Mu, Ansh Radhakrishnan, Alex Sanderford, Michael Sellitto, Jascha Sohl-Dickstein, Ted Summer, Maggie Vo, and Zachary Witten for feedback on earlier drafts and experiments, and help with release.
 
-#### 
-
-Appendix
+#### Appendix
 
 ![Table of p Values](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fbf236ca20101f988d07d2ab6f7610acfa0f85f93-2200x1200.png&w=3840&q=75)
 

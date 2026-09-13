@@ -88,9 +88,7 @@ Bars show the difference (in percentage points) between each cluster's share of 
 
 Higher-adoption countries generally use Claude more broadly, so part of Australia's lower coding share is expected. Australia's Computer and Mathematical shortfall of 8.0pp sits right in line with the Anglosphere average of 8.9pp. Where Australia diverges from its peers is in what fills the gap: it leans further into Management (+2.3pp vs the Anglosphere's +1.2pp) and Office and Administrative Support (+1.3pp vs +0.1pp), rather than Educational Instruction (−2.7pp vs +1.6pp for peers).
 
-## 
-
-**Conclusion**
+## **Conclusion**
 
 Australia is among the leading per capita adopters of Claude, with usage more than four times what its working-age population would predict. The character of that usage—predominantly work and personal rather than coursework, sophisticated prompts addressing relatively short tasks, and with less delegation to Claude—closely tracks other Anglosphere economies and cross-country relationships evident within the Anthropic Economic Index.
 

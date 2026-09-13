@@ -68,9 +68,7 @@ It’s useful to contrast these findings with external capability assessments. O
 
 Neither capability evaluations nor our measurements alone give a complete picture of agent autonomy, but together they suggest that the latitude granted to models in practice lags behind what they can handle.
 
-## 
-
-Experienced users in Claude Code auto-approve more frequently, but interrupt more often
+## Experienced users in Claude Code auto-approve more frequently, but interrupt more often
 
 How do humans adapt how they work with agents over time? We found that people grant Claude Code more autonomy as they gain experience using it (Figure 2). Newer users (<50 sessions) employ full auto-approve roughly 20% of the time; by 750 sessions, this increases to over 40% of sessions.
 
@@ -158,9 +156,7 @@ These patterns suggest we are in the early days of agent adoption. Software engi
 
 While our headline numbers are reassuring—most agent actions are low-risk and reversible, and humans are usually in the loop—these averages can obscure deployments at the frontier. The concentration of adoption in software engineering, combined with growing experimentation in new domains, suggests that the frontier of risk and autonomy will expand. We discuss what this means for model developers, product developers, and policymakers in our recommendations at the end of this post.
 
-## 
-
-Limitations
+## Limitations
 
 This research is just a start. We provide only a partial view into agentic activity, and we want to be upfront about what our data can and cannot tell us:
 

@@ -49,9 +49,7 @@ Request clusters<sup>[5](https://www.anthropic.com#footnote-5)</sup> allow us to
 
 Weekends may also create space for people to pursue new ventures. Across countries, conversations related to starting a business are highest on Saturday and Sunday. However, job application activities drop on the weekend along with other work-related tasks.[6](https://www.anthropic.com#footnote-6)
 
-### 
-
-Daily rhythms
+### Daily rhythms
 
 Hour by hour, Claude usage reflects the rhythms of daily life. Figure 1.2 shows the hourly frequency of different request clusters relative to their overall average in global traffic.[7](https://www.anthropic.com#footnote-7)
 
@@ -96,9 +94,7 @@ Our classifier identified 93% of Claude conversations as producing an artifact (
 
 What an output is doesn't tell you what it's for: the same artifact could be a work deliverable or a personal project. We look at that split next.
 
-### 
-
-What is each artifact used for?
+### What is each artifact used for?
 
 Our [January Economic Index](https://www.anthropic.com/research/anthropic-economic-index-january-2026-report) introduced a primitive that classifies each conversation as work, personal, or coursework. Here, we apply that split to the artifacts produced in Claude conversations (Figure 2.2).
 
@@ -293,9 +289,7 @@ The Anthropic Economic Index Survey surfaces a mix of positive and negative expe
 
 The most common theme expressed was one of AI *augmentation* of work. Over half of survey respondents expressed some version of wanting to collaborate with AI on work that feels meaningful, of wanting their career to still matter, and/or hoping that new industries arise and create new job opportunities. Simultaneously, just over half of respondents hoped for AI *automation*—specifically of the tedious parts of their jobs—so they could have more free time and more space for meaning outside of work. The third most common theme, expressed by about one third of survey respondents, was one of shared prosperity: the hope that the economic gains from AI will be widely shared.
 
-## 
-
-**Discussion**
+## **Discussion**
 
 AI is diffusing rapidly throughout the economy, across an increasing number of surfaces, with increasingly intelligent outputs. In earlier AI chat interfaces, usage was simple, contained in the chat window without web search, tool calls, artifacts, or other affordances. Now, Claude models can operate autonomously for hours through Claude Code and Cowork. As these forms change, the user base is shifting as well. Early adopters were highly technical. Our most recent users apply Claude to tasks that command [lower wages](https://www.anthropic.com/research/economic-index-march-2026-report) in the labor market.
 

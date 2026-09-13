@@ -434,9 +434,7 @@ Microbiologists fall below the 45-degree line, suggesting lower effective AI cov
 
 This measure arguably gives a more realistic picture of job-level AI penetration. However, its implications depend on how often these Claude conversations actually displace or augment work that would otherwise be done by humans. For data entry clerks, AI likely does substitute for tasks previously performed manually. But when a Claude conversation maps to a teacher performing a lecture, it is less clear how this translates to reduced lecture time on the job. In future work, we could leverage our 1P API data to understand which of these tasks are being integrated into production workflows.
 
-### 
-
-AI’s impact on the task content of jobs
+### AI’s impact on the task content of jobs
 
 
 Beyond how much of a worker's day AI can successfully perform, a separate question is which tasks get covered, and whether those tend to be the high-skill or low-skill components of the job. Recent research has studied changes in the task mix within jobs to understand AI's impact on wages and employment ([Autor and Thompson 2025](https://economics.mit.edu/sites/default/files/2025-06/Expertise-Autor-Thompson-20250618.pdf); [Hampole et al 2025](https://www.nber.org/papers/w33509)). A key insight is that automation's effects depend not just on how many tasks are covered, but on which tasks.
@@ -541,9 +539,7 @@ Miles McCain, Ryan Heller, Tyler Neylon, Alex Tamkin
 
 Xabi Azagirre, Tim Belonax, Keir Bradwell, Andy Braden, Dexter Callender III, Sylvie Carr, Miriam Chaum, Ronan Davy, Evan Frondorf, Deep Ganguli, Kunal Handa, Andrew Ho, Rebecca Jacobs, Owen Kaye-Kauderer, Bianca Lindner, Kelly Loftus, James Ma, Jennifer Martinez, Jared Mueller, Kelsey Nanan, Kim O'Rourke, Dianne Penn, Sarah Pollack, Ankur Rathi, Zoe Richards, Alexandra Sanderford, David Saunders, Michael Sellitto, Thariq Shihipar, Michael Stern, Kim Withee, Mengyi Xu, Tony Zeng, Xiuruo Zhang, Shuyi Zheng, Emily Pastewka, Angeli Jain, Sarah Heck, Jared Kaplan, Jack Clark, Dario Amodei
 
-#### 
-
-Citation 
+#### Citation
 
 ```
 @online{anthropic2026aeiv4,

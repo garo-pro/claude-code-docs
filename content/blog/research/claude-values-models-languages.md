@@ -66,9 +66,7 @@ These findings line up with how people perceive these models, both within Anthro
 
 Across many conversations, users may encounter a different mix of values when interacting with different Claude models. For example, Opus 4.7 tends to offer candid critique of users’ work or unprompted warnings about risks, while Sonnet 4.6 tends to be encouraging and humorous. Such differences in values across models are likely shaped by character training decisions (among other factors), and our value axis approach highlights key differences in the values Claude expresses that we may ultimately be able to trace back to these training choices.
 
-## 
-
-**Are Claude’s expressed values different between languages?**
+## **Are Claude’s expressed values different between languages?**
 
 We expect the values Claude expresses to vary based on the language of the conversation for several reasons. First, Claude's training data differs across languages, which may shape the values it expresses. Second, our model evaluations shared in system cards already [find differences across languages in what Claude knows and how it handles sensitive requests](https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf).<sup>[7](https://www.anthropic.com#footnote-7)</sup> Measuring how much the values expressed by Claude vary by language is a first step to determining whether differences across languages reflect reasonable variation or should be addressed in training.
 
@@ -143,9 +141,7 @@ Thank you to the following individuals for providing feedback on different stage
   url = {https://anthropic.com/research/claude-values-models-languages},
 }
 ```
-### 
-
-Appendix
+### Appendix
 
 Available [here.](https://cdn.sanity.io/files/4zrzovbb/website/02da7f28f74daa1be526d3ded451a4efc86bccdc.pdf) 
 

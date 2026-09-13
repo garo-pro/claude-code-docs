@@ -64,9 +64,7 @@ We also looked at different conversational topics to determine whether disempowe
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa74730bab0b94d49922f629fcea497b22470bfb9-4584x2580.png&w=3840&q=75)
 
-## 
-
-**What these interactions look like**
+## **What these interactions look like**
 
 To better understand what these interactions look like, we used our privacy-preserving tool to cluster behavioral patterns across conversations. This allowed us to identify recurring dynamics—what Claude did and how users responded—without any researcher seeing a specific person's conversation.
 

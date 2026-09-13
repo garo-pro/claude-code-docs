@@ -142,9 +142,7 @@ Most strikingly, the data point toward increased delegation of tasks to AI syste
 
 5. Nelson and Phelps, 1966 *Investment in Humans, Technological Diffusion, and Economic Growth* is a classic reference for the value of education in equipping workers to adapt to change. See also Goldin and Katz, 2008 *The Race between Education and Technology*. We thank Anton Korinek for the observation that AI itself might accelerate the diffusion and economic impact of AI to the extent that it plays the role that skilled workers played in the past in figuring out how to effectively wield new technologies in novel settings.
 
-## 
-
-Chapter 2: Claude usage across the United States and the globe
+## Chapter 2: Claude usage across the United States and the globe
 
 ### Overview
 

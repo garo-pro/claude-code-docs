@@ -15,9 +15,7 @@ We operate across multiple layers: developing policies, influencing model traini
 
 *Figure 1: Safeguards’ approach to building effective protections throughout the lifecycle of our models*
 
-## 
-
-**Policy development**
+## **Policy development**
 
 Safeguards designs our [Usage Policy](https://www.anthropic.com/legal/aup)—the framework that defines how Claude should and shouldn’t be used. The Usage Policy informs how we address critical areas like child safety, election integrity, and cybersecurity while providing nuanced guidance for Claude’s use in industries like healthcare and finance.
 
@@ -40,9 +38,7 @@ We also work with domain specialists and experts to refine Claude’s understand
 
 Through this collaborative process, Claude develops several important skills. It learns to decline assistance with harmful illegal activities, and it recognizes attempts to generate malicious code, create fraudulent content, or plan harmful activities. It learns how to discuss sensitive topics with care, and how to distinguish between these and attempts to cause actual harm.
 
-## 
-
-**Testing and evaluation**
+## **Testing and evaluation**
 
 Before releasing a new model, we evaluate its performance and capabilities. Our evaluations include:
 

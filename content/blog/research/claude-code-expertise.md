@@ -22,9 +22,7 @@ We also see evidence that domain expertise, and not coding proficiency, amplifie
 
 These findings give us an early read on possible transitions in the labor market. In our data, success is determined by how well a person understands the problem they are trying to solve, not whether they’re trained in coding. If these patterns hold across the economy, it suggests that while agentic coding tools may be absorbing some implementation-heavy work, they are also rewarding those with firm understanding of the problems they solve on the job. Coding agents are not substituting for domain expertise—the more understanding a worker brings to an agent, the more quality work the agent is able to do.
 
-## 
-
-**The division of labor**
+## **The division of labor**
 
 ### **What people use Claude Code for**
 

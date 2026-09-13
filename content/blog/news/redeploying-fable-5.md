@@ -38,9 +38,7 @@ The new classifier means that the specific technique described in the Amazon rep
 
 The new classifier also comes at the cost of flagging benign requests more often during routine coding and debugging tasks. As with all our safeguards, we’ll continue to refine this to better distinguish genuine misuse from legitimate requests and reduce false positives.
 
-## 
-
-Our approach to cybersecurity safeguards
+## Our approach to cybersecurity safeguards
 
 Claude Mythos 5 can be used to find and exploit software vulnerabilities more effectively than any other model—and all but the most skilled human security experts. These prodigious cybersecurity capabilities make it uniquely attractive to malicious actors who wish to misuse it in cyberattacks.
 

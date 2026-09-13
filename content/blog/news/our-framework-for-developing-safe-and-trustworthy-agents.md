@@ -37,9 +37,7 @@ In Claude Code, Claude shows its planned actions through a real-time to-do check
 
 *Claude Code’s to-do checklist which users can see in real-time*
 
-## 
-
-Aligning agents with human values and expectations
+## Aligning agents with human values and expectations
 
 Agents don't always act as humans intend. Our research has shown that when AI systems pursue goals autonomously, they can sometimes take actions that seem reasonable to the system but aren't what humans actually wanted. If a human asks an agent to "organize my files," the agent might automatically delete what it considers duplicates and move files to new folder structures—going far beyond simple organization to completely restructuring the user's system. While this stems from the agent trying to be helpful, it demonstrates how agents may lack the context to act appropriately even when their goals do align.
 

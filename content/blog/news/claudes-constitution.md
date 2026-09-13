@@ -80,9 +80,7 @@ Constitutions aren’t a panacea and CAI-trained systems will continue to genera
 
 AI models will have value systems, whether intentional or unintentional. One of our goals with Constitutional AI is to make those goals explicit and easy to alter as needed. We are exploring ways to more democratically produce a constitution for Claude, and also exploring offering customizable constitutions for specific use cases. We will have more to share on this in the coming months. We would welcome more recommendations for places to find principles, and further research on which principles create the most helpful, harmless, and honest models. We hope this research helps the AI community build more beneficial models and make their values more explicit.
 
-## 
-
-The Principles in Full 
+## The Principles in Full 
 
 
 **Principles Based on the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights)**

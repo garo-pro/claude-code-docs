@@ -84,9 +84,7 @@ Ultimately, to accommodate skill development in the presence of AI, we need a mo
 
 Read the [full paper](https://arxiv.org/abs/2601.20245) for details.
 
-### 
-
-Acknowledgments
+### Acknowledgments
 
 This project was led by Judy Hanwen Shen and Alex Tamkin. Editorial support for this blog post was provided by Jake Eaton, Stuart Ritchie, and Sarah Pollack.
 
@@ -103,9 +101,7 @@ We would like to thank Ethan Perez, Miranda Zhang, and Henry Sleight for making 
   eprinttype = {arxiv}
 }
 ```
-### 
-
-Footnotes
+### Footnotes
 
 1. Importantly, this setup is different from agentic coding products like Claude Code; we expect that the impacts of such programs on skill development are likely to be more pronounced than the results here.
 

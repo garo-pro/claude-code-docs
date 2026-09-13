@@ -51,9 +51,7 @@ Last week we published a case study on the Government of Alberta, whose Ministry
 
 The eight partnerships we’re announcing today are just the beginning of our investment in Canadian research. We look forward to supporting this work—in research, in hospitals, and in universities—for years to come.
 
-## 
-
-Anthropic s’engage à verser 10 millions de dollars à la recherche canadienne en IA
+## Anthropic s’engage à verser 10 millions de dollars à la recherche canadienne en IA
 
 Les institutions et les chercheurs canadiens jouent un rôle essentiel dans la révolution moderne de l’IA. À une époque où la recherche sur les réseaux neuronaux suscitait un scepticisme généralisé, l’Université de Toronto et l’Université de Montréal figuraient parmi les rares institutions à encourager la recherche dans ce domaine crucial, et des chercheurs de l’Université de l’Alberta menaient déjà des travaux fondateurs sur l’apprentissage par renforcement. Au début des années 2010, plusieurs instituts de recherche canadiens ont été parmi les premiers à démontrer qu’avec l’arrivée de nouvelles ressources informatiques puissantes (notamment le calcul générique sur processeurs graphiques), les réseaux neuronaux profonds pouvaient fonctionner à grande échelle, marquant ainsi le début d’une nouvelle ère.
 

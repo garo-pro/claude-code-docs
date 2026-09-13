@@ -33,9 +33,7 @@ Our internal cyber evaluations are now running again with these measures in plac
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ffa1e6273d039d8d476cc59394fb779c84c4b5e75-1920x1080.png&w=3840&q=75)
 
-### 
-
-**Reinforcement learning environments**
+### **Reinforcement learning environments**
 
 We also paused higher-risk RL environments on pre-release models for several weeks. During that time, we built a similar classifier, modified to avoid incentivizing the model to evade this new monitoring, which we’ve now deployed within those environments. The majority of RL has resumed, but some high-risk environments remain paused until they can be manually reviewed, while others will require an updated version of the classifier that we plan to deploy soon.
 
@@ -43,9 +41,7 @@ We also paused higher-risk RL environments on pre-release models for several wee
 
 In addition to the efforts focused on high-risk evaluations and training, we expanded our offline monitoring to cover most other forms of internal frontier agentic usage. We are also building controls on our internal inference to prevent Anthropic employees from accidentally running agents with weaker mitigations than the ones described above.
 
-## 
-
-Best practices for external partners
+## Best practices for external partners
 
 Because the reported incidents took place in third-party environments, we have asked every organization that tests **pre-release models with reduced cyber safeguards** to commit to a set of best practices. We believe these are necessary because:
 
@@ -75,9 +71,7 @@ Evaluators should also run continuous monitoring over the model’s thinking, ac
 
 We plan to continue refining this guidance in consultation with external partners, and to extend it beyond evaluations. In particular, we are developing companion practices for partners with access to Claude Mythos 5, which likewise runs without cyber safeguards, and will share more soon.
 
-## 
-
-Alignment assessment
+## Alignment assessment
 
 Containment and monitoring are critical for catching instances in which models take dangerous actions, but they don’t address *why* the model took such actions in the first place. Below we discuss our preliminary alignment investigation and the questions we’re focused on, as well as our ongoing work to prevent cheating during training—including new research on how cheating shapes model behavior.
 
@@ -119,9 +113,7 @@ We think the substantial investment we made this spring into monitoring and redu
 
 To be clear, we do not believe that cheating in training environments is the sole cause of alignment issues, or even of the specific alignment issues present in our incidents or those of other frontier AI companies. Solving alignment will involve addressing a very wide range of potential problems, and future alignment incidents may involve different behaviors and different causes from those we have seen so far.
 
-## 
-
-Hardening security practices
+## Hardening security practices
 
 Anthropic’s internal security posture was not a contributing factor to the July 30 incidents. These occurred in a third-party environment where internet access had been mistakenly left open; the models had no need to “hack out” of anything, even if they had been inclined to do so.
 
