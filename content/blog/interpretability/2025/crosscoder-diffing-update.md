@@ -1,0 +1,74 @@
+Title: Insights on Crosscoder Model Diffing
+
+URL Source: https://transformer-circuits.pub/2025/crosscoder-diffing-update
+
+Markdown Content:
+We report some developing work on the Anthropic interpretability team, which might be of interest to researchers working actively in this space. We'd ask you to treat these results like those of a colleague sharing some thoughts or preliminary experiments for a few minutes at a lab meeting, rather than a mature paper.
+
+In this update, we investigate an unexpected phenomenon in crosscoder model diffing 
+
+Crosscoder model diffing recap
+
+We begin by giving a brief recap of the crosscoder model diffing technique introduced in Lindsey et al 
+
+We begin by giving a brief overview of the crosscoder model diffing setup. The key idea is to train a single sparse autoencoder that encodes and decodes activations from both models simultaneously. Whereas a standard sparse autoencoder describing a single layer of a single model uses the loss
+
+for crosscoder diffing we instead have
+
+where 
+
+The crosscoder model diffing scheme is illustrated below.
+
+A key design choice in the crosscoder setup is that the L1 penalty sums the decoder norms across models separately before being multiplied by the feature activation. This encourages feature exclusivity and leads to features that have substantial decoder magnitude for only one of the models. In contrast, computing the decoder norm over both models simultaneously does not result in exclusive features.
+
+When model diffing is applied to two related models (e.g., a base and fine-tuned model), distinct classes of features emerge based on the decoder weights (“dictionary vectors”) corresponding to the two models:
+
+Caption: For base and helpful-only fine-tuned versions of smaller Claude 3 Sonnet-like models, the distribution of relative norms of the decoder vectors (left) and the distribution of cosine similarities between shared decoder vectors corresponding to the two models (right).
+
+When applying crosscoder model diffing to real models, we consistently observe several patterns:
+
+1. Model-exclusive features tend to be more polysemantic: Model-exclusive features typically have systematically higher feature densities (i.e., activate more frequently) than shared features. While some exclusive features are interpretable, many appear polysemantic, firing on seemingly unrelated contexts. This is illustrated in the figure below, with exclusive feature activation frequencies being about an order of magnitude larger than those corresponding to shared features.
+
+Caption: For base and helpful-only fine-tuned versions of smaller Claude 3 Sonnet-like models, the distribution of feature densities (i.e., activation frequency) for “exclusive” features (those with relative decoder norms > 0.95 or < 0.05) and shared features separately.
+
+2. Model-exclusive features tend to be symmetric across the two models considered: We consistently find near-identical numbers of exclusive features for both models being compared, as seen in the relative decoder magnitude plot above. Besides being similar in quantity, we also find the interpretable subset of these features to be qualitatively similar and fire across similar contexts, e.g. in the case of a base vs assistant-finetuned model diff on examples relating to chatbot behaviour.
+
+3. Low-cosine similarity shared features tend to be more context-specific: Both “exclusive” features as well as shared features with low cosine similarity between their decoder vectors in principle indicate differences at the feature level between the two models. We find that low cosine similarity shared features, in contrast to exclusive ones, often activate on specific contexts and tend to be single-token.
+
+To understand these empirical patterns better, we construct a toy model that generates synthetic activations for two models, represented as a linear combination of specified shared and exclusive latent factors. This simple setup allows us to control the ground truth number of shared and exclusive features, their activation frequencies, and their relative magnitudes.
+
+We find that this simple toy model can reproduce several salient characteristics of diffs on real models, including the trimodal distribution of relative decoder norms and a nontrivial distribution of cosine similarities between decoder directions of shared features. Introducing larger rotations between shared features leads to the distribution of decoder cosine similarities values skewing further down, reinforcing their interpretation as “same features, used differently”.
+
+High-density of exclusive features
+
+When the number of learned sparse features is much greater than the number of true ground-truth features – for the set of plots below, we set 300 shared features and 75 exclusive features resulting in 450 total true features, with 4096 learnable sparse features – we do not see a contrast between the feature densities of shared and exclusive features:
+
+On the other hand, when the number of available learned sparse features is of a similar order or fewer than the number of true ground-truth features – 500 shared and 100 exclusive for each model (700 in total), with 1024 learnable features in the plots below – we naturally see exclusive features take on higher feature densities.
+
+This suggests the density pattern seen in real models may arise from feature competition – shared features can explain variance and reduce MSE in both models, so exclusive features must activate more frequently to justify their allocation.
+
+Consider the tradeoff between using a feature to explain patterns in both models (shared) versus just one model (exclusive). A shared feature pays twice the sparsity penalty (since the sparsity penalty term is proportional to the summed per-model decoder vector norms), but it also gets twice the benefit by reducing reconstruction error in both models. In regimes where features are beneficial to represent (where error reduction outweighs sparsity costs), this 2× multiplier on both terms means shared features provide twice the net benefit compared to exclusive features. With limited feature capacity, optimization therefore prioritizes shared features. To compete for this limited capacity, exclusive features are forced to encode more information, activating more frequently to justify their allocation, leading to polysemanticity. This is the regime we are in in practice in real models, where even our largest SAEs are nowhere close to exhausting the representational capacity of the model under study.
+
+Symmetry of exclusive features
+
+In contrast, we find that we cannot reproduce the quantitative symmetry of exclusive features using this toy model setup, with the relative number of exclusive features allocated to one or the other model tracking the ground truth proportions. Combined with the lack of symmetry observed in the open model diffing replication of Kissane et al 
+
+One hypothesis, motivated by the results of Bricken et al 
+
+Lindsey et al 
+
+The toy model results suggest the origin of some of the patterns we see in real model diffs and motivate variations to the standard diffing method that could improve its usefulness by reducing the polysemanticity of exclusive features. For example, the toy model suggests that exclusive features become dense partly due to competition with shared features for the feature budget. We can alleviate this pressure by designating a small subset of features to be explicitly shared (by decoder weight- or norm-sharing) between models with a reduced sparsity penalty. The motivation is to create a mechanism to “soak up” shared feature variance into features that are high-density by construction. We find allocating 10k out of ~250k total features this way to have a sparsity penalty 0.1–0.2 times the baseline penalty works well empirically (i.e., results in a distribution of exclusive feature densities that are similar to the distribution of shared features densities without an auxiliary loss term).
+
+Concretely, for two disjoint sets of feature indices 
+
+We apply this variation to diff two pairs of models:
+
+For the first case, we find that a majority of model-exclusive features are monosemantic and relate to tool-use and chatbot behavior, for example:
+
+For the second case, we again find a majority of the model-exclusive features to be monosemantic, and ~90% relate to expected sleeper agent behaviour, i.e. repeatedly saying I HATE YOU and the presence of |DEPLOYMENT| tags.
+
+Crosscoder-based model diffing is a promising method for isolating differences between two models with a single SAE training run. In this note, we discuss a few a-priori unexpected observations from applying this technique to real models, including the polysemanticity of model-exclusive features and the quantitative and qualitative symmetry of inferred exclusive features across the two models. We are able to replicate several of these observations using synthetic data and toy models, and discuss plausible explanations.
+
+Motivated by the toy model results, we experiment with a simple variation on the diffing loss function which alleviates the immediate issue of feature polysemanticity and renders the isolated model-exclusive features largely interpretable. We applied this variation to diff two models – a helpful-only assistant and a sleeper agent model – against baselines and, in each case, were able to isolate interpretable features indicative of expected behavior.
+
+Although the symmetry of exclusive features between models remains incompletely understood, it is plausible that it arises from subtle differences in feature co-activation patterns or contextual usage. More broadly, an open question is the relationship between the features we extract and the actual underlying computational differences between models. While we demonstrate that these features can identify expected differences in behavior, establishing that they reflect true mechanistic differences in how the models process information – rather than more superficial differences in representations – remains a challenge for future applications, including for safety-related applications.

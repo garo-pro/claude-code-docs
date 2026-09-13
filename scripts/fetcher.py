@@ -12,6 +12,9 @@ Sources (see sources.json for the complete registry):
                                pages (sitemap + HTML scrape via trafilatura;
                                HTML-only upstream, no .md variant, jina.ai
                                proxy path was removed 2026-07)
+  - alignment.anthropic.com -> Alignment Science blog (homepage-index + scrape;
+                               same HTML-only situation as the main blog)
+  - transformer-circuits.pub -> Interpretability research (Atom feed + scrape)
   - github.com/anthropics/* -> Repos (raw.githubusercontent.com)
 
 Usage:
@@ -92,6 +95,12 @@ DISCOVER_DOMAINS = [
     ("claude.ai",               "Claude app"),
     ("claude.com",              "Product docs"),
     ("academy.claude.com",      "Courses/tutorials (HTML-only, not fetched)"),
+    ("alignment.anthropic.com", "Alignment Science blog"),
+    ("transformer-circuits.pub", "Interpretability research (Transformer Circuits Thread)"),
+    ("red.anthropic.com",       "Frontier Red Team blog -- checked 2026-09: every "
+                                 "article except the /cvd/ dashboard page 30x-redirects "
+                                 "to www.anthropic.com/research/*, which the blog source "
+                                 "already fetches. Not a real gap; not fetched."),
 ]
 
 # Which of the above the fetcher actually archives. Kept next to
@@ -100,6 +109,7 @@ DISCOVER_DOMAINS = [
 FETCHED_DOMAINS = {
     "platform.claude.com", "code.claude.com", "modelcontextprotocol.io",
     "support.claude.com", "claude.com", "anthropic.com",
+    "alignment.anthropic.com", "transformer-circuits.pub",
 }
 # No domain is frozen anymore -- anthropic.com was until 2026-09, when scraping
 # via trafilatura replaced the jina.ai proxy that had been removed in 2026-07.
@@ -162,6 +172,15 @@ class Fetcher:
         # that had gone soft-404 — upstream had been pointing here for weeks.
         self.claude_com_sitemap_url = "https://claude.com/docs/sitemap.xml"
         self.blog_sitemap_url = "https://www.anthropic.com/sitemap.xml"
+        # Neither of these serves a real sitemap or llms.txt (every path on
+        # both domains 200s the same SPA shell, so the discovery probe reports
+        # both false) -- but both are server-rendered Distill pages underneath,
+        # same as anthropic.com. alignment.anthropic.com's own homepage lists
+        # every post across every year, so it doubles as the index. transformer-
+        # circuits.pub instead publishes a real Atom feed with full history back
+        # to 2021, which is the more reliable of the two.
+        self.alignment_index_url = "https://alignment.anthropic.com/"
+        self.transformer_circuits_feed_url = "https://transformer-circuits.pub/feed.xml"
 
         self.stats = {"total": 0, "downloaded": 0, "skipped": 0,
                       "failed": 0, "dead": 0, "reaped": 0}
@@ -259,6 +278,47 @@ class Fetcher:
             and "/research/team/" not in u
         ]
 
+    def extract_alignment_urls(self, html: str) -> List[str]:
+        """Post links off the alignment.anthropic.com homepage.
+
+        No sitemap or feed exists, but the homepage itself lists every post
+        across every year (verified 2026-09: 2024 through 2026 all present in
+        one page), so it is the whole discovery surface. Some posts link out
+        to older www.anthropic.com/research articles as further reading --
+        those are caught by the /YYYY/ prefix match below only if YYYY is a
+        relative path segment, which anthropic.com URLs never are (they're
+        absolute), so no extra filtering is needed.
+        """
+        urls, seen = [], set()
+        for href in re.findall(r'href="((?:19|20)\d{2}/[^"]+)"', html):
+            full = urljoin(self.alignment_index_url, href).removesuffix("/index.html")
+            full = normalize_url(full)
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+        return urls
+
+    def extract_transformer_circuits_urls(self, atom_xml: str) -> List[str]:
+        """Article links from transformer-circuits.pub's Atom feed.
+
+        Scoped to <entry> blocks so the feed's own self-link and site link
+        (both outside any <entry>) are never mistaken for an article. The feed
+        also catalogs a handful of entries that point off-domain -- a GitHub
+        repo (PySvelte), the original Distill Circuits Thread on distill.pub --
+        which are filtered out here rather than fetched as if they were pages
+        of this blog.
+        """
+        urls, seen = [], set()
+        for entry in re.findall(r"<entry>.*?</entry>", atom_xml, re.DOTALL):
+            m = re.search(r'<link href="([^"]+)"', entry)
+            if not m or "transformer-circuits.pub" not in m.group(1):
+                continue
+            full = normalize_url(m.group(1).removesuffix("/index.html"))
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+        return urls
+
     def extract_support_urls(self, sitemap_xml: str) -> List[str]:
         # Articles serve a .md variant directly (since ~2026-07), so plain
         # download_doc applies; sitemap covers more articles than llms.txt.
@@ -320,6 +380,12 @@ class Fetcher:
                     elif parts[1] == "policy":
                         tail = "/".join(parts[2:])
                         urls.append(f"https://www.anthropic.com/{tail}")
+                    elif parts[1] == "alignment":
+                        tail = "/".join(parts[2:])
+                        urls.append(f"https://alignment.anthropic.com/{tail}")
+                    elif parts[1] == "interpretability":
+                        tail = "/".join(parts[2:])
+                        urls.append(f"https://transformer-circuits.pub/{tail}")
         return urls
 
     # -- Output path mapping ----------------------------------------------
@@ -343,6 +409,14 @@ class Fetcher:
         elif "claude.com/docs" in url:
             path = url.replace("https://claude.com/docs/", "")
             return self.output_dir / "claude" / f"{path}.md"
+        elif "alignment.anthropic.com" in url:
+            # Checked before the generic "anthropic.com" branch below, whose
+            # substring match would otherwise swallow this host too.
+            path = urlsplit(url).path.strip("/")
+            return self.output_dir / "blog" / "alignment" / f"{path}.md"
+        elif "transformer-circuits.pub" in url:
+            path = urlsplit(url).path.strip("/")
+            return self.output_dir / "blog" / "interpretability" / f"{path}.md"
         elif "anthropic.com" in url:
             path = urlsplit(url).path.strip("/")
             parts = path.split("/", 1)
@@ -474,6 +548,17 @@ class Fetcher:
             r"\]\((/[^)\s]+)\)",
             lambda mo: f"]({urljoin(url, mo.group(1))})",
             body.strip(),
+        )
+        # Every claude.ai CTA link on these pages carries a v1.<uuid> token
+        # that is re-randomized server-side on every render -- not a page
+        # identity, just an analytics tag. Left alone, it rewrote nearly all
+        # 450 blog files on every single fetch with no actual content change.
+        # Collapsed to a fixed placeholder so re-fetching a page whose prose
+        # is unchanged produces a byte-identical file.
+        body = re.sub(
+            r"claude\.ai/redirect/website\.v1\.[0-9a-f-]{36}",
+            "claude.ai/redirect/website.v1.0",
+            body,
         )
         return {"title": title, "body": body}
 
@@ -693,6 +778,22 @@ class Fetcher:
                 for url in BLOG_STANDALONE_PAGES:
                     queue(url, self.download_blog_page)
 
+                print("Source: alignment.anthropic.com")
+                html = await self.fetch_text(session, self.alignment_index_url)
+                alignment_urls = self.extract_alignment_urls(html)
+                counts["alignment"] = len(alignment_urls)
+                print(f"  {len(alignment_urls)} posts")
+                for url in alignment_urls:
+                    queue(url, self.download_blog_page)
+
+                print("Source: transformer-circuits.pub/feed.xml")
+                feed_xml = await self.fetch_text(session, self.transformer_circuits_feed_url)
+                tc_urls = self.extract_transformer_circuits_urls(feed_xml)
+                counts["interpretability"] = len(tc_urls)
+                print(f"  {len(tc_urls)} posts")
+                for url in tc_urls:
+                    queue(url, self.download_blog_page)
+
             # -- Support articles --
             if self.want("support"):
                 print("Source: support.claude.com/sitemap.xml")
@@ -727,7 +828,9 @@ class Fetcher:
                     print("Source: on-disk archive (de-indexed upstream)")
                     print(f"  {len(stragglers)} docs")
                     for url in stragglers:
-                        queue(url, self.download_blog_page if "anthropic.com" in url else None)
+                        queue(url, self.download_blog_page
+                              if "anthropic.com" in url or "transformer-circuits.pub" in url
+                              else None)
 
             # -- GitHub repos --
             if self.want("github"):
@@ -1210,7 +1313,7 @@ class Fetcher:
         allowed = [
             "platform.claude.com", "code.claude.com",
             "modelcontextprotocol.io", "claude.com/docs",
-            "anthropic.com",
+            "anthropic.com", "transformer-circuits.pub",
         ]
         return any(f"https://{d}" in url for d in allowed)
 
@@ -1221,7 +1324,8 @@ class Fetcher:
             for u in invalid:
                 print(f"  {u}", file=sys.stderr)
             print("Allowed: platform.claude.com, code.claude.com, "
-              "modelcontextprotocol.io, claude.com/docs, anthropic.com", file=sys.stderr)
+              "modelcontextprotocol.io, claude.com/docs, anthropic.com, "
+              "transformer-circuits.pub", file=sys.stderr)
             sys.exit(1)
 
         normalized = [u[:-3] if u.endswith(".md") else u for u in urls]
@@ -1234,8 +1338,9 @@ class Fetcher:
             sem = asyncio.Semaphore(self.jobs)
             results = await tqdm_asyncio.gather(
                 *(
-                    (self.download_blog_page if "anthropic.com" in u else self.download_doc)(
-                        session, u, sem)
+                    (self.download_blog_page
+                     if "anthropic.com" in u or "transformer-circuits.pub" in u
+                     else self.download_doc)(session, u, sem)
                     for u in normalized
                 ),
                 desc="Fetching", unit="file",
@@ -1269,6 +1374,10 @@ class Fetcher:
                 await self.fetch_text(session, self.support_sitemap_url))
             blog_urls = self.extract_blog_urls(
                 await self.fetch_text(session, self.blog_sitemap_url))
+            alignment_urls = self.extract_alignment_urls(
+                await self.fetch_text(session, self.alignment_index_url))
+            tc_urls = self.extract_transformer_circuits_urls(
+                await self.fetch_text(session, self.transformer_circuits_feed_url))
 
         def show_grouped(title, urls, strip_prefix):
             print(f"{title} ({len(urls)})")
@@ -1289,11 +1398,14 @@ class Fetcher:
         print(f"support.claude.com: {len(support_urls)} articles")
         print(f"anthropic.com blog: {len(blog_urls)} posts + "
               f"{len(BLOG_STANDALONE_PAGES)} standalone pages")
+        print(f"alignment.anthropic.com: {len(alignment_urls)} posts")
+        print(f"transformer-circuits.pub: {len(tc_urls)} posts")
         print(f"GitHub repos: {len(GITHUB_REPOS)} repos configured")
         print()
 
         total = (len(cc_urls) + len(platform_urls) + len(mcp_urls) + len(support_urls)
-                 + len(blog_urls) + len(BLOG_STANDALONE_PAGES))
+                 + len(blog_urls) + len(BLOG_STANDALONE_PAGES)
+                 + len(alignment_urls) + len(tc_urls))
         print(f"Total fetchable: {total}+ (excludes GitHub repos)")
 
     # -- Discovery ---------------------------------------------------------

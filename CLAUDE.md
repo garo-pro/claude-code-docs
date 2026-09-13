@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository Purpose
 
 Comprehensive archive of everything Anthropic publishes for building with
-Claude. 3,900+ docs from 12 sources, all auto-updated four times daily
+Claude. 4,000+ docs from 14 sources, all auto-updated four times daily
 (see Fetcher).
 
 ## Fetcher
@@ -20,7 +20,12 @@ report pages) was a FROZEN archive from 2026-07 to 2026-09: the site is
 HTML-only with no `.md` variant, and the jina.ai proxy path had been
 removed. Unfrozen once trafilatura-based HTML scraping replaced it --
 anthropic.com's pages turn out to be server-rendered (no JS execution
-needed to get real body text out of them).
+needed to get real body text out of them). The same trafilatura path also
+covers two more Anthropic-run research blogs added 2026-09-13:
+alignment.anthropic.com and transformer-circuits.pub -- neither has a
+`.md` variant either, and neither has a sitemap, so each needed its own
+discovery method (a homepage that lists every post, and an Atom feed,
+respectively).
 
 Five rules keep the archive honest, all learned the hard way:
 
@@ -171,6 +176,14 @@ Use these paths to reference documentation when helping users:
   policy, transparency, threat intelligence reports, economic index/futures,
   system cards (fixed allowlist, `BLOG_STANDALONE_PAGES` in `fetcher.py` --
   these sit at the site root, outside the sitemap-crawled prefixes)
+- `content/blog/alignment/` - Alignment Science blog (alignment.anthropic.com,
+  60 posts). No sitemap/feed; the homepage itself lists every post and is the
+  index. Added 2026-09-13.
+- `content/blog/interpretability/` - Transformer Circuits Thread
+  (transformer-circuits.pub, 56 posts back to 2021), discovered via its Atom
+  feed at `/feed.xml`. Added 2026-09-13. red.anthropic.com (Frontier Red Team
+  blog) was checked the same day and NOT added: every article but one
+  redirects to www.anthropic.com/research/*, already covered above.
 
 #### GitHub Repos (from github.com/anthropics)
 - `content/github/cookbooks/` - 164 recipes + notebooks
