@@ -28,7 +28,7 @@ In "Manually approve," Claude checks with you before it acts. What that looks li
 
 Claude creates a plan from your prompt, which you can approve before Claude starts. The plan specifies which websites you're allowing Claude to access, as well as the approach it will follow:
 
-![](https://downloads.intercomcdn.com/i/o/lupk8zyo/1843320727/8d1c859ae9b8e0cdb536d024bf40/9bc3d239-8eb6-4bae-a032-a236f88ee606?expires=1789279200&amp;signature=c635df9054006d71b9766e5ccaa4045688eba923f1e9051ec53cd8b26b4ccf4a&amp;req=dSgjFcp8nYZdXvMW1HO4zYqyZctP%2B4u1gN0ADj5oqFB2KsTy0gqcEeD6j5MT%0AQ%2FZdXZO5Q5uWiSWtFmM%3D%0A)
+![](https://downloads.intercomcdn.com/i/o/lupk8zyo/1843320727/8d1c859ae9b8e0cdb536d024bf40/9bc3d239-8eb6-4bae-a032-a236f88ee606?expires=1789299000&amp;signature=d81250e3e335274d89820d0c08b340dc08df04f362a978c33d21886d183ae2ee&amp;req=dSgjFcp8nYZdXvMW1HO4zYqyZctP9Yu3gN0ADj5oqFAywFTvDj55HoxELy4g%0AvlBFtAoElB2g5Se6xdA%3D%0A)
 
 Note that Claude will only use the websites listed in the plan, so you’ll need to manually approve any additional access requests.
 
@@ -62,7 +62,7 @@ When you choose "Skip all approvals," Claude doesn't pause to ask, and nothing c
 
 There are some websites on which Claude requires approval for every action. If you navigate to one of these sites, a **New permissions required** prompt will appear in the extension side panel, Claude Cowork, or Claude Code where Claude will ask for permission before accessing the page or taking any action.
 
-![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2604970825/d7b961271be69e7541b406df1efd/d845324e-6b4a-4f54-83b9-0bea86ec09c6?expires=1789279200&amp;signature=4f382ec077b34af052a2e3e62fc0eed8f0e12e078a8d0c5a2e91ee476b553e2d&amp;req=diYnEsB5nYldXPMW1HO4zZ3Nqm9yjyXu7A4lHPBihAVKt3%2F8ef11mhmIu6FJ%0A03gH4DskZknzttetKp8%3D%0A)
+![](https://downloads.intercomcdn.com/i/o/lupk8zyo/2604970825/d7b961271be69e7541b406df1efd/d845324e-6b4a-4f54-83b9-0bea86ec09c6?expires=1789299000&amp;signature=d2bba89d1755f4d6ac8376f4bfc55a6bdcc907ef9ca086beabd4f706e6d82e4a&amp;req=diYnEsB5nYldXPMW1HO4zZ3Nqm9ygSXs7A4lHPBihAUlCh%2Fl%2FolRbEppaRry%0AHwY1COkGdDE12NzQ9pI%3D%0A)
 
 ### Permission options
 

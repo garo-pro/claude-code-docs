@@ -35,9 +35,7 @@ When looking at the breakdown of these 1 million conversations, we see that the 
 
 *In the two months since our original data sample, we’ve seen an increase in the share of usage for coding, education, and the sciences. Graph shows share of Claude.ai Free and Pro traffic across top-level occupational categories in O*NET. Grey shows the distribution from our first report covering data from Dec ‘25 - Jan ‘25. Colored bars show an increase (green) and decrease (blue) in the share of usage for our new data from Feb ‘25 - March ‘25. Note that the graph shows the share of usage rather than absolute usage. See Appendix for chart showing change across the full list of occupational categories.*
 
-## 
-
-How are people using extended thinking mode?
+## How are people using extended thinking mode?
 
 Claude 3.7 Sonnet features a new “extended thinking” mode which, when activated by the user, enables the model to think for longer when answering more complex questions.
 
@@ -120,9 +118,7 @@ We also recompute the “depth of task usage” plot from our original paper. We
 
 *Percentage share of usage across occupational categories, showing values from our original report (gray bars) with corresponding increases (yellow) and decreases (blue) in the second report. computer and mathematical occupations represent the category with the largest absolute increase (+3%), while several categories like education and the sciences show notable percentage increases.*
 
-### 
-
-Results for other interaction modes
+### Results for other interaction modes
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F94b286d3ab0cd6e45c561b8117f115e82ddb79fd-1650x1364.jpg&w=3840&q=75)
 
