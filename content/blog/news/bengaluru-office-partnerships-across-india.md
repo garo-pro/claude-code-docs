@@ -5,7 +5,7 @@ URL Source: https://www.anthropic.com/news/bengaluru-office-partnerships-across-
 Markdown Content:
 # Anthropic opens Bengaluru office and announces new partnerships across India
 
-India is the second-largest market for [Claude.ai](http://claude.ai/redirect/website.v1.dcd0f585-947b-4026-9acc-b0d8fc95a671), home to a developer community doing some of the most technically intense AI work we see anywhere. [Nearly half of Claude usage](https://www.anthropic.com/research/india-brief-economic-index) in India comprises computer and mathematical tasks: building applications, modernizing systems, and shipping production software.
+India is the second-largest market for [Claude.ai](http://claude.ai/redirect/website.v1.50be3e17-7377-43cc-85f8-f6582ad02c3e), home to a developer community doing some of the most technically intense AI work we see anywhere. [Nearly half of Claude usage](https://www.anthropic.com/research/india-brief-economic-index) in India comprises computer and mathematical tasks: building applications, modernizing systems, and shipping production software.
 
 Today, as we officially open our Bengaluru office, we’re announcing partnerships across enterprise, education, and agriculture that deepen our commitment to India across a range of sectors.
 
