@@ -98,6 +98,24 @@ trafilatura path as anthropic.com below, into `content/openai/news/`
 blog). One real run: 68/81 succeeded; the rest self-heal across later
 scheduled runs since nothing is tombstoned or reaped on a failed scrape.
 
+Safety/alignment publishing, added 2026-09-26, all HTML scraped via
+`download_blog_page` (plain aiohttp; none of these sit behind Cloudflare):
+
+- **alignment.openai.com** -- the Alignment blog, into `content/openai/alignment/`.
+  No sitemap; the homepage and `/rss.xml` both list posts and are unioned.
+  Each run also reads the posts for their outbound links and fetches the
+  **openai.com pages they cite** (`/index/*` research posts into `openai/news/`,
+  `/safety/*` and root-level pages into `openai/site/`, via the curl path).
+  Third-party citations (arxiv, LessWrong, ...) are out of scope.
+- **deploymentsafety.openai.com** -- system cards, into
+  `content/openai/system-cards/`. Its sitemap lists ~1,060 URLs on
+  `http://localhost:4321` (a build artifact; the host is rewritten), but every
+  `/<card>/<section>` URL serves the same full card as `/<card>`, so only the
+  26 card roots are fetched.
+- **model-spec.openai.com** -- the Model Spec. The root meta-refreshes to the
+  current dated version, saved as `content/openai/model-spec/<date>.md`, so
+  new versions accumulate alongside old ones.
+
 ### Z.AI (see `sources.zai.json`)
 
 docs.z.ai -- `llms.txt` lists direct `.md` links for every page (same shape
@@ -262,7 +280,10 @@ covers Anthropic (`content/anthropic/`); see "OpenAI Documentation" and
   redirects to www.anthropic.com/research/*, already covered above.
 
 #### GitHub Repos (from github.com/anthropics)
-- `content/anthropic/github/cookbooks/` - 164 recipes + notebooks
+- `content/anthropic/github/claude-cookbooks/` - 198 recipes + notebooks. This is
+  also the complete source of the web cookbook at platform.claude.com/cookbook:
+  checked 2026-09-26, all 96 of its pages render a notebook already archived
+  here, so the web version is deliberately not fetched as a second copy
 - `content/anthropic/github/skills/` - 90 official Agent Skills
 - `content/anthropic/github/plugins-official/` - 266 plugin docs
 - `content/anthropic/github/courses/` - 80 prompt engineering notebooks
@@ -276,7 +297,11 @@ covers Anthropic (`content/anthropic/`); see "OpenAI Documentation" and
 - `content/openai/cookbook/` - Practical code examples
 - `content/openai/ads/`, `plugins/`, `workspace-agents/`, `commerce/` - Ads API, Apps SDK/plugins, Workspace Agents API, Agentic Commerce
 - `content/openai/blog/` - Developer blog (developers.openai.com)
-- `content/openai/news/` - Model launches (openai.com, scraped via curl -- see Fetcher above)
+- `content/openai/news/` - Model launches + research posts (openai.com/index, scraped via curl -- see Fetcher above)
+- `content/openai/alignment/` - Alignment blog (alignment.openai.com)
+- `content/openai/system-cards/` - System cards (deploymentsafety.openai.com), one file per card
+- `content/openai/model-spec/` - The Model Spec (model-spec.openai.com), one file per dated version
+- `content/openai/site/` - Other openai.com pages (/safety/*, incident reports) the alignment blog links to
 - `content/openai/learn/`, `showcase/` - Learning resources, project showcase
 - `content/openai/github/cookbook/` - openai/openai-cookbook
 - `content/openai/github/openai-python/`, `openai-node/` - SDK repos (docs, examples)
@@ -305,6 +330,7 @@ content/
   openai/                      ~1,400 docs (developers.openai.com + openai.com)
     api/, codex/, cookbook/, ads/, plugins/, workspace-agents/, commerce/, blog/, learn/, showcase/
     news/                      Model launches (openai.com/index, scraped via curl)
+    alignment/, system-cards/, model-spec/, site/   Alignment blog + what it links
     github/                    3 repos (cookbook, openai-python, openai-node)
   zai/                         68 docs
     guides/, api-reference/, devpack/, release-notes/

@@ -262,8 +262,8 @@
         ".md",
         ".ipynb"
       ],
-      "output": "anthropic/github/cookbooks/",
-      "pages": 164,
+      "output": "anthropic/github/claude-cookbooks/",
+      "pages": 198,
       "enabled": true,
       "section": [
         "github"

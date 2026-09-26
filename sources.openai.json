@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-09-17",
+  "updated": "2026-09-26",
   "description": "OpenAI developer content source registry. developers.openai.com (the successor to platform.claude.com's old platform.openai.com/docs path -- that path now just 301-redirects here) serves a full sitemap and a .md variant of every page, verified by direct fetch. Output paths below are relative to content/openai/. learn.chatgpt.com (ChatGPT product docs, linked from the root llms.txt hub) is a known gap: a separate domain, not yet added.",
   "domains": {
     "developers.openai.com": {
@@ -15,6 +15,24 @@
       "sitemap": true,
       "llms_txt": false,
       "notes": "The marketing/news domain -- NOT developers.openai.com above. Model launches (\"Introducing GPT-5\", etc.) live here under /index/<slug>, in a sitemap category literally called \"release\" (https://openai.com/sitemap.xml/release/, 81 URLs). No .md variant (404) and no llms.txt (403). robots.txt allows crawling (Allow: /) but Cloudflare's bot-check blocks aiohttp near-deterministically (0/15 in testing) while curl with a plain browser User-Agent gets through ~50% of the time -- a client-signature check, not a real access denial. Scraped via curl + trafilatura, same as anthropic.com; see fetch_html_via_curl in fetcher.py. In one real run: 68/81 succeeded, 13 failed after 6 retries each -- self-healing across subsequent scheduled runs since a failed fetch is never tombstoned or reaped."
+    },
+    "alignment.openai.com": {
+      "robots": false,
+      "sitemap": false,
+      "llms_txt": false,
+      "notes": "OpenAI Alignment blog. Static HTML, no Cloudflare (plain aiohttp gets 200). No sitemap/robots/llms.txt (all 404); homepage and /rss.xml both list posts and are unioned. No .md variant -- scraped via trafilatura like alignment.anthropic.com. Posts also link to openai.com /index/ and /safety/ pages, which are fetched too (curl, see openai.com) into openai/site/ or openai/news/; third-party citations (arxiv, LessWrong) are not."
+    },
+    "deploymentsafety.openai.com": {
+      "robots": true,
+      "sitemap": true,
+      "llms_txt": false,
+      "notes": "Deployment Safety Hub: OpenAI's system cards (26 as of 2026-09-26). Sitemap lists ~1,060 URLs but on host http://localhost:4321 (build artifact) -- host is rewritten. Every /<card>/<section> URL serves the same full card as /<card>, so only first path segments are fetched. Trailing-slash URLs 308 to the slashless form."
+    },
+    "model-spec.openai.com": {
+      "robots": false,
+      "sitemap": false,
+      "llms_txt": false,
+      "notes": "The OpenAI Model Spec. Root is a meta-refresh to the current dated version (/2026-08-18.html, ~2.6MB HTML); saved as model-spec/<date>.md so versions accumulate. Source repo github.com/openai/model_spec holds only the same HTML, so it adds nothing over the site."
     }
   },
   "sources": [
@@ -37,6 +55,37 @@
       "enabled": true,
       "section": ["openai"],
       "notes": "Model launch / release posts from openai.com (not developers.openai.com). Fetched via curl subprocess, not aiohttp -- see the openai.com domain entry above and fetch_html_via_curl in fetcher.py. Named news/ (not blog/, which is developers.openai.com's dev blog under openai/blog/) to keep the two domains' content visibly separate."
+    },
+    {
+      "name": "openai-alignment",
+      "type": "html-index-trafilatura",
+      "index": "https://alignment.openai.com/",
+      "feed": "https://alignment.openai.com/rss.xml",
+      "output": "openai/alignment/",
+      "pages": 21,
+      "enabled": true,
+      "section": ["openai"],
+      "notes": "Alignment blog posts. Plus linked openai.com pages (output openai/news/ for /index/*, openai/site/ otherwise)."
+    },
+    {
+      "name": "openai-system-cards",
+      "type": "sitemap-trafilatura",
+      "sitemap": "https://deploymentsafety.openai.com/sitemap.xml",
+      "output": "openai/system-cards/",
+      "pages": 26,
+      "enabled": true,
+      "section": ["openai"],
+      "notes": "One file per system card; see the deploymentsafety.openai.com domain entry."
+    },
+    {
+      "name": "openai-model-spec",
+      "type": "meta-refresh-trafilatura",
+      "index": "https://model-spec.openai.com/",
+      "output": "openai/model-spec/",
+      "pages": 1,
+      "enabled": true,
+      "section": ["openai"],
+      "notes": "Current Model Spec version, filed by date."
     },
     {
       "name": "openai-github-cookbook",

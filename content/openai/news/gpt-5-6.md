@@ -96,6 +96,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Professional
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | **Gemini 3.5 Flash** | 
+|---|---|---|---|---|---|---|---|---|
 | Agents' Last Exam | 52.7% | 50.4% | 50.3% | 46.9% | 40.5% | 45.2% | 32.1% | — | 
 | GDPval-AA v2 | 1,747.8 Elo | 1,593 Elo | 1,591.8 Elo | 1,493.7 Elo | 1,759.6 Elo | 1,600.1 Elo | 962.3 Elo | 1,348.8 Elo | 
 | Management Consulting Tasks (Internal) | 43.2% | 37.2% | 35.4% | 31.3% | 35.5% | 31.6% | 13.2% | — | 
@@ -105,6 +106,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Coding
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Sol Ultra** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | 
+|---|---|---|---|---|---|---|---|---|---|---|
 | Artificial Analysis Coding Agent Index v1.1 | 80 Index score | — | 77.4 Index score | 74.6 Index score | 76.4 Index score | — | — | 77.2 Index score | 72.5 Index score | 42.7 Index score | 
 | SWE-Bench Pro | 64.6% | — | 63.4% | 62.7% | 59.4% | 80.3% | 77.8% | 80% | 69.2% | 54.2% | 
 | DeepSWE v1.1 | 72.7% | — | 69.6% | 67.2% | 67% | — | — | 69.7% | 59% | 11.8% | 
@@ -113,6 +115,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Science and health
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | **Gemini 3.5 Flash** | 
+|---|---|---|---|---|---|---|---|---|
 | GeneBench Pro | 28.7% | 23.3% | 10.8% | 12% | — | 16% | 3.1% | 8.14% | 
 | LifeSciBench | 59.9% | 56% | 51.2% | 50.4% | — | 53.6% | — | — | 
 | MedChemBench (Internal) | 48.3% | 35% | 30.4% | 35.5% | — | — | — | — | 
@@ -121,6 +124,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Computer use
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Sol Ultra** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | 
+|---|---|---|---|---|---|---|---|---|---|
 | OSWorld 2.0 | 62.6% | — | 50.2% | 45.6% | 47.5% | — | — | 54.8% | — | 
 | BrowseComp | 90.4% | 92.2% | 87.5% | 83.3% | 84.4% | 88% | 87.9% | 84.3% | 85.9% | 
 | BenchCAD | 70.6% | — | 62.3% | 63.1% | 44.4% | 38.4% | 35.5% | 27.3% | — | 
@@ -129,6 +133,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Cybersecurity
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Sol Ultra** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Opus 4.8** | 
+|---|---|---|---|---|---|---|---|---|
 | Capture-the-Flag Challenges | 96.7% | — | 91.8% | 85.2% | 88.1% | — | — | — | 
 | SEC-Bench Pro | 71.2% | 74.3% | 57.7% | 48.9% | 45.8% | — | — | — | 
 | ExploitBench | 73.5% | — | 52.9% | 33.2% | 47.9% | 78% | 74.2% | 40% | 
@@ -137,6 +142,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Self-improvement
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | 
+|---|---|---|---|---|
 | Internal Research Debugging Evaluation | 68.3% | 67.8% | 50.8% | 50% | 
 | KernelGen 1P | 61.1% | 49.2% | 22.4% | 29.3% | 
 | NanoGPT | 9.69% | 14.5% | 1.66% | 2.65% | 
@@ -146,6 +152,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Multimodal
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | 
+|---|---|---|---|---|---|---|---|
 | MMMU Pro (no tools) | 83% | 80.7% | 78.4% | 81.2% | — | — | 80.5% | 
 | MMMU Pro (with tools) | 84.6% | 82% | 79.5% | 83.2% | — | — | — | 
 | gdp.pdf | 30.7% | 24.7% | 22.7% | 26% | 29.8% | 22.5% | 16.7% | 
@@ -153,6 +160,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Academic
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | 
+|---|---|---|---|---|---|---|---|---|---|
 | GPQA Diamond | 94.6% | 92.9% | 92.3% | 93.6% | 94.1% | 94.6% | 92.6% | 92% | 94.3% | 
 | FrontierMath Tier 1-3 (v2) | 89% | 84.9% | 78.6% | 85.3% | — | — | 87% | 80% | 59.6% | 
 | FrontierMath Tier 4 (v2) | 83% | 68.3% | 58.5% | 72.5% | — | — | 87.8% | 56.1% | — | 
@@ -160,12 +168,14 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Tool use
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Fable 5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | **Gemini 3.5 Flash** | 
+|---|---|---|---|---|---|---|---|---|---|---|
 | AutomationBench | 18.1% | 15.2% | 14.9% | 12.9% | — | — | 17.4% | 15.5% | — | 14.5% | 
 | Toolathlon | 58% | 53.1% | 53.4% | 55.6% | 61.7% | 61.1% | 61.7% | 59.9% | 48.8% | — | 
 
 ### Long context
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Mythos 5** | **Claude Mythos Preview** | **Claude Opus 4.8** | 
+|---|---|---|---|---|---|---|---|
 | OpenAI MRCR v2 8-needle 256K-512K | 91.5% | 89.6% | 41.3% | 81.5% | — | — | — | 
 | OpenAI MRCR v2 8-needle 512K-1M | 73.8% | 72.5% | 41.3% | 74% | — | — | — | 
 | GraphWalks BFS 256k f1 | 90.7% | 76.9% | 81.3% | 73.7% | 91.1% | 85.7% | 85.9% | 
@@ -174,6 +184,7 @@ GPT‑5.6 is priced per 1M tokens across three model sizes: Sol is $5 input / $3
 ### Abstract reasoning
 
 | **Eval** | **GPT‑5.6 Sol** | **GPT‑5.6 Terra** | **GPT‑5.6 Luna** | **GPT‑5.5** | **Claude Opus 4.8** | **Gemini 3.1 Pro Preview** | 
+|---|---|---|---|---|---|---|
 | ARC-AGI-3⁷ | 7.78% | 0.8% | 0.18% | 0.43% | 1.5% | 0.42% | 
 
 ## Keep reading

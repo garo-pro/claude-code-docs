@@ -32,6 +32,11 @@ OpenAI (content/openai/, see sources.openai.json):
                                via curl (Cloudflare blocks aiohttp outright
                                but lets curl through ~50% of the time) +
                                trafilatura, same as anthropic.com below.
+  - alignment.openai.com    -> Alignment blog (homepage + rss.xml + scrape),
+                               plus the openai.com /index/ and /safety/
+                               pages its posts link to (curl, as above)
+  - deploymentsafety.openai.com -> System cards (sitemap, one page per card)
+  - model-spec.openai.com   -> Model Spec, current dated version
   - github.com/openai/*    -> Cookbook + Python/Node SDK repos
 
 Z.AI (content/zai/, see sources.zai.json):
@@ -256,6 +261,27 @@ class Fetcher:
         # _fetch_blog_html's retry.
         self.openai_release_sitemap_url = "https://openai.com/sitemap.xml/release/"
         self._openai_release_semaphore = asyncio.Semaphore(5)
+        # OpenAI's Alignment blog. Unlike openai.com, no Cloudflare here --
+        # plain aiohttp gets a clean 200 -- and pages are static HTML, so
+        # it's scraped exactly like alignment.anthropic.com. No sitemap; the
+        # homepage and rss.xml each list the posts (verified 2026-09-26: the
+        # homepage had 22, the feed 20), so the two are unioned.
+        self.openai_alignment_url = "https://alignment.openai.com/"
+        self.openai_alignment_feed_url = "https://alignment.openai.com/rss.xml"
+        # The Deployment Safety Hub, where OpenAI's system cards now live
+        # (the alignment blog links here for every card it cites). Its
+        # sitemap lists ~1,000 URLs, but only ~26 are cards: the rest are
+        # per-section anchors (/gpt-5-5/jailbreaks) that serve the *same*
+        # full card, so only the first path segment is kept. The sitemap
+        # was also built with <loc>s on http://localhost:4321 -- the host is
+        # rewritten, not trusted.
+        self.openai_system_cards_sitemap_url = "https://deploymentsafety.openai.com/sitemap.xml"
+        self.openai_system_cards_host = "https://deploymentsafety.openai.com"
+        # The Model Spec, cited throughout the alignment blog. The root is a
+        # meta-refresh to the current dated version (/2026-08-18.html); each
+        # version is saved under its date, so the archive accumulates the
+        # spec's history as new versions publish.
+        self.openai_model_spec_url = "https://model-spec.openai.com/"
         # docs.z.ai's llms.txt already lists direct .md links (same shape as
         # code.claude.com's) and covers the same set as its sitemap.xml, so
         # it's used directly rather than the sitemap.
@@ -458,6 +484,69 @@ class Fetcher:
                 urls.append(full)
         return urls
 
+    def extract_openai_alignment_urls(self, home_html: str, rss_xml: str) -> List[str]:
+        """Post links off alignment.openai.com's homepage and rss.xml, unioned.
+
+        Posts are root-level slugs (/confessions/). Trailing slashes are
+        dropped by normalize_url; the site serves both forms with a 200 and
+        no redirect, so the slashless URL is safe to fetch as-is.
+        """
+        urls, seen = [], set()
+        hrefs = re.findall(r'href="/([a-z0-9][a-z0-9-]*)/?"', home_html)
+        hrefs += [urlsplit(u).path.strip("/") for u in
+                  re.findall(r"<link>(https://alignment\.openai\.com/[^<]*)</link>", rss_xml)]
+        for slug in hrefs:
+            if not slug or "/" in slug:
+                continue
+            full = urljoin(self.openai_alignment_url, slug)
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+        return urls
+
+    def extract_system_card_urls(self, sitemap_xml: str) -> List[str]:
+        """One URL per card from deploymentsafety.openai.com's sitemap.
+
+        See __init__: every section URL under a card serves the full card, so
+        only /<card> itself is fetched, and the localhost <loc> host is
+        replaced with the real one.
+        """
+        urls, seen = [], set()
+        for loc in re.findall(r"<loc>([^<]+)</loc>", sitemap_xml):
+            card = urlsplit(loc).path.strip("/").split("/")[0]
+            if not card:
+                continue
+            full = f"{self.openai_system_cards_host}/{card}"
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+        return urls
+
+    # openai.com paths the alignment blog links to that are site chrome or
+    # job ads, not documents worth archiving.
+    _OPENAI_LINK_SKIP = ("careers", "policies", "about", "research", "news")
+
+    def extract_openai_linked_urls(self, html: str) -> List[str]:
+        """openai.com pages an alignment post links to: /index/* research and
+        launch posts, /safety/* pages, and root-level incident reports.
+
+        Off-site references (arxiv, LessWrong, ...) are deliberately left out
+        -- this archive holds provider docs, not the literature they cite --
+        as are system cards (fetched whole from their own sitemap) and the
+        Model Spec (fetched from its own site). Locale-prefixed duplicates
+        (/en-GB/...) and bare section indexes are skipped too.
+        """
+        urls = []
+        for href in re.findall(r'href="(https://(?:www\.)?openai\.com/[^"#?]*)', html):
+            path = urlsplit(href).path.strip("/")
+            parts = path.split("/")
+            if (not path or parts[0] in self._OPENAI_LINK_SKIP
+                    or re.fullmatch(r"[a-z]{2}-[A-Z]{2}", parts[0])
+                    or (parts[0] in ("index", "safety") and len(parts) == 1)):
+                continue
+            urls.append(f"https://openai.com/{path}")
+        return urls
+
     def extract_llms_txt_urls(self, content: str, prefix: str) -> List[str]:
         """Direct .md links out of an llms.txt index whose links start with
         `prefix` (e.g. docs.z.ai's own domain) -- same shape as
@@ -561,8 +650,24 @@ class Fetcher:
                     # developers.openai.com -- see get_output_path.
                     urls.append(f"https://openai.com/index/{'/'.join(rel.parts[1:])}")
                     continue
+                if provider_dir is self.openai_dir and rel.parts[0] in self._OPENAI_SCRAPED_DIRS:
+                    base = self._OPENAI_SCRAPED_DIRS[rel.parts[0]]
+                    tail = "/".join(rel.parts[1:])
+                    urls.append(f"{base}{tail}.html" if rel.parts[0] == "model-spec"
+                                else f"{base}{tail}")
+                    continue
                 urls.append(f"{host}/{'/'.join(rel.parts)}")
         return urls
+
+    # content/openai/<dir>/ -> the URL prefix its files were scraped from.
+    # Everything else under content/openai/ (besides news/ and github/) is a
+    # 1:1 mirror of developers.openai.com.
+    _OPENAI_SCRAPED_DIRS = {
+        "alignment": "https://alignment.openai.com/",
+        "system-cards": "https://deploymentsafety.openai.com/",
+        "model-spec": "https://model-spec.openai.com/",
+        "site": "https://openai.com/",
+    }
 
     # -- Output path mapping ----------------------------------------------
 
@@ -603,6 +708,17 @@ class Fetcher:
             # Standalone allowlisted page (BLOG_STANDALONE_PAGES): lives at
             # the site root, so the last path segment is the whole slug.
             return self.anthropic_dir / "blog" / "policy" / f"{path}.md"
+        elif "alignment.openai.com" in url:
+            # This and the next two: OpenAI subdomains scraped as HTML, each
+            # checked before the generic "openai.com" branch below.
+            path = urlsplit(url).path.strip("/")
+            return self.openai_dir / "alignment" / f"{path}.md"
+        elif "deploymentsafety.openai.com" in url:
+            path = urlsplit(url).path.strip("/")
+            return self.openai_dir / "system-cards" / f"{path}.md"
+        elif "model-spec.openai.com" in url:
+            path = urlsplit(url).path.strip("/").removesuffix(".html")
+            return self.openai_dir / "model-spec" / f"{path}.md"
         elif "developers.openai.com" in url:
             # Full-site sitemap crawl, 1:1 path mapping -- same approach as
             # claude.com/docs above, just with no /docs/ prefix to strip.
@@ -618,8 +734,11 @@ class Fetcher:
             # developers.openai.com dev blog) to avoid conflating the two.
             path = urlsplit(url).path.strip("/")
             parts = path.split("/", 1)
-            slug = parts[1] if parts[0] == "index" and len(parts) == 2 else path
-            return self.openai_dir / "news" / f"{slug}.md"
+            if parts[0] == "index" and len(parts) == 2:
+                return self.openai_dir / "news" / f"{parts[1]}.md"
+            # Non-/index/ pages the alignment blog links to (/safety/*,
+            # root-level incident reports) -- see extract_openai_linked_urls.
+            return self.openai_dir / "site" / f"{path}.md"
         elif "docs.z.ai" in url:
             path = urlsplit(url).path.strip("/")
             return self.zai_dir / f"{path}.md"
@@ -807,6 +926,21 @@ class Fetcher:
             "claude.ai/redirect/website.v1.0",
             body,
         )
+        if urlsplit(url).netloc == "alignment.openai.com":
+            # Its hand-written HTML indents paragraph text inside <p>, and
+            # trafilatura keeps that whitespace -- 4+ leading spaces, which
+            # Markdown renders as a code block. Nothing on the site is a real
+            # indented code block (code is fenced), so dedent outside fences,
+            # sparing nested list items, whose indent is meaningful.
+            lines, fenced = [], False
+            for line in body.split("\n"):
+                if line.lstrip().startswith("```"):
+                    fenced = not fenced
+                if fenced or re.match(r"\s*(?:[-*+]|\d+\.)\s", line):
+                    lines.append(line)
+                else:
+                    lines.append(line.lstrip())
+            body = "\n".join(lines)
         return {"title": title, "body": body}
 
     async def download_blog_page(self, session, url, semaphore) -> Dict:
@@ -1135,7 +1269,8 @@ class Fetcher:
                     print("Source: on-disk archive (de-indexed upstream)")
                     print(f"  {len(stragglers)} docs")
                     for url in stragglers:
-                        if "openai.com" in url and "developers.openai.com" not in url:
+                        host = urlsplit(url).netloc
+                        if host == "openai.com":
                             # Scraped via curl on its own low-concurrency
                             # semaphore -- see the main openai.com/release
                             # fetch above for why. queue() can't route a
@@ -1146,9 +1281,12 @@ class Fetcher:
                             tasks.append(self.download_openai_release_page(
                                 session, url, self._openai_release_semaphore))
                         else:
-                            queue(url, self.download_blog_page
-                                  if "anthropic.com" in url or "transformer-circuits.pub" in url
-                                  else None)
+                            scraped = ("anthropic.com" in url
+                                       or "transformer-circuits.pub" in url
+                                       or host in ("alignment.openai.com",
+                                                   "deploymentsafety.openai.com",
+                                                   "model-spec.openai.com"))
+                            queue(url, self.download_blog_page if scraped else None)
 
             # -- GitHub repos (Anthropic) --
             if self.want("github"):
@@ -1201,6 +1339,57 @@ class Fetcher:
                     queued.add(url)
                     tasks.append(self.download_openai_release_page(
                         session, url, self._openai_release_semaphore))
+
+                print("Source: alignment.openai.com (homepage + rss.xml)")
+                home = await self.fetch_text(session, self.openai_alignment_url)
+                feed = await self.fetch_text(session, self.openai_alignment_feed_url)
+                alignment_urls = self.extract_openai_alignment_urls(home, feed)
+                counts["openai-alignment"] = len(alignment_urls)
+                print(f"  {len(alignment_urls)} posts")
+                for url in alignment_urls:
+                    queue(url, self.download_blog_page)
+
+                # "Everything the blog links to" that is OpenAI's own
+                # publishing: the posts are read once here just for their
+                # outbound links (22 small pages), then fetched again by
+                # download_blog_page like any other -- simpler than threading
+                # link extraction through the downloader.
+                async def _post_html(u):
+                    try:
+                        return await self.fetch_text(session, u)
+                    except Exception:
+                        return ""
+                pages = [home] + await asyncio.gather(*(_post_html(u) for u in alignment_urls))
+                linked = []
+                for html in pages:
+                    for u in self.extract_openai_linked_urls(html):
+                        if u not in queued and u not in linked:
+                            linked.append(u)
+                counts["openai-linked"] = len(linked)
+                print(f"  {len(linked)} openai.com pages linked from it (scraped via curl)")
+                for url in linked:
+                    queued.add(url)
+                    tasks.append(self.download_openai_release_page(
+                        session, url, self._openai_release_semaphore))
+
+                print("Source: deploymentsafety.openai.com/sitemap.xml (system cards)")
+                xml = await self.fetch_text(session, self.openai_system_cards_sitemap_url)
+                card_urls = self.extract_system_card_urls(xml)
+                counts["openai-system-cards"] = len(card_urls)
+                print(f"  {len(card_urls)} system cards")
+                for url in card_urls:
+                    queue(url, self.download_blog_page)
+
+                print("Source: model-spec.openai.com (current version)")
+                root = await self.fetch_text(session, self.openai_model_spec_url)
+                m = re.search(r'http-equiv="refresh"[^>]*url=([^"\'>\s]+)', root, re.I)
+                if m:
+                    counts["openai-model-spec"] = 1
+                    spec_url = urljoin(self.openai_model_spec_url, m.group(1))
+                    print(f"  {spec_url}")
+                    queue(spec_url, self.download_blog_page)
+                else:
+                    print("  WARNING: no meta-refresh to a dated version; layout changed?")
 
             # -- Z.AI docs --
             if self.want("zai"):
@@ -1770,6 +1959,11 @@ class Fetcher:
                 await self.fetch_text(session, self.zai_llms_url), "https://docs.z.ai/")
             openai_release_urls = self.extract_sitemap_urls(
                 await self.fetch_text(session, self.openai_release_sitemap_url))
+            openai_alignment_urls = self.extract_openai_alignment_urls(
+                await self.fetch_text(session, self.openai_alignment_url),
+                await self.fetch_text(session, self.openai_alignment_feed_url))
+            system_card_urls = self.extract_system_card_urls(
+                await self.fetch_text(session, self.openai_system_cards_sitemap_url))
 
         def show_grouped(title, urls, strip_prefix):
             print(f"{title} ({len(urls)})")
@@ -1797,6 +1991,9 @@ class Fetcher:
 
         show_grouped("developers.openai.com", openai_urls, "https://developers.openai.com/")
         print(f"openai.com/index (model launches, scraped via curl): {len(openai_release_urls)} posts")
+        print(f"alignment.openai.com: {len(openai_alignment_urls)} posts "
+              f"(+ openai.com pages they link, + Model Spec)")
+        print(f"deploymentsafety.openai.com: {len(system_card_urls)} system cards")
         print(f"docs.z.ai: {len(zai_urls)} docs")
         print(f"GitHub repos (OpenAI): {len(GITHUB_REPOS_OPENAI)} repos configured")
         print(f"GitHub repos (Z.AI): {len(GITHUB_REPOS_ZAI)} repos configured")
@@ -1805,7 +2002,8 @@ class Fetcher:
         total = (len(cc_urls) + len(platform_urls) + len(mcp_urls) + len(support_urls)
                  + len(blog_urls) + len(BLOG_STANDALONE_PAGES)
                  + len(alignment_urls) + len(tc_urls)
-                 + len(openai_urls) + len(openai_release_urls) + len(zai_urls))
+                 + len(openai_urls) + len(openai_release_urls) + len(zai_urls)
+                 + len(openai_alignment_urls) + len(system_card_urls) + 1)
         print(f"Total fetchable: {total}+ (excludes GitHub repos)")
 
     # -- Discovery ---------------------------------------------------------
