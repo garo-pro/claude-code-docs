@@ -103,6 +103,9 @@ Safety/alignment publishing, added 2026-09-26, all HTML scraped via
 
 - **alignment.openai.com** -- the Alignment blog, into `content/openai/alignment/`.
   No sitemap; the homepage and `/rss.xml` both list posts and are unioned.
+  Some posts are indexes whose entries sit one level down and appear in no
+  feed (`/misalignment-reports/<slug>/`); links nested under a post's own
+  path are fetched too, into `alignment/<post>/<slug>.md`.
   Each run also reads the posts for their outbound links and fetches the
   **openai.com pages they cite** (`/index/*` research posts into `openai/news/`,
   `/safety/*` and root-level pages into `openai/site/`, via the curl path).
@@ -298,7 +301,7 @@ covers Anthropic (`content/anthropic/`); see "OpenAI Documentation" and
 - `content/openai/ads/`, `plugins/`, `workspace-agents/`, `commerce/` - Ads API, Apps SDK/plugins, Workspace Agents API, Agentic Commerce
 - `content/openai/blog/` - Developer blog (developers.openai.com)
 - `content/openai/news/` - Model launches + research posts (openai.com/index, scraped via curl -- see Fetcher above)
-- `content/openai/alignment/` - Alignment blog (alignment.openai.com)
+- `content/openai/alignment/` - Alignment blog (alignment.openai.com); `misalignment-reports/` holds the individual incident reports
 - `content/openai/system-cards/` - System cards (deploymentsafety.openai.com), one file per card
 - `content/openai/model-spec/` - The Model Spec (model-spec.openai.com), one file per dated version
 - `content/openai/site/` - Other openai.com pages (/safety/*, incident reports) the alignment blog links to

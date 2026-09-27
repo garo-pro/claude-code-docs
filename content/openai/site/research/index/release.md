@@ -3,6 +3,8 @@ Title: OpenAI Research | Release
 URL Source: https://openai.com/research/index/release
 
 Markdown Content:
+Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.
+
 GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.
 
 Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.
@@ -18,5 +20,3 @@ OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities 
 ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.
 
 GPT-Rosalind advances life sciences research with enhanced biological reasoning, medicinal chemistry expertise, genomics analysis, and experimental workflow capabilities.
-
-OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing biodefense, public health, and pandemic preparedness through frontier AI.

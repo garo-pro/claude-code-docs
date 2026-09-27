@@ -97,6 +97,7 @@ While we see significant potential in its ability to generate slideshows, this f
 Overall, we expect continued improvements to ChatGPT agent’s efficiency, depth, and versatility over time, including more seamless interactions as we continue to adjust the amount of oversight required from the user to make it more useful while ensuring it’s safe to use.
 
 | **SpreadsheetBench** |  |  |  |  | 
+|---|---|---|---|---|
 | **Model** | **Evaluation environment** | **Soft restriction (%): Cell-level** | **Soft restriction (%): Sheet-level** | **Soft restriction (%): Overall** | 
 | GPT‑4o | Windows, Excel | 15.03 | 23.65 | 18.35 | 
 | Copilot in Excel | Windows, Excel | 23.33 | 15.00 | 20.00 | 

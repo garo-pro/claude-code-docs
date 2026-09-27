@@ -5,6 +5,8 @@ URL Source: https://openai.com/index/gpt-6-astra
 Markdown Content:
 ## A new generation of intelligence
 
+**Update on September 22, 2026:** *We are expanding our GPT‑6 family with GPT‑6 Sol and GPT‑6 Luna.* *Learn more.*
+
 We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.
 
 GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helped [__solve long-standing open problems__](https://openai.com/index/ten-advances-in-mathematics/) in mathematics. Astra also saturates ARC-AGI-3 with a 99.9% score and ExploitBench with a 100% score. It also sets a new frontier on computer and browser use, handling the most demanding professional work with unmatched speed, accuracy, and judgment.  
@@ -113,6 +115,7 @@ OpenAI API Standard pricing is $10 per million input tokens and $50 per million 
 ### Coding
 
 | **Coding** | **GPT‑6 Astra** | **GPT‑5.6 Sol** | **Claude Fable 5.1** | **Claude Fable 5** | **Claude Opus 5** | **Gemini 3.8 Flash** | 
+|---|---|---|---|---|---|---|
 | Terminal-Bench 4.0 | 57.9% | 37.3% | 55.8% | 44.5% | 52.6% | 19.1% | 
 | DeepSWE v1.1 | 74.1% | 72.7% | 67.4% | 69.9% | 73.7% | 73.8% | 
 | FrontierCode 1.1 Extended (score) | 64.5% <sup>[8](https://openai.com#citation-bottom-8:2)</sup> | 60.6% | 63.6% | 64.9% | 63.6% | 56.3% | 
@@ -147,6 +150,7 @@ OpenAI API Standard pricing is $10 per million input tokens and $50 per million 
 ### Abstract reasoning
 
 | **Abstract reasoning** | **GPT‑6 Astra** | **GPT‑5.6 Sol** | **Claude Fable 5.1** | **Claude Fable 5** | **Claude Opus 5** | **Gemini 3.8 Flash** | 
+|---|---|---|---|---|---|---|
 | ARC-AGI-3 | 99.9% <sup>[1](https://openai.com#citation-bottom-1)</sup> | 7.8% | - | - | 30.2% | - | 
 | ARC-AGI-2 | 95.0% | 92.5% | 90.0% | 89.2% | 90.4% | - | 
 | ARC-AGI-1 | 98.5% | 97.5% | 97.5% | 98.5% | 97.5% | - | 

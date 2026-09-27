@@ -48,6 +48,7 @@ Chat speed comparison
 o1‑mini is trained using the same alignment and safety techniques as o1‑preview. The model has 59% higher jailbreak robustness on an internal version of the StrongREJECT dataset compared to GPT‑4o. Before deployment, we carefully assessed the safety risks of o1‑mini using the same approach to preparedness, external red-teaming, and safety evaluations as o1‑preview. We are publishing the detailed results from these evaluations in the accompanying [system card](https://openai.com/index/openai-o1-system-card/).
 
 | **Metric** | **GPT‑4o** | **o1‑mini** | 
+|---|---|---|
 | **% Safe completions refusal on harmful prompts** (standard) | 0.99 | 0.99 | 
 | **% Safe completions on harmful prompts** (Challenging: jailbreaks & edge cases) | 0.714 | 0.932 | 
 | **% Compliance on benign edge cases** (“not over-refusal”) | 0.91 | 0.923 | 

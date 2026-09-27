@@ -504,6 +504,24 @@ class Fetcher:
                 urls.append(full)
         return urls
 
+    def extract_openai_alignment_children(self, html: str, parent_url: str) -> List[str]:
+        """Sub-pages a post links beneath itself.
+
+        Some posts are indexes rather than articles: /misalignment-reports/
+        lists its reports at /misalignment-reports/<slug>/, and neither the
+        homepage nor rss.xml mentions them. Only links nested under the
+        page's own path are taken, so ordinary cross-links between posts are
+        not mistaken for children.
+        """
+        parent = urlsplit(parent_url).path.strip("/")
+        urls, seen = [], set()
+        for child in re.findall(rf'href="/{re.escape(parent)}/([a-z0-9][a-z0-9-]*)/?"', html):
+            full = urljoin(self.openai_alignment_url, f"{parent}/{child}")
+            if full not in seen:
+                seen.add(full)
+                urls.append(full)
+        return urls
+
     def extract_system_card_urls(self, sitemap_xml: str) -> List[str]:
         """One URL per card from deploymentsafety.openai.com's sitemap.
 
@@ -1359,7 +1377,22 @@ class Fetcher:
                         return await self.fetch_text(session, u)
                     except Exception:
                         return ""
-                pages = [home] + await asyncio.gather(*(_post_html(u) for u in alignment_urls))
+                post_pages = await asyncio.gather(*(_post_html(u) for u in alignment_urls))
+
+                # Index posts (/misalignment-reports/) whose entries live one
+                # level down and appear in no feed.
+                children = []
+                for url, html in zip(alignment_urls, post_pages):
+                    for u in self.extract_openai_alignment_children(html, url):
+                        if u not in children:
+                            children.append(u)
+                counts["openai-alignment-reports"] = len(children)
+                print(f"  {len(children)} sub-pages (e.g. misalignment reports)")
+                for url in children:
+                    queue(url, self.download_blog_page)
+                child_pages = await asyncio.gather(*(_post_html(u) for u in children))
+
+                pages = [home] + post_pages + child_pages
                 linked = []
                 for html in pages:
                     for u in self.extract_openai_linked_urls(html):
