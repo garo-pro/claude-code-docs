@@ -1476,7 +1476,7 @@ Schema name: `ResponseCreatedEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -1484,7 +1484,9 @@ Schema name: `ResponseCreatedEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -9641,7 +9643,7 @@ Schema name: `ResponseCreatedEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -9679,7 +9681,7 @@ Schema name: `ResponseCreatedEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -11197,7 +11199,7 @@ Schema name: `ResponseInProgressEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -11205,7 +11207,9 @@ Schema name: `ResponseInProgressEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -19362,7 +19366,7 @@ Schema name: `ResponseInProgressEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -19400,7 +19404,7 @@ Schema name: `ResponseInProgressEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -20918,7 +20922,7 @@ Schema name: `ResponseCompletedEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -20926,7 +20930,9 @@ Schema name: `ResponseCompletedEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -29083,7 +29089,7 @@ Schema name: `ResponseCompletedEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -29121,7 +29127,7 @@ Schema name: `ResponseCompletedEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -30656,7 +30662,7 @@ Schema name: `ResponseFailedEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -30664,7 +30670,9 @@ Schema name: `ResponseFailedEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -38821,7 +38829,7 @@ Schema name: `ResponseFailedEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -38859,7 +38867,7 @@ Schema name: `ResponseFailedEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -40379,7 +40387,7 @@ Schema name: `ResponseIncompleteEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -40387,7 +40395,9 @@ Schema name: `ResponseIncompleteEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -48544,7 +48554,7 @@ Schema name: `ResponseIncompleteEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -48582,7 +48592,7 @@ Schema name: `ResponseIncompleteEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -49927,7 +49937,7 @@ Schema name: `ResponseOutputItemAddedEvent`
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -49935,7 +49945,9 @@ Schema name: `ResponseOutputItemAddedEvent`
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -54083,7 +54095,7 @@ Schema name: `ResponseOutputItemDoneEvent`
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -54091,7 +54103,9 @@ Schema name: `ResponseOutputItemDoneEvent`
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -60600,7 +60614,7 @@ Schema name: `ResponseQueuedEvent`
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -60608,7 +60622,9 @@ Schema name: `ResponseQueuedEvent`
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -68765,7 +68781,7 @@ Schema name: `ResponseQueuedEvent`
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -68803,7 +68819,7 @@ Schema name: `ResponseQueuedEvent`
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.

@@ -3,8 +3,6 @@ Title: Emotion concepts in a large language model
 URL Source: https://www.anthropic.com/research/emotion-concepts-function
 
 Markdown Content:
-# Emotion concepts and their function in a large language model
-
 All modern language models sometimes act like they have emotions. They may say they’re happy to help you, or sorry when they make a mistake. Sometimes they even appear to become frustrated or anxious when struggling with tasks. What’s behind these behaviors? The way modern AI models are trained pushes them to [act like a character](https://www.anthropic.com/research/persona-selection-model) with human-like characteristics. In addition, these models are known to develop rich and generalizable [internal](https://transformer-circuits.pub/2024/scaling-monosemanticity/) [representations](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) of abstract concepts underlying their actions. It may then be natural for them to develop internal machinery that emulates aspects of human psychology, like emotions. If so, this could have profound implications for how we build AI systems and ensure they behave reliably.
 
 In a new paper from our Interpretability team, we analyzed the internal mechanisms of Claude Sonnet 4.5 and found emotion-related representations that shape its behavior. These correspond to specific patterns of artificial “neurons” which activate in situations—and promote behaviors—that the model has learned to associate with the concept of a particular emotion (e.g., “happy” or “afraid”). The patterns themselves are organized in a fashion that echoes human psychology, with more similar emotions corresponding to more similar representations. In contexts where you might expect a certain emotion to arise for a human, the corresponding representations are active. Note that none of this tells us whether language models actually *feel* anything or have subjective experiences. But our key finding is that these representations are *functional*, in that they influence the model’s behavior in ways that matter.
@@ -132,7 +130,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

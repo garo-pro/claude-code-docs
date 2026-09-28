@@ -3,8 +3,6 @@ Title: Sycophancy to subterfuge: Investigating reward tampering in language mode
 URL Source: https://www.anthropic.com/research/reward-tampering
 
 Markdown Content:
-# Sycophancy to subterfuge: Investigating reward tampering in language models
-
 Perverse incentives are everywhere. Think of the concept of "teaching to the test", where teachers focus on the narrow goal of exam preparation and fail to give their students a broader education. Or think of scientists working in the "publish or perish" academic system, publishing large numbers of low-quality papers to advance their careers at the expense of what we actually want them to produce: rigorous research.
 
 Because AI models are often trained using reinforcement learning, which rewards them for behaving in particular ways, misaligned incentives can apply to them, too. When an AI model learns a way to satisfy the letter, but not necessarily the spirit, of its training, it’s called *specification gaming*: models find ways to "game" the system in which they operate to obtain rewards while not necessarily operating as their developers intended.
@@ -81,7 +79,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

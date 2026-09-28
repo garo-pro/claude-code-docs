@@ -5,7 +5,7 @@ URL Source: https://www.anthropic.com/news/redeploying-fable-5
 Markdown Content:
 # Redeploying Fable 5
 
-- UpdateClaude Fable 5 and Mythos 5 redeployed Jul 1, 2026 Access to Claude Fable 5 and Mythos 5 is now restored.
+- UpdateClaude Fable 5 and Mythos 5 redeployed Access to Claude Fable 5 and Mythos 5 is now restored.
 
 On Friday, June 12, the US government applied export controls to our newest models, Claude Fable 5 and Claude Mythos 5. This required us to restrict access to foreign nationals, whether inside or outside the United States. Because the order took effect immediately and we had no reliable way to verify nationality in real-time, we suspended access to both models for all users.
 

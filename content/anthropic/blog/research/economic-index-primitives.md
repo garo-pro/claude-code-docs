@@ -1,10 +1,8 @@
-Title: Economic Index: New building blocks for AI use
+Title: Anthropic Economic Index: New building blocks for understanding AI use
 
 URL Source: https://www.anthropic.com/research/economic-index-primitives
 
 Markdown Content:
-# Anthropic Economic Index: New building blocks for understanding AI use
-
 ![Anthropic Economic Index: New building blocks for understanding AI use](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F9b02ac64661e5bddae4953af316ac8e45125cb65-1920x1080.jpg&w=3840&q=75)
 
 Is artificial intelligence really making people faster at work? What sort of tasks does AI support best? And how might it change the nature of people’s occupations?
@@ -111,7 +109,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

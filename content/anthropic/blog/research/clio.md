@@ -3,10 +3,8 @@ Title: Clio: Privacy-preserving insights into real-world AI use
 URL Source: https://www.anthropic.com/research/clio
 
 Markdown Content:
-# Clio: A system for privacy-preserving insights into real-world AI use
-
-- UpdateThis system and research tool is now called Anthropic Insights Aug 24, 2026
-- UpdateConsumer Terms and Privacy Policy Aug 28, 2025
+- UpdateThis system and research tool is now called Anthropic Insights
+- UpdateConsumer Terms and Privacy Policy
 
 
 What do people use AI models for? Despite the rapidly-growing popularity of large language models, until now we’ve had little insight into exactly how they’re being used.
@@ -118,7 +116,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

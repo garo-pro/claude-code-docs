@@ -3,8 +3,6 @@ Title: Economic Index: Uneven AI adoption
 URL Source: https://www.anthropic.com/research/anthropic-economic-index-september-2025-report
 
 Markdown Content:
-# Anthropic Economic Index report: Uneven geographic and enterprise AI adoption
-
 ## Introduction
 
 AI differs from prior technologies in its unprecedented adoption speed. In the US alone, 40% of employees report using AI at work, up from 20% in 2023 two years ago.<sup>**1**</sup> Such rapid adoption reflects how useful this technology already is for a wide range of applications, its deployability on existing digital infrastructure, and its ease of use—by just typing or speaking—without specialized training. Rapid improvement of frontier AI likely reinforces fast adoption along each of these dimensions.
@@ -544,7 +542,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

@@ -3,7 +3,7 @@ Title: Claude Desktop Extensions: One-click MCP server installation for Claude D
 URL Source: https://www.anthropic.com/engineering/desktop-extensions
 
 Markdown Content:
-- File extension update Sep 11, 2025 Claude Desktop Extensions now use the .mcpb (MCP Bundle) file extension instead of .dxt. Existing .dxt extensions will continue to work, but we recommend developers use .mcpb for new extensions going forward. All functionality remains the same - this is purely a naming convention update.
+- File extension update Claude Desktop Extensions now use the .mcpb (MCP Bundle) file extension instead of .dxt. Existing .dxt extensions will continue to work, but we recommend developers use .mcpb for new extensions going forward. All functionality remains the same - this is purely a naming convention update.
 
 —
 

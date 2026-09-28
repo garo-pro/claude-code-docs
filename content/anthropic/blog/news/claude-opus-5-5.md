@@ -36,7 +36,7 @@ On our benchmarks, Claude Opus 5.5 leads in agentic coding, computer use, and kn
 | Business workflowsAutomationBench² | 40.0% | 31.4% | 26.9% | 41.4% | 28.8% | 
 | Multidisciplinary reasoningHumanity's Last Exam | 67.7%with tools | 65.6%with tools | 63.6%with tools | 57.2%with tools | — | 
 | Agentic scientific researchTerminal-Bench-Science 0.1³ | 58.7% | 52.6% | 29.0% | 64.6% | 22.4% | 
-| Computer useOSWorld 2.0 | 81.8%partial | 80.7%partial | 74.0%partial | — | — | 
+| Computer useOSWorld 2.1 | 81.8%partial | 80.7%partial | 74.0%partial | — | — | 
 | Visual chart recognitionChartography | 89.0%with tools | 88.4%with tools | 83.4%with tools | — | — | 
 
 Unless otherwise noted, all Claude Opus 5.5 results use adaptive thinking at max effort. Terminal-Bench 4.0 results are reported for Claude Opus 5.5 at xhigh effort and GPT-6 Astra at high effort, as reported by OpenAI; these represent each model’s highest score. Claude Opus 5.5 was evaluated with its production safeguards enabled. When they intervened, cybersecurity tasks were completed by Claude Opus 4.8, and biology and frontier LLM development tasks were completed by Claude Opus 5. This likely reduces Claude Opus 5.5’s performance on these benchmarks.

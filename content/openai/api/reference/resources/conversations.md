@@ -1316,7 +1316,7 @@ Create a conversation.
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -1324,7 +1324,9 @@ Create a conversation.
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -6450,7 +6452,7 @@ Create items in a conversation with the given ID.
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -6458,7 +6460,9 @@ Create items in a conversation with the given ID.
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -10799,7 +10803,7 @@ Create items in a conversation with the given ID.
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -10807,7 +10811,9 @@ Create items in a conversation with the given ID.
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -13710,15 +13716,7 @@ Create items in a conversation with the given ID.
 curl https://api.openai.com/v1/conversations/$CONVERSATION_ID/items \
     -H 'Content-Type: application/json' \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
-    -d '{
-          "items": [
-            {
-              "content": "string",
-              "role": "user",
-              "type": "message"
-            }
-          ]
-        }'
+    -d '{}'
 ```
 
 #### Response
@@ -15290,7 +15288,7 @@ List all items for a conversation with the given ID.
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -15298,7 +15296,9 @@ List all items for a conversation with the given ID.
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -19642,7 +19642,7 @@ Get a single item from a conversation with the given IDs.
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -19650,7 +19650,9 @@ Get a single item from a conversation with the given IDs.
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -23927,7 +23929,7 @@ curl https://api.openai.com/v1/conversations/conv_123/items/msg_abc \
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -23935,7 +23937,9 @@ curl https://api.openai.com/v1/conversations/conv_123/items/msg_abc \
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -28165,7 +28169,7 @@ curl https://api.openai.com/v1/conversations/conv_123/items/msg_abc \
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -28173,7 +28177,9 @@ curl https://api.openai.com/v1/conversations/conv_123/items/msg_abc \
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 

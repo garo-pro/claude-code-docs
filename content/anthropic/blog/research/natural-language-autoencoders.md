@@ -1,10 +1,8 @@
-Title: Natural Language Autoencoders
+Title: Natural Language Autoencoders: Turning Claude’s thoughts into text
 
 URL Source: https://www.anthropic.com/research/natural-language-autoencoders
 
 Markdown Content:
-# Natural Language Autoencoders: Turning Claude’s thoughts into text
-
 When you talk to an AI model like Claude, you talk to it in words. Internally, Claude processes those words as long lists of numbers, before again producing words as its output. These numbers in the middle are called *activations—*and like neural activity in the human brain, they encode Claude’s thoughts.
 
 Also like neural activity, activations are difficult to understand. We can’t easily decode them to read Claude’s thoughts. Over the past few years, we’ve developed a range of tools (like [sparse](https://transformer-circuits.pub/2023/monosemantic-features) [autoencoders](https://transformer-circuits.pub/2024/scaling-monosemanticity/) and [attribution](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) [graphs](https://transformer-circuits.pub/2025/attribution-graphs/methods.html)) for better understanding activations. These tools have taught us a great deal, but they don’t speak for themselves—their outputs are still complex objects that trained researchers need to carefully interpret.
@@ -99,7 +97,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

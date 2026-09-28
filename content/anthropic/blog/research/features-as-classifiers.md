@@ -3,8 +3,6 @@ Title: Using dictionary learning features as classifiers
 URL Source: https://www.anthropic.com/research/features-as-classifiers
 
 Markdown Content:
-# Using dictionary learning features as classifiers
-
 *At the link above, we report some developing work from the Anthropic interpretability team on developing feature-based classifiers, which might be of interest to researchers working actively in this space. We'd ask you to treat these results like those of a colleague sharing some thoughts or preliminary experiments for a few minutes at a lab meeting, rather than a mature paper.*
 
 ## Related content
@@ -17,7 +15,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

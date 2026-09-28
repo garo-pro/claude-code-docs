@@ -1463,7 +1463,7 @@ the `background` parameter set to `true` can be cancelled.
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -1471,7 +1471,9 @@ the `background` parameter set to `true` can be cancelled.
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -9628,7 +9630,7 @@ the `background` parameter set to `true` can be cancelled.
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -9666,7 +9668,7 @@ the `background` parameter set to `true` can be cancelled.
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -11482,7 +11484,7 @@ Learn when and how to compact long-running conversations in the [conversation st
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -11490,7 +11492,9 @@ Learn when and how to compact long-running conversations in the [conversation st
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -15247,7 +15251,7 @@ Learn when and how to compact long-running conversations in the [conversation st
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -15255,7 +15259,9 @@ Learn when and how to compact long-running conversations in the [conversation st
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -20319,7 +20325,7 @@ as input for the model's response.
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -20327,7 +20333,9 @@ as input for the model's response.
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -25017,7 +25025,7 @@ as input for the model's response.
 
   - `"disabled"`
 
-- `user: optional string`
+- `user: optional string or null`
 
   This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
   A stable identifier for your end-users.
@@ -26472,7 +26480,7 @@ as input for the model's response.
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -26480,7 +26488,9 @@ as input for the model's response.
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -34637,7 +34647,7 @@ as input for the model's response.
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -34675,7 +34685,7 @@ as input for the model's response.
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -34687,19 +34697,7 @@ as input for the model's response.
 curl https://api.openai.com/v1/responses \
     -H 'Content-Type: application/json' \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
-    -d '{
-          "context_management": [
-            {
-              "type": "type"
-            }
-          ],
-          "model": "gpt-6-astra",
-          "prompt_cache_key": "prompt-cache-key-1234",
-          "safety_identifier": "safety-identifier-1234",
-          "temperature": 1,
-          "top_p": 1,
-          "user": "user-1234"
-        }'
+    -d '"string"'
 ```
 
 #### Response
@@ -35437,33 +35435,34 @@ curl https://api.openai.com/v1/responses \
 
 ```json
 event: response.created
-data: {"type":"response.created","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"in_progress","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}}}
+data: {"type":"response.created","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"in_progress","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":0}
 
 event: response.in_progress
-data: {"type":"response.in_progress","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"in_progress","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}}}
+data: {"type":"response.in_progress","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"in_progress","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":null,"metadata":{}},"sequence_number":1}
 
 event: response.output_item.added
-data: {"type":"response.output_item.added","output_index":0,"item":{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"in_progress","role":"assistant","content":[]}}
+data: {"type":"response.output_item.added","output_index":0,"item":{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"in_progress","role":"assistant","content":[]},"sequence_number":2}
 
 event: response.content_part.added
-data: {"type":"response.content_part.added","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"part":{"type":"output_text","text":"","annotations":[]}}
+data: {"type":"response.content_part.added","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"part":{"type":"output_text","text":"","annotations":[],"logprobs":[]},"sequence_number":3}
 
 event: response.output_text.delta
-data: {"type":"response.output_text.delta","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"delta":"Hi"}
+data: {"type":"response.output_text.delta","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"delta":"Hi","sequence_number":4,"logprobs":[]}
 
-...
+: Intermediate response events omitted.
 
 event: response.output_text.done
-data: {"type":"response.output_text.done","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"text":"Hi there! How can I assist you today?"}
+data: {"type":"response.output_text.done","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"text":"Hi there! How can I assist you today?","sequence_number":10,"logprobs":[]}
 
 event: response.content_part.done
-data: {"type":"response.content_part.done","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"part":{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[]}}
+data: {"type":"response.content_part.done","item_id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","output_index":0,"content_index":0,"part":{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[],"logprobs":[]},"sequence_number":11}
 
 event: response.output_item.done
-data: {"type":"response.output_item.done","output_index":0,"item":{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[]}]}}
+data: {"type":"response.output_item.done","output_index":0,"item":{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[],"logprobs":[]}]},"sequence_number":12}
 
 event: response.completed
-data: {"type":"response.completed","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"completed","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[]}]}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":37,"output_tokens":11,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":48},"user":null,"metadata":{}}}
+data: {"type":"response.completed","response":{"id":"resp_67c9fdcecf488190bdd9a0409de3a1ec07b8b0ad4e5eb654","object":"response","access_programs":null,"created_at":1741290958,"status":"completed","error":null,"incomplete_details":null,"instructions":"You are a helpful assistant.","max_output_tokens":null,"model":"gpt-6-astra","output":[{"id":"msg_67c9fdcf37fc8190ba82116e33fb28c507b8b0ad4e5eb654","type":"message","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Hi there! How can I assist you today?","annotations":[],"logprobs":[]}]}],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":{"input_tokens":37,"output_tokens":11,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":48,"input_tokens_details":{"cached_tokens":0,"cache_write_tokens":0}},"user":null,"metadata":{}},"sequence_number":13}
+
 ```
 
 ### Text input
@@ -35669,12 +35668,32 @@ Deletes a model response with the given ID.
 
 - `response_id: string`
 
+### Returns
+
+- `id: string`
+
+- `deleted: boolean`
+
+- `object: "response.deleted"`
+
+  - `"response.deleted"`
+
 ### Example
 
 ```http
 curl https://api.openai.com/v1/responses/$RESPONSE_ID \
     -X DELETE \
     -H "Authorization: Bearer $OPENAI_API_KEY"
+```
+
+#### Response
+
+```json
+{
+  "id": "id",
+  "deleted": true,
+  "object": "response.deleted"
+}
 ```
 
 ### Example
@@ -35689,8 +35708,8 @@ curl -X DELETE https://api.openai.com/v1/responses/resp_123 \
 
 ```json
 {
-  "id": "resp_6786a1bec27481909a17d673315b29f6",
-  "object": "response",
+  "id": "resp_123",
+  "object": "response.deleted",
   "deleted": true
 }
 ```
@@ -37200,7 +37219,7 @@ Retrieves a model response with the given ID.
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -37208,7 +37227,9 @@ Retrieves a model response with the given ID.
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -45365,7 +45386,7 @@ Retrieves a model response with the given ID.
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -45403,7 +45424,7 @@ Retrieves a model response with the given ID.
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -46393,7 +46414,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -46401,7 +46422,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -52272,7 +52295,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                 Combine multiple filters using `and` or `or`.
 
-                - `filters: array of ComparisonFilter or unknown`
+                - `filters: array of ComparisonFilter or CompoundFilter`
 
                   Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -52280,7 +52303,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                     A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                  - `unknown`
+                  - `CompoundFilter object { filters, type }`
+
+                    Combine multiple filters using `and` or `or`.
 
                 - `type: "and" or "or"`
 
@@ -60437,7 +60462,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
     - `"disabled"`
 
-  - `usage: optional ResponseUsage`
+  - `usage: optional ResponseUsage or null`
 
     Represents token usage details including input tokens, output tokens,
     a breakdown of output tokens, and the total tokens used.
@@ -60475,7 +60500,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       The total number of tokens used.
 
-  - `user: optional string`
+  - `user: optional string or null`
 
     This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
     A stable identifier for your end-users.
@@ -62160,7 +62185,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -62168,7 +62193,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -70325,7 +70352,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -70363,7 +70390,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -72533,7 +72560,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -72541,7 +72568,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -80698,7 +80727,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -80736,7 +80765,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -80807,6 +80836,18 @@ curl https://api.openai.com/v1/responses/resp_123 \
     The event type identifier.
 
     - `"response.custom_tool_call_input.done"`
+
+### Response Delete Response
+
+- `ResponseDeleteResponse object { id, deleted, object }`
+
+  - `id: string`
+
+  - `deleted: boolean`
+
+  - `object: "response.deleted"`
+
+    - `"response.deleted"`
 
 ### Response Error
 
@@ -82379,7 +82420,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -82387,7 +82428,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -90544,7 +90587,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -90582,7 +90625,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -92452,7 +92495,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -92460,7 +92503,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -100617,7 +100662,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -100655,7 +100700,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -102161,7 +102206,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -102169,7 +102214,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -110326,7 +110373,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -110364,7 +110411,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -112531,7 +112578,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
             Combine multiple filters using `and` or `or`.
 
-            - `filters: array of ComparisonFilter or unknown`
+            - `filters: array of ComparisonFilter or CompoundFilter`
 
               Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -112539,7 +112586,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                 A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-              - `unknown`
+              - `CompoundFilter object { filters, type }`
+
+                Combine multiple filters using `and` or `or`.
 
             - `type: "and" or "or"`
 
@@ -116655,7 +116704,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -116663,7 +116712,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -120790,7 +120841,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -120798,7 +120849,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -125703,7 +125756,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -125711,7 +125764,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -133868,7 +133923,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `usage: optional ResponseUsage`
+    - `usage: optional ResponseUsage or null`
 
       Represents token usage details including input tokens, output tokens,
       a breakdown of output tokens, and the total tokens used.
@@ -133906,7 +133961,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         The total number of tokens used.
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -137324,7 +137379,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                     Combine multiple filters using `and` or `or`.
 
-                    - `filters: array of ComparisonFilter or unknown`
+                    - `filters: array of ComparisonFilter or CompoundFilter`
 
                       Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -137332,7 +137387,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                         A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                      - `unknown`
+                      - `CompoundFilter object { filters, type }`
+
+                        Combine multiple filters using `and` or `or`.
 
                     - `type: "and" or "or"`
 
@@ -145489,7 +145546,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
         - `"disabled"`
 
-      - `usage: optional ResponseUsage`
+      - `usage: optional ResponseUsage or null`
 
         Represents token usage details including input tokens, output tokens,
         a breakdown of output tokens, and the total tokens used.
@@ -145527,7 +145584,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
           The total number of tokens used.
 
-      - `user: optional string`
+      - `user: optional string or null`
 
         This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
         A stable identifier for your end-users.
@@ -148886,7 +148943,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                   Combine multiple filters using `and` or `or`.
 
-                  - `filters: array of ComparisonFilter or unknown`
+                  - `filters: array of ComparisonFilter or CompoundFilter`
 
                     Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -148894,7 +148951,9 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
                       A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                    - `unknown`
+                    - `CompoundFilter object { filters, type }`
+
+                      Combine multiple filters using `and` or `or`.
 
                   - `type: "and" or "or"`
 
@@ -153594,7 +153653,7 @@ curl https://api.openai.com/v1/responses/resp_123 \
 
       - `"disabled"`
 
-    - `user: optional string`
+    - `user: optional string or null`
 
       This field is being replaced by `safety_identifier` and `prompt_cache_key`. Use `prompt_cache_key` instead to maintain caching optimizations.
       A stable identifier for your end-users.
@@ -156479,7 +156538,7 @@ Returns a list of input items for a given response.
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -156487,7 +156546,9 @@ Returns a list of input items for a given response.
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -160789,7 +160850,7 @@ curl https://api.openai.com/v1/responses/resp_abc123/input_items \
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -160797,7 +160858,9 @@ curl https://api.openai.com/v1/responses/resp_abc123/input_items \
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 
@@ -165161,7 +165224,7 @@ Returns an object with `object` set to `response.input_tokens` and an `input_tok
 
               Combine multiple filters using `and` or `or`.
 
-              - `filters: array of ComparisonFilter or unknown`
+              - `filters: array of ComparisonFilter or CompoundFilter`
 
                 Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
 
@@ -165169,7 +165232,9 @@ Returns an object with `object` set to `response.input_tokens` and an `input_tok
 
                   A filter used to compare a specified attribute key to a given value using a defined comparison operation.
 
-                - `unknown`
+                - `CompoundFilter object { filters, type }`
+
+                  Combine multiple filters using `and` or `or`.
 
               - `type: "and" or "or"`
 

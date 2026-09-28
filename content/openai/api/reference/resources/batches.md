@@ -60,11 +60,11 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     - `"cancelled"`
 
-  - `cancelled_at: optional number`
+  - `cancelled_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was cancelled.
 
-  - `cancelling_at: optional number`
+  - `cancelling_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
@@ -76,7 +76,7 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     The ID of the file containing the outputs of requests with errors.
 
-  - `errors: optional object { data, object }`
+  - `errors: optional object { data, object }  or null`
 
     - `data: optional array of BatchError`
 
@@ -100,7 +100,7 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
       The object type, which is always `list`.
 
-  - `expired_at: optional number`
+  - `expired_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch expired.
 
@@ -108,7 +108,7 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
-  - `failed_at: optional number`
+  - `failed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch failed.
 
@@ -410,11 +410,11 @@ Creates and executes a batch from an uploaded file of requests
 
     - `"cancelled"`
 
-  - `cancelled_at: optional number`
+  - `cancelled_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was cancelled.
 
-  - `cancelling_at: optional number`
+  - `cancelling_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
@@ -426,7 +426,7 @@ Creates and executes a batch from an uploaded file of requests
 
     The ID of the file containing the outputs of requests with errors.
 
-  - `errors: optional object { data, object }`
+  - `errors: optional object { data, object }  or null`
 
     - `data: optional array of BatchError`
 
@@ -450,7 +450,7 @@ Creates and executes a batch from an uploaded file of requests
 
       The object type, which is always `list`.
 
-  - `expired_at: optional number`
+  - `expired_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch expired.
 
@@ -458,7 +458,7 @@ Creates and executes a batch from an uploaded file of requests
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
-  - `failed_at: optional number`
+  - `failed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch failed.
 
@@ -720,11 +720,11 @@ List your organization's batches.
 
     - `"cancelled"`
 
-  - `cancelled_at: optional number`
+  - `cancelled_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was cancelled.
 
-  - `cancelling_at: optional number`
+  - `cancelling_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
@@ -736,7 +736,7 @@ List your organization's batches.
 
     The ID of the file containing the outputs of requests with errors.
 
-  - `errors: optional object { data, object }`
+  - `errors: optional object { data, object }  or null`
 
     - `data: optional array of BatchError`
 
@@ -760,7 +760,7 @@ List your organization's batches.
 
       The object type, which is always `list`.
 
-  - `expired_at: optional number`
+  - `expired_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch expired.
 
@@ -768,7 +768,7 @@ List your organization's batches.
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
-  - `failed_at: optional number`
+  - `failed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch failed.
 
@@ -971,14 +971,13 @@ curl https://api.openai.com/v1/batches?limit=2 \
       },
       "metadata": {
         "customer_id": "user_123456789",
-        "batch_description": "Nightly job",
+        "batch_description": "Nightly job"
       }
-    },
-    { ... },
+    }
   ],
   "first_id": "batch_abc123",
-  "last_id": "batch_abc456",
-  "has_more": true
+  "last_id": "batch_abc123",
+  "has_more": false
 }
 ```
 
@@ -1040,11 +1039,11 @@ Retrieves a batch.
 
     - `"cancelled"`
 
-  - `cancelled_at: optional number`
+  - `cancelled_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was cancelled.
 
-  - `cancelling_at: optional number`
+  - `cancelling_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
@@ -1056,7 +1055,7 @@ Retrieves a batch.
 
     The ID of the file containing the outputs of requests with errors.
 
-  - `errors: optional object { data, object }`
+  - `errors: optional object { data, object }  or null`
 
     - `data: optional array of BatchError`
 
@@ -1080,7 +1079,7 @@ Retrieves a batch.
 
       The object type, which is always `list`.
 
-  - `expired_at: optional number`
+  - `expired_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch expired.
 
@@ -1088,7 +1087,7 @@ Retrieves a batch.
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
-  - `failed_at: optional number`
+  - `failed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch failed.
 
@@ -1325,11 +1324,11 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     - `"cancelled"`
 
-  - `cancelled_at: optional number`
+  - `cancelled_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was cancelled.
 
-  - `cancelling_at: optional number`
+  - `cancelling_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
@@ -1341,7 +1340,7 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     The ID of the file containing the outputs of requests with errors.
 
-  - `errors: optional object { data, object }`
+  - `errors: optional object { data, object }  or null`
 
     - `data: optional array of BatchError`
 
@@ -1365,7 +1364,7 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
       The object type, which is always `list`.
 
-  - `expired_at: optional number`
+  - `expired_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch expired.
 
@@ -1373,7 +1372,7 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
-  - `failed_at: optional number`
+  - `failed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch failed.
 

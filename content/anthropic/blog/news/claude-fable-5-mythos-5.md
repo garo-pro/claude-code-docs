@@ -7,8 +7,7 @@ Markdown Content:
 
 ![The number five composed of several butterflies](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fb7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png&w=3840&q=75)
 
-- UpdateClaude Mythos 5 and Fable 5 redeployed Jul 1, 2026 Claude Fable 5 and Mythos 5 are now available. Read more
-- Claude Mythos 5 and Fable 5 access unavailable Jun 12, 2026 We are suspending access to Claude Fable 5 and Claude Mythos 5. We apologize for this disruption to our customers and are working to restore access as soon as possible. Read more
+- Claude Mythos 5 and Fable 5 access unavailable We are suspending access to Claude Fable 5 and Claude Mythos 5. We apologize for this disruption to our customers and are working to restore access as soon as possible. Read more
 
 Today we’re launching **Claude Fable 5**: a Mythos-class<sup>[1](https://www.anthropic.com#footnote-1)</sup> model that we’ve made safe for general use.
 

@@ -1,10 +1,8 @@
-Title: Economic Index: AI's role in the US and global economy
+Title: Anthropic Economic Index: Tracking AI’s role in the US and global economy
 
 URL Source: https://www.anthropic.com/research/economic-index-geography
 
 Markdown Content:
-# Anthropic Economic Index: Tracking AI’s role in the US and global economy
-
 ![Anthropic Economic Index: Tracking AI’s role in the US and global economy](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fb9323366eca74b9c4b833760b4e01ba9d113359d-1920x1080.jpg&w=3840&q=75)
 
 Travel planning in Hawaii, scientific research in Massachusetts, and building web applications in India. On the face of it, these three activities share very little in common. But it turns out that they’re the particular uses of Claude that are some of the *most overrepresented* in each of these places.
@@ -126,7 +124,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 

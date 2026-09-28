@@ -7,7 +7,7 @@ Markdown Content:
 
 Anticipating and securing against emerging threats that accompany increasingly powerful models
 
-Last updated Aug 14, 2026
+Last updated
 
 As frontier AI models advance, we believe they will bring about transformative benefits for our society and economy. AI could accelerate scientific discoveries, revolutionize healthcare, enhance our education system, and create entirely new domains for human creativity and innovation. Frontier AI models also, however, present new challenges and risks that warrant careful study and effective safeguards.
 

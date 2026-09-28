@@ -7,7 +7,7 @@ Markdown Content:
 
 ![An abstract representation of AI computer use, with a computer cursor clicking on a stylized representation of a neural network](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F393cf77dd5c15761c47f2db9f80e30b4f6309708-2880x1620.png&w=3840&q=75)
 
-- UpdateConsumer Terms and Privacy Policy Aug 28, 2025
+- UpdateConsumer Terms and Privacy Policy
 
 Claude can now use computers. The [latest version of Claude 3.5 Sonnet](http://anthropic.com/news/3-5-models-and-computer-use) can, when run through the appropriate software setup, follow a user’s commands to move a cursor around their computer’s screen, click on relevant locations, and input information via a virtual keyboard, emulating the way people interact with their own computer.
 

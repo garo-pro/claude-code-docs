@@ -3,8 +3,6 @@ Title: A "diff" tool for AI models
 URL Source: https://www.anthropic.com/research/diff-tool
 
 Markdown Content:
-# A “diff” tool for AI: Finding behavioral differences in new models
-
 ![A “diff” tool for AI: Finding behavioral differences in new models](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa93218bbcbc4a3ada031c78fb5fbd62d42fb7eb9-1920x1080.png&w=3840&q=75)
 
 Every time a new AI model is released, its developers run a suite of evaluations to measure its performance and safety. These tests are essential, but they are somewhat limited. Because these benchmarks are human-authored, they can only test for risks we have already conceptualized and learned to measure.
@@ -113,7 +111,7 @@ Guest writer and physicist Matt von Hippel shares what happened when he issued a
 
 ### Project Swap: What happens when agents trade for us?
 
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes—a more controlled sequel to Project Deal, our first experiment with agents interacting in a marketplace on people's behalf.
+To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
 
 [Read more](https://www.anthropic.com/research/project-swap)
 
