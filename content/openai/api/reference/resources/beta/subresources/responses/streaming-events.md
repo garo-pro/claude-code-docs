@@ -1015,7 +1015,7 @@ Schema name: `BetaResponseCreatedEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -1024,7 +1024,27 @@ Schema name: `BetaResponseCreatedEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -1092,26 +1112,6 @@ Schema name: `BetaResponseCreatedEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -5833,7 +5833,7 @@ Schema name: `BetaResponseCreatedEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -5842,7 +5842,27 @@ Schema name: `BetaResponseCreatedEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -5910,26 +5930,6 @@ Schema name: `BetaResponseCreatedEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -12169,7 +12169,7 @@ Schema name: `BetaResponseInProgressEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -12178,7 +12178,27 @@ Schema name: `BetaResponseInProgressEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -12246,26 +12266,6 @@ Schema name: `BetaResponseInProgressEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -16987,7 +16987,7 @@ Schema name: `BetaResponseInProgressEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -16996,7 +16996,27 @@ Schema name: `BetaResponseInProgressEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -17064,26 +17084,6 @@ Schema name: `BetaResponseInProgressEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -23323,7 +23323,7 @@ Schema name: `BetaResponseCompletedEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -23332,7 +23332,27 @@ Schema name: `BetaResponseCompletedEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -23400,26 +23420,6 @@ Schema name: `BetaResponseCompletedEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -28141,7 +28141,7 @@ Schema name: `BetaResponseCompletedEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -28150,7 +28150,27 @@ Schema name: `BetaResponseCompletedEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -28218,26 +28238,6 @@ Schema name: `BetaResponseCompletedEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -33463,9 +33463,11 @@ Schema name: `BetaResponseCompletedEvent`
           {
             "type": "output_text",
             "text": "In a shimmering forest under a sky full of stars, a lonely unicorn named Lila discovered a hidden pond that glowed with moonlight. Every night, she would leave sparkling, magical flowers by the water's edge, hoping to share her beauty with others. One enchanting evening, she woke to find a group of friendly animals gathered around, eager to be friends and share in her magic.",
-            "annotations": []
+            "annotations": [],
+            "logprobs": []
           }
-        ]
+        ],
+        "status": "completed"
       }
     ],
     "previous_response_id": null,
@@ -33487,10 +33489,15 @@ Schema name: `BetaResponseCompletedEvent`
       "output_tokens_details": {
         "reasoning_tokens": 0
       },
-      "total_tokens": 0
+      "total_tokens": 0,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      }
     },
     "user": null,
-    "metadata": {}
+    "metadata": {},
+    "parallel_tool_calls": true
   },
   "sequence_number": 1
 }
@@ -34494,7 +34501,7 @@ Schema name: `BetaResponseFailedEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -34503,7 +34510,27 @@ Schema name: `BetaResponseFailedEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -34571,26 +34598,6 @@ Schema name: `BetaResponseFailedEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -39312,7 +39319,7 @@ Schema name: `BetaResponseFailedEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -39321,7 +39328,27 @@ Schema name: `BetaResponseFailedEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -39389,26 +39416,6 @@ Schema name: `BetaResponseFailedEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -44643,8 +44650,10 @@ Schema name: `BetaResponseFailedEvent`
     "truncation": "disabled",
     "usage": null,
     "user": null,
-    "metadata": {}
-  }
+    "metadata": {},
+    "parallel_tool_calls": true
+  },
+  "sequence_number": 1
 }
 ```
 
@@ -45650,7 +45659,7 @@ Schema name: `BetaResponseIncompleteEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -45659,7 +45668,27 @@ Schema name: `BetaResponseIncompleteEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -45727,26 +45756,6 @@ Schema name: `BetaResponseIncompleteEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -50468,7 +50477,7 @@ Schema name: `BetaResponseIncompleteEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -50477,7 +50486,27 @@ Schema name: `BetaResponseIncompleteEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -50545,26 +50574,6 @@ Schema name: `BetaResponseIncompleteEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -55777,7 +55786,7 @@ Schema name: `BetaResponseIncompleteEvent`
     "completed_at": null,
     "error": null,
     "incomplete_details": {
-      "reason": "max_tokens"
+      "reason": "max_output_tokens"
     },
     "instructions": null,
     "max_output_tokens": null,
@@ -55798,7 +55807,8 @@ Schema name: `BetaResponseIncompleteEvent`
     "truncation": "disabled",
     "usage": null,
     "user": null,
-    "metadata": {}
+    "metadata": {},
+    "parallel_tool_calls": true
   },
   "sequence_number": 1
 }
@@ -56600,7 +56610,7 @@ Schema name: `BetaResponseOutputItemAddedEvent`
 
         The canonical name of the agent that produced this item.
 
-  - `WebSearchCall object { id, action, status, 2 more }`
+  - `WebSearchCall object { id, status, type, 2 more }`
 
     The results of a web search tool call. See the
     [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -56609,7 +56619,27 @@ Schema name: `BetaResponseOutputItemAddedEvent`
 
       The unique ID of the web search tool call.
 
-    - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+    - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+      The status of the web search tool call.
+
+      - `"in_progress"`
+
+      - `"searching"`
+
+      - `"completed"`
+
+      - `"failed"`
+
+      - `"incomplete"`
+
+    - `type: "web_search_call"`
+
+      The type of the web search tool call. Always `web_search_call`.
+
+      - `"web_search_call"`
+
+    - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
       An object describing the specific action taken in this web search call.
       Includes details on how the model used the web (search, open_page, find_in_page).
@@ -56677,26 +56707,6 @@ Schema name: `BetaResponseOutputItemAddedEvent`
         - `url: string`
 
           The URL of the page searched for the pattern.
-
-    - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-      The status of the web search tool call.
-
-      - `"in_progress"`
-
-      - `"searching"`
-
-      - `"completed"`
-
-      - `"failed"`
-
-      - `"incomplete"`
-
-    - `type: "web_search_call"`
-
-      The type of the web search tool call. Always `web_search_call`.
-
-      - `"web_search_call"`
 
     - `agent: optional object { agent_name }  or null`
 
@@ -61353,7 +61363,7 @@ Schema name: `BetaResponseOutputItemDoneEvent`
 
         The canonical name of the agent that produced this item.
 
-  - `WebSearchCall object { id, action, status, 2 more }`
+  - `WebSearchCall object { id, status, type, 2 more }`
 
     The results of a web search tool call. See the
     [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -61362,7 +61372,27 @@ Schema name: `BetaResponseOutputItemDoneEvent`
 
       The unique ID of the web search tool call.
 
-    - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+    - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+      The status of the web search tool call.
+
+      - `"in_progress"`
+
+      - `"searching"`
+
+      - `"completed"`
+
+      - `"failed"`
+
+      - `"incomplete"`
+
+    - `type: "web_search_call"`
+
+      The type of the web search tool call. Always `web_search_call`.
+
+      - `"web_search_call"`
+
+    - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
       An object describing the specific action taken in this web search call.
       Includes details on how the model used the web (search, open_page, find_in_page).
@@ -61430,26 +61460,6 @@ Schema name: `BetaResponseOutputItemDoneEvent`
         - `url: string`
 
           The URL of the page searched for the pattern.
-
-    - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-      The status of the web search tool call.
-
-      - `"in_progress"`
-
-      - `"searching"`
-
-      - `"completed"`
-
-      - `"failed"`
-
-      - `"incomplete"`
-
-    - `type: "web_search_call"`
-
-      The type of the web search tool call. Always `web_search_call`.
-
-      - `"web_search_call"`
 
     - `agent: optional object { agent_name }  or null`
 
@@ -65311,7 +65321,8 @@ Schema name: `BetaResponseOutputItemDoneEvent`
       {
         "type": "output_text",
         "text": "In a shimmering forest under a sky full of stars, a lonely unicorn named Lila discovered a hidden pond that glowed with moonlight. Every night, she would leave sparkling, magical flowers by the water's edge, hoping to share her beauty with others. One enchanting evening, she woke to find a group of friendly animals gathered around, eager to be friends and share in her magic.",
-        "annotations": []
+        "annotations": [],
+        "logprobs": []
       }
     ]
   },
@@ -68802,7 +68813,7 @@ Schema name: `BetaResponseQueuedEvent`
 
           - `"incomplete"`
 
-      - `WebSearchCall object { id, action, status, 2 more }`
+      - `WebSearchCall object { id, status, type, 2 more }`
 
         The results of a web search tool call. See the
         [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -68811,7 +68822,27 @@ Schema name: `BetaResponseQueuedEvent`
 
           The unique ID of the web search tool call.
 
-        - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+        - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+          The status of the web search tool call.
+
+          - `"in_progress"`
+
+          - `"searching"`
+
+          - `"completed"`
+
+          - `"failed"`
+
+          - `"incomplete"`
+
+        - `type: "web_search_call"`
+
+          The type of the web search tool call. Always `web_search_call`.
+
+          - `"web_search_call"`
+
+        - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
           An object describing the specific action taken in this web search call.
           Includes details on how the model used the web (search, open_page, find_in_page).
@@ -68879,26 +68910,6 @@ Schema name: `BetaResponseQueuedEvent`
             - `url: string`
 
               The URL of the page searched for the pattern.
-
-        - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-          The status of the web search tool call.
-
-          - `"in_progress"`
-
-          - `"searching"`
-
-          - `"completed"`
-
-          - `"failed"`
-
-          - `"incomplete"`
-
-        - `type: "web_search_call"`
-
-          The type of the web search tool call. Always `web_search_call`.
-
-          - `"web_search_call"`
 
         - `agent: optional object { agent_name }  or null`
 
@@ -73620,7 +73631,7 @@ Schema name: `BetaResponseQueuedEvent`
 
           The canonical name of the agent that produced this item.
 
-    - `WebSearchCall object { id, action, status, 2 more }`
+    - `WebSearchCall object { id, status, type, 2 more }`
 
       The results of a web search tool call. See the
       [web search guide](https://developers.openai.com/api/docs/guides/tools-web-search) for more information.
@@ -73629,7 +73640,27 @@ Schema name: `BetaResponseQueuedEvent`
 
         The unique ID of the web search tool call.
 
-      - `action: object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
+      - `status: "in_progress" or "searching" or "completed" or 2 more`
+
+        The status of the web search tool call.
+
+        - `"in_progress"`
+
+        - `"searching"`
+
+        - `"completed"`
+
+        - `"failed"`
+
+        - `"incomplete"`
+
+      - `type: "web_search_call"`
+
+        The type of the web search tool call. Always `web_search_call`.
+
+        - `"web_search_call"`
+
+      - `action: optional object { type, queries, query, sources }  or object { type, url }  or object { pattern, type, url }`
 
         An object describing the specific action taken in this web search call.
         Includes details on how the model used the web (search, open_page, find_in_page).
@@ -73697,26 +73728,6 @@ Schema name: `BetaResponseQueuedEvent`
           - `url: string`
 
             The URL of the page searched for the pattern.
-
-      - `status: "in_progress" or "searching" or "completed" or 2 more`
-
-        The status of the web search tool call.
-
-        - `"in_progress"`
-
-        - `"searching"`
-
-        - `"completed"`
-
-        - `"failed"`
-
-        - `"incomplete"`
-
-      - `type: "web_search_call"`
-
-        The type of the web search tool call. Always `web_search_call`.
-
-        - `"web_search_call"`
 
       - `agent: optional object { agent_name }  or null`
 
@@ -78921,10 +78932,22 @@ Schema name: `BetaResponseQueuedEvent`
 {
   "type": "response.queued",
   "response": {
-    "id": "res_123",
+    "id": "resp_123",
+    "object": "response",
+    "access_programs": null,
+    "created_at": 1609459200,
     "status": "queued",
-    "created_at": "2021-01-01T00:00:00Z",
-    "updated_at": "2021-01-01T00:00:00Z"
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "model": "gpt-6-astra",
+    "output": [],
+    "parallel_tool_calls": true,
+    "temperature": 1,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 1,
+    "metadata": {}
   },
   "sequence_number": 1
 }

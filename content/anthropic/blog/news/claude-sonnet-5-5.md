@@ -80,9 +80,9 @@ Sonnet 5.5 requires fewer tokens per task than Sonnet 5, so it’s less expensiv
 
 A murmuration of 400 starlings in one HTML file
 
-![The previous model writing a starling murmuration program, then running it.](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fec47184fbddde19dc08a09a3a0e7616ba23d32a0-437x298.png%3Frect%3D0%252C12%252C437%252C274&w=3840&q=75)
+![The previous model writing a starling murmuration program, then running it.](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc3945915dad02168b631b238c900b98b23964539-1600x1000.png%3Frect%3D0%252C0%252C1600%252C1000&w=3840&q=75)
 
-![The latest model writing a starling murmuration program, then running it.](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcd72075b84c3d940e71312dcb90a5401213ca230-433x293.png%3Frect%3D0%252C11%252C433%252C271&w=3840&q=75)
+![The latest model writing a starling murmuration program, then running it.](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fcf0eae4b26b6fbe29e370d300ecac766cb94bc2d-1600x1000.png%3Frect%3D0%252C0%252C1600%252C1000&w=3840&q=75)
 
 Wind shaping sand dunes in one HTML file
 

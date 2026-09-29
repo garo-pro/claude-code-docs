@@ -263,6 +263,10 @@ curl https://api.openai.com/v1/videos \
   "created_at": 1712697600,
   "size": "1024x1792",
   "seconds": "8",
-  "quality": "standard"
+  "prompt": "A calico cat playing a piano on stage",
+  "completed_at": null,
+  "expires_at": null,
+  "error": null,
+  "remixed_from_video_id": null
 }
 ```

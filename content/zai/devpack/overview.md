@@ -61,10 +61,10 @@ The plan can be applied to coding tools such as Claude Code, Cline, and OpenCode
 Each plan is subject to both a 5-hour usage limit and a weekly usage limit.
 
 | Plan Type | 5-Hour Credits | Weekly Credits |
-| :-------: | :------------: | :------------: |
-|    Lite   |      2,000     |     10,000     |
-|    Pro    |     12,000     |     60,000     |
-|    Max    |     28,000     |     140,000    |
+| :-: | :-: | :-: |
+| Lite | 2,000 | 10,000 |
+| Pro | 12,000 | 60,000 |
+| Max | 28,000 | 140,000 |
 
 **Credit Reset Rules**
 
@@ -150,14 +150,14 @@ Each plan is subject to both a 5-hour usage limit and a weekly usage limit.
 
 Token usage varies depending on the cache hit rate, as shown below:
 
-| Cache Hit Rate |     Model     | Lite <br />(M Tokens/week) | Pro <br />(M Tokens/week) | Max <br />(M Tokens/week) |
-| :------------: | :-----------: | :------------------------: | :-----------------------: | :-----------------------: |
-|       95%      |    GLM‑5.3    |            48–97           |          290–580          |         676–1,352         |
-|       95%      | GLM‑5.3‑Flash |           146～292          |         877–1,755         |        2,047–4,095        |
-|       96%      |    GLM‑5.3    |            50–99           |          297–595          |         694–1,387         |
-|       96%      | GLM‑5.3‑Flash |           150–300          |         900–1,801         |        2,101–4,202        |
-|       98%      |    GLM‑5.3    |           52–104           |          313–627          |         731–1,463         |
-|       98%      | GLM‑5.3‑Flash |           158–317          |         950–1,900         |        2,217–4,433        |
+| Cache Hit Rate | Model | Lite <br />(M Tokens/week) | Pro <br />(M Tokens/week) | Max <br />(M Tokens/week) |
+| :-: | :-: | :-: | :-: | :-: |
+| 95% | GLM‑5.3 | 48–97 | 290–580 | 676–1,352 |
+| 95% | GLM‑5.3‑Flash | 146～292 | 877–1,755 | 2,047–4,095 |
+| 96% | GLM‑5.3 | 50–99 | 297–595 | 694–1,387 |
+| 96% | GLM‑5.3‑Flash | 150–300 | 900–1,801 | 2,101–4,202 |
+| 98% | GLM‑5.3 | 52–104 | 313–627 | 731–1,463 |
+| 98% | GLM‑5.3‑Flash | 158–317 | 950–1,900 | 2,217–4,433 |
 
 **How the Range Is Calculated**
 

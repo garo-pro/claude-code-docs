@@ -18,33 +18,33 @@ An AI-powered translation agent designed for multilingual communication and cont
 * **Intra-Language “Translation” Support:** When the source and target languages are the same, applying strategies like Two-Step, Reflective, or COT will paraphrase, rewrite, or polish the text—helpful for eliminating ambiguity in secondary translations.
 * **Translation Explainability:** COT and Reflective strategies can output the reasoning behind the translation process.
 
-| **Feature**                | **General-Purpose Translation Agent** | **Traditional Translation API** | **General LLM**                       |
-| :------------------------- | :------------------------------------ | :------------------------------ | :------------------------------------ |
-| Multilingual Support       | ✅ 40 languages                        | ✅ Typically supports many       | ✅ Typically supports many             |
-| Professional Strategies    | ✅ 6 specialized strategies            | ❌ Limited strategies            | ❌ No dedicated translation strategies |
-| Terminology Support        | ✅ Full support                        | ⚠️ Partial support              | ❌ Not supported                       |
-| Translation Suggestions    | ✅ Detailed suggestions supported      | ❌ Not supported                 | ❌ Requires manual input               |
-| Translation Explainability | ✅ Provides reasoning                  | ❌ Not available                 | ⚠️ Requires special prompting         |
-| Auto Language Detection    | ✅ High accuracy                       | ✅ Supported                     | ✅ Supported                           |
-| Special Language Support   | ✅ Classical Chinese, Cantonese, etc.  | ❌ Typically unsupported         | ⚠️ Limited support                    |
+| **Feature** | **General-Purpose Translation Agent** | **Traditional Translation API** | **General LLM** |
+| :- | :- | :- | :- |
+| Multilingual Support | ✅ 40 languages | ✅ Typically supports many | ✅ Typically supports many |
+| Professional Strategies | ✅ 6 specialized strategies | ❌ Limited strategies | ❌ No dedicated translation strategies |
+| Terminology Support | ✅ Full support | ⚠️ Partial support | ❌ Not supported |
+| Translation Suggestions | ✅ Detailed suggestions supported | ❌ Not supported | ❌ Requires manual input |
+| Translation Explainability | ✅ Provides reasoning | ❌ Not available | ⚠️ Requires special prompting |
+| Auto Language Detection | ✅ High accuracy | ✅ Supported | ✅ Supported |
+| Special Language Support | ✅ Classical Chinese, Cantonese, etc. | ❌ Typically unsupported | ⚠️ Limited support |
 
 ## Usage
 
-| **Target Users**                           | **Application Scenarios**                                                                 |
-| :----------------------------------------- | :---------------------------------------------------------------------------------------- |
-| Individual Developers & Language Learners  | Provides translation assistance and phonetic annotation to enhance learning efficiency    |
-| Content Creators / New Media Operators     | Supports multilingual content publishing and social media localization                    |
+| **Target Users** | **Application Scenarios** |
+| :- | :- |
+| Individual Developers & Language Learners | Provides translation assistance and phonetic annotation to enhance learning efficiency |
+| Content Creators / New Media Operators | Supports multilingual content publishing and social media localization |
 | Enterprise Clients / Translation Providers | Handles batch translation tasks, manages custom terminology, and ensures compliant output |
-| Educational / Research Institutions        | Supports translation of papers, course materials, and academic communication              |
+| Educational / Research Institutions | Supports translation of papers, course materials, and academic communication |
 
-| **Strategy**            | **Description**                                                                                                                                                                                                   | **Applicable Scenarios**                                                                              | **Key Features**                                                                                                                                                |
-| :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| General Translation     | A basic translation method that retains the original format, accounts for the target language’s cultural and linguistic context, balances accuracy and fluency, and resolves over 95% of prompt injection issues. | General-purpose content translation; suitable for most daily use cases and handling prompt injection. | - Preserves original structure <br />- Follows translation rules  - Supports terminology glossaries <br />- Adapts to regional language variants                |
-| Paraphrased Translation | Respects the original meaning while rewriting content in the target language’s natural expression.                                                                                                                | When natural adaptation to target culture is preferred; non-literal translation scenarios.            | -  Focuses on conveying meaning over form <br />- Adapts more naturally to the target language <br />- Allows greater flexibility in restructuring              |
-| Two-Step Translation    | Involves literal translation first, followed by freer expression; combines direct and adaptive approaches.                                                                                                        | Literary works or content needing both accuracy and expressiveness.                                   | - Balances literal and intended meanings<br />- Enhances comprehension<br />- Stepwise approach improves both accuracy and fluency                              |
-| Three-Stage Translation | Based on the Chinese traditional theory of "faithfulness, expressiveness, elegance"; ensures content accuracy, fluent delivery, and stylistic beauty—currently supports classical/literary styles only.           | High-quality literary, poetic, or culturally expressive texts.                                        | - Follows "faithfulness, expressiveness, elegance" principle <br />- Focuses on cultural and philosophical nuance<br />- Produces refined, elegant output       |
-| Reflective Translation  | Starts with a literal translation, then prompts the model to act as an expert to reflect on the result by specific dimensions, and finally optimizes the output accordingly.                                      | Professional publications, formal documents, or content requiring high accuracy and quality.          | - Improves output through iterative feedback<br />- Corrects errors and enhances style <br />- Ideal for complex or domain-specific texts                       |
-| COT Translation         | Applies a Chain of Thought reasoning process to analyze the source text before translating into the target language.                                                                                              | Conceptually complex or professional domain content requiring deeper understanding.                   | - Performs explicit reasoning before translation <br />- Enhances comprehension of complex input<br />- Increases transparency <br />- Useful in expert domains |
+| **Strategy** | **Description** | **Applicable Scenarios** | **Key Features** |
+| :- | :- | :- | :- |
+| General Translation | A basic translation method that retains the original format, accounts for the target language’s cultural and linguistic context, balances accuracy and fluency, and resolves over 95% of prompt injection issues. | General-purpose content translation; suitable for most daily use cases and handling prompt injection. | - Preserves original structure <br />- Follows translation rules  - Supports terminology glossaries <br />- Adapts to regional language variants |
+| Paraphrased Translation | Respects the original meaning while rewriting content in the target language’s natural expression. | When natural adaptation to target culture is preferred; non-literal translation scenarios. | -  Focuses on conveying meaning over form <br />- Adapts more naturally to the target language <br />- Allows greater flexibility in restructuring |
+| Two-Step Translation | Involves literal translation first, followed by freer expression; combines direct and adaptive approaches. | Literary works or content needing both accuracy and expressiveness. | - Balances literal and intended meanings<br />- Enhances comprehension<br />- Stepwise approach improves both accuracy and fluency |
+| Three-Stage Translation | Based on the Chinese traditional theory of "faithfulness, expressiveness, elegance"; ensures content accuracy, fluent delivery, and stylistic beauty—currently supports classical/literary styles only. | High-quality literary, poetic, or culturally expressive texts. | - Follows "faithfulness, expressiveness, elegance" principle <br />- Focuses on cultural and philosophical nuance<br />- Produces refined, elegant output |
+| Reflective Translation | Starts with a literal translation, then prompts the model to act as an expert to reflect on the result by specific dimensions, and finally optimizes the output accordingly. | Professional publications, formal documents, or content requiring high accuracy and quality. | - Improves output through iterative feedback<br />- Corrects errors and enhances style <br />- Ideal for complex or domain-specific texts |
+| COT Translation | Applies a Chain of Thought reasoning process to analyze the source text before translating into the target language. | Conceptually complex or professional domain content requiring deeper understanding. | - Performs explicit reasoning before translation <br />- Enhances comprehension of complex input<br />- Increases transparency <br />- Useful in expert domains |
 
 ## Use Translation Agent
 

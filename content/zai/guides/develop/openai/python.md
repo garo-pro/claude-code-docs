@@ -320,15 +320,15 @@ if message.tool_calls:
 
 ### Common Parameters
 
-| Parameter   | Type         | Default  | Description                      |
-| ----------- | ------------ | -------- | -------------------------------- |
-| model       | string       | Required | Model name to use                |
-| messages    | array        | Required | List of conversation messages    |
-| temperature | float        | 0.6      | Controls output randomness (0-1) |
-| top\_p      | float        | 0.95     | Nucleus sampling parameter (0-1) |
-| max\_tokens | integer      | -        | Maximum output tokens            |
-| stream      | boolean      | false    | Whether to use streaming output  |
-| stop        | string/array | -        | Stop generation tokens           |
+| Parameter | Type | Default | Description |
+| - | - | - | - |
+| model | string | Required | Model name to use |
+| messages | array | Required | List of conversation messages |
+| temperature | float | 0.6 | Controls output randomness (0-1) |
+| top\_p | float | 0.95 | Nucleus sampling parameter (0-1) |
+| max\_tokens | integer | - | Maximum output tokens |
+| stream | boolean | false | Whether to use streaming output |
+| stop | string/array | - | Stop generation tokens |
 
 <Note>
   Note: The temperature parameter range is (0,1), do\_sample = False (temperature = 0) is not applicable in OpenAI calls.

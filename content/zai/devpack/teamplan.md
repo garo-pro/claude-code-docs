@@ -25,10 +25,10 @@ GLM Coding Team Plan is a self-service subscription for enterprises and developm
 
 Each plan is subject to both a 5-hour usage limit and a weekly usage limit. You can check your quota consumption progress in [Usage Statistics](https://z.ai/manage-apikey/coding-plan/team/usage-stats).
 
-|   Plan Type   | 5-Hour Credits | Weekly Credits |
-| :-----------: | :------------: | :------------: |
-| Standard Seat |     15,000     |     66,000     |
-|  Premium Seat |     35,000     |     155,000    |
+| Plan Type | 5-Hour Credits | Weekly Credits |
+| :-: | :-: | :-: |
+| Standard Seat | 15,000 | 66,000 |
+| Premium Seat | 35,000 | 155,000 |
 
 **Credit Reset Rules**
 
@@ -106,14 +106,14 @@ Each plan is subject to both a 5-hour usage limit and a weekly usage limit. You 
 
 The plan’s token usage will vary depending on the cache hit rate, as shown below:
 
-| Cache hit rate | Model         | Team Standard <br />(million tokens/week) | Team Advanced <br />(million tokens/week) |
-| :------------- | :------------ | :---------------------------------------- | :---------------------------------------- |
-| 95%            | GLM‑5.3       | 319–638                                   | 749–1,497                                 |
-| 95%            | GLM‑5.3‑Flash | 965–1,930                                 | 2,267–4,533                               |
-| 96%            | GLM‑5.3       | 327–654                                   | 768–1,536                                 |
-| 96%            | GLM‑5.3‑Flash | 990–1,981                                 | 2,326–4,652                               |
-| 98%            | GLM‑5.3       | 345–689                                   | 810–1,619                                 |
-| 98%            | GLM‑5.3‑Flash | 1,045–2,090                               | 2,454–4,908                               |
+| Cache hit rate | Model | Team Standard <br />(million tokens/week) | Team Advanced <br />(million tokens/week) |
+| :- | :- | :- | :- |
+| 95% | GLM‑5.3 | 319–638 | 749–1,497 |
+| 95% | GLM‑5.3‑Flash | 965–1,930 | 2,267–4,533 |
+| 96% | GLM‑5.3 | 327–654 | 768–1,536 |
+| 96% | GLM‑5.3‑Flash | 990–1,981 | 2,326–4,652 |
+| 98% | GLM‑5.3 | 345–689 | 810–1,619 |
+| 98% | GLM‑5.3‑Flash | 1,045–2,090 | 2,454–4,908 |
 
 **How the Range Is Calculated**
 

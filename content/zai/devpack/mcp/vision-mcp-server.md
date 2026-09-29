@@ -50,10 +50,10 @@ This server implements the Model Context Protocol and can be used with any MCP-c
 
 ### Detailed Configuration
 
-| Environment Variable | Description                | Default Value | Optional Values |
-| :------------------- | :------------------------- | :------------ | :-------------- |
-| `Z_AI_API_KEY`       | Z.AI API KEY               | Required      | Your API key    |
-| `Z_AI_MODE`          | Service platform selection | Required      | `ZAI`           |
+| Environment Variable | Description | Default Value | Optional Values |
+| :- | :- | :- | :- |
+| `Z_AI_API_KEY` | Z.AI API KEY | Required | Your API key |
+| `Z_AI_MODE` | Service platform selection | Required | `ZAI` |
 
 ## Installation and Usage
 

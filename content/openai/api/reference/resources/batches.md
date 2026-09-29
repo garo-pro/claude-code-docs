@@ -68,11 +68,11 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
-  - `completed_at: optional number`
+  - `completed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was completed.
 
-  - `error_file_id: optional string`
+  - `error_file_id: optional string or null`
 
     The ID of the file containing the outputs of requests with errors.
 
@@ -104,7 +104,7 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     The Unix timestamp (in seconds) for when the batch expired.
 
-  - `expires_at: optional number`
+  - `expires_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
@@ -112,11 +112,11 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
 
     The Unix timestamp (in seconds) for when the batch failed.
 
-  - `finalizing_at: optional number`
+  - `finalizing_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started finalizing.
 
-  - `in_progress_at: optional number`
+  - `in_progress_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started processing.
 
@@ -136,7 +136,7 @@ Cancels an in-progress batch. The batch will be in status `cancelling` for up to
     characteristics, and price points. Refer to the [model
     guide](/api/docs/models) to browse and compare available models.
 
-  - `output_file_id: optional string`
+  - `output_file_id: optional string or null`
 
     The ID of the file containing the outputs of successfully executed requests.
 
@@ -418,11 +418,11 @@ Creates and executes a batch from an uploaded file of requests
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
-  - `completed_at: optional number`
+  - `completed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was completed.
 
-  - `error_file_id: optional string`
+  - `error_file_id: optional string or null`
 
     The ID of the file containing the outputs of requests with errors.
 
@@ -454,7 +454,7 @@ Creates and executes a batch from an uploaded file of requests
 
     The Unix timestamp (in seconds) for when the batch expired.
 
-  - `expires_at: optional number`
+  - `expires_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
@@ -462,11 +462,11 @@ Creates and executes a batch from an uploaded file of requests
 
     The Unix timestamp (in seconds) for when the batch failed.
 
-  - `finalizing_at: optional number`
+  - `finalizing_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started finalizing.
 
-  - `in_progress_at: optional number`
+  - `in_progress_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started processing.
 
@@ -486,7 +486,7 @@ Creates and executes a batch from an uploaded file of requests
     characteristics, and price points. Refer to the [model
     guide](/api/docs/models) to browse and compare available models.
 
-  - `output_file_id: optional string`
+  - `output_file_id: optional string or null`
 
     The ID of the file containing the outputs of successfully executed requests.
 
@@ -728,11 +728,11 @@ List your organization's batches.
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
-  - `completed_at: optional number`
+  - `completed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was completed.
 
-  - `error_file_id: optional string`
+  - `error_file_id: optional string or null`
 
     The ID of the file containing the outputs of requests with errors.
 
@@ -764,7 +764,7 @@ List your organization's batches.
 
     The Unix timestamp (in seconds) for when the batch expired.
 
-  - `expires_at: optional number`
+  - `expires_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
@@ -772,11 +772,11 @@ List your organization's batches.
 
     The Unix timestamp (in seconds) for when the batch failed.
 
-  - `finalizing_at: optional number`
+  - `finalizing_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started finalizing.
 
-  - `in_progress_at: optional number`
+  - `in_progress_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started processing.
 
@@ -796,7 +796,7 @@ List your organization's batches.
     characteristics, and price points. Refer to the [model
     guide](/api/docs/models) to browse and compare available models.
 
-  - `output_file_id: optional string`
+  - `output_file_id: optional string or null`
 
     The ID of the file containing the outputs of successfully executed requests.
 
@@ -1047,11 +1047,11 @@ Retrieves a batch.
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
-  - `completed_at: optional number`
+  - `completed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was completed.
 
-  - `error_file_id: optional string`
+  - `error_file_id: optional string or null`
 
     The ID of the file containing the outputs of requests with errors.
 
@@ -1083,7 +1083,7 @@ Retrieves a batch.
 
     The Unix timestamp (in seconds) for when the batch expired.
 
-  - `expires_at: optional number`
+  - `expires_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
@@ -1091,11 +1091,11 @@ Retrieves a batch.
 
     The Unix timestamp (in seconds) for when the batch failed.
 
-  - `finalizing_at: optional number`
+  - `finalizing_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started finalizing.
 
-  - `in_progress_at: optional number`
+  - `in_progress_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started processing.
 
@@ -1115,7 +1115,7 @@ Retrieves a batch.
     characteristics, and price points. Refer to the [model
     guide](/api/docs/models) to browse and compare available models.
 
-  - `output_file_id: optional string`
+  - `output_file_id: optional string or null`
 
     The ID of the file containing the outputs of successfully executed requests.
 
@@ -1332,11 +1332,11 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     The Unix timestamp (in seconds) for when the batch started cancelling.
 
-  - `completed_at: optional number`
+  - `completed_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch was completed.
 
-  - `error_file_id: optional string`
+  - `error_file_id: optional string or null`
 
     The ID of the file containing the outputs of requests with errors.
 
@@ -1368,7 +1368,7 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     The Unix timestamp (in seconds) for when the batch expired.
 
-  - `expires_at: optional number`
+  - `expires_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch will expire.
 
@@ -1376,11 +1376,11 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
 
     The Unix timestamp (in seconds) for when the batch failed.
 
-  - `finalizing_at: optional number`
+  - `finalizing_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started finalizing.
 
-  - `in_progress_at: optional number`
+  - `in_progress_at: optional number or null`
 
     The Unix timestamp (in seconds) for when the batch started processing.
 
@@ -1400,7 +1400,7 @@ curl https://api.openai.com/v1/batches/batch_abc123 \
     characteristics, and price points. Refer to the [model
     guide](/api/docs/models) to browse and compare available models.
 
-  - `output_file_id: optional string`
+  - `output_file_id: optional string or null`
 
     The ID of the file containing the outputs of successfully executed requests.
 

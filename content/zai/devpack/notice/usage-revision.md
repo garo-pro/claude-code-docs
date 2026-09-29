@@ -24,12 +24,12 @@ To make usage clearer and easier to predict, GLM Coding Plan is moving to a cred
 
 Sign in and use the table below to identify your current plan and see how this update affects you.
 
-| Plan type used in this notice          | How to identify it                                                                        |
-| :------------------------------------- | :---------------------------------------------------------------------------------------- |
+| Plan type used in this notice | How to identify it |
+| :- | :- |
 | Legacy Plan V1 (individual plans only) | [My plan](https://z.ai/manage-apikey/coding-plan/personal/my-plan) shows "Legacy Plan V1" |
 | Legacy Plan V2 (individual plans only) | [My plan](https://z.ai/manage-apikey/coding-plan/personal/my-plan) shows "Legacy Plan V2" |
-| Team Plan                              | [My Plan](https://z.ai/manage-apikey/coding-plan/team/plans) shows “Team Edition”         |
-| No active plan                         | Your plan has expired, or you have not subscribed                                         |
+| Team Plan | [My Plan](https://z.ai/manage-apikey/coding-plan/team/plans) shows “Team Edition” |
+| No active plan | Your plan has expired, or you have not subscribed |
 
 ## How This Update Affects You
 
@@ -99,10 +99,10 @@ One prompt refers to one query. Each prompt is estimated to invoke the model 15�
 **The monthly available quota is converted based on API pricing, equivalent to approximately 15–30× the monthly subscription fee (weekly caps already factored in).**
 
 | Plan Type | 5-Hour Limit (Dynamically refreshed; quota resets 5 hours after consumption) | Weekly Limit (Activated upon subscription; resets every 7 days) |
-| --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Lite Plan | Up to approx. 80 prompts                                                     | Up to approx. 400 prompts                                       |
-| Pro Plan  | Up to approx. 400 prompts                                                    | Up to approx. 2,000 prompts                                     |
-| Max Plan  | Up to approx. 1,600 prompts                                                  | Up to approx. 8,000 prompts                                     |
+| - | - | - |
+| Lite Plan | Up to approx. 80 prompts | Up to approx. 400 prompts |
+| Pro Plan | Up to approx. 400 prompts | Up to approx. 2,000 prompts |
+| Max Plan | Up to approx. 1,600 prompts | Up to approx. 8,000 prompts |
 
 <Check>
   The above figures are estimates. Actual available usage may vary depending on project complexity, repository size, and whether auto-accept is enabled.

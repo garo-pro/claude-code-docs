@@ -88,14 +88,14 @@ If Claude Code reports that the model with the `[1m]` suffix does not exist, ple
 
 In a Claude Code session, type the `/effort` command to switch thinking intensity. The default level is `max`.
 
-| Tool input value                                       | Actual level | Handling                                                   |
-| ------------------------------------------------------ | ------------ | ---------------------------------------------------------- |
-| `thinking.type` not set, `true`, `enabled`, `adaptive` | max          | Uses the default level                                     |
-| `thinking.type` is `false`, `disabled`, `none`, `off`  | low          | Continues the request; still performs lightweight thinking |
-| `reasoning_effort` is `minimal`, `light`, `low`        | low          | Auto-converted                                             |
-| `reasoning_effort` is `medium`, `high`                 | high         | Auto-converted                                             |
-| `reasoning_effort` is `xhigh`, `max`, `ultra`          | max          | Auto-converted                                             |
-| `reasoning_effort` is any other unknown string         | max          | Falls back to the default level and logs a hint            |
+| Tool input value | Actual level | Handling |
+| - | - | - |
+| `thinking.type` not set, `true`, `enabled`, `adaptive` | max | Uses the default level |
+| `thinking.type` is `false`, `disabled`, `none`, `off` | low | Continues the request; still performs lightweight thinking |
+| `reasoning_effort` is `minimal`, `light`, `low` | low | Auto-converted |
+| `reasoning_effort` is `medium`, `high` | high | Auto-converted |
+| `reasoning_effort` is `xhigh`, `max`, `ultra` | max | Auto-converted |
+| `reasoning_effort` is any other unknown string | max | Falls back to the default level and logs a hint |
 
 **Processing priority**: Explicit Effort > thinking toggle > default `max`.
 

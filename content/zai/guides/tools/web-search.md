@@ -11,9 +11,9 @@ Z.AI provides developers with a full suite of AI search tools, covering three co
 
 ## Product Overview
 
-| Service Module     | Developer Value                                                                                | Technical Features                                             |
-| :----------------- | :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| Web Search API     | Directly obtain **structured search results** (title/summary/link, etc.)                       | Multi-Search Engine Support                                    |
+| Service Module | Developer Value | Technical Features |
+| :- | :- | :- |
+| Web Search API | Directly obtain **structured search results** (title/summary/link, etc.) | Multi-Search Engine Support |
 | Web Search in Chat | Incorporate search results into large model-generated **answers with cited**  **web sources**. | Seamless Integration of Real-Time Retrieval and LLM Generation |
 
 ## Web Search API

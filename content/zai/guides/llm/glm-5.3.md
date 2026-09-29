@@ -27,10 +27,10 @@ As the scale of post-training continues to expand, the model’s cybersecurity c
 GLM-5.3 currently supports text-only inputs, with a 1M-token context window and a maximum output length of 128K tokens.
 GLM-5.3 always operates with reasoning enabled and supports three reasoning effort levels: `low`, `high`, and `max`. Disabling reasoning is no longer supported. The reasoning parameters are described below:
 
-| Parameter          | Values               | Default   | Description                                                                        |
-| :----------------- | :------------------- | :-------- | :--------------------------------------------------------------------------------- |
-| `thinking.type`    | `enabled`            | `enabled` | Supports reasoning only; disabling reasoning is not supported.                     |
-| `reasoning_effort` | `low`, `high`, `max` | `max`     | `low` – Lightweight Reasoning; `high` – Enhanced Reasoning; `max` – Deep Reasoning |
+| Parameter | Values | Default | Description |
+| :- | :- | :- | :- |
+| `thinking.type` | `enabled` | `enabled` | Supports reasoning only; disabling reasoning is not supported. |
+| `reasoning_effort` | `low`, `high`, `max` | `max` | `low` – Lightweight Reasoning; `high` – Enhanced Reasoning; `max` – Deep Reasoning |
 
 <Note>
   Migration Notice: If your application currently uses **`thinking.type: "disabled"`**, please change it to **`enabled`** and set **`reasoning_effort`** to **`low`** before updating the model ID to **`glm-5.3`**. Otherwise, the request will fail.
@@ -54,11 +54,11 @@ For a detailed introduction to GLM-5.3’s advanced reasoning capabilities, plea
 
 The supported protocols and endpoints are as follows:
 
-| Protocol                        | Base URL                               |
-| :------------------------------ | :------------------------------------- |
+| Protocol | Base URL |
+| :- | :- |
 | OpenAI Chat Completion Protocol | `	https://api.z.ai/api/coding/paas/v4` |
-| OpenAI Response Protocol        | `	https://api.z.ai/api/v1`             |
-| Anthropic Message Protocol      | `https://api.z.ai/api/anthropic`       |
+| OpenAI Response Protocol | `	https://api.z.ai/api/v1` |
+| Anthropic Message Protocol | `https://api.z.ai/api/anthropic` |
 
 [↗ API Documentation](https://docs.z.ai/api-reference/llm/chat-completion)：Learn how to call the API
 

@@ -60,11 +60,11 @@
   <Step title="Endpoint Guide">
     GLM Coding Plan supports both the Anthropic and OpenAI protocols. Make sure to configure the correct `Base URL`:
 
-    | Protocol                | Base URL                              |
-    | ----------------------- | ------------------------------------- |
-    | Anthropic Messages      | `https://api.z.ai/api/anthropic`      |
+    | Protocol | Base URL |
+    | - | - |
+    | Anthropic Messages | `https://api.z.ai/api/anthropic` |
     | OpenAI Chat Completions | `https://api.z.ai/api/coding/paas/v4` |
-    | OpenAI Responses        | `https://api.z.ai/api/v1`             |
+    | OpenAI Responses | `https://api.z.ai/api/v1` |
   </Step>
 
   <Step title="Start Coding">

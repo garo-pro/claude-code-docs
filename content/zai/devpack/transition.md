@@ -29,11 +29,11 @@ To make the migration as smooth as possible, we will provide the following migra
 
 We will automatically provide 2 complimentary months of the equivalent online version plan tier. This will be issued on April 30, 2026 (Singapore Time) and will be added after your current subscription ends, with no manual action required.
 
-| Current Legacy Plan | Transition Support                       |
-| :------------------ | :--------------------------------------- |
-| Legacy Lite         | 2 months of the online version Lite plan |
-| Legacy Pro          | 2 months of the online version Pro plan  |
-| Legacy Max          | 2 months of the online version Max plan  |
+| Current Legacy Plan | Transition Support |
+| :- | :- |
+| Legacy Lite | 2 months of the online version Lite plan |
+| Legacy Pro | 2 months of the online version Pro plan |
+| Legacy Max | 2 months of the online version Max plan |
 
 #### 2.2.2 Extra benefits when migrating to the online version plan
 
@@ -52,26 +52,26 @@ During this period:
 Monthly Plan
 
 | Plan | Current Standard Price | 50% off (example based on current pricing) |
-| :--- | :--------------------- | :----------------------------------------- |
-| Lite | \$18                   | \$9                                        |
-| Pro  | \$72                   | \$36                                       |
-| Max  | \$160                  | \$80                                       |
+| :- | :- | :- |
+| Lite | \$18 | \$9 |
+| Pro | \$72 | \$36 |
+| Max | \$160 | \$80 |
 
 Quarterly Plan
 
 | Plan | Current Discounted Price | 50% off (example based on current pricing) |
-| :--- | :----------------------- | :----------------------------------------- |
-| Lite | \$48.60                  | \$24.30                                    |
-| Pro  | \$194.40                 | \$97.20                                    |
-| Max  | \$432                    | \$216                                      |
+| :- | :- | :- |
+| Lite | \$48.60 | \$24.30 |
+| Pro | \$194.40 | \$97.20 |
+| Max | \$432 | \$216 |
 
 Annual Plan
 
 | Plan | Current Discounted Price | 50% off (example based on current pricing) |
-| :--- | :----------------------- | :----------------------------------------- |
-| Lite | \$172.80                 | \$96                                       |
-| Pro  | \$691.20                 | \$288                                      |
-| Max  | \$1,536                  | \$768                                      |
+| :- | :- | :- |
+| Lite | \$172.80 | \$96 |
+| Pro | \$691.20 | \$288 |
+| Max | \$1,536 | \$768 |
 
 ### 3. What this means for you
 

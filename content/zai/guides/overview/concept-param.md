@@ -10,15 +10,15 @@
 
 ## Quick Reference
 
-| Parameter                              | Type    | Default Value         | Description                                                                                   |
-| :------------------------------------- | :------ | :-------------------- | :-------------------------------------------------------------------------------------------- |
-| [do\_sample](#do_sample)               | Boolean | `true`                | Whether to sample the output to increase diversity.                                           |
-| [temperature](#temperature)            | Float   | (Model dependent)     | Controls the randomness of output, higher values are more random.                             |
-| [top\_p](#top_p)                       | Float   | (Model dependent)     | Controls diversity through nucleus sampling, recommended to use either this or `temperature`. |
-| [max\_tokens](#max_tokens)             | Integer | (Model dependent)     | Limits the maximum number of tokens generated in a single call.                               |
-| [stream](#stream)                      | Boolean | `false`               | Whether to return responses in streaming mode.                                                |
-| [thinking](#thinking)                  | Object  | `{"type": "enabled"}` | Whether to enable chain-of-thought deep thinking, only supported by `GLM-4.5` and above.      |
-| [reasoning\_effort](#reasoning_effort) | String  | `max` `high` `low`    | Controls the model's reasoning effort level, only supported by `GLM-5.2` and above.           |
+| Parameter | Type | Default Value | Description |
+| :- | :- | :- | :- |
+| [do\_sample](#do_sample) | Boolean | `true` | Whether to sample the output to increase diversity. |
+| [temperature](#temperature) | Float | (Model dependent) | Controls the randomness of output, higher values are more random. |
+| [top\_p](#top_p) | Float | (Model dependent) | Controls diversity through nucleus sampling, recommended to use either this or `temperature`. |
+| [max\_tokens](#max_tokens) | Integer | (Model dependent) | Limits the maximum number of tokens generated in a single call. |
+| [stream](#stream) | Boolean | `false` | Whether to return responses in streaming mode. |
+| [thinking](#thinking) | Object | `{"type": "enabled"}` | Whether to enable chain-of-thought deep thinking, only supported by `GLM-4.5` and above. |
+| [reasoning\_effort](#reasoning_effort) | String | `max` `high` `low` | Controls the model's reasoning effort level, only supported by `GLM-5.2` and above. |
 
 ***
 
@@ -74,25 +74,25 @@ Best Practices:
 
 Default `max_tokens` and maximum supported `max_tokens` for each model:
 
-| Model Code          | Default max\_tokens | Maximum max\_tokens |
-| :------------------ | :-----------------: | :-----------------: |
-| glm-5.3             |        65536        |        131072       |
-| glm-5.3-flash       |        65536        |        131072       |
-| glm-5.2             |        65536        |        131072       |
-| glm-5.1             |        65536        |        131072       |
-| glm-5               |        65536        |        131072       |
-| glm-4.7             |        65536        |        131072       |
-| glm-4.6             |        65536        |        131072       |
-| glm-4.6v            |        16384        |        32768        |
-| glm-4.6v-flash      |        16384        |        32768        |
-| glm-4.6v-flashx     |        16384        |        32768        |
-| glm-4.5             |        65536        |        98304        |
-| glm-4.5-air         |        65536        |        98304        |
-| glm-4.5-x           |        65536        |        98304        |
-| glm-4.5-airx        |        65536        |        98304        |
-| glm-4.5-flash       |        65536        |        98304        |
-| glm-4.5v            |        16384        |        16384        |
-| glm-4-32b-0414-128k |        16384        |        16384        |
+| Model Code | Default max\_tokens | Maximum max\_tokens |
+| :- | :-: | :-: |
+| glm-5.3 | 65536 | 131072 |
+| glm-5.3-flash | 65536 | 131072 |
+| glm-5.2 | 65536 | 131072 |
+| glm-5.1 | 65536 | 131072 |
+| glm-5 | 65536 | 131072 |
+| glm-4.7 | 65536 | 131072 |
+| glm-4.6 | 65536 | 131072 |
+| glm-4.6v | 16384 | 32768 |
+| glm-4.6v-flash | 16384 | 32768 |
+| glm-4.6v-flashx | 16384 | 32768 |
+| glm-4.5 | 65536 | 98304 |
+| glm-4.5-air | 65536 | 98304 |
+| glm-4.5-x | 65536 | 98304 |
+| glm-4.5-airx | 65536 | 98304 |
+| glm-4.5-flash | 65536 | 98304 |
+| glm-4.5v | 16384 | 16384 |
+| glm-4-32b-0414-128k | 16384 | 16384 |
 
 ### stream
 

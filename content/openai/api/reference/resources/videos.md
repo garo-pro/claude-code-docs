@@ -265,7 +265,11 @@ curl https://api.openai.com/v1/videos \
   "created_at": 1712697600,
   "size": "1024x1792",
   "seconds": "8",
-  "quality": "standard"
+  "prompt": "A calico cat playing a piano on stage",
+  "completed_at": null,
+  "expires_at": null,
+  "error": null,
+  "remixed_from_video_id": null
 }
 ```
 
@@ -1078,10 +1082,22 @@ curl https://api.openai.com/v1/videos \
       "id": "video_123",
       "object": "video",
       "model": "sora-2",
-      "status": "completed"
+      "status": "completed",
+      "created_at": 1712697600,
+      "completed_at": 1712697840,
+      "progress": 100,
+      "expires_at": null,
+      "error": null,
+      "prompt": "A calico cat playing a piano on stage",
+      "size": "1024x1792",
+      "seconds": "8",
+      "remixed_from_video_id": null
     }
   ],
-  "object": "list"
+  "object": "list",
+  "first_id": "video_123",
+  "last_id": "video_123",
+  "has_more": false
 }
 ```
 
@@ -1302,7 +1318,11 @@ curl -X POST https://api.openai.com/v1/videos/video_123/remix \
   "created_at": 1712698600,
   "size": "720x1280",
   "seconds": "8",
-  "remixed_from_video_id": "video_123"
+  "remixed_from_video_id": "video_123",
+  "prompt": "Extend the scene with the cat taking a bow to the cheering audience",
+  "completed_at": null,
+  "expires_at": null,
+  "error": null
 }
 ```
 

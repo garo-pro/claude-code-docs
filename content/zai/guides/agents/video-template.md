@@ -93,11 +93,11 @@ Includes three popular special effects video templates: french\_kiss, bodyshake,
 
 ## Usage
 
-| **Target Users**      | **Application Scenarios**                                                                                                                               |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Individual Creators   | Quickly produce popular special effects short videos (such as costume changes/dance challenges) and efficiently produce creative content at low cost.   |
-| MCN Agencies          | Batch generate standardized special effects videos (such as popular costume change templates) to meet the large-scale content needs of matrix accounts. |
-| Short Video Platforms | Provide an integrated special effects template library to lower user creation barriers, enhance platform content diversity, and boost user engagement.  |
+| **Target Users** | **Application Scenarios** |
+| :- | :- |
+| Individual Creators | Quickly produce popular special effects short videos (such as costume changes/dance challenges) and efficiently produce creative content at low cost. |
+| MCN Agencies | Batch generate standardized special effects videos (such as popular costume change templates) to meet the large-scale content needs of matrix accounts. |
+| Short Video Platforms | Provide an integrated special effects template library to lower user creation barriers, enhance platform content diversity, and boost user engagement. |
 
 ## Use Video Templates
 

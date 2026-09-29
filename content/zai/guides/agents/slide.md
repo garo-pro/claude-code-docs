@@ -55,11 +55,11 @@ GLM Slide/Poster Agent is an intelligent creation agent built for working people
 
 ## Usage
 
-| Scenarios            | Typical Needs                                                                                                                |
-| :------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| Workplace Reporting  | Weekly Reports, Project Roadshows, Business Presentations, Internal Briefings, etc.                                          |
-| Education & Training | Teaching Courseware, Academic Thesis Presentations, Research Posters, Workshop Materials, Training Program Slides, etc.      |
-| Personal Use         | Summary Reporting, Activity Planning Programs, Personal Portfolios, Knowledge Sharing Presentations, Event Invitations, etc. |
+| Scenarios | Typical Needs |
+| :- | :- |
+| Workplace Reporting | Weekly Reports, Project Roadshows, Business Presentations, Internal Briefings, etc. |
+| Education & Training | Teaching Courseware, Academic Thesis Presentations, Research Posters, Workshop Materials, Training Program Slides, etc. |
+| Personal Use | Summary Reporting, Activity Planning Programs, Personal Portfolios, Knowledge Sharing Presentations, Event Invitations, etc. |
 
 ## Use GLM Slide/Poster Agent
 
