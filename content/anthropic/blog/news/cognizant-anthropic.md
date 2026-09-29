@@ -1,4 +1,4 @@
-Title: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients
+Title: Expanding our partnership with Cognizant
 
 URL Source: https://www.anthropic.com/news/cognizant-anthropic
 
