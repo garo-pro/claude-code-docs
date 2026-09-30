@@ -911,6 +911,14 @@
       "since": "2026-09-17",
       "reason": "HTTP 404"
     },
+    "https://developers.openai.com/api/reference/resources/beta/subresources/agents/subresources/sessions/subresources/traces": {
+      "since": "2026-09-30",
+      "reason": "HTTP 404"
+    },
+    "https://developers.openai.com/api/reference/resources/beta/subresources/agents/subresources/sessions/subresources/traces/methods/list": {
+      "since": "2026-09-30",
+      "reason": "HTTP 404"
+    },
     "https://developers.openai.com/api/reference/resources/beta/subresources/agents/subresources/sessions/subresources/turns": {
       "since": "2026-09-17",
       "reason": "HTTP 404"

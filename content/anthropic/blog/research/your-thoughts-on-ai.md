@@ -1,4 +1,4 @@
-Title: What Do You Want from AI?
+Title: What do you want from AI?
 
 URL Source: https://www.anthropic.com/research/your-thoughts-on-ai
 
@@ -99,6 +99,12 @@ Participants in this study will all be people who use Claude, which is not a rep
 
 ## Related content
 
+### What work can robots do?
+
+We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.
+
+[Read more](https://www.anthropic.com/research/what-work-can-robots-do)
+
 ### GLM-5.3 and the spread of advanced cyber capabilities
 
 Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
@@ -110,9 +116,3 @@ Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously bui
 Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.
 
 [Read more](https://www.anthropic.com/research/yes-claude-can-do-nine-loops)
-
-### Project Swap: What happens when agents trade for us?
-
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
-
-[Read more](https://www.anthropic.com/research/project-swap)

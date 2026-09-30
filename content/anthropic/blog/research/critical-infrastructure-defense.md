@@ -25,8 +25,8 @@ In this research effort, Anthropic provided access to the cutting edge of model 
 
 We are grateful to Loc Truong and Kristopher Willis at PNNL for leading this project and sharing data with us for this post. You can read more about the project on PNNL’s [website](https://www.pnnl.gov/news-media/generative-ai-speeds-cybersecurity-defenses).
 
+We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.
+
 We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
 
 Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
-
-Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.

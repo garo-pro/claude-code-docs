@@ -159,8 +159,8 @@ In addition to the growth in interest, the tools themselves have been steadily i
 
 [Matthew Schwartz](https://www.physics.harvard.edu/people/facpages/schwartz) is a professor of physics at Harvard University. The paper discussed here is [available on arXiv](https://arxiv.org/abs/2601.02484).
 
+We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.
+
 We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
 
 Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
-
-Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.
