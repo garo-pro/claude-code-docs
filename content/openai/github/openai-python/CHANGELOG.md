@@ -1,5 +1,38 @@
 # Changelog
 
+## [3.22.1](https://github.com/openai/openai-python/compare/v3.22.0...v3.22.1) (2026-09-30)
+
+
+### Bug Fixes
+
+* **api:** correct the missing authentication error message ([#3993](https://github.com/openai/openai-python/issues/3993)) ([51692ed](https://github.com/openai/openai-python/commit/51692ed3f9d2b87084801295f824c2202dac3785)), closes [#3962](https://github.com/openai/openai-python/issues/3962)
+* transform NotRequired typed dictionary fields ([#3995](https://github.com/openai/openai-python/issues/3995)) ([5544c18](https://github.com/openai/openai-python/commit/5544c18c19f125718ed9c4f7c42866c27060158e))
+
+
+### Chores
+
+* **tests:** mark sample_file.txt as text with LF line endings ([#3879](https://github.com/openai/openai-python/issues/3879)) ([fd78a48](https://github.com/openai/openai-python/commit/fd78a48d2be489fde978696e1ad32032c20f0fab))
+
+
+### Documentation
+
+* **examples:** fix two stale example comments ([#3877](https://github.com/openai/openai-python/issues/3877)) ([1c4830b](https://github.com/openai/openai-python/commit/1c4830b6e735d2ca3c4bd95f66467fa007f8b451))
+* **examples:** print event.delta in the streaming helpers doc ([#3876](https://github.com/openai/openai-python/issues/3876)) ([063375b](https://github.com/openai/openai-python/commit/063375b7a12f3f3a0de10aec829c0416651be8cc))
+
+## [3.22.0](https://github.com/openai/openai-python/compare/v3.21.0...v3.22.0) (2026-09-29)
+
+
+### Features
+
+* **api:** add computer use to beta agents ([#3989](https://github.com/openai/openai-python/issues/3989)) ([f5dddb5](https://github.com/openai/openai-python/commit/f5dddb5a199f899d9439ac3187c9c0f2d3e4082e))
+
+## [3.21.0](https://github.com/openai/openai-python/compare/v3.20.0...v3.21.0) (2026-09-29)
+
+
+### Features
+
+* **api:** add GPT-6.1 Sol model identifier ([#3986](https://github.com/openai/openai-python/issues/3986)) ([160b2c0](https://github.com/openai/openai-python/commit/160b2c0230b9afac15862dcdf8a764e5bae18eb3))
+
 ## [3.20.0](https://github.com/openai/openai-python/compare/v3.19.2...v3.20.0) (2026-09-28)
 
 

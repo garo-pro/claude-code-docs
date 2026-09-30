@@ -50,8 +50,8 @@ These are not all on the same maturity curve. Where spectral analysis is far eno
 
 We are expanding the [AI for Science program](https://www.anthropic.com/news/ai-for-science-program) to more explicitly support chemistry research. If you are a researcher working on a problem where Claude could plausibly help, especially one that involves the kinds of multimodal reasoning we have described, we would like to hear from you at [scienceblog@anthropic.com](mailto:scienceblog@anthropic.com), or through the AI for Science application.
 
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+
+Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
+
 Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.
-
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
-
-Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.

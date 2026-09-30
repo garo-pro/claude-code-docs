@@ -136,8 +136,8 @@ As society begins to plug AI models into more and more important functions, desi
 
 Project Vend wouldn’t exist without our partners at [Andon Labs](https://andonlabs.com/), who built the hardware and software infrastructure behind the operation and kept our fridges and shelves stocked. We’re also very grateful to Keir Bradwell and Allison Lattanzio for doing the same in their respective offices, and to Amritha Kini and Ryan O’Holleran for some sales advice.
 
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+
+Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
+
 Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.
-
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
-
-Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.

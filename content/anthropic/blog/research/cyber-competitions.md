@@ -108,8 +108,8 @@ Ultimately, experiments like entering Claude into cyber competitions to understa
 
 We thank Artem Petrov and Dmitrii Volkov from Palisade Research for providing data from the HackTheBox AI vs Human CTF Challenge. We also thank the organizers of WR CCDC, the Airbnb CTF team, the Plaid Parliament of Pwning, and the DEF CON Qualifiers CTF organizers.
 
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+
+Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
+
 Guest writer and physicist Matt von Hippel shares what happened when he issued a challenge to AI companies to solve a problem in his former subfield of theoretical physics.
-
-To see what works and what breaks when agents are sent into a market, we made a miniature market of Claudes.
-
-Claude made the open-source models that scientists use to predict and design biomolecules faster and more memory-efficient. Claude optimized more than 30 of these models in just under four weeks, speeding them up roughly 4x on average. It also created a low-memory mode that enables the accurate prediction of biomolecular systems larger than 10,000 tokens (amino acids, nucleotides, and atoms from small molecules and ions) on a single NVIDIA GPU node.
