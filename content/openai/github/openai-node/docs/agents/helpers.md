@@ -66,3 +66,67 @@ Register the corresponding function on the agent before using a handler. Each in
 The first coordinator `turn.created` event selects the turn. Initial idle events and subagent completions do not terminate iteration. After that turn completes, fails, or is cancelled, the helper waits for `session.idle`; `session.failed` also terminates. These terminal events remain visible, while an unexpected connection end throws.
 
 Break out of `for await`, call `stream.abort()`, or pass a request `signal` to close local requests. This does not cancel the backend turn. Cancellation interrupts waiting for an asynchronous handler but cannot undo work the callback already started. For observing an active session without submitting input, use `client.beta.agents.sessions.events.stream()`.
+
+## Typed application tools (beta)
+
+Use `functionTool()` with `zodResponsesFunction()` or `standardResponsesFunction()` to share a schema and callback between the hosted definition and local execution. Arguments are validated before your callback runs. Bind application services through closures or bound methods.
+
+```ts
+import { z } from 'zod';
+import { zodResponsesFunction } from 'openai/helpers/zod';
+import { functionTool } from 'openai/lib/beta/agents/function-tool';
+
+const lookup = functionTool(
+  zodResponsesFunction({
+    name: 'lookup_item',
+    description: 'Look up a catalog item.',
+    parameters: z.object({ item_id: z.string() }),
+    function: ({ item_id }) => catalog.lookup(item_id),
+  }),
+);
+// Use this agent configuration when creating your session.
+const agent = { model: MODEL, tools: [lookup.definition] };
+
+// Attach the local handler once the configured session is idle.
+const stream = client.beta.agents.sessions.stream(SESSION_ID, {
+  input: 'Look up catalog item ITEM_A.',
+  toolHandlers: { [lookup.name]: lookup.handler },
+});
+for await (const event of stream) {
+  console.log(event.type);
+}
+```
+
+Reuse the handler with an existing idle session whose agent already has the matching definition. Raw handlers can share the same `toolHandlers` map.
+
+### Typed final output (beta)
+
+Bind a Zod v3/v4/Mini object schema to creation and its final result:
+
+```ts
+import { z } from 'zod';
+import { zodAgentTextFormat } from 'openai/helpers/beta/agents/zod';
+
+const format = zodAgentTextFormat(z.object({ summary: z.string() }));
+const stream = await client.beta.agents.sessions.create({
+  agent: { model: 'gpt-6-astra', text: { format } },
+  environment: { type: 'none' },
+  input: 'Summarize the notes.',
+  stream: true,
+});
+const result = await stream.finalResult();
+console.log(result.output_parsed.summary);
+
+const followup = client.beta.agents.sessions.stream(result.session_id, {
+  input: 'Make it shorter.',
+  outputFormat: format,
+});
+console.log((await followup.finalResult()).output_parsed.summary);
+```
+
+Follow-up `outputFormat` only chooses the local parser; the session must already use
+that schema. `standardAgentTextFormat` from
+`openai/helpers/beta/agents/standard-schema` supports synchronous Standard Schema
+validators; `agentOutputFormat(schema, parse)` supports other validators.
+`output_parsed` contains the first parsed final text part; every final text part is validated.
+`AgentOutputParseError.raw_result` preserves completed raw output if parsing fails.
