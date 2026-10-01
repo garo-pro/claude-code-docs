@@ -15,6 +15,9 @@ Examples throughout this guide will use a placeholder for the Advertiser API key
 
 API partners can follow [API Partner Setup](https://developers.openai.com/ads/api-partner-setup). For another end-to-end example, see the [Quickstart](https://developers.openai.com/ads/api-quickstart).
 
+Use [Audit Logs](https://developers.openai.com/ads/api-reference/audit-logs) to review recorded changes to
+resources in your ad account.
+
 ### Request conventions
 
 Use the following base URL for API requests. Provide your API key in the Authorization header when making requests.
@@ -204,6 +207,10 @@ ad account. See [Bulk API limits](https://developers.openai.com/ads/bulk-api#lim
 [{"Download the OpenAPI spec"}](https://developers.openai.com/ads/openapi.json)
 
 ## Changelog
+
+### September 30th, 2026
+
+- Added selectable click/view attribution windows and time basis to all four GET Insights endpoints. Omitted settings now default independently to 30-day click, 1-day view, and ad-event time. Conversion totals include click-through plus view-through goal conversions and can differ from previous reports; impressions, clicks, and spend are unchanged. See [Understand attribution](https://developers.openai.com/ads/reporting#understand-attribution).
 
 ### September 10th, 2026
 

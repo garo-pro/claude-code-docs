@@ -5,7 +5,7 @@ URL Source: https://www.anthropic.com/news/life-sciences-verification-program
 Markdown Content:
 # Introducing the Life Sciences Verification Program
 
-Today, we are introducing the Life Sciences Verification Program (LSVP), which gives life science professionals access to our Mythos, Opus, and Sonnet models with a refined set of safeguards more permissive for biology-related work. We have already onboarded dozens of organizations through an early-access program, and are now opening applications to the broader life science community ([apply here](https://claude.com/form/life-sciences-verification-program)). The program is launching in beta, initially for teams and institutions. We will continue to improve the program and expand access to individual Pro and Max plans over time.
+Today, we are introducing the Life Sciences Verification Program (LSVP), which gives life science professionals access to our Mythos, Opus, and Sonnet models with a refined set of safeguards more permissive for biology-related work. We have already onboarded dozens of organizations through an early-access program, and are now opening applications to the broader life science community ([join waitlist here](https://claude.com/form/life-sciences-verification-program)). The program is launching in beta, initially for teams and institutions. We will continue to improve the program and expand access to individual Pro and Max plans over time.
 
 The LSVP is designed to enable life science professionals to use our models across a wide range of tasks that are currently blocked in our generally available Fable models, like drug discovery, research biology, clinical development, and manufacturing. It’s built for teams of all kinds—from academic labs to startups, pharma companies, and more.
 
@@ -49,7 +49,7 @@ At Manifold Bio, we’re building a massively parallel interface into living sys
 
 ## Applications and availability
 
-Organizations interested in joining the LSVP can [submit an application here](https://claude.com/form/life-sciences-verification-program). We expect to enroll hundreds of organizations within the first week, and to scale the program further to support the majority of the life science community in the coming weeks.
+Organizations interested in joining the LSVP can [register interest here](https://claude.com/form/life-sciences-verification-program). We expect to enroll hundreds of organizations within the first week, and to scale the program further to support the majority of the life science community in the coming weeks.
 
 Today, LSVP is available in our first-party console for API usage, as well as in Claude for Enterprise and Team plans. We do not yet support individual plans but are working to expand access for these users. It is also not yet available on third-party platforms.
 
@@ -60,6 +60,10 @@ In API and Claude Science, users can switch between grants natively. In [Claude.
 ## What comes next
 
 Providing these frontier capabilities is part of our broader efforts in supporting the life sciences community in our shared mission to accelerate curing disease and improving human health. We will share more about new products, research collaborations, and improvements to the program in the coming months.
+
+**Changelog:**
+
+September 30th, 2026. We clarified that the form we link to is an expression of interest, not an application.
 
 ## Related content
 
