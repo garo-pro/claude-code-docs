@@ -192,3 +192,6 @@ a) This DPA shall remain in effect as long as Company carries out Customer Data 
 b) The Company do not store any of the content the Customer or its End Users provide or generate while using our Services. This includes any texts, or other data you input. This information is processed in real-time to provide the Customer and End Users with the API Service and is not saved on our servers.
 
 c) For Customer Data other than those provided under Section 4(b), Company will temporarily store such data for the purposes of providing the API Services or in compliance with applicable laws. The Company will delete such data after the termination of the Terms unless otherwise required by applicable laws.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

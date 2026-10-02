@@ -124,3 +124,6 @@ By following a “first understand, then translate” reasoning process, this ap
 ## Price
 
 Pay-as-you-go by Token usage, \$3 per 1 million Tokens
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

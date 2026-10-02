@@ -349,3 +349,6 @@ Response format with deep thinking enabled:
 3. **Model support**：Ensure you're using models that support deep thinking
 4. **Task matching**：Choose whether to enable deep thinking according to the task complexity
 5. **Streaming output**：Combine streaming output to see the thinking process, improving user experience
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

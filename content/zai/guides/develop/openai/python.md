@@ -409,3 +409,6 @@ response = client.chat.completions.create(
 <Note>
   Z.AI is committed to maintaining compatibility with OpenAI API. If you encounter any issues during migration, please contact our technical support team.
 </Note>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

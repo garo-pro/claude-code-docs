@@ -191,3 +191,6 @@ See: [Tool Streaming Output Documentation](/guides/tools/stream-tool)
     Get technical support and help
   </Card>
 </CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

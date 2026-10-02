@@ -193,3 +193,6 @@ If issues arise, run `coding-helper doctor` first for a health check.
     3. Ensure Node.js and the network environment are ready.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

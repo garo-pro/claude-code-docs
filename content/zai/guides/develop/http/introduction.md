@@ -351,3 +351,6 @@ curl --location 'https://api.z.ai/api/paas/v4/chat/completions' \
 <Note>
   It is recommended to use HTTPS protocol in production environments and implement appropriate security measures to protect your API keys and data transmission.
 </Note>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

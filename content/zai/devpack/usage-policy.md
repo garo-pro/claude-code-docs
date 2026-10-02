@@ -49,3 +49,6 @@ You can manage your subscription, view billing details, and cancel the subscript
 ## Refund Policy
 
 Please note that once a subscription service is purchased, it is considered confirmed, and refunds are not supported. Even if you have not used up your plan, the fees cannot be refunded. We recommend that you choose the appropriate subscription plan and term based on your usage needs.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

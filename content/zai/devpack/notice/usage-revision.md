@@ -225,3 +225,6 @@ One prompt refers to one query. Each prompt is estimated to invoke the model 15â
     </tbody>
   </table>
 </div>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

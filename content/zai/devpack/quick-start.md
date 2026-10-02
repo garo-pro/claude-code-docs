@@ -128,3 +128,6 @@
     For detailed usage instructions, refer to the [Web Reader MCP Server](/devpack/mcp/reader-mcp-server) documentation.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

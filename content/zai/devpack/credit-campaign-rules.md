@@ -91,3 +91,6 @@ Inviting users (hereinafter "Inviter") can earn the following Credits rewards af
 ***
 
 **If you have any questions about these rules, please contact our customer service. Thank you for your participation!**
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

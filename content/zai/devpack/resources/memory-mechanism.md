@@ -402,3 +402,6 @@ This approach brings two direct benefits:
     * do not rely on the conversation alone to preserve rules
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

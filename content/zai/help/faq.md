@@ -25,3 +25,6 @@ You can recharge from the billing page: [https://z.ai/manage-apikey/billing](htt
 #### Why can't I recharge when using credit card?
 
 When using a credit card to recharge, please ensure that you are not using 3DS verification. 3DS verification is not supported in our platform at this moment.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

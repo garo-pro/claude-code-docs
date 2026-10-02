@@ -77,3 +77,6 @@ The following is the response message of a curl request, where 401 is the HTTP s
 ```
 
 > **Note**: When using streaming (SSE) calls, if the API terminates abnormally during inference, the above error codes will not be returned. Instead, the reason for the exception will be provided in the `finish_reason` parameter of the response body. For details, please refer to the description of the `finish_reason` parameter.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -146,3 +146,6 @@ By setting the `tool_stream=True` parameter, you can enable streaming tool call 
     * Display tool call chain
   </Card>
 </CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

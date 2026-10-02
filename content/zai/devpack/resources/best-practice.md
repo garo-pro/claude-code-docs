@@ -347,3 +347,6 @@ In practice, a mature coding agent workflow typically includes the following sta
 ![Description](https://cdn.bigmodel.cn/markdown/1774433767376image.png?attname=image.png)
 
 Through this workflow, a coding agent can gradually evolve from a simple code generation tool into a collaborative system that participates across the full software development lifecycle.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

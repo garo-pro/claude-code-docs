@@ -181,3 +181,6 @@ Notes:
     If your application requires high concurrency processing, please check your account limits or contact platform support.
   </Accordion>
 </AccordionGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

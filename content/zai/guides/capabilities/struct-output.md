@@ -903,3 +903,6 @@ print(f"Emotions: {result['emotions']}")
 <Tip>
   When designing JSON Schema, it's recommended to start with simple structures and gradually increase complexity. Also, providing detailed descriptions and examples for key fields helps AI better understand and generate JSON data that meets requirements.
 </Tip>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

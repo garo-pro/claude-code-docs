@@ -206,3 +206,6 @@ For example: If a plan costs 100 USD, and your friend gets a 50% first-order dis
 
 3. Only the following two models can be called: GLM-5.3, GLM-5.3-Flash. For detailed instructions, please refer to:
    [https://docs.z.ai/devpack/overview](https://docs.z.ai/devpack/overview)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

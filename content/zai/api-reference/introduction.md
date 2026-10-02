@@ -298,3 +298,6 @@ If you purchase an [API usage bundle](https://z.ai/usage-bundles) for a model, w
     ```
   </Tab>
 </Tabs>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

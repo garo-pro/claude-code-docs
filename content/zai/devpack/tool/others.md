@@ -149,3 +149,6 @@ In Cline, select `Use your own API Key`, then fill in the following configuratio
 ### 3. Get Started
 
 Once configured, you can enter your requirements in the input box to let the model assist you with code generation, file editing, refactoring, explaining code logic, debugging, and more.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

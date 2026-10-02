@@ -128,3 +128,6 @@ Includes three popular special effects video templates: french\_kiss, bodyshake,
 ## Price
 
 Pay-as-you-go based on number of videos, \$ 0.2 per video
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

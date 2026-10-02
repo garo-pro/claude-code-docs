@@ -243,3 +243,6 @@ GLM-OCR is a lightweight professional OCR model with parameters as small as 0.9B
     ```
   </Tab>
 </Tabs>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -193,3 +193,6 @@ Token usage varies depending on the cache hit rate, as shown below:
     Find answers to common questions about subscriptions, promotions, and using the plan.
   </Card>
 </CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

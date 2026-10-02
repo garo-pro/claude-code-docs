@@ -240,3 +240,6 @@ You can directly use search functionality in conversations:
 * [Claude Code MCP Configuration Guide](https://docs.anthropic.com/en/docs/claude-code/mcp)
 * [MCP Usage Limits](/devpack/overview#usage-instruction)
 * [GLM Coding Plan Overview](/devpack/overview)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -24,3 +24,6 @@ During the campaign period, every day from **23:00 to 09:00 the following day**,
 * This campaign **applies only to GLM-5.3-Flash**. If GLM-5.3 is selected, quota will still be consumed according to the standard rules of your plan.
 * Due to system limitations, if your usage during the campaign window has already reached the **5 hours/week quota limit**, you will temporarily be unable to participate in this campaign. You can continue to participate once the quota limit is refreshed and reset.
 * This campaign takes effect only in **ZCode version 3.10 and later**. It is recommended to use the latest version.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

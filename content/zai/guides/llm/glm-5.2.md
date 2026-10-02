@@ -480,3 +480,6 @@ The following is a full sample code to help you onboard GLM-5.2 with ease.
     ```
   </Tab>
 </Tabs>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

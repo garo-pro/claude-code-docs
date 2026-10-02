@@ -124,3 +124,6 @@ for chunk in response:
 
 print(f"Reasoning: {reasoning}\nReply: {content}")
 ```
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

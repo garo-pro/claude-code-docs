@@ -86,3 +86,6 @@ Prices per video.
 | GLM Slide/Poster Agent(beta) | \$0.7 / MTok |
 | General-Purpose Translation | \$3 / MTok |
 | Popular Special Effects Video Templates | \$0.2 / video |
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

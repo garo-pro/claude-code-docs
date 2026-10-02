@@ -60,3 +60,6 @@ Z.ai reserves the right to adjust its products and pricing standards due to busi
 
 * Additional services or features may require separate fees, which you will have the chance to review and accept before being charged.
 * Z.ai is not liable for errors or issues caused by third-party payment processors.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

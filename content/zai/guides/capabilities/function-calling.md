@@ -583,3 +583,6 @@ def protected_function(user_id: str, operation: str, data: dict) -> dict:
 <Warning>
   Function calling involves code execution. Please ensure appropriate security measures are implemented, including input validation, permission control, and error handling.
 </Warning>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

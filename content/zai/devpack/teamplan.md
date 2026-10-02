@@ -187,3 +187,6 @@ During off-peak hours, plan users will enjoy higher concurrency benefits through
 * [Quick Start](https://docs.z.ai/devpack/quick-start): Complete the basic integration process in just a few minutes and get started quickly
 * [Tool Integration](https://docs.z.ai/devpack/tool/others): View the coding tools supported by the plan and their configuration methods, and choose the development environment that best suits your needs
 * [How to Switch Models](https://docs.z.ai/devpack/latest-model): Make sure your coding tool is using your target model version
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

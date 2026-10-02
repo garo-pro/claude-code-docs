@@ -134,3 +134,6 @@ Please use the following settings:
   * Adjust temperature and any other parameters based on your task requirements
 
 ![Description](https://cdn.bigmodel.cn/markdown/1785421409503image.png?attname=image.png)
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

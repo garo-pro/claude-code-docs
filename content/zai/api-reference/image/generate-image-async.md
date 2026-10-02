@@ -155,3 +155,5 @@ components:
         key>](https://z.ai/manage-apikey/apikey-list)
 
 ````
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

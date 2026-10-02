@@ -486,3 +486,6 @@ Billing calculation:
 
 Compared to no cache (2500 × 0.01/1000 = 0.025), saves 24%
 ```
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

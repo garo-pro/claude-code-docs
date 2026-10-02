@@ -465,3 +465,6 @@ a) The Additional Terms will be terminated once the conditions set under Section
 b) If the Terms and the Additional Terms terminate, the rights granted by us to you will cease immediately. Termination or expiration will not affect any rights or obligations, including the payment of amounts due, which have accrued under these Terms and separate order forms (if any) up to the date of termination.
 
 c) Section 4 of the Additional Terms shall survive the termination of the Additional Terms.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

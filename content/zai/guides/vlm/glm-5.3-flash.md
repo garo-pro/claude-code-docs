@@ -202,3 +202,6 @@ Compared with our initial baseline on the same hardware, we achieved a 3× impro
 #### Conclusion
 
 GLM-5.3-Flash shows that frontier intelligence does not have to come at frontier cost. This is not the result of any single trick, but of three layers working together: an architecture that delivers stronger capability from less compute, a richer multimodal pre-training corpus, and infrastructure co-designed with inference hardware. We are now scaling this recipe to larger models — GLM-5.3-Flash pushes the cost-performance frontier, and the lessons from building it are already shaping our next frontier model.
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

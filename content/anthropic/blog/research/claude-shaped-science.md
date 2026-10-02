@@ -1,4 +1,4 @@
-Title: Working on Claude-shaped problems with BootLoops, a toolkit for exact calculations in quantitative science.
+Title: Claude-shaped science
 
 URL Source: https://www.anthropic.com/research/claude-shaped-science
 
