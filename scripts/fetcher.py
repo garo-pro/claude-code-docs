@@ -20,6 +20,7 @@ Anthropic (content/anthropic/, see sources.anthropic.json):
   - alignment.anthropic.com -> Alignment Science blog (homepage-index + scrape;
                                same HTML-only situation as the main blog)
   - transformer-circuits.pub -> Interpretability research (Atom feed + scrape)
+  - claude.dev              -> Builder blog (llms.txt + .md suffix)
   - github.com/anthropics/* -> Repos (raw.githubusercontent.com)
 
 OpenAI (content/openai/, see sources.openai.json):
@@ -152,6 +153,7 @@ DISCOVER_DOMAINS = [
     ("academy.claude.com",      "Courses/tutorials (HTML-only, not fetched)"),
     ("alignment.anthropic.com", "Alignment Science blog"),
     ("transformer-circuits.pub", "Interpretability research (Transformer Circuits Thread)"),
+    ("claude.dev",              "Builder blog (technical posts for people building with Claude)"),
     ("red.anthropic.com",       "Frontier Red Team blog -- checked 2026-09: every "
                                  "article except the /cvd/ dashboard page 30x-redirects "
                                  "to www.anthropic.com/research/*, which the blog source "
@@ -164,7 +166,7 @@ DISCOVER_DOMAINS = [
 FETCHED_DOMAINS = {
     "platform.claude.com", "code.claude.com", "modelcontextprotocol.io",
     "support.claude.com", "claude.com", "anthropic.com",
-    "alignment.anthropic.com", "transformer-circuits.pub",
+    "alignment.anthropic.com", "transformer-circuits.pub", "claude.dev",
 }
 # No domain is frozen anymore -- anthropic.com was until 2026-09, when scraping
 # via trafilatura replaced the jina.ai proxy that had been removed in 2026-07.
@@ -244,6 +246,9 @@ class Fetcher:
         # to 2021, which is the more reliable of the two.
         self.alignment_index_url = "https://alignment.anthropic.com/"
         self.transformer_circuits_feed_url = "https://transformer-circuits.pub/feed.xml"
+        # Unlike the two above, claude.dev serves real markdown: its llms.txt
+        # links every post's /blog/<slug>.md directly, the docs.z.ai shape.
+        self.claude_dev_llms_url = "https://claude.dev/llms.txt"
 
         # OpenAI migrated its docs off platform.openai.com to
         # developers.openai.com in 2026; the old path now just redirects
@@ -648,6 +653,9 @@ class Fetcher:
                     elif parts[1] == "interpretability":
                         tail = "/".join(parts[2:])
                         urls.append(f"https://transformer-circuits.pub/{tail}")
+                    elif parts[1] == "claude-dev":
+                        tail = "/".join(parts[2:])
+                        urls.append(f"https://claude.dev/blog/{tail}")
 
         # openai/ and zai/ map 1:1 onto their site's URL path, so the
         # reconstruction is direct -- no per-section dispatch needed. github/
@@ -716,6 +724,9 @@ class Fetcher:
         elif "transformer-circuits.pub" in url:
             path = urlsplit(url).path.strip("/")
             return self.anthropic_dir / "blog" / "interpretability" / f"{path}.md"
+        elif "claude.dev" in url:
+            path = urlsplit(url).path.strip("/").removeprefix("blog/")
+            return self.anthropic_dir / "blog" / "claude-dev" / f"{path}.md"
         elif "anthropic.com" in url:
             path = urlsplit(url).path.strip("/")
             parts = path.split("/", 1)
@@ -1252,6 +1263,14 @@ class Fetcher:
                 print(f"  {len(tc_urls)} posts")
                 for url in tc_urls:
                     queue(url, self.download_blog_page)
+
+                print("Source: claude.dev/llms.txt")
+                llms = await self.fetch_text(session, self.claude_dev_llms_url)
+                cd_urls = self.extract_llms_txt_urls(llms, "https://claude.dev/blog/")
+                counts["claude-dev"] = len(cd_urls)
+                print(f"  {len(cd_urls)} posts")
+                for url in cd_urls:
+                    queue(url)
 
             # -- Support articles --
             if self.want("support"):
@@ -1914,7 +1933,7 @@ class Fetcher:
         allowed = [
             "platform.claude.com", "code.claude.com",
             "modelcontextprotocol.io", "claude.com/docs",
-            "anthropic.com", "transformer-circuits.pub",
+            "anthropic.com", "transformer-circuits.pub", "claude.dev",
             "developers.openai.com", "docs.z.ai", "openai.com",
         ]
         return any(f"https://{d}" in url for d in allowed)
@@ -1927,7 +1946,7 @@ class Fetcher:
                 print(f"  {u}", file=sys.stderr)
             print("Allowed: platform.claude.com, code.claude.com, "
               "modelcontextprotocol.io, claude.com/docs, anthropic.com, "
-              "transformer-circuits.pub, developers.openai.com, docs.z.ai, "
+              "transformer-circuits.pub, claude.dev, developers.openai.com, docs.z.ai, "
               "openai.com", file=sys.stderr)
             sys.exit(1)
 
@@ -1983,6 +2002,8 @@ class Fetcher:
                 await self.fetch_text(session, self.alignment_index_url))
             tc_urls = self.extract_transformer_circuits_urls(
                 await self.fetch_text(session, self.transformer_circuits_feed_url))
+            cd_urls = self.extract_llms_txt_urls(
+                await self.fetch_text(session, self.claude_dev_llms_url), "https://claude.dev/blog/")
             openai_urls = [
                 u for u in self.extract_sitemap_urls(
                     await self.fetch_text(session, self.openai_sitemap_url))
@@ -2019,6 +2040,7 @@ class Fetcher:
               f"{len(BLOG_STANDALONE_PAGES)} standalone pages")
         print(f"alignment.anthropic.com: {len(alignment_urls)} posts")
         print(f"transformer-circuits.pub: {len(tc_urls)} posts")
+        print(f"claude.dev: {len(cd_urls)} posts")
         print(f"GitHub repos (Anthropic): {len(GITHUB_REPOS)} repos configured")
         print()
 
@@ -2034,7 +2056,7 @@ class Fetcher:
 
         total = (len(cc_urls) + len(platform_urls) + len(mcp_urls) + len(support_urls)
                  + len(blog_urls) + len(BLOG_STANDALONE_PAGES)
-                 + len(alignment_urls) + len(tc_urls)
+                 + len(alignment_urls) + len(tc_urls) + len(cd_urls)
                  + len(openai_urls) + len(openai_release_urls) + len(zai_urls)
                  + len(openai_alignment_urls) + len(system_card_urls) + 1)
         print(f"Total fetchable: {total}+ (excludes GitHub repos)")
@@ -2166,7 +2188,9 @@ Sections (Anthropic, content/anthropic/):
   support       Support articles (support.claude.com, sitemap + .md)
   products      Product docs (claude.com/docs: Claude Tag, Cowork, connectors)
   blog          anthropic.com news/research/engineering + standalone pages
-                (sitemap + HTML scrape via trafilatura; no .md variant)
+                (sitemap + HTML scrape via trafilatura; no .md variant),
+                plus alignment.anthropic.com, transformer-circuits.pub, and
+                claude.dev (llms.txt + .md)
 
 Sections (other providers):
   openai        developers.openai.com docs + openai/* GitHub repos (content/openai/)

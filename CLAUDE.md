@@ -27,7 +27,7 @@ switching frameworks -- see "When adding new sections" below.
 ### Anthropic (see `sources.anthropic.json`)
 
 Sources: code.claude.com, platform.claude.com, claude.com/docs,
-modelcontextprotocol.io, support.claude.com (sitemap + .md),
+claude.dev, modelcontextprotocol.io, support.claude.com (sitemap + .md),
 github.com/anthropics/* (10 repos). anthropic.com blog
 (engineering/research/news, plus a fixed allowlist of standalone policy/
 report pages) was a FROZEN archive from 2026-07 to 2026-09: the site is
@@ -39,7 +39,9 @@ covers two more Anthropic-run research blogs added 2026-09-13:
 alignment.anthropic.com and transformer-circuits.pub -- neither has a
 `.md` variant either, and neither has a sitemap, so each needed its own
 discovery method (a homepage that lists every post, and an Atom feed,
-respectively).
+respectively). claude.dev (Anthropic's builder blog, added 2026-10-02) is
+the easy one: its `llms.txt` links a `.md` for every post, so it uses the
+plain markdown path like code.claude.com, no scraping.
 
 Five rules keep the archive honest, all learned the hard way:
 
@@ -281,6 +283,10 @@ covers Anthropic (`content/anthropic/`); see "OpenAI Documentation" and
   feed at `/feed.xml`. Added 2026-09-13. red.anthropic.com (Frontier Red Team
   blog) was checked the same day and NOT added: every article but one
   redirects to www.anthropic.com/research/*, already covered above.
+- `content/anthropic/blog/claude-dev/` - claude.dev builder blog (13 posts): Claude
+  Code engineering, model playbooks (Opus/Sonnet 5.5), evals, mods. Fetched
+  from `llms.txt` + `.md`; `/terminal/` and `/mods/` are HTML-only and skipped.
+  Added 2026-10-02.
 
 #### GitHub Repos (from github.com/anthropics)
 - `content/anthropic/github/claude-cookbooks/` - 198 recipes + notebooks. This is
@@ -327,7 +333,7 @@ content/
     en/agents-and-tools/       Tool use, agent skills
     claude/                    Product docs (215)
     mcp/                       MCP protocol spec (373)
-    blog/                      Engineering, research, news, policy, alignment, interpretability
+    blog/                      Engineering, research, news, policy, alignment, interpretability, claude-dev
     github/                    10 repos (718 files)
     support/                   Help articles (365)
   openai/                      ~1,400 docs (developers.openai.com + openai.com)

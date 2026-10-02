@@ -64,6 +64,12 @@
       "llms_txt": false,
       "notes": "Interpretability research (Transformer Circuits Thread). Same Distill template and server-rendering as alignment.anthropic.com, but discoverable via a real Atom feed at /feed.xml covering full history back to 2021. Added 2026-09-13: 56 posts, all exclusive to this domain."
     },
+    "claude.dev": {
+      "robots": true,
+      "sitemap": true,
+      "llms_txt": true,
+      "notes": "Builder blog: technical posts from Anthropic for people building with Claude (Claude Code, model playbooks, evals). Unlike the other Anthropic blogs it serves real markdown: llms.txt links every post's /blog/<slug>.md directly, plus posts.json and rss.xml as indexes. /terminal/, /mods/ and /terms/ are HTML-only site chrome (interactive post list, a demo page, legal) and are not fetched. Added 2026-10-02: 13 posts, none duplicated under blog/engineering."
+    },
     "red.anthropic.com": {
       "robots": true,
       "sitemap": false,
@@ -252,6 +258,18 @@
         "blog"
       ],
       "notes": "Transformer Circuits Thread (interpretability research). Discovered via a real Atom feed covering full history back to 2021. HTML scrape via trafilatura."
+    },
+    {
+      "name": "claude-dev-blog",
+      "type": "llms-txt-md",
+      "llms_txt_url": "https://claude.dev/llms.txt",
+      "output": "anthropic/blog/claude-dev/",
+      "pages": 13,
+      "enabled": true,
+      "section": [
+        "blog"
+      ],
+      "notes": "claude.dev builder blog. llms.txt lists a direct .md link for every post, so this is the plain download_doc path, no scraping."
     },
     {
       "name": "github-cookbooks",
