@@ -5,6 +5,19 @@ on:
     # Four times daily: 01:00, 06:00, 11:00, 16:00 UTC (aligned with hn-digest)
     - cron: "0 1,6,11,16 * * *"
   workflow_dispatch: # Allow manual trigger
+  push:
+    # A fetcher change should show its effect on the archive right away,
+    # not at the next cron slot. The bot's own commits never touch this
+    # file (and GITHUB_TOKEN pushes don't trigger workflows anyway).
+    branches: [main]
+    paths:
+      - scripts/fetcher.py
+
+# A push-triggered run can land while a scheduled one is mid-fetch; both
+# end in `git push origin HEAD:main`, so let them queue instead of racing.
+concurrency:
+  group: fetch-docs
+  cancel-in-progress: false
 
 jobs:
   fetch-docs:
