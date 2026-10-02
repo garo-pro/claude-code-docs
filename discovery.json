@@ -63,6 +63,12 @@
       "serves_sitemap": false,
       "serves_markdown": false
     },
+    "claude.dev": {
+      "status": "fetched",
+      "serves_llms_txt": true,
+      "serves_sitemap": true,
+      "serves_markdown": true
+    },
     "red.anthropic.com": {
       "status": "not-fetched",
       "serves_llms_txt": false,
