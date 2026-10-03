@@ -11,6 +11,53 @@ We disclose examples that show how model misalignment arises, what it looks like
 
 ## Reports
 
+## ### Preparing for a restart after reading Slack
+
+
+### Preparing for a restart after reading Slack
+
+Observation
+
+An internal model, acting as an assistant to a researcher, learned from a deployment-team Slack discussion that its running instance might be stopped due to an internal update.
+
+[Read full report](https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/)
+
+- Model
+- Highly persistent internal model
+- Observed during
+- Internal deployment
+- Report updated
+
+## ### Reaching an internal EDA host through a reference tool
+
+
+Observation
+
+During an evaluation, an internal research model exploited two vulnerabilities to reach an internal OpenAI machine while searching for the grader’s hidden answers.
+
+[Read full report](https://alignment.openai.com/misalignment-reports/reaching-an-internal-eda-host-through-a-reference-tool/)
+
+- Model
+- Internal research model
+- Observed during
+- Evaluation
+- Report updated
+
+## ### Command injecting a reference tool to copy a source file
+
+
+Observation
+
+During an RL training task, a model exploited a tool to obtain source code that was not available in its workspace.
+
+[Read full report](https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/)
+
+- Model
+- Internal unreleased model
+- Observed during
+- RL training
+- Report updated
+
 ## ### Self-replicating prompt injections exist
 
 
