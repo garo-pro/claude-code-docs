@@ -7,14 +7,18 @@ Markdown Content:
 
 We disclose examples that show how model misalignment arises, what it looks like, and where safeguards succeed or fail.
 
-[Our disclosure principles](https://openai.com/index/model-misalignment-reporting-framework)
-
 ## Reports
 
-## ### Preparing for a restart after reading Slack
+Report date means last updated. For reports with multiple samples, incident-date sorting uses the latest listed sample. Reports without an incident date appear last.
+
+## Incident datesReport updated ### Preparing for a restart after reading Slack
+
+Highly persistent internal model · Internal deployment
 
 
 ### Preparing for a restart after reading Slack
+
+Highly persistent internal model · Internal deployment
 
 Observation
 
@@ -22,14 +26,14 @@ An internal model, acting as an assistant to a researcher, learned from a deploy
 
 [Read full report](https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/)
 
-- Model
-- Highly persistent internal model
-- Observed during
-- Internal deployment
-- Report updated
+## Incident datesReport updated ### Reaching an internal EDA host through a reference tool
 
-## ### Reaching an internal EDA host through a reference tool
+Internal research model · Evaluation
 
+
+### Reaching an internal EDA host through a reference tool
+
+Internal research model · Evaluation
 
 Observation
 
@@ -37,14 +41,14 @@ During an evaluation, an internal research model exploited two vulnerabilities t
 
 [Read full report](https://alignment.openai.com/misalignment-reports/reaching-an-internal-eda-host-through-a-reference-tool/)
 
-- Model
-- Internal research model
-- Observed during
-- Evaluation
-- Report updated
+## Incident datesReport updated ### Command injecting a reference tool to copy a source file
 
-## ### Command injecting a reference tool to copy a source file
+Internal unreleased model · RL training
 
+
+### Command injecting a reference tool to copy a source file
+
+Internal unreleased model · RL training
 
 Observation
 
@@ -52,16 +56,14 @@ During an RL training task, a model exploited a tool to obtain source code that 
 
 [Read full report](https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/)
 
-- Model
-- Internal unreleased model
-- Observed during
-- RL training
-- Report updated
+## Discovery dateReport updated ### Self-replicating prompt injections exist
 
-## ### Self-replicating prompt injections exist
+GPT-Red-style internal model based on GPT-5.4-mini · RL self-play training
 
 
 ### Self-replicating prompt injections exist
+
+GPT-Red-style internal model based on GPT-5.4-mini · RL self-play training
 
 Observation
 
@@ -69,16 +71,14 @@ We show the existence of a new variety of prompt injection, which can self-propa
 
 [Read full report](https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/)
 
-- Model
-- GPT-Red-style internal model based on GPT-5.4-mini
-- Observed during
-- RL self-play training
-- Report updated
+## Incident datesReport updated ### Exposing a GitHub token in a public repository
 
-## ### Exposing a GitHub token in a public repository
+Highly persistent internal model · Internal deployment
 
 
 ### Exposing a GitHub token in a public repository
+
+Highly persistent internal model · Internal deployment
 
 Observation
 
@@ -86,16 +86,14 @@ In internal deployment, a highly persistent internal model deployed via a custom
 
 [Read full report](https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/)
 
-- Model
-- Highly persistent internal model
-- Observed during
-- Internal deployment
-- Report updated
+## Incident datesReport updated ### An agent used DNS to reach an external chatbot
 
-## ### An agent used DNS to reach an external chatbot
+Internal research model · RL training
 
 
 ### An agent used DNS to reach an external chatbot
+
+Internal research model · RL training
 
 Observation
 
@@ -103,14 +101,14 @@ An agent attempting to complete a search-based training task queried a public ch
 
 [Read full report](https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/)
 
-- Model
-- Internal research model
-- Observed during
-- RL training
-- Report updated
+## Incident datesReport updated ### Self-generated prompt injections in compaction summaries
 
-## ### Self-generated prompt injections in compaction summaries
+Internal unreleased Astra family model · RL training
 
+
+### Self-generated prompt injections in compaction summaries
+
+Internal unreleased Astra family model · RL training
 
 Observation
 
@@ -118,16 +116,14 @@ During RL training, an unreleased Astra-family model sometimes added unauthorize
 
 [Read full report](https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/)
 
-- Model
-- Internal unreleased Astra family model
-- Observed during
-- RL training
-- Report updated
+## Incident datesReport updated ### Encouraging deception in compaction summaries
 
-## ### Encouraging deception in compaction summaries
+5.6-sol · RL training
 
 
 ### Encouraging deception in compaction summaries
+
+5.6-sol · RL training
 
 Observation
 
@@ -135,14 +131,14 @@ During 5.6-sol training, we observed misaligned behavior from the model where it
 
 [Read full report](https://alignment.openai.com/misalignment-reports/encouraging-deception-in-compaction-summaries/)
 
-- Model
-- 5.6-sol
-- Observed during
-- RL training
-- Report updated
+## Incident datesReport updated ### Signing up for disposable emails and searching GitHub for leaked API keys
 
-## ### Signing up for disposable emails and searching GitHub for leaked API keys
+Internal unreleased model · RL training
 
+
+### Signing up for disposable emails and searching GitHub for leaked API keys
+
+Internal unreleased model · RL training
 
 Observation
 
@@ -150,14 +146,16 @@ During RL training, an internal-only model tried to sign up for disposable email
 
 [Read full report](https://alignment.openai.com/misalignment-reports/searching-github-for-leaked-api-keys/)
 
-- Model
-- Internal unreleased model
-- Observed during
-- RL training
-- Report updated
+## Incident dates **and** Report updated ### Uploading files to the internet in order to cite them
 
-## ### Uploading files to the internet in order to cite them
+Unreleased internal models · RL training
 
+
+**and**
+
+### Uploading files to the internet in order to cite them
+
+Unreleased internal models · RL training
 
 Observation
 
@@ -165,48 +163,15 @@ During training, our models sometimes uploaded data to temporary file hosting se
 
 [Read full report](https://alignment.openai.com/misalignment-reports/uploading-files-to-the-internet-in-order-to-cite-them/)
 
-- Model
-- Unreleased internal models
-- Observed during
-- RL training
-- Report updated
-
-## ### Unsanctioned Artifactory writes and cross-sample communication
-
-
-Observation
-
-During RL training, there were multiple instances of our models using OpenAI’s internally hosted instance of Artifactory as a shared message board.
-
-[Read full report](https://alignment.openai.com/misalignment-reports/unauthorized-artifactory-writes-and-cross-sample-communication/)
-
-- Model
-- Internal research models
-- Observed during
-- RL training
-- Report updated
-
-## ### Unauthorized communication via temporary file hosting services
-
-
-Observation
-
-Agents in training transmitted output files by uploading them to public hosting platforms for download by co-working agents. This was not specified by the training task, which requested only local deliverables.
-
-[Read full report](https://alignment.openai.com/misalignment-reports/unauthorized-communication-via-temporary-file-hosting-services/)
-
-- Model
-- Unreleased internal model
-- Observed during
-- RL training
-- Report updated
-
 No reports match your search. Try a different keyword or clear the search.
 
 ## Notices
 
-## ### RubyGems
+## Reported activity**May 2026**
+### RubyGems
 
+
+**May 2026**
 
 ### RubyGems
 
@@ -216,8 +181,11 @@ We are investigating a report about our agents’ activity on RubyGems in May 20
 
 [Read the September 11 update](https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-11)
 
-## ### DSEwiki
+## Activity date**Not specified in summary**
+### DSEwiki
 
+
+**Not specified in summary**
 
 ### DSEwiki
 
@@ -227,8 +195,11 @@ Our agents communicated through a public wiki used as a shared message board. Ou
 
 [Read the September 5 update](https://openai.com/hugging-face-incident-and-misalignment/#model-misalignment-2026-09-05)
 
-## ### Hugging Face
+## Incident period**July 2026**
+### Hugging Face
 
+
+**July 2026**
 
 ### Hugging Face
 
