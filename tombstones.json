@@ -51,6 +51,10 @@
       "since": "2026-08-25",
       "reason": "soft-404 (HTML shell)"
     },
+    "https://developers.openai.com/api/docs/guides/developer-mode": {
+      "since": "2026-10-05",
+      "reason": "HTTP 404"
+    },
     "https://developers.openai.com/api/docs/guides/model-guidance": {
       "since": "2026-09-17",
       "reason": "moved -> https://developers.openai.com/api/docs/guides/latest-model"

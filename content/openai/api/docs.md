@@ -59,7 +59,6 @@ Each entry has a Markdown twin at `/api/docs/<slug>.md`.
 - [Batch API](https://developers.openai.com/api/docs/guides/batch.md): Learn how to use OpenAI's Batch API for processing jobs with asynchronous requests, increased rate limits, and cost efficiency.
 - [Bedrock Managed Agents](https://developers.openai.com/api/docs/guides/agents-api/bedrock-managed-agents.md): Understand how Bedrock Managed Agents uses the Agents API on AWS, and compare execution environments and authentication.
 - [Blaxel](https://developers.openai.com/api/docs/guides/agents-api/environments/providers/blaxel.md): Run an Agents API session in a Blaxel sandbox.
-- [ChatGPT Developer mode](https://developers.openai.com/api/docs/guides/developer-mode.md): Full MCP client access for apps and tools.
 - [ChatKit](https://developers.openai.com/api/docs/guides/chatkit.md): Embed a widget to build your own chat experiences.
 - [ChatKit widgets](https://developers.openai.com/api/docs/guides/chatkit-widgets.md): Learn how to design widgets in your chat experience with ChatKit.
 - [Citation Formatting](https://developers.openai.com/api/docs/guides/citation-formatting.md): Learn practical citation formatting patterns that help models generate reliable citations.
@@ -81,11 +80,12 @@ Each entry has a Markdown twin at `/api/docs/<slug>.md`.
 - [Configuring workload identity federation for Microsoft Azure](https://developers.openai.com/api/docs/guides/workload-identity-federation/microsoft-azure.md): Configure Azure managed identity or AKS as a workload identity federation token provider.
 - [Configuring workload identity federation for Oracle Cloud Infrastructure](https://developers.openai.com/api/docs/guides/workload-identity-federation/oracle-cloud.md): Configure Oracle Cloud Infrastructure instance principals as a workload identity federation token provider.
 - [Configuring workload identity federation for SPIFFE](https://developers.openai.com/api/docs/guides/workload-identity-federation/spiffe.md): Configure SPIFFE JWT-SVIDs as workload identity federation subject tokens.
-- [Content provenance](https://developers.openai.com/api/docs/guides/content-provenance.md): Learn how to verify images and audio, interpret content credentials and watermarks, and use provenance results responsibly.
+- [Content provenance](https://developers.openai.com/api/docs/guides/content-provenance.md): Learn how to verify images and audio and use provenance results responsibly.
 - [Conversation state](https://developers.openai.com/api/docs/guides/conversation-state.md): Learn how to manage conversation state during a model interaction with the OpenAI API.
 - [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization.md): Lower your OpenAI model costs by trying our tools and strategies.
 - [Cost optimization](https://developers.openai.com/api/docs/guides/voice-latency-cost.md): Understand voice usage and manage costs for GPT-Live and the Realtime API.
 - [Counting tokens](https://developers.openai.com/api/docs/guides/token-counting.md): Use the Responses API to count input tokens for text, images, files, tools, and more—without estimation or tiktoken.
+- [Create custom MCP server](https://developers.openai.com/api/docs/guides/custom-mcp-server.md): Connect an MCP server to ChatGPT as a plugin with read and write tools.
 - [CSAM guidance](https://developers.openai.com/api/docs/guides/csam-guidance.md): Learn practical guidance for addressing CSAM risks in products built with OpenAI.
 - [Custom voices](https://developers.openai.com/api/docs/guides/custom-voices.md): Create an approved custom voice and use it for speech generation and voice agents.
 - [Cybersecurity checks](https://developers.openai.com/api/docs/guides/safety-checks/cybersecurity.md): Learn about API cybersecurity safeguards, authorized access, request-level checks, access restrictions, and appeals.
