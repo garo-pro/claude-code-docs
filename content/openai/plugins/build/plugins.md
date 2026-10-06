@@ -99,7 +99,7 @@ server. The plugin still needs a local folder and manifest, and you first
 register the MCP server connection in ChatGPT:
 
 1. Go to [ChatGPT Plugins](https://chatgpt.com/plugins).
-2. Select the plus button, then **Create custom MCP server**.
+2. Select the plus button, then **Add custom MCP server**.
 3. Complete the form with your MCP server URL and connection details.
 4. Review the risk warning and select **I understand and want to continue**.
 5. Select **Create as a plugin**.

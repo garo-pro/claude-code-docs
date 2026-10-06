@@ -602,7 +602,7 @@ the `/mcp` path (for example, `https://<subdomain>.ngrok.app/mcp`).
 Once your MCP server and web component work locally, connect the server in
 ChatGPT:
 
-1. Go to [ChatGPT Plugins](https://chatgpt.com/plugins), select the plus button, then **Create custom MCP server**.
+1. Go to [ChatGPT Plugins](https://chatgpt.com/plugins), select the plus button, then **Add custom MCP server**.
 2. Paste the HTTPS + `/mcp` URL from your tunnel or deployment (for example, `https://<subdomain>.ngrok.app/mcp`), name the connection, and configure authentication.
 3. Review the risk warning, select **I understand and want to continue**, then **Create as a plugin**.
 4. Install the resulting plugin, open a new chat, type `@` in the prompt box, and select the plugin. Prompt the model (for example, “Add a new task to read my book”). ChatGPT will stream tool payloads so you can confirm inputs and outputs.

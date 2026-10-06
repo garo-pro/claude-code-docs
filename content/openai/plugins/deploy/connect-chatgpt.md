@@ -44,10 +44,10 @@ confirmation behavior, and the model-readable result.
 
 ### Add the MCP server
 
-Account and workspace policies apply to creating and using custom MCP servers.
+Account and workspace policies apply to adding and using custom MCP servers.
 
 1. Go to [ChatGPT Plugins](https://chatgpt.com/plugins).
-2. Select the plus button, then **Create custom MCP server**.
+2. Select the plus button, then **Add custom MCP server**.
 3. Enter a user-facing name and description.
 4. Under **Connection**, choose the connection method:
    - For a public endpoint, enter the MCP server URL, including the `/mcp` path.

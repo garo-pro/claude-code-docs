@@ -38,6 +38,7 @@ Each entry has a Markdown twin at `/api/docs/<slug>.md`.
 
 ## Guides
 - [Actions in ChatKit](https://developers.openai.com/api/docs/guides/chatkit-actions.md): Embed a widget to build your own chat experiences.
+- [Add custom MCP server](https://developers.openai.com/api/docs/guides/custom-mcp-server.md): Connect an MCP server to ChatGPT as a plugin with read and write tools.
 - [Admin APIs](https://developers.openai.com/api/docs/guides/admin-apis.md): Use Admin APIs and Admin API keys to automate organization management tasks such as invitations and audit log retrieval.
 - [Advanced integrations with ChatKit](https://developers.openai.com/api/docs/guides/custom-chatkit.md): Use your own server with ChatKit to integrate agent workflows into your product with more customization.
 - [Advanced usage](https://developers.openai.com/api/docs/guides/advanced-usage.md): Discover advanced usage techniques for OpenAI's API, including reproducible outputs, token management, and parameter settings.
@@ -85,7 +86,6 @@ Each entry has a Markdown twin at `/api/docs/<slug>.md`.
 - [Cost optimization](https://developers.openai.com/api/docs/guides/cost-optimization.md): Lower your OpenAI model costs by trying our tools and strategies.
 - [Cost optimization](https://developers.openai.com/api/docs/guides/voice-latency-cost.md): Understand voice usage and manage costs for GPT-Live and the Realtime API.
 - [Counting tokens](https://developers.openai.com/api/docs/guides/token-counting.md): Use the Responses API to count input tokens for text, images, files, tools, and more—without estimation or tiktoken.
-- [Create custom MCP server](https://developers.openai.com/api/docs/guides/custom-mcp-server.md): Connect an MCP server to ChatGPT as a plugin with read and write tools.
 - [CSAM guidance](https://developers.openai.com/api/docs/guides/csam-guidance.md): Learn practical guidance for addressing CSAM risks in products built with OpenAI.
 - [Custom voices](https://developers.openai.com/api/docs/guides/custom-voices.md): Create an approved custom voice and use it for speech generation and voice agents.
 - [Cybersecurity checks](https://developers.openai.com/api/docs/guides/safety-checks/cybersecurity.md): Learn about API cybersecurity safeguards, authorized access, request-level checks, access restrictions, and appeals.

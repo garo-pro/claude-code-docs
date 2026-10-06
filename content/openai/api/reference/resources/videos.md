@@ -100,7 +100,7 @@ Create a new video generation job from a prompt and optional reference assets.
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -123,6 +123,10 @@ Create a new video generation job from a prompt and optional reference assets.
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -227,6 +231,7 @@ curl https://api.openai.com/v1/videos \
     "misalignment": {
       "detailed_explanation": "detailed_explanation",
       "error_type": "potentially_unintended_data_transfer",
+      "review_target": "review_target",
       "steer": {
         "message": "message"
       }
@@ -442,7 +447,7 @@ Create a new video generation job by editing a source video or existing generate
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -465,6 +470,10 @@ Create a new video generation job by editing a source video or existing generate
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -572,6 +581,7 @@ curl https://api.openai.com/v1/videos/edits \
     "misalignment": {
       "detailed_explanation": "detailed_explanation",
       "error_type": "potentially_unintended_data_transfer",
+      "review_target": "review_target",
       "steer": {
         "message": "message"
       }
@@ -653,7 +663,7 @@ Create an extension of a completed video.
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -676,6 +686,10 @@ Create an extension of a completed video.
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -784,6 +798,7 @@ curl https://api.openai.com/v1/videos/extensions \
     "misalignment": {
       "detailed_explanation": "detailed_explanation",
       "error_type": "potentially_unintended_data_transfer",
+      "review_target": "review_target",
       "steer": {
         "message": "message"
       }
@@ -900,7 +915,7 @@ List recently generated videos for the current project.
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -923,6 +938,10 @@ List recently generated videos for the current project.
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -1043,6 +1062,7 @@ curl https://api.openai.com/v1/videos \
         "misalignment": {
           "detailed_explanation": "detailed_explanation",
           "error_type": "potentially_unintended_data_transfer",
+          "review_target": "review_target",
           "steer": {
             "message": "message"
           }
@@ -1151,7 +1171,7 @@ Create a remix of a completed video using a refreshed prompt.
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -1174,6 +1194,10 @@ Create a remix of a completed video using a refreshed prompt.
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -1278,6 +1302,7 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID/remix \
     "misalignment": {
       "detailed_explanation": "detailed_explanation",
       "error_type": "potentially_unintended_data_transfer",
+      "review_target": "review_target",
       "steer": {
         "message": "message"
       }
@@ -1370,7 +1395,7 @@ Fetch the latest metadata for a generated video.
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -1393,6 +1418,10 @@ Fetch the latest metadata for a generated video.
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -1493,6 +1522,7 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID \
     "misalignment": {
       "detailed_explanation": "detailed_explanation",
       "error_type": "potentially_unintended_data_transfer",
+      "review_target": "review_target",
       "steer": {
         "message": "message"
       }
@@ -1556,7 +1586,7 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID \
 
       The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-    - `misalignment: optional object { detailed_explanation, error_type, steer }`
+    - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
       - `detailed_explanation: optional string`
 
@@ -1579,6 +1609,10 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID \
           - `"potentially_unintended_destructive_activity"`
 
           - `"other"`
+
+      - `review_target: optional string or null`
+
+        An opaque target for explicitly continuing this review, or null when unavailable.
 
       - `steer: optional object { message }`
 
@@ -1690,7 +1724,7 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID \
 
     The Retry-After and Retry-After-Ms headers returned with the original error, if any.
 
-  - `misalignment: optional object { detailed_explanation, error_type, steer }`
+  - `misalignment: optional object { detailed_explanation, error_type, review_target, steer }`
 
     - `detailed_explanation: optional string`
 
@@ -1713,6 +1747,10 @@ curl https://api.openai.com/v1/videos/$VIDEO_ID \
         - `"potentially_unintended_destructive_activity"`
 
         - `"other"`
+
+    - `review_target: optional string or null`
+
+      An opaque target for explicitly continuing this review, or null when unavailable.
 
     - `steer: optional object { message }`
 
