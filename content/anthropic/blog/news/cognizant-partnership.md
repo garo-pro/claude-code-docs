@@ -1,4 +1,4 @@
-Title: Cognizant brings Claude to 350,000 employees
+Title: Cognizant will make Claude available to 350,000 employees, accelerating enterprise AI adoption and internal transformation
 
 URL Source: https://www.anthropic.com/news/cognizant-partnership
 
@@ -35,7 +35,7 @@ Cognizant plans to engage clients through workshops, reference patterns, and pla
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

@@ -1,4 +1,4 @@
-Title: Anthropic opens Milan office
+Title: Anthropic opens Milan office to support Italian enterprise, research, and developers
 
 URL Source: https://www.anthropic.com/news/milan-office-opening
 
@@ -23,7 +23,7 @@ The question of how AI reshapes work, design, knowledge, and human agency is not
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

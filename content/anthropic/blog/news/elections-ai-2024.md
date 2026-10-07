@@ -1,4 +1,4 @@
-Title: Elections and AI in 2024: Anthropic observations and learnings
+Title: Elections and AI in 2024: observations and learnings
 
 URL Source: https://www.anthropic.com/news/elections-ai-2024
 
@@ -43,7 +43,7 @@ Protecting election integrity requires constant vigilance and adaptation as AI t
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

@@ -32,7 +32,7 @@ We remain ready to continue our work to support the national security of the Uni
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

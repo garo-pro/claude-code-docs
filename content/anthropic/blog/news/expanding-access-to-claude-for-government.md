@@ -1,4 +1,4 @@
-Title: Expanding Access to Claude for Government
+Title: Expanding access to Claude for government
 
 URL Source: https://www.anthropic.com/news/expanding-access-to-claude-for-government
 
@@ -25,7 +25,7 @@ Since our founding, we have been committed to working to support effective gover
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

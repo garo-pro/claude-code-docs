@@ -1,4 +1,4 @@
-Title: Anthropic opens Seoul office
+Title: Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem
 
 URL Source: https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem
 
@@ -47,7 +47,7 @@ Our Seoul office—led by [KiYoung Choi](https://www.anthropic.com/news/kiyoung-
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

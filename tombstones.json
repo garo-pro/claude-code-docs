@@ -1607,6 +1607,10 @@
       "since": "2026-09-17",
       "reason": "HTTP 404"
     },
+    "https://developers.openai.com/community/codex-ambassadors/directory": {
+      "since": "2026-10-07",
+      "reason": "HTTP 404"
+    },
     "https://developers.openai.com/community/codex-for-oss": {
       "since": "2026-09-17",
       "reason": "HTTP 404"

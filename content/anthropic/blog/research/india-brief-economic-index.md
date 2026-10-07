@@ -1,4 +1,4 @@
-Title: India Country Brief: The Anthropic Economic Index
+Title: India Country Brief: Anthropic Economic Index
 
 URL Source: https://www.anthropic.com/research/india-brief-economic-index
 
@@ -115,6 +115,6 @@ We built an index of how well today’s robots can perform US job tasks. Robots 
 
 ### What do you want from AI?
 
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.
 
 [Read more](https://www.anthropic.com/research/your-thoughts-on-ai)

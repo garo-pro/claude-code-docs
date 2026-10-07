@@ -1,4 +1,4 @@
-Title: Moral self-correction in large language models
+Title: The Capacity for Moral Self-Correction in Large Language Models
 
 URL Source: https://www.anthropic.com/research/the-capacity-for-moral-self-correction-in-large-language-models
 
@@ -25,6 +25,6 @@ We built an index of how well today’s robots can perform US job tasks. Robots 
 
 ### What do you want from AI?
 
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.
 
 [Read more](https://www.anthropic.com/research/your-thoughts-on-ai)

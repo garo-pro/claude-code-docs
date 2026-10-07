@@ -1,4 +1,4 @@
-Title: Anthropic awarded $200M DOD agreement for AI capabilities
+Title: Anthropic and the Department of Defense to advance responsible AI in defense operations
 
 URL Source: https://www.anthropic.com/news/anthropic-and-the-department-of-defense-to-advance-responsible-ai-in-defense-operations
 
@@ -37,7 +37,7 @@ Organizations interested in transforming their operations with Claude can [conta
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 

@@ -1,4 +1,4 @@
-Title: Scaling laws of learning from repeated data
+Title: Scaling Laws and Interpretability of Learning from Repeated Data
 
 URL Source: https://www.anthropic.com/research/scaling-laws-and-interpretability-of-learning-from-repeated-data
 
@@ -27,6 +27,6 @@ We built an index of how well today’s robots can perform US job tasks. Robots 
 
 ### What do you want from AI?
 
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.
 
 [Read more](https://www.anthropic.com/research/your-thoughts-on-ai)

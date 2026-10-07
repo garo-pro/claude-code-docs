@@ -115,4 +115,4 @@ Guest author Prof. Matthew Schwartz describes what happened when he stopped figh
 
 We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.
 
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.

@@ -1,4 +1,4 @@
-Title: Measuring subjective global opinions in LLMs
+Title: Towards measuring the representation of subjective global opinions in language models
 
 URL Source: https://www.anthropic.com/research/towards-measuring-the-representation-of-subjective-global-opinions-in-language-models
 
@@ -25,6 +25,6 @@ We built an index of how well today’s robots can perform US job tasks. Robots 
 
 ### What do you want from AI?
 
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI, and we invite you to participate.
+We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.
 
 [Read more](https://www.anthropic.com/research/your-thoughts-on-ai)

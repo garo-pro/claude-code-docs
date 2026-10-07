@@ -1,4 +1,4 @@
-Title: The need for transparency in Frontier AI
+Title: A framework for AI development transparency
 
 URL Source: https://www.anthropic.com/news/the-need-for-transparency-in-frontier-ai
 
@@ -32,7 +32,7 @@ As models advance, we have an unprecedented opportunity to accelerate scientific
 
 ### Expanding the Cyber Verification Program
 
-We’re launching a new, expanded version of our Cyber Verification Program (CVP), which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
 
