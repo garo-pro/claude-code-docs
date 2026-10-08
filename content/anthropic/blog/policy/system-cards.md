@@ -9,6 +9,8 @@ System cards document the capabilities, safety evaluations, and responsible depl
 
 | Model | Date | System card | 
 |---|---|---|
+| Claude Haiku 5.5 | October 2026 | [Read system card](https://www.anthropic.com/claude-haiku-5-5-system-card) | 
+| Claude Sonnet 5.5 | September 2026 | [Read system card](https://www.anthropic.com/claude-sonnet-5-5-system-card) | 
 | Claude Opus 5.5 | September 2026 | [Read system card](https://www.anthropic.com/claude-opus-5-5-system-card) | 
 | Claude Fable 5.1 and Mythos 5.1 | September 2026 | [Read system card](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) | 
 | Claude Opus 5 | July 2026 | [Read system card](https://anthropic.com/claude-opus-5-system-card) | 

@@ -1000,6 +1000,18 @@ Schema name: `SessionEventAgentSessionCreated`
 
     The IDs of vaults made available to the session.
 
+  - `spend_control: optional object { consumed, limit }`
+
+    Configured spending limit and best-effort consumption, in USD cents. Unlimited sessions omit this object.
+
+    - `consumed: number or null`
+
+      Best-effort recorded spend floored to whole USD cents, or null when unavailable.
+
+    - `limit: number`
+
+      The configured positive limit in USD cents.
+
 - `type: "agent.session.created"`
 
   The type of the object. Always `agent.session.created`.
@@ -1013,6 +1025,10 @@ Schema name: `SessionEventAgentSessionCreated`
   "type": "agent.session.created",
   "event_id": "event_id",
   "session": {
+    "spend_control": {
+      "limit": 1,
+      "consumed": 0
+    },
     "metadata": {
       "foo": "string"
     },
@@ -4200,6 +4216,18 @@ Schema name: `SessionEventAgentSessionIdle`
 
     The IDs of vaults made available to the session.
 
+  - `spend_control: optional object { consumed, limit }`
+
+    Configured spending limit and best-effort consumption, in USD cents. Unlimited sessions omit this object.
+
+    - `consumed: number or null`
+
+      Best-effort recorded spend floored to whole USD cents, or null when unavailable.
+
+    - `limit: number`
+
+      The configured positive limit in USD cents.
+
 - `type: "agent.session.idle"`
 
   The type of the object. Always `agent.session.idle`.
@@ -4213,6 +4241,10 @@ Schema name: `SessionEventAgentSessionIdle`
   "type": "agent.session.idle",
   "event_id": "event_id",
   "session": {
+    "spend_control": {
+      "limit": 1,
+      "consumed": 0
+    },
     "metadata": {
       "foo": "string"
     },
@@ -5098,6 +5130,18 @@ Schema name: `SessionEventAgentSessionInProgress`
 
     The IDs of vaults made available to the session.
 
+  - `spend_control: optional object { consumed, limit }`
+
+    Configured spending limit and best-effort consumption, in USD cents. Unlimited sessions omit this object.
+
+    - `consumed: number or null`
+
+      Best-effort recorded spend floored to whole USD cents, or null when unavailable.
+
+    - `limit: number`
+
+      The configured positive limit in USD cents.
+
 - `type: "agent.session.in_progress"`
 
   The type of the object. Always `agent.session.in_progress`.
@@ -5111,6 +5155,10 @@ Schema name: `SessionEventAgentSessionInProgress`
   "type": "agent.session.in_progress",
   "event_id": "event_id",
   "session": {
+    "spend_control": {
+      "limit": 1,
+      "consumed": 0
+    },
     "metadata": {
       "foo": "string"
     },
@@ -5996,6 +6044,18 @@ Schema name: `SessionEventAgentSessionRequiresAction`
 
     The IDs of vaults made available to the session.
 
+  - `spend_control: optional object { consumed, limit }`
+
+    Configured spending limit and best-effort consumption, in USD cents. Unlimited sessions omit this object.
+
+    - `consumed: number or null`
+
+      Best-effort recorded spend floored to whole USD cents, or null when unavailable.
+
+    - `limit: number`
+
+      The configured positive limit in USD cents.
+
 - `type: "agent.session.requires_action"`
 
   The type of the object. Always `agent.session.requires_action`.
@@ -6009,6 +6069,10 @@ Schema name: `SessionEventAgentSessionRequiresAction`
   "type": "agent.session.requires_action",
   "event_id": "event_id",
   "session": {
+    "spend_control": {
+      "limit": 1,
+      "consumed": 0
+    },
     "metadata": {
       "foo": "string"
     },
@@ -6894,6 +6958,18 @@ Schema name: `SessionEventAgentSessionFailed`
 
     The IDs of vaults made available to the session.
 
+  - `spend_control: optional object { consumed, limit }`
+
+    Configured spending limit and best-effort consumption, in USD cents. Unlimited sessions omit this object.
+
+    - `consumed: number or null`
+
+      Best-effort recorded spend floored to whole USD cents, or null when unavailable.
+
+    - `limit: number`
+
+      The configured positive limit in USD cents.
+
 - `type: "agent.session.failed"`
 
   The type of the object. Always `agent.session.failed`.
@@ -6907,6 +6983,10 @@ Schema name: `SessionEventAgentSessionFailed`
   "type": "agent.session.failed",
   "event_id": "event_id",
   "session": {
+    "spend_control": {
+      "limit": 1,
+      "consumed": 0
+    },
     "metadata": {
       "foo": "string"
     },

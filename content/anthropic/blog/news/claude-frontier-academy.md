@@ -47,20 +47,20 @@ Claude Frontier Academy builds on the [Claude Partner Network](https://claude.co
 
 ## Related content
 
+### 2026 Usage Policy update
+
+We’re publishing a new version of our Usage Policy. In this post, we summarize the changes we’ve made.
+
+[Read more](https://www.anthropic.com/news/2026-usage-policy-update)
+
+### Building on our commitment to American scientific discovery
+
+Anthropic is committing $150 million over three years to the Genesis Mission, a federal initiative to accelerate scientific and technological discovery through AI.
+
+[Read more](https://www.anthropic.com/news/genesis-mission-commitment)
+
 ### Expanding the Cyber Verification Program
 
 We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
-
-### Barclays scales Claude to upgrade operations and improve client experience
-
-Barclays, the British universal bank, is expanding its strategic collaboration with Anthropic to integrate secure, enterprise-grade AI systems across its global operations.
-
-[Read more](https://www.anthropic.com/news/barclays-scales-claude)
-
-### Claude discovers a novel enzyme system with CRISPR-like repeats
-
-We’re announcing a new life sciences research group and laboratory at Anthropic. This post introduces the team behind this work and shares early results in which Claude discovered a novel enzyme system with properties reminiscent of CRISPR.
-
-[Read more](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system)

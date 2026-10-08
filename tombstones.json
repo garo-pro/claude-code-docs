@@ -963,6 +963,10 @@
       "since": "2026-09-17",
       "reason": "HTTP 404"
     },
+    "https://developers.openai.com/api/reference/resources/beta/subresources/agents/subresources/vaults/methods/update": {
+      "since": "2026-10-08",
+      "reason": "HTTP 404"
+    },
     "https://developers.openai.com/api/reference/resources/beta/subresources/agents/subresources/vaults/subresources/credentials": {
       "since": "2026-09-17",
       "reason": "HTTP 404"

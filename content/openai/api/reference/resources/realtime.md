@@ -3485,7 +3485,7 @@
       `marin`, and `cedar`. You may also provide a custom voice object with
       an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
       during the session once the model has responded with audio at least once.
-      Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+      Custom voices must be created from audio samples.
       We recommend `marin` and `cedar` for best quality.
 
       - `string`
@@ -3801,7 +3801,7 @@
     `marin`, and `cedar`. You may also provide a custom voice object with
     an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
     during the session once the model has responded with audio at least once.
-    Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+    Custom voices must be created from audio samples.
     We recommend `marin` and `cedar` for best quality.
 
     - `string`
@@ -4716,7 +4716,7 @@
             `marin`, and `cedar`. You may also provide a custom voice object with
             an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
             during the session once the model has responded with audio at least once.
-            Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+            Custom voices must be created from audio samples.
             We recommend `marin` and `cedar` for best quality.
 
             - `string`
@@ -5493,7 +5493,7 @@
               `marin`, and `cedar`. You may also provide a custom voice object with
               an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
               during the session once the model has responded with audio at least once.
-              Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+              Custom voices must be created from audio samples.
               We recommend `marin` and `cedar` for best quality.
 
               - `string`
@@ -7389,7 +7389,7 @@
       `marin`, and `cedar`. You may also provide a custom voice object with
       an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
       during the session once the model has responded with audio at least once.
-      Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+      Custom voices must be created from audio samples.
       We recommend `marin` and `cedar` for best quality.
 
       - `string`
@@ -7483,7 +7483,7 @@
         `marin`, and `cedar`. You may also provide a custom voice object with
         an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
         during the session once the model has responded with audio at least once.
-        Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+        Custom voices must be created from audio samples.
         We recommend `marin` and `cedar` for best quality.
 
         - `string`
@@ -12423,7 +12423,7 @@
         `marin`, and `cedar`. You may also provide a custom voice object with
         an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
         during the session once the model has responded with audio at least once.
-        Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+        Custom voices must be created from audio samples.
         We recommend `marin` and `cedar` for best quality.
 
         - `string`
@@ -15705,7 +15705,7 @@
           `marin`, and `cedar`. You may also provide a custom voice object with
           an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
           during the session once the model has responded with audio at least once.
-          Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+          Custom voices must be created from audio samples.
           We recommend `marin` and `cedar` for best quality.
 
           - `string`
@@ -20480,7 +20480,7 @@
             `marin`, and `cedar`. You may also provide a custom voice object with
             an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
             during the session once the model has responded with audio at least once.
-            Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+            Custom voices must be created from audio samples.
             We recommend `marin` and `cedar` for best quality.
 
             - `string`
@@ -22711,7 +22711,7 @@ handle it.
       `marin`, and `cedar`. You may also provide a custom voice object with
       an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
       during the session once the model has responded with audio at least once.
-      Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+      Custom voices must be created from audio samples.
       We recommend `marin` and `cedar` for best quality.
 
       - `string`
@@ -23768,7 +23768,7 @@ Returns the created client secret and the effective session object. The client s
           `marin`, and `cedar`. You may also provide a custom voice object with
           an `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed
           during the session once the model has responded with audio at least once.
-          Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+          Custom voices must be created from audio samples.
           We recommend `marin` and `cedar` for best quality.
 
           - `string`
@@ -27928,7 +27928,7 @@ Returns the created Realtime session object, plus an ephemeral key.
   `marin`, and `cedar`. You may also provide a custom voice object with an
   `id`, for example `{ "id": "voice_1234" }`. Voice cannot be changed during
   the session once the model has responded with audio at least once.
-  Custom voices must be created from audio samples. Voices created from text prompts are supported only in Live.
+  Custom voices must be created from audio samples.
 
   - `string`
 

@@ -21,8 +21,8 @@ Along with the concrete importance of securing frontier AI models against nuclea
 
 *Full details about our NNSA partnership and the safeguards development can be found on our [red.anthropic.com](https://red.anthropic.com/) blog, the home for research from Anthropic’s Frontier Red Team (and occasionally other teams at Anthropic) on what frontier AI models mean for national security. Click [here](http://red.anthropic.com/2025/nuclear-safeguards/) to read more.*
 
+We’re publishing a new version of our Usage Policy. In this post, we summarize the changes we’ve made.
+
+Anthropic is committing $150 million over three years to the Genesis Mission, a federal initiative to accelerate scientific and technological discovery through AI.
+
 We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
-
-Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk already underway.
-
-Barclays, the British universal bank, is expanding its strategic collaboration with Anthropic to integrate secure, enterprise-grade AI systems across its global operations.
