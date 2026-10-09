@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook shows how to implement a question answering system with LangChain, [Deep Lake](https://activeloop.ai/) as a vector store and OpenAI embeddings. We will take the following steps to achieve this:
 
 1. Load a Deep Lake text dataset

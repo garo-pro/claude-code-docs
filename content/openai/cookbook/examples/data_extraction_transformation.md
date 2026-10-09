@@ -2,6 +2,10 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
+
 A lot of enterprise data is unstructured and locked up in difficult-to-use formats, e.g. PDFs, PPT, PNG, that are not optimized for use with LLMs or databases. As a result this type of data tends to be underutilized for analysis and product development, despite it being so valuable. The traditional way of extracting information from unstructured or non-ideal formats has been to use OCR, but OCR struggles with complex layouts and can have limited multilingual support. Moreover, manually applying transforms to data can be cumbersome and timeconsuming. 
 
 The multi-modal capabilities of GPT-4o enable new ways to extract and transform data because of GPT-4o's ability to adapt to different types of documents and to use reasoning for interpreting the content of documents. Here are some reasons why you would choose GPT-4o for your extraction and transformation workflows over traditional methods. 

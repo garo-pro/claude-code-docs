@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ### Finding your next book
 
 In this notebook we will be going over generating embeddings of book descriptions with OpenAI and using those embeddings within Zilliz to find relevant books. The dataset in this example is sourced from HuggingFace datasets, and contains a little over 1 million title-description pairs.

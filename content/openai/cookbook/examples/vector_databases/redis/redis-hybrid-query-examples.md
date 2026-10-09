@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook provides an introduction to using Redis as a vector database with OpenAI embeddings and running hybrid queries that combine VSS and lexical search using Redis Query and Search capability. Redis is a scalable, real-time database that can be used as a vector database when using the [RediSearch Module](https://oss.redislabs.com/redisearch/). The Redis Query and Search capability allows you to index and search for vectors in Redis. This notebook will show you how to use the Redis Query and Search to index and search for vectors created by using the OpenAI API and stored in Redis.
 
 Hybrid queries combine vector similarity with traditional Redis Query and Search filtering capabilities on GEO, NUMERIC, TAG or TEXT data simplifying application code. A common example of a hybrid query in an e-commerce use case is to find items visually similar to a given query image limited to items available in a GEO location and within a price range.

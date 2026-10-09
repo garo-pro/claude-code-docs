@@ -50,4 +50,4 @@ We’re publishing a new version of our Usage Policy. In this post, we summarize
 
 Anthropic is committing $150 million over three years to the Genesis Mission, a federal initiative to accelerate scientific and technological discovery through AI.
 
-We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching the Anthropic Cyber Mission, a long-term commitment to securing the systems everyone depends on.

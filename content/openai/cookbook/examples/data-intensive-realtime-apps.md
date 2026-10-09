@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This cookbook serves as a practical guide to help AI Engineers maximize the effectiveness of OpenAI's Realtime API, specifically when dealing with data-intensive function calls. We'll focus on scenarios common in speech-to-speech agents, where vast amounts of data must be handled smoothly and efficiently.
 
 This post won't cover the basics of setting up a Realtime API solution. Instead, you'll gain clear insights and actionable strategies to enhance the performance and reliability of your real-time conversational agents. It addresses specific challenges unique to handling large amounts of data in real-time conversational contexts.

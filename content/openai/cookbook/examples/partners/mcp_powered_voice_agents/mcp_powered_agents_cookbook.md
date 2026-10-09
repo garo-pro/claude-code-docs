@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ### Agents
 Agents are becoming the de-facto framework in which we orchestrate various, often specialized, LLMs applications to work with one another. Many practical applications require the use of external tools to create a complex workflow for LLM-based agents.
 

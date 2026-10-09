@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Steering Text-to-Speech for more dynamic audio generation
 
 Our traditional [TTS APIs](https://platform.openai.com/docs/guides/text-to-speech) don't have the ability to steer the voice of the generated audio. For example, if you wanted to convert a paragraph of text to audio, you would not be able to give any specific instructions on audio generation.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook serves as a tool to preprocess and analyze the chat dataset used for fine-tuning a chat model. 
 It checks for format errors, provides basic statistics, and estimates token counts for fine-tuning costs.
 The method shown here corresponds to the [current fine-tuning method](https://platform.openai.com/docs/guides/fine-tuning) for gpt-3.5-turbo.

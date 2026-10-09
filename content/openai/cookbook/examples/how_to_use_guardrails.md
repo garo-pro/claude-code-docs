@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this notebook we share examples of how to implement guardrails for your LLM applications. A guardrail is a generic term for **detective controls** that aim to steer your application. Greater steerability is a common requirement given the inherent randomness of LLMs, and so creating effective guardrails has become one of the most common areas of performance optimization when pushing an LLM from prototype to production. 
 
 Guardrails are incredibly [diverse](https://github.com/NVIDIA/NeMo-Guardrails/blob/main/examples/README.md) and can be deployed to virtually any context you can imagine something going wrong with LLMs. This notebook aims to give simple examples that can be extended to meet your unique use case, as well as outlining the trade-offs to consider when deciding whether to implement a guardrail, and how to do it.

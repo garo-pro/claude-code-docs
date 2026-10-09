@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This cookbook demonstrates how to use OpenAI's Evals framework for image-based tasks. Leveraging the Evals API, we will grade model-generated responses to an image and prompt by using **sampling** to generate model responses and **model grading** (LLM as a Judge) to score the model responses against the image, prompt, and reference answer.
 
 In this example, we will evaluate how well our model can:

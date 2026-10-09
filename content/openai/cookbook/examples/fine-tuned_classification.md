@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 We will fine-tune a `babbage-002` classifier (replacement for the `ada` models) to distinguish between the two sports: Baseball and Hockey.
 
 ```python

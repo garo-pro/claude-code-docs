@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Overview
 The best model for you depends on your business goal. Many startups choose large language models (LLMs) based on offline evaluations and public benchmarks. However, a model that achieves high scores on a benchmark may not necessarily lead your users to pay, subscribe, or continue using your product. Models that look strong on paper can underperform when measured against actual business outcomes.
 

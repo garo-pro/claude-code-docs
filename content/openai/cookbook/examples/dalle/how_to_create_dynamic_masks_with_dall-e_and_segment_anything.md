@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Segment Anything is a model from Meta that can be used to select portions of images. Combined with DALL·E's ability to inpaint specified portions of images, you can use Segment Anything to easily select any part of an image you'd like to alter.
 
 In this notebook, we'll use these tools to become fashion designers and dynamically replace our digital models' outfits with tailored, original creations. The notebook follows this flow:

@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 이 노트북은 OpenAI의  **gpt-oss (open‑weight)** 모델을 **한국 뉴스 문체 + 최신 대화체**로 세밀 튜닝하는 방법을
 한국어/영어 **이중 언어**로 제공합니다.  
 This notebook shows how to fine‑tune OpenAI's **gpt-oss (open‑weight)** models for **Korean news style + modern chat tone**, in **Korean & English**.

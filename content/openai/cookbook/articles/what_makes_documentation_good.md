@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Documentation puts useful information inside other people’s heads. Follow these tips to write better documentation.
 
 ### Make docs easy to skim

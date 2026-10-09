@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 When developing customer service solutions, one of the initial steps involves transforming knowledge base articles into a set of routines that an LLM can comprehend and follow. A routine, in this context, refers to a set of step-by-step instructions designed specifically for the LLM to execute efficiently. Each routine is carefully structured so that a step corresponds to a clear action. Actions can include responding to a user, triggering a function call, or retrieving additional relevant knowledge.
 
 Most internal knowledge base articles are complex and structured for human interpretation. They often include intricate diagrams, multi-step processes, and decision trees that pose challenges for LLM-based solutions to reason through in a meaningful way. By breaking down these documents into routines, each instruction can be simplified and formatted in a way that guides the LLM through a series of small, manageable tasks. This granular approach reduces ambiguity, allowing the LLM to process the information methodically and reducing the risk of hallucination or deviation from the expected path.

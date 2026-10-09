@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Using embeddings
 
 This notebook contains some helpful snippets you can use to embed text with the `text-embedding-3-small` model via the OpenAI API.

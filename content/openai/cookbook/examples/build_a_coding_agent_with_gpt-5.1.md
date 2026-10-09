@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 GPT-5.1 is exceptionally strong at coding, and with the new code-editing and command-execution tools available in the [Responses API](https://platform.openai.com/docs/api-reference/responses), it’s now easier than ever to build coding agents that can work across full codebases and iterate quickly.
 
 In this guide, we’ll use the [Agents SDK](https://openai.github.io/openai-agents-python/) to build a **coding agent that can scaffold a brand-new app from a prompt and refine it through user feedback**. Our agent will be equipped with the following tools:

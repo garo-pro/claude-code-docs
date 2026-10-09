@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## 1. Overview
 Build an end‑to‑end **voice bot** that listens to your mic, speaks back in real time and **summarises long conversations** so quality never drops.
 

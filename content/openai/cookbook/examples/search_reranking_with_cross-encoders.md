@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook takes you through examples of using a cross-encoder to re-rank search results.
 
 This is a common use case with our customers, where you've implemented semantic search using embeddings (produced using a [bi-encoder](https://www.sbert.net/examples/applications/retrieve_rerank/README.html#retrieval-bi-encoder)) but the results are not as accurate as your use case requires. A possible cause is that there is some business rule you can use to rerank the documents such as how recent or how popular a document is. 

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 GPT excels at answering questions, but only on topics it remembers from its training data.
 
 What should you do if you want GPT to answer questions about unfamiliar topics? E.g.,

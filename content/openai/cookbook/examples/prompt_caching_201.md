@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 > **Note:** This guide applies only to models before GPT-5.6. For GPT-5.6 and later, see the [Prompt Caching guide](https://developers.openai.com/api/docs/guides/prompt-caching).
 
 A practical guide to prompt caching: fundamentals, performance impact, measurement, and optimization strategies.

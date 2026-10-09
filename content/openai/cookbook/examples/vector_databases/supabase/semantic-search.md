@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The purpose of this guide is to demonstrate how to store OpenAI embeddings in [Supabase Vector](https://supabase.com/docs/guides/ai) (Postgres + pgvector) for the purposes of semantic search.
 
 [Supabase](https://supabase.com/docs) is an open-source Firebase alternative built on top of [Postgres](https://en.wikipedia.org/wiki/PostgreSQL), a production-grade SQL database. Since Supabase Vector is built on [pgvector](https://github.com/pgvector/pgvector), you can store your embeddings within the same database that holds the rest of your application data. When combined with pgvector's indexing algorithms, vector search remains [fast at large scales](https://supabase.com/blog/increase-performance-pgvector-hnsw).

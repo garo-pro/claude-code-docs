@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook builds on the concepts in the [argument generation](https://developers.openai.com/cookbook/examples/How_to_call_functions_with_chat_models.ipynb) notebook, by creating an agent with access to a knowledge base and two functions that it can call based on the user requirement.
 
 We'll create an agent that uses data from arXiv to answer questions about academic subjects. It has two functions at its disposal:

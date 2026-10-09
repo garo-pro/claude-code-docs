@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 OpenAI's audio transcription API has an optional parameter called `prompt`.
 
 The prompt is intended to help stitch together multiple audio segments. By submitting the prior segment's transcript via the prompt, the Whisper model can use that context to better understand the speech and maintain a consistent writing style.

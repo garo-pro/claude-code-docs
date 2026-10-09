@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+ 
 *This guide is for developers and ML practitioners who have some experience with OpenAIʼs APIs and wish to use their fine-tuned models for research or other appropriate uses. OpenAI’s services are not intended for the personalized treatment or diagnosis of any medical condition and are subject to our [applicable terms](https://openai.com/policies/).*
  
 This guide discusses fine-tuning methods supported by OpenAI, specifically highlighting what each method is best for and not best for, to help you identify the most suitable technique for your use case. It then provides an in-depth look at one particular method — Direct Preference Optimization (DPO) — and provides links to existing guides for the other techniques.

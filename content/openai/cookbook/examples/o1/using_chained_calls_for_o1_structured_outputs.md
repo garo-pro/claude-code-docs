@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The initially released versions (September 2024) of [o1](https://openai.com/index/introducing-openai-o1-preview/) reasoning models have advanced capabilities but do not have [structured outputs](https://platform.openai.com/docs/guides/structured-outputs/examples) support. 
 
 This means that requests with o1 don't have reliable type-safety and rely on the prompt itself to return a useful JSON. 

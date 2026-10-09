@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This section of the OpenAI Cookbook showcases many of the vector databases available to support your semantic search use cases.
 
 Vector databases can be a great accompaniment for knowledge retrieval applications, which reduce hallucinations by providing the LLM with the relevant context to answer questions.

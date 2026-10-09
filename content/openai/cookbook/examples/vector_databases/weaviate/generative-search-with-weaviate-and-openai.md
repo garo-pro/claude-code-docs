@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook is prepared for a scenario where:
 * Your data is already in Weaviate
 * You want to use Weaviate with the Generative OpenAI module ([generative-openai](https://weaviate.io/developers/weaviate/modules/reader-generator-modules/generative-openai)).

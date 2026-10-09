@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook guides you step-by-step through answering questions about a collection of data, using [Chroma](https://trychroma.com), an open-source embeddings database, along with OpenAI's [text embeddings](https://platform.openai.com/docs/guides/embeddings/use-cases) and [chat completion](https://platform.openai.com/docs/guides/chat) API's. 
 
 Additionally, this notebook demonstrates some of the tradeoffs in making a question answering system more robust. As we shall see, *simple querying doesn't always create the best results*! 

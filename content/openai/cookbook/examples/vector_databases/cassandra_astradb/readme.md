@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The demos in this directory show how to use the Vector
 Search capabilities available today in **DataStax Astra DB**, a serverless
 Database-as-a-Service built on Apache Cassandra®.

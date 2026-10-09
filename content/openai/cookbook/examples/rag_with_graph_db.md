@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook shows how to use LLMs in combination with [Neo4j](https://neo4j.com/), a graph database, to perform Retrieval Augmented Generation (RAG).
 
 ### Why use RAG?

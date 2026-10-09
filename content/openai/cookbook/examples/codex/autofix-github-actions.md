@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 > **Archived example — use the current CI guidance.** The workflow below exposes an API key to the whole job and combines repository-controlled execution with repository write permissions. Do not copy that credential and permission layout. Use the [current autofix workflow](https://learn.chatgpt.com/docs/non-interactive-mode#example-autofix-ci-failures-in-github-actions), which separates patch generation from pull request publication, and the [Codex GitHub Action security checklist](https://learn.chatgpt.com/docs/github-action#security-checklist).
 
 ## Purpose of this cookbook

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ## Introduction
 
 At DevDay 2025 we launched [AgentKit](https://openai.com/index/introducing-agentkit/), a complete set of tools for developers and enterprises to build, deploy, and optimize agents. AgentKit is a set of interconnected building blocks:

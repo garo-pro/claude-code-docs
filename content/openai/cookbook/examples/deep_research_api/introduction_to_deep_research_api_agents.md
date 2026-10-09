@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This cookbook demonstrates how to build Agentic research workflows using the OpenAI Deep Research API and the OpenAI [Agents SDK](https://openai.github.io/openai-agents-python/). It is a continuation of [a fundamentals cookbook](https://developers.openai.com/cookbook/examples/deep_research_api/introduction_to_deep_research_api), if you have not already familiarized yourself with that content, please consider doing so.
 
 You’ll learn how to orchestrate single and multi-agent pipelines, enrich user queries to maximize output quality, stream research progress, integrate web search and [MCP for internal file search](https://developers.openai.com/cookbook/examples/deep_research_api/how_to_build_a_deep_research_mcp_server/readme), and architect a robust research application.

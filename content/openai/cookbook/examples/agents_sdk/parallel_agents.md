@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Why would you want to do this?
 In many production workflows you must answer several independent questions about the same piece of content.
 Doing those analyses one-by-one increases latency and can increase total cost if any step fails and forces a retry.

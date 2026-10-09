@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Elasticsearch is a popular search/analytics engine and [vector database](https://www.elastic.co/elasticsearch/vector-database).
 Elasticsearch offers an efficient way to create, store, and search vector embeddings at scale.
 

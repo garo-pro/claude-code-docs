@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Visualizing Open AI Embeddings in Atlas
 
 In this example, we will upload food review embeddings to [Atlas](https://atlas.nomic.ai) to visualize the embeddings.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The `ChatCompletion` endpoint now includes the ability to specify whether a tool **must** be called every time, by adding `tool_choice='required'` as a parameter. 
 
 This adds an element of determinism to how you build your wrapping application, as you can count on a tool being provided with every call. We'll demonstrate here how this can be useful for a contained flow like customer service, where having the ability to define specific exit points gives more control.

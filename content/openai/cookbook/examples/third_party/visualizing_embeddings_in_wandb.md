@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Visualizing embeddings in W&B
 
 We will upload the data to [Weights & Biases](http://wandb.ai) and use an [Embedding Projector](https://docs.wandb.ai/ref/app/features/panels/weave/embedding-projector) to visualize the embeddings using common dimension reduction algorithms like PCA, UMAP, and t-SNE. The dataset is created in the [Get_embeddings_from_dataset Notebook](https://developers.openai.com/cookbook/examples/Get_embeddings_from_dataset.ipynb).

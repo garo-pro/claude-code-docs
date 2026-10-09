@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this notebook we delve into the evaluation techniques for abstractive summarization tasks using a simple example. We explore traditional evaluation methods like [ROUGE](https://aclanthology.org/W04-1013/) and [BERTScore](https://arxiv.org/abs/1904.09675), in addition to showcasing a more novel approach using LLMs as evaluators.
 
 Evaluating the quality of summaries is a time-consuming process, as it involves different quality metrics such as coherence, conciseness, readability and content. Traditional automatic evaluation metrics such as `ROUGE`, `BERTScore`, and others are concrete and reliable, but they may not correlate well with the actual quality of summaries. They show relatively low correlation with human judgments, especially for open-ended generation tasks ([Liu et al., 2023](https://arxiv.org/pdf/2303.16634.pdf)). There's a growing need to lean on human evaluations, user feedback, or model-based metrics while being vigilant about potential biases. While human judgment provides invaluable insights, it is often not scalable and can be cost-prohibitive.

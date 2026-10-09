@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Optimizing Retrieval-Augmented Generation using GPT-4o Vision Modality
 
 Implementing Retrieval-Augmented Generation (RAG) presents unique challenges when working with documents rich in images, graphics and tables. Traditional RAG models excel with textual data but often falter when visual elements play a crucial role in conveying information. In this cookbook, we bridge that gap by leveraging the vision modality to extract and interpret visual content, ensuring that the generated responses are as informative and accurate as possible.

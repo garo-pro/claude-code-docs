@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The new Batch API allows to **create async batch jobs for a lower price and with higher rate limits**.
 
 Batches will be completed within 24h, but may be processed sooner depending on global usage. 

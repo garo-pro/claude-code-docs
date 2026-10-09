@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This cookbook demonstrates how to use OpenAI's Evals framework for audio-based tasks. Leveraging the Evals API, we will grade model-generated responses to an audio message and prompt by using **sampling** to generate model responses and **model grading** to score the model responses against the output audio and reference answer. Note that grading will be on audio outputs from the sampled response.
 
 Before audio support was added, to evaluate audio conversations, they first needed to be transcribed to text. Now you can use the original audio and get samples from the model in audio as well. This more accurately represents workflows such as a customer support scenario where both the user and the agent are using audio. For grading, we will use an audio model to grade the audio response with a model grader. We could alternatively, or in combination, use the text transcript from the sampled audio and leverage the existing suite of text graders.

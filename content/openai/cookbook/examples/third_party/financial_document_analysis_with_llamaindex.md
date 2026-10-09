@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this example notebook, we showcase how to perform financial analysis over [**10-K**](https://en.wikipedia.org/wiki/Form_10-K) documents with the [**LlamaIndex**](https://gpt-index.readthedocs.io/en/latest/) framework with just a few lines of code.
 
 ## Notebook Outline

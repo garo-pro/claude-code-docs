@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ## Introduction
 
 This particular GPT Action provides an overview of how to build an **AWS Lambda** function. This documentation helps a user set up an OAuth-protected AWS Function to connect to a GPT Action, and to a sample application. This example uses AWS SAM (Serverless Application Model) in this example to set-up the AWS stack.

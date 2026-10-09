@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this cookbook, you'll learn how to use GPT Image, our new large language model with image generation capabilities.
 
 This model has world knowledge and can generate images leveraging this broad understanding of the world.

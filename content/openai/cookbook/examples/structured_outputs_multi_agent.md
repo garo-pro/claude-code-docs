@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this cookbook, we will explore how to use Structured Outputs to build multi-agent systems.
 
 Structured Outputs is a new capability that builds upon JSON mode and function calling to enforce a strict schema in a model output.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 DALL·E-3 is the latest version of our DALL-E text-to-image generation models. As the current state of the art in text-to-image generation, DALL·E is capable of generating high-quality images across a wide variety of domains. If you're interested in more technical details of how DALL·E-3 was built, you can read more about in our [research paper](https://cdn.openai.com/papers/dall-e-3.pdf). I'll be going over some of the new features and capabilities of DALL·E-3 in this article, as well as some examples of what new products you can build with the API.
 
 As a reminder, the Image generation API hasn't changed and maintains the same endpoints and formatting as with DALL·E-2. If you're looking for a guide on how to use the Image API, see [the Cookbook article](https://developers.openai.com/cookbook/examples/dalle/image_generations_edits_and_variations_with_dall-e) on the subject.

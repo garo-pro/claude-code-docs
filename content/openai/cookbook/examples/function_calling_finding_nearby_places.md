@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook is centered around the integration of the Google Places API and custom user profiles to enhance location-based searches. Our approach involves using the Google Places API in combination with user preferences, aiming to make location discovery more personal and relevant. Please note that while we focus on the Google Places API in this instance, there are numerous other APIs you could explore and apply in a similar fashion.
 
 We'll explore the application of three main components:

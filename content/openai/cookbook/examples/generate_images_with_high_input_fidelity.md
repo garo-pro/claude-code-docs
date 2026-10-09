@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This cookbook shows how you can leverage the `input_fidelity` parameter, available in the Image API and the Responses image generation tool, to preserve distinctive features from the input.
 
 Setting `input_fidelity="high"` is especially useful when editing images with faces, logos, or any other details that require high fidelity in the output.

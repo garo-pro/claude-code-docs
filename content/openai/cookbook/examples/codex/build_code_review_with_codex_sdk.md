@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 > **Archived example — review the current CI guidance before using these workflows.** The GitHub example below exposes API and repository tokens to the whole job and combines review with pull request write permissions. Do not copy that credential and permission layout; a read-only sandbox alone does not protect secrets. Use the [current Codex GitHub Action workflow and security checklist](https://learn.chatgpt.com/docs/github-action), which separate review from posting feedback. For other CI systems, follow the [automation authentication guidance](https://learn.chatgpt.com/docs/non-interactive-mode#authenticate-in-automation).
 
 With [Code Review](https://chatgpt.com/codex/settings/code-review) in Codex Cloud, you can connect your team's cloud hosted GitHub repository to Codex and receive automated code reviews on every PR. But what if your code is hosted on-prem, or you don't have GitHub as an SCM?

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 **TLDR**: Developers can now specify `seed` parameter in the Chat Completion request to receive (mostly) consistent outputs. To help you keep track of these changes, we expose the `system_fingerprint` field. If this value is different, you may see different outputs due to changes we've made on our systems. Please note that this feature is in beta and only currently supported for `gpt-4-1106-preview` and `gpt-3.5-turbo-1106`.
 
 ### Context

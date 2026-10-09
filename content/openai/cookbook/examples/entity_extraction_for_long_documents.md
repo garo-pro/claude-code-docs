@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 GPT-3 can help us extract key figures, dates or other bits of important content from documents that are too big to fit into the context window. One approach for solving this is to chunk the document up and process each chunk separately, before combining into one list of answers. 
 
 In this notebook we'll run through this approach:

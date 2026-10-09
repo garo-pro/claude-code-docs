@@ -2,6 +2,10 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
+
 Multimodal RAG integrates additional modalities into traditional text-based RAG, enhancing LLMs' question-answering by providing extra context and grounding textual data for improved understanding.
 
 Adopting the approach from the [clothing matchmaker cookbook](https://developers.openai.com/cookbook/examples/how_to_combine_gpt4v_with_rag_outfit_assistant), we directly embed images for similarity search, bypassing the lossy process of text captioning, to boost retrieval accuracy.

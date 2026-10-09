@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Let's say you're an AI lead at a consumer tech company. You have the vision of deploying a single entry point digital voice assistant with the ability to help users with any query, regardless of whether they want to take action on their account, find product information, or receive real-time guidance.
 
 However, turning this vision into reality can be extremely difficult - it requires building and testing the capability to handle each individual use case through text first, integrating access to the wide range of tools and systems they require, and somehow orchestrating them into a coherent experience. Then, once you’ve achieved a satisfactory level of quality (and even evaluating this can be a struggle), you face the daunting task of refactoring the entire workflow for voice interaction.

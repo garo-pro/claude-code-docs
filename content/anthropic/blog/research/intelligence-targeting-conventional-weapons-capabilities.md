@@ -115,8 +115,8 @@ As model capabilities and adoption advance, the scale of this risk does as well.
 
 Finally, as model progress continues, we expect more aspects of military and intelligence work to be dramatically accelerated by AI. For instance, drones are not the only platform on which it is valuable to have better algorithms for sensing and responding to the environment. The same is true in space and undersea warfare. If models become more innovative researchers in these domains, they could be the source of geopolitical disruption. Enumerating these possibilities and developing tests to provide early warning will be a crucial area of work for us. The link between AI and national security goes far beyond cyber and bio, and it is not limited to proprietary models developed in the US.
 
+Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+
+We’re making available OSS Scanner, an opt-in vulnerability scanner for the open-source ecosystem that’s informed by our experience using Claude to find vulnerabilities during Project Glasswing.
+
 Guest author Prof. Matthew Schwartz describes what happened when he stopped fighting Claude and allowed Claude to find “Claude-shaped” problems: ones best suited to the capabilities of the current generation of LLM tools. This led him to build BootLoops, a toolkit for exact calculations in quantitative science, which he has been applying across scientific fields alongside experts.
-
-We built an index of how well today’s robots can perform US job tasks. Robots can already do three-quarters of physical tasks, mostly in limited settings, but are cost-competitive for just 0.3% of them.
-
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.

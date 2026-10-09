@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 This notebook provides a step-by-step guide for using Pinecone as a vector database to store OpenAI embeddings. As an example, it demonstrates how to integrate this setup with Retool to create a REST endpoint, enabling seamless interaction with ChatGPT as an action. However, Retool is just one of many approaches available for connecting your Pinecone database to ChatGPT.
 
 [Pinecone](https://www.pinecone.io/) is a fully managed vector database designed for storing, indexing, and querying large-scale vector embeddings. It enables fast and efficient similarity searches, making it ideal for AI-powered applications like recommendation systems, semantic search, and natural language processing.

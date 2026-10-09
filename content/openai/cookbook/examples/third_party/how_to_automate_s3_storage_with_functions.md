@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This code demonstrates how to interact with ChatGPT functions to perform tasks related to Amazon S3 buckets. The notebook covers S3 bucket key functionalities such as running simple listing commands, searching for a specific file in all buckets, uploading a file to a bucket, and downloading a file from a bucket. The OpenAI Chat API understands the user instructions, generates the natural language responses, and extracts appropriate function calls based on the user's input.
 
 **Requirements**:

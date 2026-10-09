@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This is a minimal example of a Deep Research style MCP server for searching and fetching files from the OpenAI file storage service.
 
 For a reference of _how_ to call this service from the Responses API, with Deep Research see [this cookbook](https://developers.openai.com/cookbook/examples/deep_research_api/introduction_to_deep_research_api). To see how to call the MCP server with the Agents SDK, checkout [this cookbook](https://developers.openai.com/cookbook/examples/deep_research_api/how_to_use_deep_research_api_agents)!

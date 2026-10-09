@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 <img src="http://wandb.me/logo-im-png" width="400" alt="Weights & Biases" />
 
 <!--- @wandbcode{weave_openai_client_qs} -->

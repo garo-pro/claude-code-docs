@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Crafting effective prompts is a critical skill when working with AI models. Even experienced users can inadvertently introduce contradictions, ambiguities, or inconsistencies that lead to suboptimal results. The system demonstrated here helps identify and fix common issues, resulting in more reliable and effective prompts.
 
 The optimization process uses a multi-agent approach with specialized AI agents collaborating to analyze and rewrite prompts. The system automatically identifies and addresses several types of common issues:

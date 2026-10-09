@@ -36,7 +36,7 @@ Schema name: `SessionEventAgentSessionEnvironmentReady`
 
       The error type.
 
-  - `status: "pending" or "ready" or "connected" or 2 more`
+  - `status: "pending" or "ready" or "connected" or 4 more`
 
     The environment's connection status.
 
@@ -55,6 +55,14 @@ Schema name: `SessionEventAgentSessionEnvironmentReady`
     - `"disconnected"`
 
       The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
 
     - `"failed"`
 
@@ -87,6 +95,224 @@ Schema name: `SessionEventAgentSessionEnvironmentReady`
 ```json
 {
   "type": "agent.session.environment.ready",
+  "event_id": "event_id",
+  "session_id": "session_id",
+  "turn_id": "turn_id",
+  "environment": {
+    "id": "id",
+    "type": "type",
+    "status": "pending",
+    "error": {
+      "type": "type",
+      "code": "code",
+      "message": "message"
+    }
+  }
+}
+```
+
+<a id="agent.session.environment.suspended"></a>
+
+## agent.session.environment.suspended
+
+Emitted after an idle hosted session environment is checkpointed and stopped.
+
+### Schema
+
+Schema name: `SessionEventAgentSessionEnvironmentSuspended`
+
+- `environment: AgentSessionEnvironmentState`
+
+  The current environment state.
+
+  - `id: string`
+
+    The public ID of the environment.
+
+  - `error: object { code, message, type }  or null`
+
+    The error reported while preparing the environment, if any.
+
+    - `code: string`
+
+      A machine-readable error code.
+
+    - `message: string`
+
+      A human-readable error message.
+
+    - `type: string`
+
+      The error type.
+
+  - `status: "pending" or "ready" or "connected" or 4 more`
+
+    The environment's connection status.
+
+    - `"pending"`
+
+      The environment is being prepared.
+
+    - `"ready"`
+
+      The environment is ready to connect.
+
+    - `"connected"`
+
+      The environment is connected.
+
+    - `"disconnected"`
+
+      The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
+
+    - `"failed"`
+
+      The environment failed to connect.
+
+  - `type: string`
+
+    The environment type.
+
+- `event_id: string`
+
+  The unique ID of the event.
+
+- `session_id: string`
+
+  The ID of the session associated with the event.
+
+- `turn_id: string or null`
+
+  The ID of the turn associated with the event, when applicable.
+
+- `type: "agent.session.environment.suspended"`
+
+  The type of the object. Always `agent.session.environment.suspended`.
+
+  - `"agent.session.environment.suspended"`
+
+### Example
+
+```json
+{
+  "type": "agent.session.environment.suspended",
+  "event_id": "event_id",
+  "session_id": "session_id",
+  "turn_id": "turn_id",
+  "environment": {
+    "id": "id",
+    "type": "type",
+    "status": "pending",
+    "error": {
+      "type": "type",
+      "code": "code",
+      "message": "message"
+    }
+  }
+}
+```
+
+<a id="agent.session.environment.expired"></a>
+
+## agent.session.environment.expired
+
+Emitted after a suspended hosted session environment and its checkpoint expire.
+
+### Schema
+
+Schema name: `SessionEventAgentSessionEnvironmentExpired`
+
+- `environment: AgentSessionEnvironmentState`
+
+  The current environment state.
+
+  - `id: string`
+
+    The public ID of the environment.
+
+  - `error: object { code, message, type }  or null`
+
+    The error reported while preparing the environment, if any.
+
+    - `code: string`
+
+      A machine-readable error code.
+
+    - `message: string`
+
+      A human-readable error message.
+
+    - `type: string`
+
+      The error type.
+
+  - `status: "pending" or "ready" or "connected" or 4 more`
+
+    The environment's connection status.
+
+    - `"pending"`
+
+      The environment is being prepared.
+
+    - `"ready"`
+
+      The environment is ready to connect.
+
+    - `"connected"`
+
+      The environment is connected.
+
+    - `"disconnected"`
+
+      The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
+
+    - `"failed"`
+
+      The environment failed to connect.
+
+  - `type: string`
+
+    The environment type.
+
+- `event_id: string`
+
+  The unique ID of the event.
+
+- `session_id: string`
+
+  The ID of the session associated with the event.
+
+- `turn_id: string or null`
+
+  The ID of the turn associated with the event, when applicable.
+
+- `type: "agent.session.environment.expired"`
+
+  The type of the object. Always `agent.session.environment.expired`.
+
+  - `"agent.session.environment.expired"`
+
+### Example
+
+```json
+{
+  "type": "agent.session.environment.expired",
   "event_id": "event_id",
   "session_id": "session_id",
   "turn_id": "turn_id",
@@ -806,7 +1032,7 @@ Schema name: `SessionEventAgentSessionCreated`
 
     - `"agent.session"`
 
-  - `required_actions: array of object { request, request_id, turn_id, type }  or object { arguments, call_id, name, 2 more }  or object { environment_id, type }`
+  - `required_actions: array of ComputerUseApprovalRequest { request, request_id, turn_id, type }  or FunctionCall { arguments, call_id, name, 2 more }  or EnvironmentConnection { environment_id, type }`
 
     Actions that must be completed before the session can continue.
 
@@ -814,7 +1040,7 @@ Schema name: `SessionEventAgentSessionCreated`
 
       Respond to a computer-use request.
 
-      - `request: object { credential_origin, fields, options, 2 more }  or object { origin, reason, type }`
+      - `request: BrowserAuthentication { credential_origin, fields, options, 2 more }  or BrowserOriginAccess { origin, reason, type }`
 
         The information needed to render the request.
 
@@ -2994,7 +3220,7 @@ Schema name: `SessionEventAgentSessionTurnItemAdded`
 
       The registered request answered by this item.
 
-    - `response: object { action, selected_option, type }  or object { action, type }`
+    - `response: Submit { action, selected_option, type }  or Cancel { action, type }`
 
       The admitted response, without submitted credential values.
 
@@ -4022,7 +4248,7 @@ Schema name: `SessionEventAgentSessionIdle`
 
     - `"agent.session"`
 
-  - `required_actions: array of object { request, request_id, turn_id, type }  or object { arguments, call_id, name, 2 more }  or object { environment_id, type }`
+  - `required_actions: array of ComputerUseApprovalRequest { request, request_id, turn_id, type }  or FunctionCall { arguments, call_id, name, 2 more }  or EnvironmentConnection { environment_id, type }`
 
     Actions that must be completed before the session can continue.
 
@@ -4030,7 +4256,7 @@ Schema name: `SessionEventAgentSessionIdle`
 
       Respond to a computer-use request.
 
-      - `request: object { credential_origin, fields, options, 2 more }  or object { origin, reason, type }`
+      - `request: BrowserAuthentication { credential_origin, fields, options, 2 more }  or BrowserOriginAccess { origin, reason, type }`
 
         The information needed to render the request.
 
@@ -4936,7 +5162,7 @@ Schema name: `SessionEventAgentSessionInProgress`
 
     - `"agent.session"`
 
-  - `required_actions: array of object { request, request_id, turn_id, type }  or object { arguments, call_id, name, 2 more }  or object { environment_id, type }`
+  - `required_actions: array of ComputerUseApprovalRequest { request, request_id, turn_id, type }  or FunctionCall { arguments, call_id, name, 2 more }  or EnvironmentConnection { environment_id, type }`
 
     Actions that must be completed before the session can continue.
 
@@ -4944,7 +5170,7 @@ Schema name: `SessionEventAgentSessionInProgress`
 
       Respond to a computer-use request.
 
-      - `request: object { credential_origin, fields, options, 2 more }  or object { origin, reason, type }`
+      - `request: BrowserAuthentication { credential_origin, fields, options, 2 more }  or BrowserOriginAccess { origin, reason, type }`
 
         The information needed to render the request.
 
@@ -5850,7 +6076,7 @@ Schema name: `SessionEventAgentSessionRequiresAction`
 
     - `"agent.session"`
 
-  - `required_actions: array of object { request, request_id, turn_id, type }  or object { arguments, call_id, name, 2 more }  or object { environment_id, type }`
+  - `required_actions: array of ComputerUseApprovalRequest { request, request_id, turn_id, type }  or FunctionCall { arguments, call_id, name, 2 more }  or EnvironmentConnection { environment_id, type }`
 
     Actions that must be completed before the session can continue.
 
@@ -5858,7 +6084,7 @@ Schema name: `SessionEventAgentSessionRequiresAction`
 
       Respond to a computer-use request.
 
-      - `request: object { credential_origin, fields, options, 2 more }  or object { origin, reason, type }`
+      - `request: BrowserAuthentication { credential_origin, fields, options, 2 more }  or BrowserOriginAccess { origin, reason, type }`
 
         The information needed to render the request.
 
@@ -6764,7 +6990,7 @@ Schema name: `SessionEventAgentSessionFailed`
 
     - `"agent.session"`
 
-  - `required_actions: array of object { request, request_id, turn_id, type }  or object { arguments, call_id, name, 2 more }  or object { environment_id, type }`
+  - `required_actions: array of ComputerUseApprovalRequest { request, request_id, turn_id, type }  or FunctionCall { arguments, call_id, name, 2 more }  or EnvironmentConnection { environment_id, type }`
 
     Actions that must be completed before the session can continue.
 
@@ -6772,7 +6998,7 @@ Schema name: `SessionEventAgentSessionFailed`
 
       Respond to a computer-use request.
 
-      - `request: object { credential_origin, fields, options, 2 more }  or object { origin, reason, type }`
+      - `request: BrowserAuthentication { credential_origin, fields, options, 2 more }  or BrowserOriginAccess { origin, reason, type }`
 
         The information needed to render the request.
 
@@ -7112,7 +7338,7 @@ Schema name: `SessionEventAgentSessionEnvironmentPending`
 
       The error type.
 
-  - `status: "pending" or "ready" or "connected" or 2 more`
+  - `status: "pending" or "ready" or "connected" or 4 more`
 
     The environment's connection status.
 
@@ -7131,6 +7357,14 @@ Schema name: `SessionEventAgentSessionEnvironmentPending`
     - `"disconnected"`
 
       The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
 
     - `"failed"`
 
@@ -7213,7 +7447,7 @@ Schema name: `SessionEventAgentSessionEnvironmentConnected`
 
       The error type.
 
-  - `status: "pending" or "ready" or "connected" or 2 more`
+  - `status: "pending" or "ready" or "connected" or 4 more`
 
     The environment's connection status.
 
@@ -7232,6 +7466,14 @@ Schema name: `SessionEventAgentSessionEnvironmentConnected`
     - `"disconnected"`
 
       The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
 
     - `"failed"`
 
@@ -7314,7 +7556,7 @@ Schema name: `SessionEventAgentSessionEnvironmentDisconnected`
 
       The error type.
 
-  - `status: "pending" or "ready" or "connected" or 2 more`
+  - `status: "pending" or "ready" or "connected" or 4 more`
 
     The environment's connection status.
 
@@ -7333,6 +7575,14 @@ Schema name: `SessionEventAgentSessionEnvironmentDisconnected`
     - `"disconnected"`
 
       The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
 
     - `"failed"`
 
@@ -7415,7 +7665,7 @@ Schema name: `SessionEventAgentSessionEnvironmentFailed`
 
       The error type.
 
-  - `status: "pending" or "ready" or "connected" or 2 more`
+  - `status: "pending" or "ready" or "connected" or 4 more`
 
     The environment's connection status.
 
@@ -7434,6 +7684,14 @@ Schema name: `SessionEventAgentSessionEnvironmentFailed`
     - `"disconnected"`
 
       The environment is disconnected.
+
+    - `"suspended"`
+
+      The environment is stopped and can be resumed from its private checkpoint.
+
+    - `"expired"`
+
+      The environment and its private checkpoint have expired.
 
     - `"failed"`
 

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Now that GPT-5 has been out in the world, we’ve been amazed by all of the incredible things developers are building with the model. We’ve also identified a handful of common troubleshooting patterns that should enable you to get the most out of the model.
 
 ## Overthinking

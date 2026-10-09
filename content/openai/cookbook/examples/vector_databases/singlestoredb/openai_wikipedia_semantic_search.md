@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 This notebook is an example on how you can use SingleStoreDB vector storage and functions to build an interactive Q&A application with ChatGPT. If you start a [Trial](https://www.singlestore.com/cloud-trial/) in SingleStoreDB, you can find the same notebook in our sample notebooks with native connection.
 
 ## First let's talk directly to ChatGPT and try and get back a response

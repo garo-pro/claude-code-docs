@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 Newer models, such as GPT-4.1, are best in class in performance and instruction following. As model gets smarter, there is a consistent need to adapt prompts that were originally tailored to earlier models' limitations, ensuring they remain effective and clear for newer generations.
 
 Models such as GPT‑4.1 excel at closely following instructions, but this precision means it can interpret unclear or poorly phrased instructions **literally**, leading to unexpected or incorrect results. To leverage GPT‑4.1's full potential, it's essential to refine prompts, ensuring each instruction is explicit, unambiguous, and aligned with your intended outcomes.

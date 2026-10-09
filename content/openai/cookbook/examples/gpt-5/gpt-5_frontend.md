@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 GPT-5 is a large leap forward in frontend development. We have seen the model be excellent at developing full stack applications in one shot, making complex refactors look easy, and making surgical edits within large codebases. 
 
 In this cookbook we will show some examples and some learnings of developing frontend applications with GPT-5 across multiple axes. 

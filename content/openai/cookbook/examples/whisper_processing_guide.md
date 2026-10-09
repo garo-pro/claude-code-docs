@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook offers a guide to improve the Whisper's transcriptions. We'll streamline your audio data via trimming and segmentation, enhancing Whisper's transcription quality. After transcriptions, we'll refine the output by adding punctuation, adjusting product terminology (e.g., 'five two nine' to '529'), and mitigating Unicode issues. These strategies will help improve the clarity of your transcriptions, but remember, customization based on your unique use-case may be beneficial.
 
 

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 > **Archived example — the Codex MCP server is deprecated.** This notebook uses `codex mcp-server`, which the [current documentation](https://learn.chatgpt.com/docs/mcp-server) retains for existing integrations. For new automation and CI jobs, start with the [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk). For a deeper integration that manages authentication, conversation history, approvals, and streamed events, use the [Codex app server](https://learn.chatgpt.com/docs/app-server). These are different interfaces; the code below is not a migration example.
 
 ### Ensuring Repeatable, Traceable, and Scalable Agentic Development

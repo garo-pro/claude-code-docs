@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 By default, when you request a completion from the OpenAI, the entire completion is generated before being sent back in a single response.
 
 If you're generating long completions, waiting for the response can take many seconds.

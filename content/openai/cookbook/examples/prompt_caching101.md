@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 OpenAI offers discounted prompt caching for prompts exceeding 1024 tokens, resulting in up to an 80% reduction in latency for longer prompts over 10,000 tokens. By caching repetitive information across LLM API requests, you can greatly reduce both latency and costs. Prompt caching is scoped at the organization level, meaning only members of the same organization can access shared caches. Additionally, caching is eligible for zero data retention, as no data is stored during the process.
 
 Prompt caching automatically activates for prompts longer than 1024 tokens-- you don't have to change anything in your completions request. When an API request is made, the system first checks if the beginning portion (prefix) of the prompt has already been cached. If a match is found (cache hit), the cached prompt is used, leading to reduced latency and costs. If there's no match, the system processes the full prompt from scratch and caches the prefix for future use.

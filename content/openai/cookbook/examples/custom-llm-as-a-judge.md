@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Let's say you're working on a customer service bot and trying to evaluate the quality of its responses. Consider a question like "What is your return policy?" If the correct answer is "You can return items within 30 days of purchase," but your bot generates "You can return items within 30 days," how would you evaluate whether this is a good response?
 
 A heuristic like the `Levenshtein` string distance would indicate that the response is incorrect. However, a better approach is to use an LLM-as-a-judge to assess the accuracy of the response. LLM-as-a-judge is a technique that leverages an LLM to score the quality of answers. LLMs can reason about language beyond surface-level string comparisons, enabling them to evaluate answers more accurately.

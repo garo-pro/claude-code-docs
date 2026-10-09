@@ -654,20 +654,20 @@ Footnotes
 
 ## Related content
 
+### The missing map of the sky
+
+Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+
+[Read more](https://www.anthropic.com/research/the-missing-map-of-the-sky)
+
+### Launching an opt-in vulnerability-finding service for open-source software
+
+We’re making available OSS Scanner, an opt-in vulnerability scanner for the open-source ecosystem that’s informed by our experience using Claude to find vulnerabilities during Project Glasswing.
+
+[Read more](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source)
+
 ### Claude-shaped science
 
 Guest author Prof. Matthew Schwartz describes what happened when he stopped fighting Claude and allowed Claude to find “Claude-shaped” problems: ones best suited to the capabilities of the current generation of LLM tools. This led him to build BootLoops, a toolkit for exact calculations in quantitative science, which he has been applying across scientific fields alongside experts.
 
 [Read more](https://www.anthropic.com/research/claude-shaped-science)
-
-### What do you want from AI?
-
-We’re launching a new study using Anthropic Interviewer to learn from your experiences with AI.
-
-[Read more](https://www.anthropic.com/research/your-thoughts-on-ai)
-
-### GLM-5.3 and the spread of advanced cyber capabilities
-
-Like Claude Mythos Preview, GLM-5.3 has strong capabilities for autonomously building end-to-end cyber exploits. But GLM-5.3 is unlike other frontier models in that it has been released without meaningful safeguards to limit misuse.
-
-[Read more](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)

@@ -2,6 +2,8 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 This notebook presents how to implement a Question Answering system with Langchain, Tair as a knowledge based and OpenAI embeddings. If you are not familiar with Tair, it’s better to check out the [Getting_started_with_Tair_and_OpenAI.ipynb](https://developers.openai.com/cookbook/examples/vector_databases/tair/Getting_started_with_Tair_and_OpenAI.ipynb) notebook.
 
 This notebook presents an end-to-end process of:

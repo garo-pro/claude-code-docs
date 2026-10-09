@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Semantic text search using embeddings
 
 We can search through all our reviews semantically in a very efficient manner and at very low cost, by embedding our search query, and then finding the most similar reviews. The dataset is created in the [Get_embeddings_from_dataset Notebook](https://developers.openai.com/cookbook/examples/Get_embeddings_from_dataset.ipynb).

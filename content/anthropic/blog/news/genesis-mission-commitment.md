@@ -31,14 +31,14 @@ We’re publishing a new version of our Usage Policy. In this post, we summarize
 
 [Read more](https://www.anthropic.com/news/2026-usage-policy-update)
 
+### Introducing the Anthropic Cyber Mission
+
+We’re launching the Anthropic Cyber Mission, a long-term commitment to securing the systems everyone depends on.
+
+[Read more](https://www.anthropic.com/news/anthropic-cyber-mission)
+
 ### Expanding the Cyber Verification Program
 
 We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
 
 [Read more](https://www.anthropic.com/news/cyber-verification-program)
-
-### Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap
-
-Anthropic is investing $100 million in Claude Frontier Academy to train 10,000 Frontier Deployed Engineers by the end of 2027, with cohorts from Accenture, Bain, CBA, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk already underway.
-
-[Read more](https://www.anthropic.com/news/claude-frontier-academy)

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ChatGPT is powered by `gpt-3.5-turbo` and `gpt-4`, OpenAI's most advanced models.
 
 You can build your own applications with `gpt-3.5-turbo` or `gpt-4` using the OpenAI API.

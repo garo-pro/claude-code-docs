@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Building a Bring Your Own Browser (BYOB) Tool for Web Browsing and Summarization
 
 **Disclaimer: This cookbook is for educational purposes only. Ensure that you comply with all applicable laws and service terms when using web search and scraping technologies. This cookbook will restrict the search to openai.com domain to retrieve the public information to illustrate the concepts.**

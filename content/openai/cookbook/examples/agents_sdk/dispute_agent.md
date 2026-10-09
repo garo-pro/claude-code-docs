@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 We recently announced our new open-source **Agents SDK**, designed to help you build agentic AI applications using a lightweight, easy-to-use package with minimal abstractions.
 
 This cookbook demonstrates how you can leverage the Agents SDK in combination with Stripe's API to handle dispute management, a common operational challenge many businesses face. Specifically, we focus on two real-world scenarios:

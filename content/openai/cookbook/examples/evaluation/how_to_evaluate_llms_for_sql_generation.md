@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 LLMs are fundamentally nondeterministic. This attribute makes their responses creative and dynamic. However, this trait poses significant challenges in achieving consistency, a crucial aspect for integrating LLMs into production environments.
 
 The key to harnessing the potential of LLMs in practical applications lies in consistent and systematic evaluation. This enables the identification and rectification of inconsistencies and helps with monitoring progress over time as the application evolves.

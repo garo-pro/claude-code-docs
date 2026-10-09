@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 **Note:** This guide is designed to complement our Guardrails Cookbook by providing a more focused look at moderation techniques. While there is some overlap in content and structure, this cookbook delves deeper into the nuances of tailoring moderation criteria to specific needs, offering a more granular level of control. If you're interested in a broader overview of content safety measures, including guardrails and moderation, we recommend starting with the [Guardrails Cookbook](https://developers.openai.com/cookbook/examples/how_to_use_guardrails). Together, these resources offer a comprehensive understanding of how to effectively manage and moderate content within your applications.
 
 Moderation, much like guardrails in the physical world, serves as a preventative measure to ensure that your application remains within the bounds of acceptable and safe content. Moderation techniques are incredibly versatile and can be applied to a wide array of scenarios where LLMs might encounter issues. This notebook is designed to offer straightforward examples that can be adapted to suit your specific needs, while also discussing the considerations and trade-offs involved in deciding whether to implement moderation and how to go about it. This notebook will use our [Moderation API](https://platform.openai.com/docs/guides/moderation/overview), a tool you can use to check whether text or an image is potentially harmful.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 ## 1. Introduction
 
 `gpt-image-1.5` is our latest image generation model, designed for production-quality visuals and highly controllable creative workflows. It delivers major improvements in realism, accuracy, and editability, making it well-suited for both professional design tasks and iterative content creation. It delivers major improvements in realism, accuracy, and editability compared to the previous generation, and supports both high-quality rendering and low-latency use cases.

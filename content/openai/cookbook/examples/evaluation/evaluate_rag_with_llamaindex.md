@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 In this notebook we will look into building an RAG pipeline and evaluating it with LlamaIndex. It has following 3 sections.
 
 1. Understanding Retrieval Augmented Generation (RAG).

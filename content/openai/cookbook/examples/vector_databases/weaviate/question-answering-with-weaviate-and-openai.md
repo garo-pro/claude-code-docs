@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook is prepared for a scenario where:
 * Your data is not vectorized
 * You want to run Q&A ([learn more](https://weaviate.io/developers/weaviate/modules/reader-generator-modules/qna-openai)) on your data based on the [OpenAI completions](https://beta.openai.com/docs/api-reference/completions) endpoint.

@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 Growing up, I was fascinated by the idea of Jarvis—an intelligent assistant that could autonomously handle complex workflows. What I didn’t realize back then was that I was imagining the future of voice agents. OpenAI was the first to make this vision real with the launch of `4o-audio`, and more recently made it even more accessible—cutting costs by 70%—with the release of [GPT Realtime Mini](https://platform.openai.com/docs/models/gpt-realtime-mini), which offers lower latency and major improvements in tool calling.
 
 Building with speech models, however, is fundamentally different from working with text-only interfaces. In addition to prompt engineering, audio models bring new challenges: they’re more latency-sensitive, require managing a WebRTC session, and introduce additional variability through voice activity detection (VAD).

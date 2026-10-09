@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 The GPT-4o, available as gpt-4o-2024-11-20 as of November 2024, now enables function calling with vision capabilities, better reasoning and a knowledge cutoff date of Oct 2023. Using images with function calling will unlock multimodal use cases and the ability to use reasoning, allowing you to go beyond OCR and image descriptions.
 
 We will go through two examples to demonstrate the use of function calling with GPT-4o with Vision:

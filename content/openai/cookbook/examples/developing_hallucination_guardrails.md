@@ -1,5 +1,7 @@
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
 ## Developing Hallucination Guardrails
 
 A guardrail is a set of rules and checks designed to ensure that the outputs of an LLM are accurate, appropriate, and aligned with user expectations. For more additional information on developing guardrails, you can refer to this [guide on developing guardrails](https://developers.openai.com/cookbook/examples/how_to_use_guardrails).

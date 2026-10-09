@@ -166,8 +166,8 @@ Anthropic is committing $150 million over three years to the Genesis Mission, a 
 
 [Read more](https://www.anthropic.com/news/genesis-mission-commitment)
 
-### Expanding the Cyber Verification Program
+### Introducing the Anthropic Cyber Mission
 
-We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.
+We’re launching the Anthropic Cyber Mission, a long-term commitment to securing the systems everyone depends on.
 
-[Read more](https://www.anthropic.com/news/cyber-verification-program)
+[Read more](https://www.anthropic.com/news/anthropic-cyber-mission)

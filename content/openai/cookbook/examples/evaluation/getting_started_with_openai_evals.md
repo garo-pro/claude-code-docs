@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 **Note: OpenAI now has a hosted evals product with an API! We recommend you use this instead.
 See [Evals](https://platform.openai.com/docs/guides/evals)**
 

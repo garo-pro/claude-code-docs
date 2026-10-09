@@ -2,6 +2,9 @@
 
 > For the complete documentation index, see [llms.txt](/llms.txt). Markdown versions of documentation pages are available by appending `.md` to the page URL.
 
+> This recipe is archived and may reference outdated models or APIs.
+
+
 This notebook demonstrates how to evaluate a model's ability to retrieve correct answers from the web using the OpenAI **Evals** framework with a custom in-memory dataset.
 
 **Goals:**
