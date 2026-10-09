@@ -50,7 +50,7 @@ These are not all on the same maturity curve. Where spectral analysis is far eno
 
 We are expanding the [AI for Science program](https://www.anthropic.com/news/ai-for-science-program) to more explicitly support chemistry research. If you are a researcher working on a problem where Claude could plausibly help, especially one that involves the kinds of multimodal reasoning we have described, we would like to hear from you at [scienceblog@anthropic.com](mailto:scienceblog@anthropic.com), or through the AI for Science application.
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 We’re making available OSS Scanner, an opt-in vulnerability scanner for the open-source ecosystem that’s informed by our experience using Claude to find vulnerabilities during Project Glasswing.
 

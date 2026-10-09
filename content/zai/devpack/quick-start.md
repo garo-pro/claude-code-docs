@@ -31,7 +31,7 @@
     </Warning>
   </Step>
 
-  <Step title="Connect a Coding Tool">
+  <Step title="Connect a Tool">
     The GLM Coding Plan is strictly limited to use within officially [supported tools and products](https://docs.z.ai/devpack/tool/others#step-1-supported-tools). Click a tool below to open its configuration guide:
 
     <CardGroup cols={3}>

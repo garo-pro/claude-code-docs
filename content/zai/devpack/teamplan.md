@@ -6,7 +6,7 @@
 
 > Learn about GLM Coding Team Plan usage quotas, benefits, and usage rules
 
-GLM Coding Team Plan is a self-service subscription for enterprises and development teams. Building on the individual plan’s generous access to Z.AI’s top-tier models and broad coding tool compatibility, it adds flexible organization management, enterprise-grade data security, and centralized billing and invoicing—helping teams scale AI coding efficiently with predictable costs.
+GLM Coding Team Plan is a self-service subscription for enterprises and teams. Building on the individual plan’s generous access to Z.AI’s top-tier models and broad agent tool compatibility, it adds flexible organization management, enterprise-grade data security, and centralized billing and invoicing—helping teams scale AI-powered work efficiently with predictable costs.
 
 ## Exclusive Capabilities
 
@@ -185,7 +185,7 @@ During off-peak hours, plan users will enjoy higher concurrency benefits through
 ## Next Steps
 
 * [Quick Start](https://docs.z.ai/devpack/quick-start): Complete the basic integration process in just a few minutes and get started quickly
-* [Tool Integration](https://docs.z.ai/devpack/tool/others): View the coding tools supported by the plan and their configuration methods, and choose the development environment that best suits your needs
+* [Tool Integration](https://docs.z.ai/devpack/tool/others): View the agent tools supported by the plan and their configuration methods, and choose the working environment that best suits your needs
 * [How to Switch Models](https://docs.z.ai/devpack/latest-model): Make sure your coding tool is using your target model version
 
 

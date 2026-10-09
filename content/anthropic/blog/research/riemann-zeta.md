@@ -45,7 +45,7 @@ Below is a list of documents that provide more information about Claude’s resu
 
 **Changelog:** this post was updated on August 13, 2026, with an updated version of Claude's paper. This paper was revised by Claude to provide a clearer proof and additional historical context.
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 We’re making available OSS Scanner, an opt-in vulnerability scanner for the open-source ecosystem that’s informed by our experience using Claude to find vulnerabilities during Project Glasswing.
 

@@ -1,4 +1,4 @@
-Title: Red teaming language models to reduce harms
+Title: Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned
 
 URL Source: https://www.anthropic.com/research/red-teaming-language-models-to-reduce-harms-methods-scaling-behaviors-and-lessons-learned
 
@@ -15,7 +15,7 @@ We describe our early efforts to red team language models in order to simultaneo
 
 ### The missing map of the sky
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 [Read more](https://www.anthropic.com/research/the-missing-map-of-the-sky)
 

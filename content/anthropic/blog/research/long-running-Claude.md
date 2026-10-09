@@ -79,7 +79,7 @@ This kind of compression changes what counts as idle time. A universal experienc
 
 We thank Eric Kauderer-Abrams for peer-review, as well as Xander Balwit, Ethan Dyer, and Rebecca Hiscott for providing helpful feedback.
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 We’re making available OSS Scanner, an opt-in vulnerability scanner for the open-source ecosystem that’s informed by our experience using Claude to find vulnerabilities during Project Glasswing.
 

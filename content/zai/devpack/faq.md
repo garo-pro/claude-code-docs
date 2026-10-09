@@ -49,7 +49,7 @@ The rules are as follows:
 
 **Q: Which tools are supported?**
 
-**A:** The GLM Coding Plan is strictly limited to use within officially [supported tools and products](https://docs.z.ai/devpack/tool/others#step-1-supported-tools). The subscriber shall not use the subscription benefits in any unsupported tools or scenarios.<br />Please refer to our tool guide for step-by-step setup. All supported coding tools share the same usage quota under your subscription.
+**A:** The GLM Coding Plan is strictly limited to use within officially [supported tools and products](https://docs.z.ai/devpack/tool/others#step-1-supported-tools). The subscriber shall not use the subscription benefits in any unsupported tools or scenarios.<br />Please refer to our tool guide for step-by-step setup. All supported tools share the same usage quota under your subscription.
 
 ***
 

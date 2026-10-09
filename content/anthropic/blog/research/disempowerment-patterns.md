@@ -121,7 +121,7 @@ Our research has important limitations. It is restricted to Claude.ai consumer t
 
 ### The missing map of the sky
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 [Read more](https://www.anthropic.com/research/the-missing-map-of-the-sky)
 

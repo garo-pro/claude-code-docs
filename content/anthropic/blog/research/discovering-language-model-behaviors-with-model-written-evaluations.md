@@ -1,4 +1,4 @@
-Title: Discovering behaviors with model-written evaluations
+Title: Discovering Language Model Behaviors with Model-Written Evaluations
 
 URL Source: https://www.anthropic.com/research/discovering-language-model-behaviors-with-model-written-evaluations
 
@@ -11,7 +11,7 @@ As language models (LMs) scale, they develop many novel behaviors, good and bad,
 
 ### The missing map of the sky
 
-Astronomers have mapped the entire sky in visible light, infrared, radio, X-rays, and gamma rays. No one, however, had created a complete map of the sky in ultraviolet (UV) light. Here, Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
+Brice Ménard, an astrophysicist at Johns Hopkins University and a researcher at Anthropic, explains how he worked with Claude Science to produce the first complete map of the sky in UV light.
 
 [Read more](https://www.anthropic.com/research/the-missing-map-of-the-sky)
 

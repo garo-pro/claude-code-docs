@@ -4,11 +4,13 @@
 
 # Overview
 
-The GLM Coding Plan is a subscription package designed specifically for AI-powered coding.
+The GLM Coding Plan is your AI partner for tasks and code — a single subscription that unlocks a suite of agent tools for AI-powered coding and everyday office work.
 
 ## Usage
 
-The plan can be applied to coding tools such as Claude Code, Cline, and OpenCode, covering a wide range of development scenarios:
+The plan can be applied to agent tools such as ZCode, Claude Code, Codex, OpenCode, AutoClaw, and OpenClaw, covering both coding and office scenarios:
+
+### Coding
 
 <AccordionGroup>
   <Accordion title="Natural Language Programming">
@@ -32,12 +34,32 @@ The plan can be applied to coding tools such as Claude Code, Cline, and OpenCode
   </Accordion>
 </AccordionGroup>
 
+### Office Work
+
+<AccordionGroup>
+  <Accordion title="Deep Search & Research">
+    Cross-source intelligent retrieval and information synthesis, delivering structured research reports fast—so every decision is backed by evidence.
+  </Accordion>
+
+  <Accordion title="Business Data Analysis">
+    Upload multi-dimensional business data to automatically generate visual charts, along with in-depth business insights and operational recommendations.
+  </Accordion>
+
+  <Accordion title="Creative Ideation & Brainstorming">
+    Break through mental boundaries and spark inspiration from multiple angles, turning vague ideas into actionable plans — fast.
+  </Accordion>
+
+  <Accordion title="Automated Task Execution">
+    Autonomously run complex workflows end to end, from instruction to delivery — cutting repetitive work and freeing up time for what matters.
+  </Accordion>
+</AccordionGroup>
+
 ## Advantages
 
-* **Access to high-intelligence Coding Model:** Upon release, the GLM series achieved SOTA performance among open-source models in reasoning, coding, and agent capabilities, delivering outstanding results in tool use and complex task execution.
-* **Works with Multiple Tools:** Beyond Claude Code, it also supports Cline, OpenCode, and some <a href="https://docs.z.ai/devpack/tool/others#step-1-supported-tools">specific tools</a>, giving you flexibility across development workflows.
+* **Access to High-Intelligence Models:** Upon release, the GLM series achieved SOTA performance among open-source models in reasoning, coding, and agent capabilities, delivering outstanding results in tool use and complex task execution.
+* **Works with 20+ Agent Tools:** Beyond Claude Code, it also supports ZCode, Cline, OpenCode, AutoClaw, and other <a href="https://docs.z.ai/devpack/tool/others#step-1-supported-tools">supported tools</a>, giving you flexibility across both coding and office workflows.
 * **Generous Usage at a Fair Price:** Get higher call limits than standard plans. Starting at just 18 USD per month, with Pro and Max plans designed for high-frequency, complex projects.
-* **Expanded Capabilities:** All plans support Vision Understanding, Web Search MCP， Web Reader MCP and Zread MCP helping you tackle a wider range of development tasks.
+* **Expanded Capabilities:** All plans support Vision Understanding, Web Search MCP， Web Reader MCP and Zread MCP helping you tackle a wider range of coding and office tasks.
 
 ## Benefits
 
@@ -170,7 +192,7 @@ Token usage varies depending on the cache hit rate, as shown below:
 
 <CardGroup cols={3}>
   <Card title="Quick Start" color="#ffffff" icon="rocket" href="/devpack/quick-start">
-    Get up and running in minutes — from subscribing to the plan to using it in your coding tools.
+    Get up and running in minutes — from subscribing to the plan to using it in your agent tools.
   </Card>
 
   <Card title="Usage Policy" color="#ffffff" icon="shield-keyhole" href="/devpack/usage-policy">

@@ -5,7 +5,7 @@
 # Quick Start
 
 <Info>
-  Tired of limits? GLM Coding Plan — monthly access to world-class models, compatible with top coding tools like Claude Code and Cline. All from just \$18/month.  [Try it now →](https://z.ai/subscribe?utm_campaign=Platform_Ops&_channel_track_key=DaprgHIc)
+  Tired of limits? GLM Coding Plan — monthly access to world-class models for coding and office tasks, compatible with 20+ top agent tools. All from just \$18/month.  [Try it now →](https://z.ai/subscribe?utm_campaign=Platform_Ops&_channel_track_key=DaprgHIc)
 </Info>
 
 ## Getting Started

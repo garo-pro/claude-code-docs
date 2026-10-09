@@ -4,7 +4,7 @@
 
 # Usage Policy
 
-The GLM Coding Plan is a subscription package designed specifically for AI-powered coding.
+The GLM Coding Plan is your AI partner for tasks and code — a single subscription that unlocks a suite of agent tools for AI-powered coding and everyday office work.
 
 ## Rate Limits
 
