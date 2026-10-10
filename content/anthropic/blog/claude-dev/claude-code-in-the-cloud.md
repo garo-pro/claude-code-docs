@@ -20,8 +20,6 @@ You can start one from [claude.ai/code](https://code.claude.com/docs/en/web-quic
 
 Cloud sessions come with your Pro, Max, Team, or Enterprise plan at no additional cost: there's no separate charge for the cloud machine, and sessions draw on the same usage limits as the rest of Claude Code. Depending on your plan, an organization owner may need to [turn on cloud sessions](https://claude.ai/admin-settings/claude-code) first.
 
-**Bonus credit for cloud sessions.** Existing individual Pro and Max subscribers can claim a one-time bonus credit for cloud sessions, on top of their plan limits: $100 on Pro and $250 on Max. Claim it by October 7 at claude.ai/code/claim-credit or with `/claim-credit` in Claude Code. The credit expires on November 4. After it's used or expires, your plan's regular usage applies. It isn't eligible for Projects or Routines. See the [Promotional Credit Offer Terms](https://www.anthropic.com/legal/promotion-credit-terms).
-
 For this guide I ran four real cloud sessions against a small sample repository. Their transcripts, diffs, and timings appear throughout. The repository and the user in the screenshots are made up. The work, the output, and the numbers come from those sessions.
 
 One of the main advantages of cloud sessions is that you can run several tasks at once without them getting in each other's way. Here are three I started within 16 seconds of each other, each on its own machine. On my laptop, I'd have run these one after another, or spent my time keeping them out of each other's way.

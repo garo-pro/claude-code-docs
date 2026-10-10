@@ -156,11 +156,16 @@ depend on its `type`.
 | `contents[].name`         | No       | A string containing the item's display name.                                                                                                                                  |
 | `contents[].content_type` | No       | A string describing the item category, such as `product`, `plan`, or `page`.                                                                                                  |
 | `contents[].quantity`     | No       | The item quantity as an integer.                                                                                                                                              |
-| `contents[].amount`       | No       | The item-level monetary value as an integer in the currency's standard minor unit.                                                                                            |
+| `contents[].amount`       | No       | The per-unit price as an integer in the currency's standard minor unit. Supply `contents[].quantity` separately.                                                              |
 | `contents[].currency`     | No       | A valid three-letter ISO 4217 currency code for the item, such as `USD`, `EUR`, or `JPY`.                                                                                     |
 | `contents[].variant_dict` | No       | An object whose keys and values are strings, such as `{"size": "medium", "color": "blue"}`.                                                                                   |
 | `plan_id`                 | No       | A string identifying your subscription or trial plan. Available when `data.type` is `plan_enrollment` or `custom`.                                                            |
 | `<custom_field>`          | No       | A custom property available only when `data.type` is `custom`. Values can be strings, numbers, boolean values, objects, arrays, or `null`.                                    |
+
+Use `contents[].amount` for the price of one unit and the event-level `amount`
+for the value of the whole event. See
+[Item and event amounts](https://developers.openai.com/ads/supported-events#item-and-event-amounts) for an
+example with `quantity: 2`.
 
 ## Send user data
 

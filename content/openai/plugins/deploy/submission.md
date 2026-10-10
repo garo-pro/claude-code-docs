@@ -75,6 +75,62 @@ Your package can declare multiple MCP servers, but **only one MCP server can be 
 
 If connecting or scanning fails, check endpoint availability and authentication, then reconnect or rescan. Resolve **Complete MCP setup** findings and connection failures before submitting. See the [plugin guidelines](https://developers.openai.com/plugins/plugin-guidelines) for MCP server URL, authentication, tool metadata, and UI requirements.
 
+#### Configure authentication for submission
+
+The portal reads advanced authentication settings from your package's
+`mcp.json`. Configure the authentication method, OAuth client registration,
+endpoints, and scopes using the [MCP authentication reference](https://developers.openai.com/plugins/build/plugins#configure-mcp-authentication).
+The connection panel displays those settings; it doesn't provide an advanced
+OAuth settings editor.
+
+To change the configuration, update `mcp.json`, select **Upload new version**,
+and inspect the saved settings under **MCPs** before connecting. Existing client
+registration can lock credential changes; check the saved connection rather
+than assuming an upload replaces an existing client.
+
+For OAuth, choose a registration method supported by your provider:
+
+| Registration method                          | What to provide                                                                                                                     |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Registered client (`provided`)               | Declare the client ID and token endpoint authentication method in `mcp.json`. Enter the client secret in the portal when required.  |
+| Dynamic Client Registration (`dcr`)          | Provide a registration endpoint through discovery or a `registrationUrl` override. Don't include client credentials in the package. |
+| Client Identifier Metadata Document (`cimd`) | Configure CIMD preference. The runtime can fall back to DCR according to its registration policy.                                   |
+
+For a registered client:
+
+1. Register the callback URL used by the connection flow with your OAuth provider.
+2. Open **MCPs**, select your server, and select **Connect**.
+3. Enter **OAuth Client Secret** if your client requires a secret. The field appears for a provided OAuth client unless `tokenEndpointAuthMethod` is `"none"`.
+4. Complete domain verification if needed, select **Connect**, and authorize the account used to connect and scan the server.
+5. Wait for the scan to finish and resolve any connection or tool findings.
+
+Don't put the client secret in `mcp.json`; the manifest rejects
+`clientSecret`. The client secret authenticates your OAuth application. It
+isn't the account password, an access token, or reviewer sign-in credentials.
+
+If OAuth discovery doesn't provide the required endpoints, add
+`authorizationUrl` and `tokenUrl` overrides to `mcp.json`. Ensure the client
+ID, token endpoint authentication method, scopes, and callback URL match the
+provider's configuration.
+
+#### Authentication limitations
+
+The portal connection form supports no authentication, OAuth, and mixed
+unauthenticated/OAuth access. Although the manifest schema accepts API-key
+authentication, the portal doesn't provide an API-key connection flow or a
+bearer-token input. This limitation also applies to Basic and custom-header
+API-key declarations. Uploading an API-key declaration alone won't complete
+MCP setup. Contact OpenAI if your submission requires this authentication method.
+
+Don't embed a token in server `headers` to work around this limitation:
+public submission rejects nonempty server headers. Don't configure a protected
+server as `type: "none"`.
+
+The schema accepts `private_key_jwt` for a provided OAuth client, but that
+value alone doesn't configure signing keys. This portal guide doesn't provide
+a signing-key setup procedure; confirm the required setup with OpenAI before
+using that method for submission.
+
 <a id="domain-verification"></a>
 
 #### Domain verification details

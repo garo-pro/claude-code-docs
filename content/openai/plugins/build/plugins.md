@@ -725,6 +725,165 @@ For public submission, submit the remote HTTPS endpoint through **With MCP**.
 If your MCP server runs locally, deploy it to a public HTTPS URL. If you can't,
 reach out to your OpenAI contact for local MCP support.
 
+#### Configure MCP authentication
+
+Declare authentication under each server's
+`extensions["com.openai"].auth` object in `mcp.json`. These settings belong to
+the MCP server, not the OpenAI extension in `plugin.json`.
+
+Choose an authentication method for your server:
+
+| Method                            | Configuration                                                    |
+| --------------------------------- | ---------------------------------------------------------------- |
+| No authentication                 | `auth.type: "none"`                                              |
+| OAuth                             | `auth.type: "oauth"`, with optional client registration settings |
+| Public and OAuth-protected access | `auth.type: "mixed"`                                             |
+| API key                           | `auth.type: "api_key"`, with a header scheme                     |
+
+The manifest declares connection settings, not secret credentials. For portal
+setup, client secret entry, and supported submission methods, see
+[Configure authentication for submission](https://developers.openai.com/plugins/deploy/submission#configure-authentication-for-submission).
+
+#### Use a registered OAuth client
+
+Use `client.mode: "provided"` when you have registered an OAuth application
+with your provider. Set `clientId` to that application's client ID. This
+configures the plugin's OAuth client.
+
+For example, configure a remote server with a registered client and explicit
+OAuth endpoints:
+
+```json
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "docs": {
+      "type": "streamable-http",
+      "url": "https://example.com/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "provided",
+              "clientId": "docs-client",
+              "tokenEndpointAuthMethod": "client_secret_basic"
+            },
+            "authorizationUrl": "https://example.com/oauth/authorize",
+            "tokenUrl": "https://example.com/oauth/token",
+            "baseScopes": ["docs:read"]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Replace the URL, client ID, endpoints, and scopes with your provider's values.
+Omit endpoint overrides when OAuth discovery supplies them. Register the
+callback URL used by the connection flow with your OAuth provider.
+
+Keep the client secret out of the package. The manifest doesn't accept a
+`clientSecret` field; supply it through the connection setup flow.
+
+Choose the token endpoint authentication method your provider supports:
+
+- `client_secret_basic`: Send client credentials using HTTP Basic authentication.
+- `client_secret_post`: Send client credentials in the token request body.
+- `none`: Use a public client without a client secret.
+
+The schema also accepts `private_key_jwt`. Declaring that method doesn't
+configure signing keys. Check the [submission requirements](https://developers.openai.com/plugins/deploy/submission#configure-authentication-for-submission)
+before choosing it for a public plugin.
+
+#### Use automatic OAuth client registration
+
+For Dynamic Client Registration (DCR), use this `auth` object at the same
+location as the previous example.
+Omit `registrationUrl` if discovery supplies it.
+
+```json
+{
+  "type": "oauth",
+  "client": {
+    "mode": "dcr"
+  },
+  "registrationUrl": "https://example.com/oauth/register"
+}
+```
+
+To prefer Client Identifier Metadata Document (CIMD), use:
+
+```json
+{
+  "type": "oauth",
+  "client": {
+    "mode": "cimd"
+  }
+}
+```
+
+Don't include `clientId` or client credentials in a `dcr` or `cimd` client
+object. CIMD preference doesn't disable the DCR fallback.
+
+#### OAuth configuration reference
+
+These fields belong inside `extensions["com.openai"].auth`. Use
+`type: "oauth"`, or `type: "mixed"` for both unauthenticated and OAuth access.
+Mixed authentication doesn't combine OAuth with a fixed API key. Omitted
+optional values remain available for discovery.
+
+| Field                            | Type             | Description                                                                                                         |
+| -------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `client`                         | Object           | Optional client registration configuration.                                                                         |
+| `client.mode`                    | String           | `provided`, `dcr`, or `cimd`. Required when `client` is present.                                                    |
+| `client.clientId`                | String           | Required for a `provided` client.                                                                                   |
+| `client.tokenEndpointAuthMethod` | String           | Optional method for a provided client: `none`, `client_secret_basic`, `client_secret_post`, or `private_key_jwt`.   |
+| `authorizationUrl`               | String           | Authorization endpoint override.                                                                                    |
+| `tokenUrl`                       | String           | Token endpoint override.                                                                                            |
+| `registrationUrl`                | String           | Dynamic registration endpoint override.                                                                             |
+| `authorizationServerBase`        | String           | Authorization server base override.                                                                                 |
+| `resource`                       | String           | OAuth resource identifier override.                                                                                 |
+| `baseScopes`                     | Array of strings | Scopes included on every OAuth request.                                                                             |
+| `defaultScopes`                  | Array of strings | Default scope override. An empty array requests no default scopes; omit the field to use client or server defaults. |
+| `oidcEnabled`                    | boolean          | OpenID Connect (OIDC) override.                                                                                     |
+| `oidcConfigurationUrl`           | String           | OIDC discovery endpoint override.                                                                                   |
+| `oidcUserinfoEndpoint`           | String           | OIDC user information endpoint override.                                                                            |
+| `oidcScopesSupported`            | Array of strings | Supported OIDC scope override.                                                                                      |
+
+Use scope strings containing at least one non-whitespace character and absolute
+HTTP or HTTPS URLs without embedded
+credentials or fragments for endpoint overrides. Public submission still
+requires a remote HTTPS MCP endpoint. Field names are case-sensitive: use
+`clientId` inside `client`, not a top-level `oauth.client_id`.
+
+#### Fixed bearer tokens and API keys
+
+A server that accepts a fixed bearer token without an OAuth authorization
+flow uses API-key authentication. Its manifest `auth` declaration is:
+
+```json
+{
+  "type": "api_key",
+  "headerScheme": "bearer"
+}
+```
+
+This object describes how to send a credential supplied during connection setup;
+it doesn't contain the token. The schema also accepts `headerScheme: "basic"`
+and `headerScheme: "custom_header"`. A custom header requires `headerName`,
+which is only allowed with `custom_header`; `Host` isn't allowed.
+
+API-key declarations aren't supported by the submission portal's connection
+form. See [Authentication limitations](https://developers.openai.com/plugins/deploy/submission#authentication-limitations)
+before submitting a plugin that requires an API key.
+
+An OAuth access token may also use the bearer scheme. A fixed token doesn't
+replace OAuth client registration or user authorization.
+
+#### Configure installed server policy
+
 After installation, users can enable or disable a bundled MCP server and tune
 tool approval policy from their Codex config without editing the plugin. Use
 `plugins.<plugin>.mcp_servers.<server>` for plugin-scoped MCP server policy:
