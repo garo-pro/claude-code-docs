@@ -230,7 +230,7 @@ print(bot.chat("Write a Python quicksort algorithm"))
 
 ### Thinking Mode
 
-In thinking mode, GLM-4.6, GLM-4.5 and GLM-4.5-Air can solve complex reasoning problems, including mathematics, science, and logic problems.
+In thinking mode, GLM-4.6 can solve complex reasoning problems, including mathematics, science, and logic problems.
 
 The param `thinking.type` can be either `enabled` or `disabled`.
 

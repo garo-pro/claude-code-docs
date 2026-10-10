@@ -39,14 +39,6 @@
       <Card title="GLM-5.3-FLASH" icon="eyes" href="/guides/vlm/glm-5.3-flash">
         Multimodal Coding model, specializing in visual programming.
       </Card>
-
-      <Card title="GLM-Image" icon="image" href="/guides/image/glm-image">
-        Supports text-to-image generation, achieving open-source state-of-the-art (SOTA) in complex scenarios.
-      </Card>
-
-      <Card title="CogVideoX-3" icon="video" href="/guides/video/cogvideox-3">
-        New frame generation capabilities that significantly improve image stability and clarity.
-      </Card>
     </CardGroup>
   </Step>
 

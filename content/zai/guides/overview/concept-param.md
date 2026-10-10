@@ -17,7 +17,7 @@
 | [top\_p](#top_p) | Float | (Model dependent) | Controls diversity through nucleus sampling, recommended to use either this or `temperature`. |
 | [max\_tokens](#max_tokens) | Integer | (Model dependent) | Limits the maximum number of tokens generated in a single call. |
 | [stream](#stream) | Boolean | `false` | Whether to return responses in streaming mode. |
-| [thinking](#thinking) | Object | `{"type": "enabled"}` | Whether to enable chain-of-thought deep thinking, only supported by `GLM-4.5` and above. |
+| [thinking](#thinking) | Object | `{"type": "enabled"}` | Whether to enable chain-of-thought deep thinking, only supported by `GLM-4.6` and above. |
 | [reasoning\_effort](#reasoning_effort) | String | `max` `high` `low` | Controls the model's reasoning effort level, only supported by `GLM-5.2` and above. |
 
 ***
@@ -63,7 +63,7 @@ Best Practices:
 
 ### max\_tokens
 
-`max_tokens` is used to limit the maximum number of tokens the model can generate in a single call. GLM-4.6 supports a maximum output length of 128K, GLM-4.5 supports a maximum output length of 96K, and it's recommended to set it to no less than 1024. Tokens are the basic units of text, typically 1 token equals approximately 0.75 English words or 1.5 Chinese characters. Setting an appropriate max\_tokens can control response length and cost, avoiding overly long outputs. If the model completes its answer before reaching the max\_tokens limit, it will naturally end; if it reaches the limit, the output may be truncated.
+`max_tokens` is used to limit the maximum number of tokens the model can generate in a single call. GLM-4.6 supports a maximum output length of 128K, and it's recommended to set it to no less than 1024. Tokens are the basic units of text, typically 1 token equals approximately 0.75 English words or 1.5 Chinese characters. Setting an appropriate max\_tokens can control response length and cost, avoiding overly long outputs. If the model completes its answer before reaching the max\_tokens limit, it will naturally end; if it reaches the limit, the output may be truncated.
 
 * Purpose: Prevents generating overly long text and controls API call costs.
 * Note: `max_tokens` limits the length of generated content, not including input.
@@ -83,16 +83,6 @@ Default `max_tokens` and maximum supported `max_tokens` for each model:
 | glm-5 | 65536 | 131072 |
 | glm-4.7 | 65536 | 131072 |
 | glm-4.6 | 65536 | 131072 |
-| glm-4.6v | 16384 | 32768 |
-| glm-4.6v-flash | 16384 | 32768 |
-| glm-4.6v-flashx | 16384 | 32768 |
-| glm-4.5 | 65536 | 98304 |
-| glm-4.5-air | 65536 | 98304 |
-| glm-4.5-x | 65536 | 98304 |
-| glm-4.5-airx | 65536 | 98304 |
-| glm-4.5-flash | 65536 | 98304 |
-| glm-4.5v | 16384 | 16384 |
-| glm-4-32b-0414-128k | 16384 | 16384 |
 
 ### stream
 
@@ -110,12 +100,12 @@ Best Practices:
 The `thinking` parameter controls whether the model enables "Chain of Thought" for deeper thinking and reasoning.
 
 * Type: Object
-* Supported Models: `GLM-4.5` and above
+* Supported Models: `GLM-4.6` and above
 
 Properties:
 
 * `type` (string):
-  * `enabled` (default): Enable chain of thought. `GLM-5.3` and `GLM-5.3-FLASH` use forced thinking. For other models, `GLM-5.2`, `GLM-5.1`, `GLM-5`, `GLM-4.6`, and `GLM-4.5` auto-determine whether to think, while `GLM-4.7` and `GLM-4.5V` use forced thinking.
+  * `enabled` (default): Enable chain of thought. `GLM-5.3` and `GLM-5.3-FLASH` use forced thinking. For other models, `GLM-5.2`, `GLM-5.1`, `GLM-5`, `GLM-4.6`, while `GLM-4.7` use forced thinking.
   * `disabled`: Disable chain of thought.
 
 Best Practices:

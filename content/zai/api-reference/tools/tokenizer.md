@@ -82,8 +82,6 @@ components:
           default: glm-4.6
           enum:
             - glm-4.6
-            - glm-4.6v
-            - glm-4.5
         messages:
           type: array
           description: >-
@@ -263,9 +261,8 @@ components:
                   type: string
                   description: >-
                     Image URL or Base64 encoding. Image size limit is under 5M
-                    per image, with pixels not exceeding 6000*6000. GLM-5V
-                    GLM4.6V series are limited to 150 sheets, GLM4.5V limit 50
-                    sheets. Supports jpg, png, jpeg formats.
+                    per image, with pixels not exceeding 6000*6000. GLM-5V are
+                    limited to 150 sheets.Supports jpg, png, jpeg formats.
               required:
                 - url
               additionalProperties: false
@@ -290,8 +287,7 @@ components:
                   type: string
                   description: >-
                     Video URL address.The video size is limited to within 200
-                    MB, GLM-5V GLM4.6V series are limited to 2 videos, GLM4.5V
-                    limit 1 video, and the format supports `mp4`，`mkv`，`mov`.
+                    MB,and the format supports `mp4`，`mkv`，`mov`.
               required:
                 - url
               additionalProperties: false
@@ -327,9 +323,9 @@ components:
                 file_url:
                   type: string
                   description: >-
-                    File URL address. Only GLM-5.3-Flash series, GLM-4.6V,
-                    GLM-4.5V supported. Supports formats such as pdf, txt, word,
-                    jsonl, xlsx, pptx, with a maximum of 50.
+                    File URL address. Only GLM-5.3-Flash series. Supports
+                    formats such as pdf, txt, word, jsonl, xlsx, pptx, with a
+                    maximum of 50.
                 file_data:
                   type: string
                   description: >-

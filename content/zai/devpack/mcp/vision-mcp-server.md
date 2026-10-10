@@ -284,7 +284,6 @@ Other common issues:
 * [Model Context Protocol (MCP) Official Documentation](https://modelcontextprotocol.io/)
 * [Claude Desktop MCP Configuration Guide](https://docs.anthropic.com/en/docs/claude-code/mcp)
 * [MCP Usage Limits](/devpack/overview#usage-instruction)
-* [Vision Model Introduction](/guides/vlm/glm-4.6v)
 
 
 This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

@@ -13,7 +13,7 @@ Streaming messages use an incremental generation mechanism, transmitting content
 ### Core Parameter Description
 
 * **`stream=True`**: Enable streaming output, must be set to `True`
-* **`model`**: Models that support streaming output, such as `glm-5`,  `glm-4.7`, `glm-4.6`, `glm-4.5`, etc.
+* **`model`**: Models that support streaming output, such as `glm-5.3`,  `glm-5.2`, etc.
 
 ### Response Format Description
 

@@ -212,15 +212,7 @@ components:
             - glm-5.1
             - glm-5
             - glm-4.7
-            - glm-4.7-flash
-            - glm-4.7-flashx
             - glm-4.6
-            - glm-4.5
-            - glm-4.5-air
-            - glm-4.5-x
-            - glm-4.5-airx
-            - glm-4.5-flash
-            - glm-4-32b-0414-128k
         messages:
           type: array
           description: >-
@@ -389,8 +381,7 @@ components:
             Sampling temperature, controls the randomness of the output, must be
             a positive number within the range: `[0.0, 1.0]`. The GLM-5.3,
             GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 series default value is
-            `1.0`, GLM-4.5 series default value is `0.6`, GLM-4-32B-0414-128K
-            default value is `0.75`.
+            `1.0`
           format: float
           example: 1
           default: 1
@@ -400,9 +391,8 @@ components:
           type: number
           description: >-
             Another method of temperature sampling, value range is: `[0.01,
-            1.0]`. The GLM-5.3, GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6,
-            GLM-4.5 series default value is `0.95`, GLM-4-32B-0414-128K default
-            value is `0.9`.
+            1.0]`. The GLM-5.3, GLM-5.2, GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 series
+            default value is `0.95`.
           format: float
           example: 0.95
           default: 0.95
@@ -413,9 +403,7 @@ components:
           description: >-
             The maximum number of tokens for model output, the GLM-5.3, GLM-5.2,
             GLM-5.1, GLM-5, GLM-4.7, GLM-4.6 series supports 128K maximum
-            output, the GLM-4.5 series supports 96K maximum output, the GLM-4.6v
-            series supports 32K maximum output, the GLM-4.5v series supports 16K
-            maximum output, GLM-4-32B-0414-128K supports 16K maximum output.
+            output.
           example: 1024
           minimum: 1
           maximum: 131072
@@ -509,11 +497,6 @@ components:
           enum:
             - glm-5.3-flashx
             - glm-5.3-flash
-            - glm-4.6v
-            - autoglm-phone-multilingual
-            - glm-4.6v-flash
-            - glm-4.6v-flashx
-            - glm-4.5v
         messages:
           type: array
           description: >-
@@ -623,9 +606,7 @@ components:
           description: >-
             Sampling temperature, controls the randomness of the output, must be
             a positive number within the range: `[0.0, 1.0]`. For
-            `GLM-5.3-Flash` series the default value is `1.0`; the GLM-4.6V,
-            GLM-4.5V series default value is `0.8`; the
-            autoglm-phone-multilingual default value is `0.0`.
+            `GLM-5.3-Flash` series the default value is `1.0`.
           format: float
           example: 1
           default: 1
@@ -635,9 +616,7 @@ components:
           type: number
           description: >-
             Another method of temperature sampling, value range is: `[0.01,
-            1.0]`. For `GLM-5.3-Flash` series the default value is `0.95`; the
-            GLM-4.6V, GLM-4.5V series default value is `0.6`; the
-            autoglm-phone-multilingual default value is `0.85`.
+            1.0]`. For `GLM-5.3-Flash` series the default value is `0.95`.
           format: float
           example: 0.95
           default: 0.95
@@ -647,10 +626,7 @@ components:
           type: integer
           description: >-
             The maximum number of tokens for model output. `GLM-5.3-Flash`
-            series supports a maximum output length of 128K, the GLM-4.6V series
-            supports 32K, the GLM-4.5V series supports 16K, and
-            autoglm-phone-multilingual supports 4K. It is recommended to set it
-            to no less than 1024.
+            series supports a maximum output length of 128K.
           example: 1024
           minimum: 1
           maximum: 131072
@@ -658,9 +634,8 @@ components:
           type: array
           description: >
             A list of tools the model may call. Only supported by
-            `GLM-5.3-Flash` series, the GLM-4.6V series, and
-            autoglm-phone-multilingual. Use this to provide a list of functions
-            the model may generate JSON inputs for. A max of 128 functions are
+            `GLM-5.3-Flash` series.Use this to provide a list of functions the
+            model may generate JSON inputs for. A max of 128 functions are
             supported.
           items:
             anyOf:
@@ -772,7 +747,7 @@ components:
     ChatThinking:
       type: object
       description: >-
-        Only supported by GLM-4.5 series and higher models. This parameter is
+        Only supported by GLM-4.6 series and higher models. This parameter is
         used to control whether the model enable the chain of thought.
       properties:
         type:
@@ -781,9 +756,8 @@ components:
             Whether to enable the chain of thought(`GLM-5.3` `GLM-5.3-FLASH`
             series can only be enabled, and the thinking depth is controlled by
             `reasoning_effort`; for other models, when enabled, GLM-5.2 GLM-5.1
-            GLM-5 GLM-4.6 GLM-4.5 and others will automatically determine
-            whether to think, while GLM-4.7 and GLM-4.5V will think
-            compulsorily), default: enabled
+            GLM-5 GLM-4.6 and others will automatically determine whether to
+            think, while GLM-4.7 will think compulsorily), default: enabled
           default: enabled
           enum:
             - enabled
@@ -879,9 +853,8 @@ components:
                   type: string
                   description: >-
                     Image URL or Base64 encoding. Image size limit is under 5M
-                    per image, with pixels not exceeding 6000*6000. GLM-5V
-                    GLM4.6V series are limited to 150 sheets, GLM4.5V limit 50
-                    sheets. Supports jpg, png, jpeg formats.
+                    per image, with pixels not exceeding 6000*6000. GLM-5V are
+                    limited to 150 sheets.Supports jpg, png, jpeg formats.
               required:
                 - url
               additionalProperties: false
@@ -906,8 +879,7 @@ components:
                   type: string
                   description: >-
                     Video URL address.The video size is limited to within 200
-                    MB, GLM-5V GLM4.6V series are limited to 2 videos, GLM4.5V
-                    limit 1 video, and the format supports `mp4`，`mkv`，`mov`.
+                    MB,and the format supports `mp4`，`mkv`，`mov`.
               required:
                 - url
               additionalProperties: false
@@ -943,9 +915,9 @@ components:
                 file_url:
                   type: string
                   description: >-
-                    File URL address. Only GLM-5.3-Flash series, GLM-4.6V,
-                    GLM-4.5V supported. Supports formats such as pdf, txt, word,
-                    jsonl, xlsx, pptx, with a maximum of 50.
+                    File URL address. Only GLM-5.3-Flash series. Supports
+                    formats such as pdf, txt, word, jsonl, xlsx, pptx, with a
+                    maximum of 50.
                 file_data:
                   type: string
                   description: >-
@@ -970,14 +942,7 @@ components:
           type: string
           description: >-
             Current conversation content. Hits function is null, otherwise
-            returns model inference result. 
-
-            For the GLM-4.5V series models, the output may contain the reasoning
-            process tags `<think> </think>` or the text boundary tags
-            `<|begin_of_box|> <|end_of_box|>`.
-        reasoning_content:
-          type: string
-          description: Reasoning content, supports by GLM-4.5 series.
+            returns model inference result.
         tool_calls:
           type: array
           description: >-

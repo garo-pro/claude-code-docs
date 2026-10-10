@@ -167,13 +167,13 @@ Across six coding and agentic benchmarks, GLM-5.3-Flash consistently outperforms
 
 ![](https://cloud-document-converter.oss-cn-beijing.aliyuncs.com/feishu2md/20260826/1787756367780-5fet8o.png)
 
-Compared with the GLM-4.5 series, GLM-5.3-Flash is specifically designed for ultra-low-cost inference. Despite a similar total parameter count (320B vs. 355B), it nearly halves both the activated parameter count (18B vs. 32B) and the number of layers (45 vs. 92).
+GLM-5.3-Flash is specifically designed for ultra-low-cost inference. Despite a similar total parameter count (320B vs. 355B), it nearly halves both the activated parameter count (18B vs. 32B) and the number of layers (45 vs. 92).
 
 To minimize attention costs in long-context scenarios, we use a hybrid architecture combining linear and sparse attention. Linear attention captures local dependencies through state modeling, while sparse attention retrieves relevant global context through a lightweight indexer. To further reduce the latency and memory overhead of the indexer at a 1M-token context length, we introduce IndexPool, which compresses four indexer key vectors into one through weighted pooling.
 
 To illustrate the efficiency of our architecture, we compare the per-token compute and KV cache size of GLM-5.3-Flash against GLM-5.3 and two recent open models DeepSeek-V4-Flash and Kimi-K3. For a fair comparison among different scales, we calculate the attention compute per head per layer and average KV cache size per layer (BF16). Compared with GLM-5.3, GLM-5.3-Flash reduces the attention compute and KV cache size by factors of 3.0x and 4.4x. GLM-5.3-Flash has the lowest attention compute among all models compared. The KV cache size is still slightly larger than Kimi-K3 and DeepSeek-V4-Flash, leaving further room for improvement.
 
-The overall architecture improvements, combined with optimized pre-training corpus, enable GLM-5.3-Flash to produce more intelligence with less compute. In the table below we show the evaluation results of the base model of GLM-5.3-Flash, comparing with our previous base models and DeepSeek-V4-Flash-Base. The results show that GLM-5.3-Flash-Base outperforms GLM-4.5-Base overall and remains competitive with GLM-5-Base across most benchmarks.
+The overall architecture improvements, combined with optimized pre-training corpus, enable GLM-5.3-Flash to produce more intelligence with less compute. In the table below we show the evaluation results of the base model of GLM-5.3-Flash, comparing with our previous base models and DeepSeek-V4-Flash-Base. The results show that GLM-5.3-Flash-Base remains competitive with GLM-5-Base across most benchmarks.
 
 #### Visual Intelligence in the Coding Loop
 

@@ -435,32 +435,6 @@ response = client.chat.completions.create(
 print(response)
 ```
 
-### Video Generation
-
-```python theme={null}
-from zai import ZaiClient
-import time
-
-client = ZaiClient(api_key="your-api-key")
-
-# Submit generation task
-response = client.videos.generations(
-    model="cogvideox-3",  # Video generation model to use
-    image_url=image_url,  # Provided image URL or Base64 encoding
-    prompt="Make the scene come alive",
-    quality="speed",  # Output mode: "quality" for quality priority, "speed" for speed priority
-    with_audio=True,
-    size="1920x1080",  # Video resolution, supports up to 4K (e.g., "3840x2160")
-    fps=30,  # Frame rate, can be 30 or 60
-)
-print(response)
-
-# Get generation result
-time.sleep(60)  # Wait for a while to ensure video generation is complete
-result = client.videos.retrieve_videos_result(id=response.id)
-print(result)
-```
-
 ### Streaming Processing
 
 ```python theme={null}

@@ -99,7 +99,7 @@
 
 <AccordionGroup>
   <Accordion title="Vision MCP Server (Coding Plan Exclusive)">
-    All users can utilize the Vision MCP Server, which employs the flagship vision reasoning model GLM-4.6V to comprehend and analyze image content.
+    All users can utilize the Vision MCP Server, which employs the flagship vision reasoning model to comprehend and analyze image content.
 
     * Analyze UI design mockups and generate corresponding code
     * Understand flowcharts and architecture diagrams

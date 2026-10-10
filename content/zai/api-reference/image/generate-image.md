@@ -77,7 +77,6 @@ components:
           description: Model code
           enum:
             - glm-image
-            - cogview-4-250304
           example: glm-image
         prompt:
           type: string

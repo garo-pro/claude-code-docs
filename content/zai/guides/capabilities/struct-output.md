@@ -13,7 +13,7 @@ The structured output feature provides AI models with strict data format control
 ### Core Parameters
 
 * **`response_format`**: Specifies the response format, set to `{"type": "json_object"}` to enable JSON mode
-* **`model`**: Use models that support structured output, such as `glm-5`, `glm-4.7`, `glm-4.5`, `glm-4.6`, etc.
+* **`model`**: Use models that support structured output, such as `glm-5`, `glm-4.7`, `glm-4.6`, etc.
 * **`messages`**: Define the expected JSON structure and field requirements in system messages
 
 ## Code Examples

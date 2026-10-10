@@ -20,7 +20,7 @@ Thinking is activated by default in GLM-5.3 GLM-5.3-FLASH GLM-5.2 GLM-5.1 GLM-5 
 
 ## **Interleaved thinking**
 
-We support **interleaved thinking** by default (supported since GLM-4.5), allowing GLM to think between tool calls and after receiving tool results. This enables more complex, step-by-step reasoning: interpreting each tool output before deciding what to do next, chaining multiple tool calls with reasoning steps, and making finer-grained decisions based on intermediate results.
+We support **interleaved thinking** by default, allowing GLM to think between tool calls and after receiving tool results. This enables more complex, step-by-step reasoning: interpreting each tool output before deciding what to do next, chaining multiple tool calls with reasoning steps, and making finer-grained decisions based on intermediate results.
 
 <Tip>
   When using interleaved thinking with tools, **thinking blocks should be explicitly preserved and returned together with the tool results.**
